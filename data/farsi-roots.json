@@ -1,0 +1,185 @@
+{
+  "version": "1.0.0",
+  "language": "farsi",
+  "description": "500 most common Arabic roots found in Persian/Farsi",
+  "roots": [
+    {
+      "id": 1,
+      "root": "ک-ت-ب",
+      "rootLatin": "k-t-b",
+      "meaning": "to write",
+      "category": "writing",
+      "derivatives": [
+        {
+          "word": "کتاب",
+          "latin": "ketâb",
+          "meaning": "book",
+          "pos": "noun"
+        },
+        {
+          "word": "کتابخانه",
+          "latin": "ketâbkhâne",
+          "meaning": "library",
+          "pos": "noun"
+        },
+        {
+          "word": "کتابت",
+          "latin": "ketâbat",
+          "meaning": "writing, calligraphy",
+          "pos": "noun"
+        },
+        {
+          "word": "کاتب",
+          "latin": "kâteb",
+          "meaning": "writer, scribe",
+          "pos": "noun"
+        },
+        {
+          "word": "مکتوب",
+          "latin": "maktub",
+          "meaning": "letter, written document",
+          "pos": "noun"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "root": "ع-ل-م",
+      "rootLatin": "ʿ-l-m",
+      "meaning": "to know",
+      "category": "knowledge",
+      "derivatives": [
+        {
+          "word": "علم",
+          "latin": "elm",
+          "meaning": "science, knowledge",
+          "pos": "noun"
+        },
+        {
+          "word": "عالم",
+          "latin": "âlem",
+          "meaning": "scholar, world",
+          "pos": "noun"
+        },
+        {
+          "word": "معلم",
+          "latin": "moʿallem",
+          "meaning": "teacher",
+          "pos": "noun"
+        },
+        {
+          "word": "علمی",
+          "latin": "elmi",
+          "meaning": "scientific",
+          "pos": "adjective"
+        },
+        {
+          "word": "اعلام",
+          "latin": "eʿlâm",
+          "meaning": "announcement",
+          "pos": "noun"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "root": "د-ر-س",
+      "rootLatin": "d-r-s",
+      "meaning": "to study",
+      "category": "education",
+      "derivatives": [
+        {
+          "word": "درس",
+          "latin": "dars",
+          "meaning": "lesson",
+          "pos": "noun"
+        },
+        {
+          "word": "مدرسه",
+          "latin": "madrese",
+          "meaning": "school",
+          "pos": "noun"
+        },
+        {
+          "word": "مدرس",
+          "latin": "modarres",
+          "meaning": "instructor",
+          "pos": "noun"
+        },
+        {
+          "word": "تدریس",
+          "latin": "tadris",
+          "meaning": "teaching",
+          "pos": "noun"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "root": "ک-ل-م",
+      "rootLatin": "k-l-m",
+      "meaning": "to speak",
+      "category": "communication",
+      "derivatives": [
+        {
+          "word": "کلمه",
+          "latin": "kalame",
+          "meaning": "word",
+          "pos": "noun"
+        },
+        {
+          "word": "کلام",
+          "latin": "kalâm",
+          "meaning": "speech, discourse",
+          "pos": "noun"
+        },
+        {
+          "word": "تکلم",
+          "latin": "takallom",
+          "meaning": "speaking",
+          "pos": "noun"
+        },
+        {
+          "word": "متکلم",
+          "latin": "motakallem",
+          "meaning": "speaker",
+          "pos": "noun"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "root": "ع-م-ل",
+      "rootLatin": "ʿ-m-l",
+      "meaning": "to do, to act",
+      "category": "action",
+      "derivatives": [
+        {
+          "word": "عمل",
+          "latin": "amal",
+          "meaning": "action, deed",
+          "pos": "noun"
+        },
+        {
+          "word": "عملی",
+          "latin": "amali",
+          "meaning": "practical",
+          "pos": "adjective"
+        },
+        {
+          "word": "عامل",
+          "latin": "âmel",
+          "meaning": "agent, factor",
+          "pos": "noun"
+        },
+        {
+          "word": "استعمال",
+          "latin": "esteʿmâl",
+          "meaning": "use, usage",
+          "pos": "noun"
+        }
+      ]
+    }
+  ],
+  "note": "This is a starter set with 5 roots. Expand to 500 roots for full functionality."
+}

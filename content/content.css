@@ -1,0 +1,170 @@
+/**
+ * Styles for Farsi Root Word Learner Extension
+ */
+
+/* Subtle highlighting for matched words */
+.farsi-root-highlight {
+  text-decoration: underline dotted;
+  text-decoration-color: #6366f1;
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 2px;
+  cursor: help;
+  transition: text-decoration-color 0.2s ease;
+}
+
+.farsi-root-highlight:hover {
+  text-decoration-color: #4f46e5;
+  text-decoration-thickness: 2px;
+}
+
+/* Tooltip container */
+.farsi-root-tooltip {
+  position: absolute;
+  z-index: 2147483647; /* Maximum z-index to appear above everything */
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 12px 14px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  max-width: 320px;
+  min-width: 240px;
+  pointer-events: none;
+  opacity: 0;
+  transform: translateY(-4px);
+  transition: opacity 0.15s ease, transform 0.15s ease;
+}
+
+.farsi-root-tooltip.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Tooltip arrow */
+.farsi-root-tooltip::before {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: 20px;
+  width: 12px;
+  height: 12px;
+  background: #ffffff;
+  border-right: 1px solid #e5e7eb;
+  border-bottom: 1px solid #e5e7eb;
+  transform: rotate(45deg);
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .farsi-root-tooltip {
+    background: #1f2937;
+    border-color: #374151;
+    color: #f3f4f6;
+  }
+
+  .farsi-root-tooltip::before {
+    background: #1f2937;
+    border-color: #374151;
+  }
+
+  .farsi-root-highlight {
+    text-decoration-color: #818cf8;
+  }
+
+  .farsi-root-highlight:hover {
+    text-decoration-color: #a5b4fc;
+  }
+}
+
+/* Tooltip content sections */
+.tooltip-word {
+  font-size: 18px;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 8px;
+  font-family: 'Segoe UI', Tahoma, Arial, sans-serif;
+}
+
+.tooltip-section {
+  margin-bottom: 8px;
+}
+
+.tooltip-section:last-child {
+  margin-bottom: 0;
+}
+
+.tooltip-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #6b7280;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+.tooltip-value {
+  color: #374151;
+  font-size: 13px;
+}
+
+.tooltip-root {
+  font-weight: 600;
+  color: #6366f1;
+  font-size: 15px;
+  direction: rtl;
+}
+
+.tooltip-pos {
+  display: inline-block;
+  background: #eff6ff;
+  color: #1e40af;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: lowercase;
+}
+
+@media (prefers-color-scheme: dark) {
+  .tooltip-word {
+    color: #f3f4f6;
+  }
+
+  .tooltip-label {
+    color: #9ca3af;
+  }
+
+  .tooltip-value {
+    color: #d1d5db;
+  }
+
+  .tooltip-root {
+    color: #a5b4fc;
+  }
+
+  .tooltip-pos {
+    background: #1e3a8a;
+    color: #bfdbfe;
+  }
+}
+
+/* Category badge */
+.tooltip-category {
+  display: inline-block;
+  background: #f3f4f6;
+  color: #4b5563;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 500;
+  margin-left: 6px;
+}
+
+@media (prefers-color-scheme: dark) {
+  .tooltip-category {
+    background: #374151;
+    color: #9ca3af;
+  }
+}
