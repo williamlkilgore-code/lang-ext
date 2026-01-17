@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Dictionary Load Test</title>
+  <style>
+    body {
+      font-family: monospace;
+      padding: 20px;
+      background: #1e1e1e;
+      color: #d4d4d4;
+    }
+    .success { color: #4ec9b0; }
+    .error { color: #f48771; }
+    .info { color: #dcdcaa; }
+    pre {
+      background: #252526;
+      padding: 15px;
+      border-radius: 5px;
+      overflow-x: auto;
+    }
+  </style>
+</head>
+<body>
+  <h1>Dictionary Load Test</h1>
+  <div id="output"></div>
+
+  <script>
+    const output = document.getElementById('output');
+
+    function log(message, type = 'info') {
+      const p = document.createElement('p');
+      p.className = type;
+      p.textContent = message;
+      output.appendChild(p);
+    }
+
+    async function testDictionaryLoad() {
+      try {
+        log('🔍 Testing dictionary load...', 'info');
+
+        // Try to load the dictionary
+        const url = chrome.runtime.getURL('data/farsi-roots.json');
+        log(`📂 URL: ${url}`, 'info');
+
+        const response = await fetch(url);
+        log(`📡 Response status: ${response.status} ${response.statusText}`,
+            response.ok ? 'success' : 'error');
+
+        if (!response.ok) {
+          log('❌ Failed to fetch dictionary', 'error');
+          return;
+        }
+
+        const data = await response.json();
+        log('✅ Dictionary loaded successfully!', 'success');
+
+        // Display stats
+        const stats = {
+          version: data.version,
+          language: data.language,
+          totalRoots: data.roots.length,
+          totalWords: data.roots.reduce((sum, r) => sum + r.derivatives.length, 0),
+          categories: [...new Set(data.roots.map(r => r.category))].length
+        };
+
+        log('\n📊 Dictionary Statistics:', 'success');
+        const pre = document.createElement('pre');
+        pre.textContent = JSON.stringify(stats, null, 2);
+        output.appendChild(pre);
+
+        // Show sample roots
+        log('\n📚 Sample Roots:', 'success');
+        const samplePre = document.createElement('pre');
+        const samples = data.roots.slice(0, 5).map(r =>
+          `${r.id}. ${r.root} (${r.rootLatin}) - ${r.meaning} [${r.derivatives.length} derivatives]`
+        ).join('\n');
+        samplePre.textContent = samples;
+        output.appendChild(samplePre);
+
+      } catch (error) {
+        log(`❌ Error: ${error.message}`, 'error');
+        log(`Stack: ${error.stack}`, 'error');
+      }
+    }
+
+    // Run test
+    if (typeof chrome !== 'undefined' && chrome.runtime) {
+      testDictionaryLoad();
+    } else {
+      log('❌ Extension API not available. Make sure this page is loaded with the extension active.', 'error');
+    }
+  </script>
+</body>
+</html>
