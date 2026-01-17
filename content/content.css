@@ -5,16 +5,16 @@
 /* Subtle highlighting for matched words */
 .farsi-root-highlight {
   text-decoration: underline dotted;
-  text-decoration-color: #6366f1;
-  text-decoration-thickness: 1.5px;
-  text-underline-offset: 2px;
+  text-decoration-color: rgba(156, 163, 175, 0.4); /* Very subtle gray */
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
   cursor: help;
   transition: text-decoration-color 0.2s ease;
 }
 
 .farsi-root-highlight:hover {
-  text-decoration-color: #4f46e5;
-  text-decoration-thickness: 2px;
+  text-decoration-color: rgba(99, 102, 241, 0.6); /* Slightly more visible on hover */
+  text-decoration-thickness: 1px;
 }
 
 /* Tooltip container */
@@ -70,11 +70,11 @@
   }
 
   .farsi-root-highlight {
-    text-decoration-color: #818cf8;
+    text-decoration-color: rgba(156, 163, 175, 0.5); /* Subtle gray for dark mode */
   }
 
   .farsi-root-highlight:hover {
-    text-decoration-color: #a5b4fc;
+    text-decoration-color: rgba(165, 180, 252, 0.7); /* Slightly more visible on hover */
   }
 }
 

@@ -133,6 +133,19 @@
    * @param {Text} textNode - Text node to process
    */
   function processTextNode(textNode) {
+    // Safety checks
+    if (!textNode || !textNode.parentNode || !textNode.textContent) return;
+
+    // Skip if parent is already processed or is our tooltip
+    const parent = textNode.parentNode;
+    if (parent.classList && (
+        parent.classList.contains('farsi-root-highlight') ||
+        parent.classList.contains('farsi-root-tooltip') ||
+        parent.closest('.farsi-root-tooltip')
+    )) {
+      return;
+    }
+
     const text = textNode.textContent;
     const matches = matcher.extractWords(text);
 
@@ -180,7 +193,11 @@
     }
 
     // Replace text node with fragment
-    textNode.parentNode.replaceChild(fragment, textNode);
+    try {
+      textNode.parentNode.replaceChild(fragment, textNode);
+    } catch (error) {
+      console.error('Farsi Root Learner: Error replacing text node', error);
+    }
   }
 
   /**
@@ -203,21 +220,43 @@
    * Observer for dynamically added content
    */
   function setupMutationObserver() {
+    let processingTimeout = null;
+
     const observer = new MutationObserver(mutations => {
-      mutations.forEach(mutation => {
-        mutation.addedNodes.forEach(node => {
-          if (node.nodeType === Node.ELEMENT_NODE) {
-            const textNodes = detector.getPersianTextNodes(node);
-            textNodes.forEach(textNode => {
-              try {
-                processTextNode(textNode);
-              } catch (error) {
-                console.error('Farsi Root Learner: Error processing dynamic content', error);
+      // Debounce processing to avoid excessive calls
+      if (processingTimeout) {
+        clearTimeout(processingTimeout);
+      }
+
+      processingTimeout = setTimeout(() => {
+        mutations.forEach(mutation => {
+          mutation.addedNodes.forEach(node => {
+            // Skip our own tooltip
+            if (node.nodeType === Node.ELEMENT_NODE) {
+              if (node.classList && (
+                  node.classList.contains('farsi-root-tooltip') ||
+                  node.classList.contains('farsi-root-highlight')
+              )) {
+                return;
               }
-            });
-          }
+
+              // Skip if this is inside our tooltip
+              if (node.closest && node.closest('.farsi-root-tooltip')) {
+                return;
+              }
+
+              const textNodes = detector.getPersianTextNodes(node);
+              textNodes.forEach(textNode => {
+                try {
+                  processTextNode(textNode);
+                } catch (error) {
+                  console.error('Farsi Root Learner: Error processing dynamic content', error);
+                }
+              });
+            }
+          });
         });
-      });
+      }, 100); // Debounce 100ms
     });
 
     observer.observe(document.body, {
