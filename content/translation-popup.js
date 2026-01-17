@@ -31,8 +31,15 @@ class TranslationPopup {
     `;
     document.body.appendChild(this.popup);
 
-    // Add click handler for translate button
+    // Add handlers for translate button
     const translateBtn = this.popup.querySelector('.translate-btn');
+
+    // Prevent mousedown from clearing selection
+    translateBtn.addEventListener('mousedown', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+    });
+
     translateBtn.addEventListener('click', (e) => {
       e.preventDefault();
       e.stopPropagation();
@@ -61,6 +68,11 @@ class TranslationPopup {
   handleSelection(event) {
     const selection = window.getSelection();
     const selectedText = selection.toString().trim();
+
+    // Don't hide if popup is showing translation results
+    if (this.popup.classList.contains('showing-translation')) {
+      return;
+    }
 
     // Hide if no selection or selection is empty
     if (!selectedText || selectedText.length === 0) {
@@ -135,8 +147,15 @@ class TranslationPopup {
     // Remove showing-translation class
     this.popup.classList.remove('showing-translation');
 
-    // Re-attach click handler
+    // Re-attach click and mousedown handlers
     const translateBtn = this.popup.querySelector('.translate-btn');
+
+    // Prevent mousedown from clearing selection
+    translateBtn.addEventListener('mousedown', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+    });
+
     translateBtn.addEventListener('click', (e) => {
       e.preventDefault();
       e.stopPropagation();
@@ -146,6 +165,7 @@ class TranslationPopup {
 
   hide() {
     this.popup.classList.remove('visible');
+    this.popup.classList.remove('showing-translation');
     this.isVisible = false;
     this.currentSelection = null;
   }
