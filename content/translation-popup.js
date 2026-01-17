@@ -91,6 +91,9 @@ class TranslationPopup {
   show(selection) {
     if (selection.rangeCount === 0) return;
 
+    // Reset popup content to show translate button
+    this.resetPopupContent();
+
     const range = selection.getRangeAt(0);
     const rect = range.getBoundingClientRect();
 
@@ -116,6 +119,29 @@ class TranslationPopup {
     this.popup.style.left = `${left}px`;
     this.popup.classList.add('visible');
     this.isVisible = true;
+  }
+
+  resetPopupContent() {
+    // Reset to translate button
+    this.popup.innerHTML = `
+      <button class="translate-btn" title="Translate selection">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"/>
+        </svg>
+        Translate
+      </button>
+    `;
+
+    // Remove showing-translation class
+    this.popup.classList.remove('showing-translation');
+
+    // Re-attach click handler
+    const translateBtn = this.popup.querySelector('.translate-btn');
+    translateBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      this.translateSelection();
+    });
   }
 
   hide() {
