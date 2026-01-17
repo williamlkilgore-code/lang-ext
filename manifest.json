@@ -16,6 +16,7 @@
       "js": [
         "utils/language-detector.js",
         "utils/persian-matcher.js",
+        "content/translation-popup.js",
         "content/content.js"
       ],
       "css": ["content/content.css"],

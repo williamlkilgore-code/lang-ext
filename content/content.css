@@ -168,3 +168,232 @@
     color: #9ca3af;
   }
 }
+
+/* Translation Popup Styles */
+.farsi-translation-popup {
+  position: absolute;
+  z-index: 2147483646;
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-4px);
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
+  pointer-events: none;
+  min-width: 120px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+.farsi-translation-popup.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.farsi-translation-popup.showing-translation {
+  min-width: 280px;
+  max-width: 400px;
+}
+
+/* Translate Button */
+.translate-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 12px;
+  background: #6366f1;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  white-space: nowrap;
+}
+
+.translate-btn:hover {
+  background: #4f46e5;
+}
+
+.translate-btn svg {
+  flex-shrink: 0;
+}
+
+/* Translation Result */
+.translation-result {
+  padding: 12px;
+}
+
+.translation-word {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 8px;
+  direction: rtl;
+  text-align: right;
+}
+
+.translation-meaning {
+  font-size: 15px;
+  color: #374151;
+  margin-bottom: 6px;
+  font-weight: 500;
+}
+
+.translation-pos {
+  display: inline-block;
+  font-size: 11px;
+  color: #6366f1;
+  background: #eef2ff;
+  padding: 2px 8px;
+  border-radius: 4px;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.translation-root {
+  font-size: 12px;
+  color: #6b7280;
+  padding-top: 8px;
+  border-top: 1px solid #f3f4f6;
+  margin-top: 8px;
+  direction: rtl;
+  text-align: right;
+}
+
+/* Multiword Translation */
+.translation-result.multiword {
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.translation-header {
+  font-size: 12px;
+  color: #6b7280;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.word-translations {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.word-translation {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 8px;
+  background: #f9fafb;
+  border-radius: 4px;
+  font-size: 13px;
+}
+
+.word-translation .original {
+  font-weight: 500;
+  color: #1f2937;
+  direction: rtl;
+  min-width: 60px;
+}
+
+.word-translation .arrow {
+  color: #9ca3af;
+  font-size: 11px;
+}
+
+.word-translation .meaning {
+  color: #374151;
+  flex: 1;
+}
+
+/* External Translation Options */
+.translation-result.external {
+  text-align: center;
+}
+
+.external-options {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.external-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 16px;
+  background: #f9fafb;
+  color: #374151;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  border: 1px solid #e5e7eb;
+}
+
+.external-link:hover {
+  background: #f3f4f6;
+  border-color: #d1d5db;
+  transform: translateY(-1px);
+}
+
+.external-link svg {
+  flex-shrink: 0;
+}
+
+/* Dark mode support for translation popup */
+@media (prefers-color-scheme: dark) {
+  .farsi-translation-popup {
+    background: #1f2937;
+    border-color: #374151;
+  }
+
+  .translation-word {
+    color: #f9fafb;
+  }
+
+  .translation-meaning {
+    color: #e5e7eb;
+  }
+
+  .translation-pos {
+    color: #a5b4fc;
+    background: rgba(99, 102, 241, 0.15);
+  }
+
+  .translation-root {
+    color: #9ca3af;
+    border-top-color: #374151;
+  }
+
+  .word-translation {
+    background: #111827;
+  }
+
+  .word-translation .original {
+    color: #f3f4f6;
+  }
+
+  .word-translation .meaning {
+    color: #d1d5db;
+  }
+
+  .external-link {
+    background: #111827;
+    color: #e5e7eb;
+    border-color: #374151;
+  }
+
+  .external-link:hover {
+    background: #0f172a;
+    border-color: #4b5563;
+  }
+}

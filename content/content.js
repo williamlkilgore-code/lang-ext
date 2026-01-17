@@ -9,6 +9,7 @@
   // Initialize components
   const detector = new LanguageDetector();
   const matcher = new PersianMatcher();
+  let translationPopup = null;
 
   let isActive = false;
   let tooltip = null;
@@ -288,6 +289,10 @@
 
     console.log('Farsi Root Learner: Activating on this page');
     isActive = true;
+
+    // Initialize translation popup
+    translationPopup = new TranslationPopup(matcher);
+    console.log('Farsi Root Learner: Translation popup initialized');
 
     // Process existing content
     processPage();
