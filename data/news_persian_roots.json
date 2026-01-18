@@ -1,0 +1,4268 @@
+{
+  "meta": {
+    "source_file": "Copy of Copy of Roots2.xlsm.xlsx",
+    "source_sheet": "Arabic",
+    "selection": {
+      "roots": 150,
+      "criterion": "lowest best-rank among roots with >=3 listed word families",
+      "derivatives_per_root": "3-5 word-family heads (all listed with Arabic roots)"
+    },
+    "variant": "news_persian",
+    "fields": [
+      "lemma_fa",
+      "pos",
+      "definition_en",
+      "pron_fa"
+    ]
+  },
+  "roots": {
+    "ح و ل": {
+      "root_best_rank": 43.0,
+      "derivatives": [
+        {
+          "lemma_fa": "حال",
+          "pos": "Singular Noun",
+          "definition_en": "state",
+          "pron_fa": "hɑl"
+        },
+        {
+          "lemma_fa": "حالا",
+          "pos": "Adverb",
+          "definition_en": "now",
+          "pron_fa": "hɑlæn, hɑlɑ"
+        },
+        {
+          "lemma_fa": "تحول",
+          "pos": "Singular Noun",
+          "definition_en": "development",
+          "pron_fa": "tæhævvol"
+        },
+        {
+          "lemma_fa": "حول",
+          "pos": "Singular Noun",
+          "definition_en": null,
+          "pron_fa": "how"
+        },
+        {
+          "lemma_fa": "محال",
+          "pos": "Adjective/Plural Noun",
+          "definition_en": null,
+          "pron_fa": "mohɑl"
+        }
+      ]
+    },
+    "ق ر ر": {
+      "root_best_rank": 67.0,
+      "derivatives": [
+        {
+          "lemma_fa": "قرار",
+          "pos": "Singular Noun",
+          "definition_en": "agreement",
+          "pron_fa": "ɢærɑr"
+        },
+        {
+          "lemma_fa": "مستقر",
+          "pos": "Adjective",
+          "definition_en": "based",
+          "pron_fa": "mostæʔɢerr, mostæʔɢærr"
+        },
+        {
+          "lemma_fa": "قاره",
+          "pos": "Singular Noun",
+          "definition_en": "continent",
+          "pron_fa": "ɢɑre"
+        },
+        {
+          "lemma_fa": "استقرار",
+          "pos": "Singular Noun",
+          "definition_en": "establishment",
+          "pron_fa": "esteɢrɑr"
+        },
+        {
+          "lemma_fa": "مقررات",
+          "pos": "Plural Noun",
+          "definition_en": "provisions",
+          "pron_fa": "moɢærʔrærɑt"
+        }
+      ]
+    },
+    "ع ن ی": {
+      "root_best_rank": 75.0,
+      "derivatives": [
+        {
+          "lemma_fa": "یعنی",
+          "pos": "Conjunction/Adverb",
+          "definition_en": "namely, meaning",
+          "pron_fa": "jæʔni"
+        },
+        {
+          "lemma_fa": "معنی",
+          "pos": "Singular Noun",
+          "definition_en": "meaning",
+          "pron_fa": "mæʔni, mæʔnɑ"
+        },
+        {
+          "lemma_fa": "معنوی",
+          "pos": "Adjective",
+          "definition_en": null,
+          "pron_fa": "mæʔnævi"
+        },
+        {
+          "lemma_fa": "عنایت",
+          "pos": "Singular Noun",
+          "definition_en": "thanks",
+          "pron_fa": "enɑjæt"
+        }
+      ]
+    },
+    "ق ص د": {
+      "root_best_rank": 79.0,
+      "derivatives": [
+        {
+          "lemma_fa": "اقتصاد",
+          "pos": "Singular Noun",
+          "definition_en": "economy",
+          "pron_fa": "eɢtesɑd"
+        },
+        {
+          "lemma_fa": "قصد",
+          "pos": "Singular Noun",
+          "definition_en": "intent",
+          "pron_fa": "ɢæsd"
+        },
+        {
+          "lemma_fa": "مقصد",
+          "pos": "Singular Noun",
+          "definition_en": null,
+          "pron_fa": "mæɢʔsæd"
+        }
+      ]
+    },
+    "س ل م": {
+      "root_best_rank": 81.0,
+      "derivatives": [
+        {
+          "lemma_fa": "اسلام",
+          "pos": "Singular Noun",
+          "definition_en": "Islam",
+          "pron_fa": "eslɑm"
+        },
+        {
+          "lemma_fa": "سلام",
+          "pos": "Singular Noun",
+          "definition_en": "hello",
+          "pron_fa": "sælɑm"
+        },
+        {
+          "lemma_fa": "سلامت",
+          "pos": "Singular Noun/Adjective",
+          "definition_en": "health",
+          "pron_fa": "sælɑmæt"
+        },
+        {
+          "lemma_fa": "مسلم",
+          "pos": "Adjective/Singular Proper Noun",
+          "definition_en": "moslem",
+          "pron_fa": "mosællæm, moslem"
+        },
+        {
+          "lemma_fa": "سالم",
+          "pos": "Adjective",
+          "definition_en": "healthy",
+          "pron_fa": "sɑlem"
+        }
+      ]
+    },
+    "ن ظ م": {
+      "root_best_rank": 82.0,
+      "derivatives": [
+        {
+          "lemma_fa": "نظام",
+          "pos": "Singular Noun",
+          "definition_en": "system",
+          "pron_fa": "nezɑm"
+        },
+        {
+          "lemma_fa": "نظم",
+          "pos": "Singular Noun",
+          "definition_en": null,
+          "pron_fa": "næzm"
+        },
+        {
+          "lemma_fa": "منظم",
+          "pos": "Adjective",
+          "definition_en": null,
+          "pron_fa": "monæzʔzæm"
+        }
+      ]
+    },
+    "ع ل م": {
+      "root_best_rank": 88.0,
+      "derivatives": [
+        {
+          "lemma_fa": "اعلام",
+          "pos": "Singular Noun",
+          "definition_en": "declaration",
+          "pron_fa": "eʔlɑm"
+        },
+        {
+          "lemma_fa": "علم",
+          "pos": "Singular Noun",
+          "definition_en": "science",
+          "pron_fa": "ʔælæm, ʔelm"
+        },
+        {
+          "lemma_fa": "معلوم",
+          "pos": "Adjective",
+          "definition_en": "clear",
+          "pron_fa": "mæʔʔlum"
+        },
+        {
+          "lemma_fa": "عالم",
+          "pos": "Singular Noun",
+          "definition_en": "world",
+          "pron_fa": "ʔɑlem"
+        },
+        {
+          "lemma_fa": "معلم",
+          "pos": "Singular Noun",
+          "definition_en": "teacher",
+          "pron_fa": "moælʔlæm, moælʔlem"
+        }
+      ]
+    },
+    "خ ر ج": {
+      "root_best_rank": 89.0,
+      "derivatives": [
+        {
+          "lemma_fa": "خارج",
+          "pos": "Singular Noun",
+          "definition_en": "external",
+          "pron_fa": "xɑreʤ"
+        },
+        {
+          "lemma_fa": "خروج",
+          "pos": "Singular Noun",
+          "definition_en": "exit",
+          "pron_fa": "xoruʤ"
+        },
+        {
+          "lemma_fa": "اخراج",
+          "pos": "Singular Noun",
+          "definition_en": "dismissal",
+          "pron_fa": "exrɑʤ"
+        },
+        {
+          "lemma_fa": "خرج",
+          "pos": "Singular Noun",
+          "definition_en": "cost",
+          "pron_fa": "xærʤ"
+        },
+        {
+          "lemma_fa": "استخراج",
+          "pos": "Singular Noun",
+          "definition_en": null,
+          "pron_fa": "estexrɑʤ"
+        }
+      ]
+    },
+    "و ق ع": {
+      "root_best_rank": 91.0,
+      "derivatives": [
+        {
+          "lemma_fa": "واقع",
+          "pos": "Adjective",
+          "definition_en": "indeed",
+          "pron_fa": "vɑɢeʔ"
+        },
+        {
+          "lemma_fa": "موقع",
+          "pos": "Singular Noun",
+          "definition_en": "time",
+          "pron_fa": "mowɢeʔ"
+        },
+        {
+          "lemma_fa": "واقعیت",
+          "pos": "Singular Noun",
+          "definition_en": "reality",
+          "pron_fa": "vɑɢeʔijjæt"
+        },
+        {
+          "lemma_fa": "وقوع",
+          "pos": "Singular Noun",
+          "definition_en": "occurrence",
+          "pron_fa": "voɢuʔ"
+        },
+        {
+          "lemma_fa": "واقعه",
+          "pos": "Singular Noun",
+          "definition_en": null,
+          "pron_fa": "vɑɢeæh, vɑɢeʔæh"
+        }
+      ]
+    },
+    "ن ف ر": {
+      "root_best_rank": 92.0,
+      "derivatives": [
+        {
+          "lemma_fa": "نفر",
+          "pos": "Singular Noun",
+          "definition_en": "person",
+          "pron_fa": "næfær"
+        },
+        {
+          "lemma_fa": "نفره",
+          "pos": "Singular Noun",
+          "definition_en": "people",
+          "pron_fa": null
+        },
+        {
+          "lemma_fa": "نفرت",
+          "pos": "Singular Noun",
+          "definition_en": "hate",
+          "pron_fa": "næfræt"
+        }
+      ]
+    },
+    "د و م": {
+      "root_best_rank": 93.0,
+      "derivatives": [
+        {
+          "lemma_fa": "ادامه",
+          "pos": "Singular Noun",
+          "definition_en": "continuation",
+          "pron_fa": "edɑme"
+        },
+        {
+          "lemma_fa": "دام",
+          "pos": "Singular Noun",
+          "definition_en": "trap",
+          "pron_fa": "dɑm, dɑʔmæ"
+        },
+        {
+          "lemma_fa": "دوام",
+          "pos": "Singular Noun",
+          "definition_en": null,
+          "pron_fa": "dævɑm"
+        }
+      ]
+    },
+    "ح ض ر": {
+      "root_best_rank": 98.0,
+      "derivatives": [
+        {
+          "lemma_fa": "حضور",
+          "pos": "Singular Noun",
+          "definition_en": "presence",
+          "pron_fa": "hozur"
+        },
+        {
+          "lemma_fa": "حاضر",
+          "pos": "Adjective",
+          "definition_en": "present",
+          "pron_fa": "hɑzer"
+        },
+        {
+          "lemma_fa": "حضرت",
+          "pos": "Singular Noun",
+          "definition_en": "holiness",
+          "pron_fa": "hæzræt"
+        },
+        {
+          "lemma_fa": "حضر",
+          "pos": null,
+          "definition_en": null,
+          "pron_fa": "hæzær"
+        },
+        {
+          "lemma_fa": "احضار",
+          "pos": "Singular Noun",
+          "definition_en": null,
+          "pron_fa": "ehzɑr"
+        }
+      ]
+    },
+    "ن ظ ر": {
+      "root_best_rank": 99.0,
+      "derivatives": [
+        {
+          "lemma_fa": "نظر",
+          "pos": "Singular Noun",
+          "definition_en": "opinion",
+          "pron_fa": "næzær"
+        },
+        {
+          "lemma_fa": "منظور",
+          "pos": "Singular Noun",
+          "definition_en": "purpose",
+          "pron_fa": "mænʔzur"
+        },
+        {
+          "lemma_fa": "انتظار",
+          "pos": "Singular Noun",
+          "definition_en": "expectation",
+          "pron_fa": "entezɑr"
+        },
+        {
+          "lemma_fa": "نظارت",
+          "pos": "Singular Noun",
+          "definition_en": "supervision",
+          "pron_fa": "næzɑræt"
+        },
+        {
+          "lemma_fa": "ناظر",
+          "pos": "Adjective/Singular Noun",
+          "definition_en": "supervisor",
+          "pron_fa": "nɑzer"
+        }
+      ]
+    },
+    "ج د د": {
+      "root_best_rank": 104.0,
+      "derivatives": [
+        {
+          "lemma_fa": "جدید",
+          "pos": "Adjective",
+          "definition_en": "new",
+          "pron_fa": "ʤædid"
+        },
+        {
+          "lemma_fa": "جدی",
+          "pos": "Adjective",
+          "definition_en": "serious",
+          "pron_fa": "ʤæddi"
+        },
+        {
+          "lemma_fa": "جدا",
+          "pos": "Adjective",
+          "definition_en": "separate",
+          "pron_fa": "ʤodɑ, ʤeddæn"
+        },
+        {
+          "lemma_fa": "مجدد",
+          "pos": "Adjective",
+          "definition_en": "further",
+          "pron_fa": "moʤædʔdæd"
+        },
+        {
+          "lemma_fa": "جدیت",
+          "pos": "Singular Noun",
+          "definition_en": null,
+          "pron_fa": "ʤeddijæt"
+        }
+      ]
+    },
+    "و ر د": {
+      "root_best_rank": 106.0,
+      "derivatives": [
+        {
+          "lemma_fa": "مورد",
+          "pos": "Singular Noun",
+          "definition_en": "case",
+          "pron_fa": "mored"
+        },
+        {
+          "lemma_fa": "وارد",
+          "pos": "Adjective/Singular Noun/Preposition",
+          "definition_en": "enter",
+          "pron_fa": "vɑred"
+        },
+        {
+          "lemma_fa": "ورود",
+          "pos": "Singular Noun",
+          "definition_en": "entry",
+          "pron_fa": "vorud"
+        }
+      ]
+    },
+    "م ل ل": {
+      "root_best_rank": 110.0,
+      "derivatives": [
+        {
+          "lemma_fa": "ملی",
+          "pos": "Adjective",
+          "definition_en": "national",
+          "pron_fa": "melli"
+        },
+        {
+          "lemma_fa": "ملت",
+          "pos": "Singular Noun",
+          "definition_en": "nation",
+          "pron_fa": "mellæt"
+        },
+        {
+          "lemma_fa": "ملل",
+          "pos": "Plural Noun",
+          "definition_en": "nations",
+          "pron_fa": "melæl"
+        }
+      ]
+    },
+    "ش ر ک": {
+      "root_best_rank": 115.0,
+      "derivatives": [
+        {
+          "lemma_fa": "شرکت",
+          "pos": "Singular Noun",
+          "definition_en": "company",
+          "pron_fa": "ʃerkæt"
+        },
+        {
+          "lemma_fa": "مشترک",
+          "pos": "Adjective",
+          "definition_en": "common",
+          "pron_fa": "moʃtæræk"
+        },
+        {
+          "lemma_fa": "مشارکت",
+          "pos": "Singular Noun",
+          "definition_en": "partnership",
+          "pron_fa": "moʃɑrækæt"
+        },
+        {
+          "lemma_fa": "شریک",
+          "pos": "Singular Noun/Adjective",
+          "definition_en": "partner",
+          "pron_fa": "ʃærik"
+        },
+        {
+          "lemma_fa": "اشتراک",
+          "pos": "Singular Noun",
+          "definition_en": null,
+          "pron_fa": "eʃterɑk"
+        }
+      ]
+    },
+    "و ض ع": {
+      "root_best_rank": 131.0,
+      "derivatives": [
+        {
+          "lemma_fa": "وضع",
+          "pos": "Singular Noun",
+          "definition_en": "status",
+          "pron_fa": "væzʔ"
+        },
+        {
+          "lemma_fa": "موضوع",
+          "pos": "Singular Noun",
+          "definition_en": "topic",
+          "pron_fa": "mowzuʔ"
+        },
+        {
+          "lemma_fa": "موضع",
+          "pos": "Singular Noun",
+          "definition_en": "position",
+          "pron_fa": "mowzeʔ"
+        }
+      ]
+    },
+    "و ج ه": {
+      "root_best_rank": 132.0,
+      "derivatives": [
+        {
+          "lemma_fa": "توجه",
+          "pos": "Singular Noun",
+          "definition_en": "attention",
+          "pron_fa": "tævæʤʤoh"
+        },
+        {
+          "lemma_fa": "جهت",
+          "pos": "Singular Noun/Preposition",
+          "definition_en": "direction",
+          "pron_fa": "ʤehæt"
+        },
+        {
+          "lemma_fa": "مواجه",
+          "pos": "Adjective",
+          "definition_en": "encountering",
+          "pron_fa": "movɑʔʤeh"
+        },
+        {
+          "lemma_fa": "متوجه",
+          "pos": "Adjective/Singular Noun",
+          "definition_en": "notice",
+          "pron_fa": "motæʔvæʤʤeh"
+        },
+        {
+          "lemma_fa": "وجه",
+          "pos": "Singular Noun",
+          "definition_en": "payment",
+          "pron_fa": "væʤh"
+        }
+      ]
+    },
+    "ش ه ر": {
+      "root_best_rank": 134.0,
+      "derivatives": [
+        {
+          "lemma_fa": "شهر",
+          "pos": "Singular Noun",
+          "definition_en": "city",
+          "pron_fa": "ʃæhr"
+        },
+        {
+          "lemma_fa": "مشهور",
+          "pos": "Adjective",
+          "definition_en": "famous",
+          "pron_fa": "mæʃʔhur"
+        },
+        {
+          "lemma_fa": "شهرت",
+          "pos": "Singular Noun",
+          "definition_en": null,
+          "pron_fa": "ʃohræt"
+        },
+        {
+          "lemma_fa": "شهره",
+          "pos": "Adjective/Singular Noun/Singular Proper Noun",
+          "definition_en": "sh",
+          "pron_fa": "ʃohreh"
+        }
+      ]
+    },
+    "و ج د": {
+      "root_best_rank": 137.0,
+      "derivatives": [
+        {
+          "lemma_fa": "وجود",
+          "pos": "Singular Noun",
+          "definition_en": "existence",
+          "pron_fa": "voʤud"
+        },
+        {
+          "lemma_fa": "موجود",
+          "pos": "Adjective",
+          "definition_en": "available",
+          "pron_fa": "mowʔʤud"
+        },
+        {
+          "lemma_fa": "واجد",
+          "pos": "Adjective",
+          "definition_en": null,
+          "pron_fa": "vɑʤed"
+        }
+      ]
+    },
+    "ه م م": {
+      "root_best_rank": 139.0,
+      "derivatives": [
+        {
+          "lemma_fa": "مهم",
+          "pos": "Adjective/Singular Noun",
+          "definition_en": "important",
+          "pron_fa": "mohem"
+        },
+        {
+          "lemma_fa": "اهمیت",
+          "pos": "Singular Noun",
+          "definition_en": "importance",
+          "pron_fa": "ɑhæmmijjæt"
+        },
+        {
+          "lemma_fa": "همت",
+          "pos": "Singular Noun",
+          "definition_en": "thanks",
+          "pron_fa": "hemmæt"
+        },
+        {
+          "lemma_fa": "هام",
+          "pos": "Singular Proper Noun",
+          "definition_en": null,
+          "pron_fa": "ha:mm"
+        },
+        {
+          "lemma_fa": "همام",
+          "pos": "Adjective",
+          "definition_en": "hammam",
+          "pron_fa": "homɑm"
+        }
+      ]
+    },
+    "غ ر ب": {
+      "root_best_rank": 141.0,
+      "derivatives": [
+        {
+          "lemma_fa": "غرب",
+          "pos": "Singular Noun/Singular Proper Noun",
+          "definition_en": "west",
+          "pron_fa": "ɢærb"
+        },
+        {
+          "lemma_fa": "مغرب",
+          "pos": "Singular Noun/Singular Proper Noun",
+          "definition_en": null,
+          "pron_fa": "mæɢreb"
+        },
+        {
+          "lemma_fa": "غروب",
+          "pos": "Singular Noun",
+          "definition_en": null,
+          "pron_fa": "ɢorub"
+        }
+      ]
+    },
+    "ش ک ل": {
+      "root_best_rank": 146.0,
+      "derivatives": [
+        {
+          "lemma_fa": "مشکل",
+          "pos": "Singular Noun/Adjective",
+          "definition_en": "problem",
+          "pron_fa": "moʃkel"
+        },
+        {
+          "lemma_fa": "تشکیل",
+          "pos": "Singular Noun",
+          "definition_en": "formation",
+          "pron_fa": "tæʃkil"
+        },
+        {
+          "lemma_fa": "شکل",
+          "pos": "Singular Noun",
+          "definition_en": "shape",
+          "pron_fa": "ʃækl"
+        },
+        {
+          "lemma_fa": "اشکال",
+          "pos": "Plural Noun/Singular Noun",
+          "definition_en": "difficulty",
+          "pron_fa": "eʃkɑl, æʃkɑl"
+        },
+        {
+          "lemma_fa": "تشکل",
+          "pos": "Singular Noun",
+          "definition_en": "association",
+          "pron_fa": "tæʃækkol"
+        }
+      ]
+    },
+    "ق د م": {
+      "root_best_rank": 155.0,
+      "derivatives": [
+        {
+          "lemma_fa": "اقدام",
+          "pos": "Singular Noun",
+          "definition_en": "action",
+          "pron_fa": "eɢdɑm, æɢdɑm"
+        },
+        {
+          "lemma_fa": "مقدمه",
+          "pos": "Singular Noun",
+          "definition_en": "introduction",
+          "pron_fa": "moɢæddæme"
+        },
+        {
+          "lemma_fa": "قدم",
+          "pos": "Singular Noun",
+          "definition_en": "step",
+          "pron_fa": "ɢædæm, ɢedæm"
+        },
+        {
+          "lemma_fa": "مقدم",
+          "pos": "Adjective/Singular Proper Noun/Singular Noun",
+          "definition_en": null,
+          "pron_fa": "moɢæddæm, mæɢdæm"
+        }
+      ]
+    },
+    "ن خ ب": {
+      "root_best_rank": 157.0,
+      "derivatives": [
+        {
+          "lemma_fa": "انتخاب",
+          "pos": "Singular Noun",
+          "definition_en": "selection",
+          "pron_fa": "entexɑb"
+        },
+        {
+          "lemma_fa": "نخبه",
+          "pos": "Adjective/Singular Noun",
+          "definition_en": "elite",
+          "pron_fa": "noxbæh"
+        },
+        {
+          "lemma_fa": "منتخب",
+          "pos": "Singular Noun/Adjective",
+          "definition_en": null,
+          "pron_fa": "montæʔxæb, montæʔxeb"
+        }
+      ]
+    },
+    "س ر ر": {
+      "root_best_rank": 158.0,
+      "derivatives": [
+        {
+          "lemma_fa": "سر",
+          "pos": "Singular Noun",
+          "definition_en": "head",
+          "pron_fa": "sær, ser"
+        },
+        {
+          "lemma_fa": "سره",
+          "pos": "Singular Noun/Adjective",
+          "definition_en": "pure",
+          "pron_fa": "særeh"
+        },
+        {
+          "lemma_fa": "سرور",
+          "pos": "Singular Noun/Singular Proper Noun",
+          "definition_en": null,
+          "pron_fa": "sorur, særvær"
+        }
+      ]
+    },
+    "ب ی ن": {
+      "root_best_rank": 160.0,
+      "derivatives": [
+        {
+          "lemma_fa": "بین",
+          "pos": "Preposition/Singular Noun",
+          "definition_en": "between",
+          "pron_fa": "bejn"
+        },
+        {
+          "lemma_fa": "بیان",
+          "pos": "Singular Noun",
+          "definition_en": "expression",
+          "pron_fa": "bæjɑn"
+        },
+        {
+          "lemma_fa": "بینی",
+          "pos": "Singular Noun/Verb Subjunctive",
+          "definition_en": "nose",
+          "pron_fa": "bini"
+        },
+        {
+          "lemma_fa": "تبیین",
+          "pos": "Singular Noun",
+          "definition_en": null,
+          "pron_fa": "tæbʔjin"
+        },
+        {
+          "lemma_fa": "بان",
+          "pos": null,
+          "definition_en": null,
+          "pron_fa": "bɑn"
+        }
+      ]
+    },
+    "ا م ن": {
+      "root_best_rank": 162.0,
+      "derivatives": [
+        {
+          "lemma_fa": "امنیت",
+          "pos": "Singular Noun",
+          "definition_en": "security",
+          "pron_fa": "æmnijæt"
+        },
+        {
+          "lemma_fa": "امن",
+          "pos": "Adjective",
+          "definition_en": "safe",
+          "pron_fa": "æmn, æmen"
+        },
+        {
+          "lemma_fa": "امان",
+          "pos": "Singular Proper Noun/Singular Noun",
+          "definition_en": "mercy",
+          "pron_fa": "æmɑn"
+        }
+      ]
+    },
+    "ح د د": {
+      "root_best_rank": 167.0,
+      "derivatives": [
+        {
+          "lemma_fa": "حد",
+          "pos": "Singular Noun",
+          "definition_en": "limit",
+          "pron_fa": "hædd"
+        },
+        {
+          "lemma_fa": "حدود",
+          "pos": "Quantifier/Plural Noun",
+          "definition_en": "range",
+          "pron_fa": "hodud"
+        },
+        {
+          "lemma_fa": "محدود",
+          "pos": "Adjective",
+          "definition_en": "limited",
+          "pron_fa": "mæhdud"
+        },
+        {
+          "lemma_fa": "محدودیت",
+          "pos": "Singular Noun",
+          "definition_en": "restriction",
+          "pron_fa": null
+        },
+        {
+          "lemma_fa": "حداد",
+          "pos": "Singular Proper Noun",
+          "definition_en": null,
+          "pron_fa": "hæddɑd"
+        }
+      ]
+    },
+    "ف ی د": {
+      "root_best_rank": 168.0,
+      "derivatives": [
+        {
+          "lemma_fa": "استفاده",
+          "pos": "Singular Noun",
+          "definition_en": "use",
+          "pron_fa": "estefɑde"
+        },
+        {
+          "lemma_fa": "مفید",
+          "pos": "Adjective",
+          "definition_en": "useful",
+          "pron_fa": "mofid"
+        },
+        {
+          "lemma_fa": "مفاد",
+          "pos": "Plural Noun",
+          "definition_en": null,
+          "pron_fa": "mofɑd"
+        }
+      ]
+    },
+    "ت م م": {
+      "root_best_rank": 171.0,
+      "derivatives": [
+        {
+          "lemma_fa": "تمام",
+          "pos": "Quantifier/Adjective",
+          "definition_en": "whole, all",
+          "pron_fa": "tæmɑm"
+        },
+        {
+          "lemma_fa": "تم",
+          "pos": "Singular Noun",
+          "definition_en": "themes",
+          "pron_fa": "tæmʔmæ"
+        },
+        {
+          "lemma_fa": "اتمام",
+          "pos": "Singular Noun",
+          "definition_en": null,
+          "pron_fa": "etmɑm"
+        },
+        {
+          "lemma_fa": "تام",
+          "pos": "Singular Proper Noun/Adjective",
+          "definition_en": null,
+          "pron_fa": "tɑm"
+        }
+      ]
+    },
+    "ا م ر": {
+      "root_best_rank": 174.0,
+      "derivatives": [
+        {
+          "lemma_fa": "امر",
+          "pos": "Singular Noun",
+          "definition_en": "affair",
+          "pron_fa": "æmr"
+        },
+        {
+          "lemma_fa": "امار",
+          "pos": null,
+          "definition_en": "statistics",
+          "pron_fa": "ɑmɑr"
+        },
+        {
+          "lemma_fa": "مامور",
+          "pos": "Singular Noun",
+          "definition_en": "officer",
+          "pron_fa": "mɑʔmur"
+        }
+      ]
+    },
+    "ق و م": {
+      "root_best_rank": 175.0,
+      "derivatives": [
+        {
+          "lemma_fa": "مقام",
+          "pos": "Singular Noun",
+          "definition_en": "position",
+          "pron_fa": "mæɢɑm"
+        },
+        {
+          "lemma_fa": "قیمت",
+          "pos": "Singular Noun",
+          "definition_en": "price",
+          "pron_fa": "ɢimæt"
+        },
+        {
+          "lemma_fa": "مقاومت",
+          "pos": "Singular Noun",
+          "definition_en": "resistance",
+          "pron_fa": "moɢɑvæmæt"
+        },
+        {
+          "lemma_fa": "اقامت",
+          "pos": "Singular Noun",
+          "definition_en": "stay",
+          "pron_fa": "eɢɑmæt"
+        },
+        {
+          "lemma_fa": "قوم",
+          "pos": "Singular Noun",
+          "definition_en": "people",
+          "pron_fa": "ɢowm"
+        }
+      ]
+    },
+    "خ ل ف": {
+      "root_best_rank": 179.0,
+      "derivatives": [
+        {
+          "lemma_fa": "مختلف",
+          "pos": "Adjective",
+          "definition_en": "different",
+          "pron_fa": "moxtælef"
+        },
+        {
+          "lemma_fa": "مخالف",
+          "pos": "Adjective/Singular Noun",
+          "definition_en": "against",
+          "pron_fa": "moxɑlef"
+        },
+        {
+          "lemma_fa": "اختلاف",
+          "pos": "Singular Noun",
+          "definition_en": "difference",
+          "pron_fa": "extelɑf"
+        },
+        {
+          "lemma_fa": "خلیفه",
+          "pos": "Singular Noun/Singular Proper Noun",
+          "definition_en": "caliph",
+          "pron_fa": "xælife"
+        },
+        {
+          "lemma_fa": "خلاف",
+          "pos": "Singular Noun/Adjective",
+          "definition_en": "unlike",
+          "pron_fa": "xelɑf"
+        }
+      ]
+    },
+    "خ ص ص": {
+      "root_best_rank": 202.0,
+      "derivatives": [
+        {
+          "lemma_fa": "خصوص",
+          "pos": "Singular Noun",
+          "definition_en": "about",
+          "pron_fa": "xosus"
+        },
+        {
+          "lemma_fa": "خاص",
+          "pos": "Adjective/Singular Noun",
+          "definition_en": "specific",
+          "pron_fa": "xɑss"
+        },
+        {
+          "lemma_fa": "اختصاص",
+          "pos": "Singular Noun",
+          "definition_en": "allocation",
+          "pron_fa": "extesɑs"
+        },
+        {
+          "lemma_fa": "متخصص",
+          "pos": "Adjective/Singular Noun",
+          "definition_en": "expert",
+          "pron_fa": "motæʔxæsses"
+        },
+        {
+          "lemma_fa": "تخصص",
+          "pos": "Singular Noun",
+          "definition_en": "specialization",
+          "pron_fa": "tæxæssos"
+        }
+      ]
+    },
+    "ع ل ل": {
+      "root_best_rank": 205.0,
+      "derivatives": [
+        {
+          "lemma_fa": "علیه",
+          "pos": "Preposition/Singular Noun",
+          "definition_en": "against",
+          "pron_fa": "ælejh"
+        },
+        {
+          "lemma_fa": "علت",
+          "pos": "Singular Noun",
+          "definition_en": "reason",
+          "pron_fa": "ʔellæt"
+        },
+        {
+          "lemma_fa": "معلول",
+          "pos": "Adjective/Singular Noun",
+          "definition_en": null,
+          "pron_fa": "mæʔʔlul"
+        }
+      ]
+    },
+    "ق ل ب": {
+      "root_best_rank": 209.0,
+      "derivatives": [
+        {
+          "lemma_fa": "انقلاب",
+          "pos": "Singular Noun",
+          "definition_en": "revolution",
+          "pron_fa": "enɢelɑb"
+        },
+        {
+          "lemma_fa": "قالب",
+          "pos": "Singular Noun",
+          "definition_en": "format",
+          "pron_fa": "ɢɑleb"
+        },
+        {
+          "lemma_fa": "قلب",
+          "pos": "Singular Noun",
+          "definition_en": "heart",
+          "pron_fa": "ɢælb"
+        },
+        {
+          "lemma_fa": "تقلب",
+          "pos": "Singular Noun",
+          "definition_en": null,
+          "pron_fa": "tæɢællob"
+        }
+      ]
+    },
+    "ق ب ل": {
+      "root_best_rank": 216.0,
+      "derivatives": [
+        {
+          "lemma_fa": "قبل",
+          "pos": "Singular Noun/Adjective",
+          "definition_en": "before",
+          "pron_fa": "ɢæbl"
+        },
+        {
+          "lemma_fa": "مقابل",
+          "pos": "Singular Noun/Preposition/Adjective",
+          "definition_en": "opposite",
+          "pron_fa": "moɢɑbel"
+        },
+        {
+          "lemma_fa": "قابل",
+          "pos": "Adjective",
+          "definition_en": "available",
+          "pron_fa": "ɢɑbel"
+        },
+        {
+          "lemma_fa": "مقابله",
+          "pos": "Singular Noun",
+          "definition_en": "confronting",
+          "pron_fa": "moɢɑbele"
+        },
+        {
+          "lemma_fa": "قبول",
+          "pos": "Adjective/Singular Noun",
+          "definition_en": "accept",
+          "pron_fa": "ɢæbul"
+        }
+      ]
+    },
+    "ف ک ر": {
+      "root_best_rank": 225.0,
+      "derivatives": [
+        {
+          "lemma_fa": "فکر",
+          "pos": "Singular Noun",
+          "definition_en": "thought",
+          "pron_fa": "fekr"
+        },
+        {
+          "lemma_fa": "فکری",
+          "pos": "Adjective/Singular Noun/Singular Proper Noun",
+          "definition_en": "intellectual",
+          "pron_fa": "fekri"
+        },
+        {
+          "lemma_fa": "تفکر",
+          "pos": "Singular Noun",
+          "definition_en": "thinking",
+          "pron_fa": "tæfækkor"
+        }
+      ]
+    },
+    "ر ق ب": {
+      "root_best_rank": 227.0,
+      "derivatives": [
+        {
+          "lemma_fa": "رقابت",
+          "pos": "Singular Noun",
+          "definition_en": "competition",
+          "pron_fa": "ræɢɑbæt"
+        },
+        {
+          "lemma_fa": "مراقبت",
+          "pos": "Singular Noun",
+          "definition_en": null,
+          "pron_fa": "morɑʔɢæbæt"
+        },
+        {
+          "lemma_fa": "مراقب",
+          "pos": "Singular Noun/Adjective",
+          "definition_en": null,
+          "pron_fa": "morɑʔɢeb"
+        }
+      ]
+    },
+    "خ د م": {
+      "root_best_rank": 242.0,
+      "derivatives": [
+        {
+          "lemma_fa": "خدمت",
+          "pos": "Singular Noun",
+          "definition_en": "service",
+          "pron_fa": "xedmæt"
+        },
+        {
+          "lemma_fa": "استخدام",
+          "pos": "Singular Noun",
+          "definition_en": "employment",
+          "pron_fa": "estexdɑm"
+        },
+        {
+          "lemma_fa": "خدام",
+          "pos": null,
+          "definition_en": null,
+          "pron_fa": "xudda:m"
+        }
+      ]
+    },
+    "م د د": {
+      "root_best_rank": 252.0,
+      "derivatives": [
+        {
+          "lemma_fa": "مدت",
+          "pos": "Singular Noun",
+          "definition_en": "term",
+          "pron_fa": "moddæt"
+        },
+        {
+          "lemma_fa": "ماده",
+          "pos": "Singular Noun",
+          "definition_en": "article",
+          "pron_fa": "mɑdeh"
+        },
+        {
+          "lemma_fa": "مد",
+          "pos": "Singular Noun",
+          "definition_en": "fashion",
+          "pron_fa": "mædd, med, mod"
+        },
+        {
+          "lemma_fa": "امداد",
+          "pos": "Singular Noun",
+          "definition_en": null,
+          "pron_fa": "emdɑd"
+        }
+      ]
+    },
+    "د و ر": {
+      "root_best_rank": 255.0,
+      "derivatives": [
+        {
+          "lemma_fa": "دور",
+          "pos": "Singular Noun/Adjective",
+          "definition_en": "away",
+          "pron_fa": "dowr, dur"
+        },
+        {
+          "lemma_fa": "دوره",
+          "pos": "Singular Noun",
+          "definition_en": "period",
+          "pron_fa": "dowre"
+        },
+        {
+          "lemma_fa": "دوران",
+          "pos": "Singular Noun/Plural Noun",
+          "definition_en": "era",
+          "pron_fa": "dæværɑn"
+        },
+        {
+          "lemma_fa": "اداره",
+          "pos": "Singular Noun",
+          "definition_en": "office",
+          "pron_fa": "edɑre"
+        },
+        {
+          "lemma_fa": "داور",
+          "pos": "Singular Noun",
+          "definition_en": "referee",
+          "pron_fa": "dɑvær"
+        }
+      ]
+    },
+    "س ب ق": {
+      "root_best_rank": 260.0,
+      "derivatives": [
+        {
+          "lemma_fa": "مسابقه",
+          "pos": "Singular Noun",
+          "definition_en": "competition",
+          "pron_fa": "mosɑbeɢe"
+        },
+        {
+          "lemma_fa": "سابق",
+          "pos": "Adjective",
+          "definition_en": "former",
+          "pron_fa": "sɑbeɢ"
+        },
+        {
+          "lemma_fa": "سابقه",
+          "pos": "Singular Noun",
+          "definition_en": "history",
+          "pron_fa": "sɑbeɢeh"
+        }
+      ]
+    },
+    "ق د ر": {
+      "root_best_rank": 271.0,
+      "derivatives": [
+        {
+          "lemma_fa": "قدرت",
+          "pos": "Singular Noun",
+          "definition_en": "power",
+          "pron_fa": "ɢodræt"
+        },
+        {
+          "lemma_fa": "قدر",
+          "pos": "Singular Noun",
+          "definition_en": "magnitude",
+          "pron_fa": "ɢædr, ɢædær"
+        },
+        {
+          "lemma_fa": "مقدار",
+          "pos": "Singular Noun",
+          "definition_en": "amount",
+          "pron_fa": "meɢdɑr, meɢʔdɑr"
+        },
+        {
+          "lemma_fa": "قادر",
+          "pos": "Adjective",
+          "definition_en": "able",
+          "pron_fa": "ɢɑder"
+        },
+        {
+          "lemma_fa": "اقتدار",
+          "pos": "Singular Noun",
+          "definition_en": "power",
+          "pron_fa": "eɢtedɑr"
+        }
+      ]
+    },
+    "ح م ل": {
+      "root_best_rank": 274.0,
+      "derivatives": [
+        {
+          "lemma_fa": "حمله",
+          "pos": "Singular Noun",
+          "definition_en": "attack",
+          "pron_fa": "hæmle"
+        },
+        {
+          "lemma_fa": "احتمال",
+          "pos": "Singular Noun",
+          "definition_en": "probability",
+          "pron_fa": "ehtemɑl"
+        },
+        {
+          "lemma_fa": "حمل",
+          "pos": "Singular Noun",
+          "definition_en": "shipping",
+          "pron_fa": "hæml, hæmæl, heml"
+        },
+        {
+          "lemma_fa": "تحمل",
+          "pos": "Singular Noun",
+          "definition_en": "tolerance",
+          "pron_fa": "tæhæmmol"
+        },
+        {
+          "lemma_fa": "حامل",
+          "pos": "Singular Noun/Adjective",
+          "definition_en": null,
+          "pron_fa": "hɑmel"
+        }
+      ]
+    },
+    "س ء ل": {
+      "root_best_rank": 275.0,
+      "derivatives": [
+        {
+          "lemma_fa": "مساله",
+          "pos": "Singular Noun",
+          "definition_en": "issue",
+          "pron_fa": "mæsʔæle"
+        },
+        {
+          "lemma_fa": "مسئول",
+          "pos": null,
+          "definition_en": "responsible",
+          "pron_fa": "mæsʔul"
+        },
+        {
+          "lemma_fa": "مسئله",
+          "pos": "Singular Proper Noun",
+          "definition_en": "problem",
+          "pron_fa": "mæsʔæle"
+        },
+        {
+          "lemma_fa": "مسئولیت",
+          "pos": null,
+          "definition_en": "disclaimer",
+          "pron_fa": "mæsʔulijjæt"
+        },
+        {
+          "lemma_fa": "مسأله",
+          "pos": null,
+          "definition_en": null,
+          "pron_fa": null
+        }
+      ]
+    },
+    "ر ب ط": {
+      "root_best_rank": 279.0,
+      "derivatives": [
+        {
+          "lemma_fa": "رابطه",
+          "pos": "Singular Noun",
+          "definition_en": "relation",
+          "pron_fa": "rɑbete"
+        },
+        {
+          "lemma_fa": "ارتباط",
+          "pos": "Singular Noun",
+          "definition_en": "relationship",
+          "pron_fa": "ertebɑt"
+        },
+        {
+          "lemma_fa": "مربوط",
+          "pos": "Adjective",
+          "definition_en": "related",
+          "pron_fa": "mærbut"
+        },
+        {
+          "lemma_fa": "مرتبط",
+          "pos": "Adjective",
+          "definition_en": "linked",
+          "pron_fa": "mortæbet"
+        },
+        {
+          "lemma_fa": "ربط",
+          "pos": "Singular Noun",
+          "definition_en": "relevance",
+          "pron_fa": "ræbt"
+        }
+      ]
+    },
+    "ک م ل": {
+      "root_best_rank": 287.0,
+      "derivatives": [
+        {
+          "lemma_fa": "کامل",
+          "pos": "Adjective",
+          "definition_en": "complete",
+          "pron_fa": "kɑmel"
+        },
+        {
+          "lemma_fa": "تکمیل",
+          "pos": "Singular Noun",
+          "definition_en": "completion",
+          "pron_fa": "tækmil"
+        },
+        {
+          "lemma_fa": "کمال",
+          "pos": "Singular Proper Noun/Singular Noun",
+          "definition_en": "perfection",
+          "pron_fa": "kæmɑl"
+        },
+        {
+          "lemma_fa": "تکامل",
+          "pos": "Singular Noun",
+          "definition_en": null,
+          "pron_fa": "tækɑmol"
+        }
+      ]
+    },
+    "ش و ر": {
+      "root_best_rank": 288.0,
+      "derivatives": [
+        {
+          "lemma_fa": "اشاره",
+          "pos": "Singular Noun",
+          "definition_en": "indicate",
+          "pron_fa": "eʃɑre"
+        },
+        {
+          "lemma_fa": "مشاور",
+          "pos": "Singular Noun/Adjective",
+          "definition_en": "consultant",
+          "pron_fa": "moʃɑver"
+        },
+        {
+          "lemma_fa": "شور",
+          "pos": "Adjective/Singular Noun/Singular Proper Noun",
+          "definition_en": "passion",
+          "pron_fa": "ʃur, ʃowr"
+        },
+        {
+          "lemma_fa": "مشورت",
+          "pos": "Singular Noun",
+          "definition_en": "consultation",
+          "pron_fa": "mæʃværæt"
+        },
+        {
+          "lemma_fa": "مشاوره",
+          "pos": "Singular Noun",
+          "definition_en": null,
+          "pron_fa": "moʃɑvere"
+        }
+      ]
+    },
+    "ع م ل": {
+      "root_best_rank": 295.0,
+      "derivatives": [
+        {
+          "lemma_fa": "عمل",
+          "pos": "Singular Noun",
+          "definition_en": "action",
+          "pron_fa": "ʔæmæl"
+        },
+        {
+          "lemma_fa": "عامل",
+          "pos": "Singular Noun",
+          "definition_en": "factor",
+          "pron_fa": "ɑmel"
+        },
+        {
+          "lemma_fa": "معمول",
+          "pos": "Adjective",
+          "definition_en": "usual",
+          "pron_fa": "mæʔʔmul"
+        },
+        {
+          "lemma_fa": "معامله",
+          "pos": "Singular Noun",
+          "definition_en": "transaction",
+          "pron_fa": "moʔɑmele"
+        },
+        {
+          "lemma_fa": "تعامل",
+          "pos": "Singular Noun",
+          "definition_en": "interaction",
+          "pron_fa": null
+        }
+      ]
+    },
+    "ع ر ض": {
+      "root_best_rank": 301.0,
+      "derivatives": [
+        {
+          "lemma_fa": "اعتراض",
+          "pos": "Singular Noun",
+          "definition_en": "protest",
+          "pron_fa": "eʔterɑz"
+        },
+        {
+          "lemma_fa": "عرض",
+          "pos": "Singular Noun",
+          "definition_en": "width",
+          "pron_fa": "ʔæræz, ʔærz"
+        },
+        {
+          "lemma_fa": "معترض",
+          "pos": "Adjective",
+          "definition_en": "objecting",
+          "pron_fa": "moʔtærez"
+        },
+        {
+          "lemma_fa": "عرضه",
+          "pos": "Singular Noun",
+          "definition_en": "offer",
+          "pron_fa": "ærzeh, orzeh"
+        },
+        {
+          "lemma_fa": "معرض",
+          "pos": "Singular Noun",
+          "definition_en": null,
+          "pron_fa": "mæʔræz"
+        }
+      ]
+    },
+    "و ح د": {
+      "root_best_rank": 304.0,
+      "derivatives": [
+        {
+          "lemma_fa": "اتحادیه",
+          "pos": "Singular Noun",
+          "definition_en": "union",
+          "pron_fa": "ettehɑdije"
+        },
+        {
+          "lemma_fa": "واحد",
+          "pos": "Singular Noun/Adjective",
+          "definition_en": "unit",
+          "pron_fa": "vɑhed"
+        },
+        {
+          "lemma_fa": "متحد",
+          "pos": "Adjective",
+          "definition_en": "united, ally",
+          "pron_fa": "mottæhed"
+        },
+        {
+          "lemma_fa": "وحدت",
+          "pos": "Singular Noun",
+          "definition_en": "unity",
+          "pron_fa": "væhdæt"
+        },
+        {
+          "lemma_fa": "اتحاد",
+          "pos": "Singular Noun",
+          "definition_en": "alliance",
+          "pron_fa": "ettehɑd"
+        }
+      ]
+    },
+    "س و ی": {
+      "root_best_rank": 308.0,
+      "derivatives": [
+        {
+          "lemma_fa": "سوی",
+          "pos": "Singular Noun",
+          "definition_en": "towards",
+          "pron_fa": "suj, sævi"
+        },
+        {
+          "lemma_fa": "مساوی",
+          "pos": "Adjective",
+          "definition_en": "equal",
+          "pron_fa": "mosɑvi"
+        },
+        {
+          "lemma_fa": "تساوی",
+          "pos": "Singular Noun",
+          "definition_en": "equality",
+          "pron_fa": "tæsɑvi"
+        }
+      ]
+    },
+    "ن س ب": {
+      "root_best_rank": 317.0,
+      "derivatives": [
+        {
+          "lemma_fa": "نسبت",
+          "pos": "Singular Noun",
+          "definition_en": "relation",
+          "pron_fa": "nesbæt"
+        },
+        {
+          "lemma_fa": "مناسب",
+          "pos": "Adjective",
+          "definition_en": "appropriate",
+          "pron_fa": "monɑseb"
+        },
+        {
+          "lemma_fa": "مناسبت",
+          "pos": "Singular Noun",
+          "definition_en": "events",
+          "pron_fa": "monɑsebæt"
+        },
+        {
+          "lemma_fa": "متناسب",
+          "pos": "Adjective",
+          "definition_en": null,
+          "pron_fa": "motænɑʔseb"
+        },
+        {
+          "lemma_fa": "تناسب",
+          "pos": "Singular Noun",
+          "definition_en": null,
+          "pron_fa": "tænɑsob"
+        }
+      ]
+    },
+    "س ف ر": {
+      "root_best_rank": 320.0,
+      "derivatives": [
+        {
+          "lemma_fa": "سفر",
+          "pos": "Singular Noun",
+          "definition_en": "travel",
+          "pron_fa": "sæfær"
+        },
+        {
+          "lemma_fa": "سفارت",
+          "pos": "Singular Noun",
+          "definition_en": "embassy",
+          "pron_fa": "sefɑræt"
+        },
+        {
+          "lemma_fa": "مسافرت",
+          "pos": "Singular Noun",
+          "definition_en": "travel",
+          "pron_fa": "mosɑferæt"
+        },
+        {
+          "lemma_fa": "مسافر",
+          "pos": "Singular Noun",
+          "definition_en": "passenger",
+          "pron_fa": "mosɑʔfer"
+        },
+        {
+          "lemma_fa": "سفره",
+          "pos": "Singular Noun",
+          "definition_en": "table",
+          "pron_fa": "sofreh"
+        }
+      ]
+    },
+    "ح م د": {
+      "root_best_rank": 321.0,
+      "derivatives": [
+        {
+          "lemma_fa": "محمد",
+          "pos": "Singular Proper Noun",
+          "definition_en": "Mohammad",
+          "pron_fa": "mohæmmæd"
+        },
+        {
+          "lemma_fa": "احمد",
+          "pos": "Singular Proper Noun",
+          "definition_en": "Ahmad",
+          "pron_fa": "ɑhmæd"
+        },
+        {
+          "lemma_fa": "محمود",
+          "pos": "Singular Proper Noun",
+          "definition_en": "Mahmoud",
+          "pron_fa": "mæhmud"
+        },
+        {
+          "lemma_fa": "حامد",
+          "pos": "Singular Proper Noun",
+          "definition_en": null,
+          "pron_fa": "hɑmed"
+        }
+      ]
+    },
+    "ش ر ع": {
+      "root_best_rank": 322.0,
+      "derivatives": [
+        {
+          "lemma_fa": "شروع",
+          "pos": "Singular Noun",
+          "definition_en": "start",
+          "pron_fa": "ʃoruʔ"
+        },
+        {
+          "lemma_fa": "مشروع",
+          "pos": "Adjective",
+          "definition_en": null,
+          "pron_fa": "mæʃʔruʔ"
+        },
+        {
+          "lemma_fa": "شریعت",
+          "pos": "Singular Noun",
+          "definition_en": null,
+          "pron_fa": "ʃæriʔæt"
+        }
+      ]
+    },
+    "ج ن ب": {
+      "root_best_rank": 323.0,
+      "derivatives": [
+        {
+          "lemma_fa": "جنوب",
+          "pos": "Singular Noun",
+          "definition_en": "south",
+          "pron_fa": "ʤonub"
+        },
+        {
+          "lemma_fa": "جناب",
+          "pos": "Singular Noun",
+          "definition_en": "excellency",
+          "pron_fa": "ʤænɑb"
+        },
+        {
+          "lemma_fa": "جانب",
+          "pos": "Singular Noun",
+          "definition_en": null,
+          "pron_fa": "ʤɑneb"
+        },
+        {
+          "lemma_fa": "جنبه",
+          "pos": "Singular Noun",
+          "definition_en": "aspects",
+          "pron_fa": "ʤæmbeh"
+        },
+        {
+          "lemma_fa": "اجتناب",
+          "pos": "Singular Noun",
+          "definition_en": null,
+          "pron_fa": "eʤtenɑb"
+        }
+      ]
+    },
+    "ق ه ر": {
+      "root_best_rank": 325.0,
+      "derivatives": [
+        {
+          "lemma_fa": "قهرمان",
+          "pos": "Singular Noun/Adjective",
+          "definition_en": "champion",
+          "pron_fa": "ɢæhremɑn"
+        },
+        {
+          "lemma_fa": "قاهره",
+          "pos": "Singular Proper Noun/Adjective",
+          "definition_en": "Cairo",
+          "pron_fa": "ɢɑhere"
+        },
+        {
+          "lemma_fa": "قهر",
+          "pos": "Singular Noun",
+          "definition_en": "wrath",
+          "pron_fa": "ɢæhr"
+        }
+      ]
+    },
+    "ج م ع": {
+      "root_best_rank": 327.0,
+      "derivatives": [
+        {
+          "lemma_fa": "جامعه",
+          "pos": "Singular Noun",
+          "definition_en": "society",
+          "pron_fa": "ʤɑmeʔe"
+        },
+        {
+          "lemma_fa": "جمع",
+          "pos": "Singular Noun",
+          "definition_en": "sum",
+          "pron_fa": "ʤæmʔ"
+        },
+        {
+          "lemma_fa": "جمعه",
+          "pos": "Singular Noun",
+          "definition_en": "friday",
+          "pron_fa": "ʤomʔeh"
+        },
+        {
+          "lemma_fa": "جمعیت",
+          "pos": "Singular Noun",
+          "definition_en": "population",
+          "pron_fa": "ʤæmʔijjæt"
+        },
+        {
+          "lemma_fa": "مجموعه",
+          "pos": "Singular Noun",
+          "definition_en": "collection",
+          "pron_fa": "mæʤʔmuʔæh"
+        }
+      ]
+    },
+    "ظ ه ر": {
+      "root_best_rank": 330.0,
+      "derivatives": [
+        {
+          "lemma_fa": "تظاهرات",
+          "pos": "Singular Noun/Plural Noun",
+          "definition_en": "protests",
+          "pron_fa": "tæzɑhorɑt"
+        },
+        {
+          "lemma_fa": "اظهار",
+          "pos": "Singular Noun",
+          "definition_en": "statement",
+          "pron_fa": "ezhɑr, æzhɑr"
+        },
+        {
+          "lemma_fa": "ظاهر",
+          "pos": "Singular Noun",
+          "definition_en": "appearance",
+          "pron_fa": "zɑher"
+        },
+        {
+          "lemma_fa": "ظهر",
+          "pos": "Singular Noun",
+          "definition_en": "noon",
+          "pron_fa": "zohr, zæhr"
+        },
+        {
+          "lemma_fa": "ظهور",
+          "pos": "Singular Noun",
+          "definition_en": null,
+          "pron_fa": "zohur"
+        }
+      ]
+    },
+    "و ف ق": {
+      "root_best_rank": 333.0,
+      "derivatives": [
+        {
+          "lemma_fa": "توافق",
+          "pos": "Singular Noun",
+          "definition_en": "agreement",
+          "pron_fa": "tævɑfoɢ"
+        },
+        {
+          "lemma_fa": "اتفاق",
+          "pos": "Singular Noun",
+          "definition_en": "event",
+          "pron_fa": "ettefɑɢ"
+        },
+        {
+          "lemma_fa": "موفق",
+          "pos": "Adjective",
+          "definition_en": "successful",
+          "pron_fa": "movæffæɢ"
+        },
+        {
+          "lemma_fa": "موافق",
+          "pos": "Adjective/Singular Noun",
+          "definition_en": "compliant",
+          "pron_fa": "movɑʔfeɢ"
+        }
+      ]
+    },
+    "ح ر ف": {
+      "root_best_rank": 347.0,
+      "derivatives": [
+        {
+          "lemma_fa": "حرف",
+          "pos": "Singular Noun",
+          "definition_en": "letter",
+          "pron_fa": "hærf"
+        },
+        {
+          "lemma_fa": "حرفه",
+          "pos": "Singular Noun",
+          "definition_en": "profession",
+          "pron_fa": "herfeh"
+        },
+        {
+          "lemma_fa": "انحراف",
+          "pos": "Singular Noun",
+          "definition_en": "deviation",
+          "pron_fa": "enherɑf"
+        }
+      ]
+    },
+    "ک ل ل": {
+      "root_best_rank": 348.0,
+      "derivatives": [
+        {
+          "lemma_fa": "کل",
+          "pos": "Singular Noun/Quantifier",
+          "definition_en": "total",
+          "pron_fa": "kæl, kol"
+        },
+        {
+          "lemma_fa": "کلی",
+          "pos": "Adjective",
+          "definition_en": "general",
+          "pron_fa": "kæli, koli, kolli"
+        },
+        {
+          "lemma_fa": "کلیه",
+          "pos": "Quantifier/Singular Noun",
+          "definition_en": "kidney",
+          "pron_fa": "kolʔjæh, kollijjæh"
+        },
+        {
+          "lemma_fa": "کلیت",
+          "pos": "Singular Noun",
+          "definition_en": null,
+          "pron_fa": "kollijʔjæt"
+        },
+        {
+          "lemma_fa": "کله",
+          "pos": "Singular Noun/Singular Proper Noun",
+          "definition_en": "head",
+          "pron_fa": "kæleh, kælleh, kolæh, kolleh"
+        }
+      ]
+    },
+    "ص ح ب": {
+      "root_best_rank": 352.0,
+      "derivatives": [
+        {
+          "lemma_fa": "صحبت",
+          "pos": "Singular Noun",
+          "definition_en": "talk",
+          "pron_fa": "sohbæt"
+        },
+        {
+          "lemma_fa": "صاحب",
+          "pos": "Singular Noun",
+          "definition_en": "master",
+          "pron_fa": "sɑheb"
+        },
+        {
+          "lemma_fa": "مصاحبه",
+          "pos": "Singular Noun",
+          "definition_en": null,
+          "pron_fa": "mosɑʔhæbæh"
+        }
+      ]
+    },
+    "ن ق ش": {
+      "root_best_rank": 361.0,
+      "derivatives": [
+        {
+          "lemma_fa": "نقش",
+          "pos": "Singular Noun",
+          "definition_en": "role",
+          "pron_fa": "næɢʃ"
+        },
+        {
+          "lemma_fa": "نقاش",
+          "pos": "Singular Noun/Adjective",
+          "definition_en": "painter",
+          "pron_fa": "næɢɢɑʃ"
+        },
+        {
+          "lemma_fa": "مناقشه",
+          "pos": "Singular Noun",
+          "definition_en": null,
+          "pron_fa": "monɑɢæʔʃæh"
+        }
+      ]
+    },
+    "ط ل ع": {
+      "root_best_rank": 374.0,
+      "derivatives": [
+        {
+          "lemma_fa": "اطلاع",
+          "pos": "Singular Noun",
+          "definition_en": "information",
+          "pron_fa": "ettelɑʔ"
+        },
+        {
+          "lemma_fa": "مطالعه",
+          "pos": "Singular Noun",
+          "definition_en": "study",
+          "pron_fa": "motɑleʔe"
+        },
+        {
+          "lemma_fa": "مطلع",
+          "pos": "Adjective/Singular Noun",
+          "definition_en": null,
+          "pron_fa": "mætlæʔ, mottæleʔ"
+        }
+      ]
+    },
+    "ش م ل": {
+      "root_best_rank": 380.0,
+      "derivatives": [
+        {
+          "lemma_fa": "شمال",
+          "pos": "Singular Noun",
+          "definition_en": "north",
+          "pron_fa": "ʃomɑl"
+        },
+        {
+          "lemma_fa": "شامل",
+          "pos": "Adjective",
+          "definition_en": "included",
+          "pron_fa": "ʃɑmel"
+        },
+        {
+          "lemma_fa": "مشمول",
+          "pos": "Adjective/Singular Noun",
+          "definition_en": null,
+          "pron_fa": "mæʃʔmul"
+        }
+      ]
+    },
+    "غ ی ر": {
+      "root_best_rank": 384.0,
+      "derivatives": [
+        {
+          "lemma_fa": "غیر",
+          "pos": "Singular Noun",
+          "definition_en": "other",
+          "pron_fa": "ɢejr"
+        },
+        {
+          "lemma_fa": "تغییر",
+          "pos": "Singular Noun",
+          "definition_en": "change",
+          "pron_fa": "tæɢʔjir"
+        },
+        {
+          "lemma_fa": "غیره",
+          "pos": "Singular Noun/Adjective",
+          "definition_en": "etc",
+          "pron_fa": "ɢejreh"
+        },
+        {
+          "lemma_fa": "مغایر",
+          "pos": "Adjective",
+          "definition_en": null,
+          "pron_fa": "mæɢɑjer, moɢɑʔjer"
+        }
+      ]
+    },
+    "ع د د": {
+      "root_best_rank": 397.0,
+      "derivatives": [
+        {
+          "lemma_fa": "تعداد",
+          "pos": "Singular Noun",
+          "definition_en": "number",
+          "pron_fa": "tæʔdɑd"
+        },
+        {
+          "lemma_fa": "عده",
+          "pos": "Singular Noun",
+          "definition_en": "number",
+          "pron_fa": "oddeh, eddeh"
+        },
+        {
+          "lemma_fa": "متعدد",
+          "pos": "Adjective",
+          "definition_en": "multiple",
+          "pron_fa": "motæʔædded"
+        },
+        {
+          "lemma_fa": "استعداد",
+          "pos": "Singular Noun",
+          "definition_en": null,
+          "pron_fa": "esteʔdɑd"
+        },
+        {
+          "lemma_fa": "عدد",
+          "pos": "Singular Noun",
+          "definition_en": "number",
+          "pron_fa": "ɑdæd, odæd"
+        }
+      ]
+    },
+    "و س ط": {
+      "root_best_rank": 419.0,
+      "derivatives": [
+        {
+          "lemma_fa": "توسط",
+          "pos": "Preposition",
+          "definition_en": "by",
+          "pron_fa": "tævæssot"
+        },
+        {
+          "lemma_fa": "وسط",
+          "pos": "Singular Noun",
+          "definition_en": "middle",
+          "pron_fa": "væsæt"
+        },
+        {
+          "lemma_fa": "متوسط",
+          "pos": "Adjective/Singular Noun",
+          "definition_en": "average",
+          "pron_fa": "motævæsset"
+        },
+        {
+          "lemma_fa": "واسطه",
+          "pos": "Singular Noun",
+          "definition_en": "intermediate",
+          "pron_fa": "vɑsetæh"
+        },
+        {
+          "lemma_fa": "اوسط",
+          "pos": "Plural Noun",
+          "definition_en": null,
+          "pron_fa": "owsæt"
+        }
+      ]
+    },
+    "ن و ع": {
+      "root_best_rank": 423.0,
+      "derivatives": [
+        {
+          "lemma_fa": "نوع",
+          "pos": "Singular Noun",
+          "definition_en": "type",
+          "pron_fa": "nowʔ"
+        },
+        {
+          "lemma_fa": "تنوع",
+          "pos": "Singular Noun",
+          "definition_en": "diversity",
+          "pron_fa": "tænævvoʔ"
+        },
+        {
+          "lemma_fa": "متنوع",
+          "pos": "Adjective",
+          "definition_en": null,
+          "pron_fa": "motænævveʔ"
+        }
+      ]
+    },
+    "ح ر ک": {
+      "root_best_rank": 439.0,
+      "derivatives": [
+        {
+          "lemma_fa": "حرکت",
+          "pos": "Singular Noun",
+          "definition_en": "move",
+          "pron_fa": "hærækæt"
+        },
+        {
+          "lemma_fa": "تحریک",
+          "pos": "Singular Noun",
+          "definition_en": null,
+          "pron_fa": "tæhrik"
+        },
+        {
+          "lemma_fa": "تحرک",
+          "pos": "Singular Noun",
+          "definition_en": null,
+          "pron_fa": "taharruk"
+        }
+      ]
+    },
+    "ح ک م": {
+      "root_best_rank": 446.0,
+      "derivatives": [
+        {
+          "lemma_fa": "حکومت",
+          "pos": "Singular Noun",
+          "definition_en": "government",
+          "pron_fa": "hokumæt"
+        },
+        {
+          "lemma_fa": "حاکم",
+          "pos": "Singular Noun/Adjective",
+          "definition_en": "governor",
+          "pron_fa": "hɑkem"
+        },
+        {
+          "lemma_fa": "محکوم",
+          "pos": "Adjective",
+          "definition_en": "sentenced",
+          "pron_fa": "mæhʔkum"
+        },
+        {
+          "lemma_fa": "حاکمیت",
+          "pos": "Singular Noun",
+          "definition_en": "rule",
+          "pron_fa": "hɑkemijjæt"
+        },
+        {
+          "lemma_fa": "محاکمه",
+          "pos": "Singular Noun",
+          "definition_en": "trial",
+          "pron_fa": "mohɑkeme"
+        }
+      ]
+    },
+    "س ی ر": {
+      "root_best_rank": 448.0,
+      "derivatives": [
+        {
+          "lemma_fa": "مسیر",
+          "pos": "Singular Noun",
+          "definition_en": "route",
+          "pron_fa": "mæsir"
+        },
+        {
+          "lemma_fa": "سایر",
+          "pos": "Singular Noun",
+          "definition_en": "other",
+          "pron_fa": "sɑjer"
+        },
+        {
+          "lemma_fa": "سیر",
+          "pos": "Singular Noun/Adjective",
+          "definition_en": null,
+          "pron_fa": "sir, sejr, siær"
+        }
+      ]
+    },
+    "ح ل ل": {
+      "root_best_rank": 452.0,
+      "derivatives": [
+        {
+          "lemma_fa": "حل",
+          "pos": "Singular Noun",
+          "definition_en": "solution",
+          "pron_fa": "hæll"
+        },
+        {
+          "lemma_fa": "محل",
+          "pos": "Singular Noun",
+          "definition_en": "location",
+          "pron_fa": "mæhæl"
+        },
+        {
+          "lemma_fa": "محله",
+          "pos": "Singular Noun",
+          "definition_en": "district",
+          "pron_fa": "mæhælæh"
+        },
+        {
+          "lemma_fa": "انحلال",
+          "pos": "Singular Noun",
+          "definition_en": null,
+          "pron_fa": "enhelɑl"
+        }
+      ]
+    },
+    "ب ر ز": {
+      "root_best_rank": 473.0,
+      "derivatives": [
+        {
+          "lemma_fa": "مبارزه",
+          "pos": "Singular Noun",
+          "definition_en": "struggle",
+          "pron_fa": "mobɑrezeh"
+        },
+        {
+          "lemma_fa": "ابراز",
+          "pos": "Singular Noun",
+          "definition_en": "expression",
+          "pron_fa": "ebrɑz"
+        },
+        {
+          "lemma_fa": "مبارز",
+          "pos": "Adjective",
+          "definition_en": "warrior",
+          "pron_fa": "mobɑrez"
+        },
+        {
+          "lemma_fa": "بارز",
+          "pos": "Adjective/Singular Proper Noun",
+          "definition_en": null,
+          "pron_fa": "bɑrez"
+        }
+      ]
+    },
+    "ح ق ق": {
+      "root_best_rank": 488.0,
+      "derivatives": [
+        {
+          "lemma_fa": "حق",
+          "pos": "Singular Noun",
+          "definition_en": "right",
+          "pron_fa": "hæɢ"
+        },
+        {
+          "lemma_fa": "حقیقت",
+          "pos": "Singular Noun",
+          "definition_en": "truth",
+          "pron_fa": "hæɢiɢæt"
+        },
+        {
+          "lemma_fa": "تحقق",
+          "pos": "Singular Noun",
+          "definition_en": "realization",
+          "pron_fa": "tæhæɢɢoɢ"
+        },
+        {
+          "lemma_fa": "محقق",
+          "pos": "Singular Noun/Adjective/Singular Proper Noun",
+          "definition_en": "scholar",
+          "pron_fa": "mohæɢɢeɢ"
+        }
+      ]
+    },
+    "ر ش د": {
+      "root_best_rank": 491.0,
+      "derivatives": [
+        {
+          "lemma_fa": "رشد",
+          "pos": "Singular Noun",
+          "definition_en": "growth",
+          "pron_fa": "roʃd"
+        },
+        {
+          "lemma_fa": "ارشد",
+          "pos": "Adjective",
+          "definition_en": null,
+          "pron_fa": "ærʃæd"
+        },
+        {
+          "lemma_fa": "ارشاد",
+          "pos": "Singular Noun",
+          "definition_en": null,
+          "pron_fa": "erʃɑd"
+        }
+      ]
+    },
+    "د ف ع": {
+      "root_best_rank": 499.0,
+      "derivatives": [
+        {
+          "lemma_fa": "دفاع",
+          "pos": "Singular Noun",
+          "definition_en": "defense",
+          "pron_fa": "defɑʔ"
+        },
+        {
+          "lemma_fa": "دفعه",
+          "pos": "Singular Noun/Plural Noun",
+          "definition_en": "time",
+          "pron_fa": "dæfʔeh"
+        },
+        {
+          "lemma_fa": "مدافع",
+          "pos": "Adjective/Singular Noun",
+          "definition_en": "advocate",
+          "pron_fa": "modɑʔfeʔ"
+        }
+      ]
+    },
+    "خ ل ص": {
+      "root_best_rank": 503.0,
+      "derivatives": [
+        {
+          "lemma_fa": "خلاصه",
+          "pos": "Adjective/Singular Noun",
+          "definition_en": "summary",
+          "pron_fa": "xolɑseh"
+        },
+        {
+          "lemma_fa": "خالص",
+          "pos": "Adjective",
+          "definition_en": null,
+          "pron_fa": "xɑles"
+        },
+        {
+          "lemma_fa": "مخلص",
+          "pos": "Adjective/Singular Noun",
+          "definition_en": "sincere",
+          "pron_fa": "mæxlæs, moxles, moxælles"
+        }
+      ]
+    },
+    "ص ل ح": {
+      "root_best_rank": 513.0,
+      "derivatives": [
+        {
+          "lemma_fa": "اصلاح",
+          "pos": "Singular Noun",
+          "definition_en": "correction",
+          "pron_fa": "eslɑh"
+        },
+        {
+          "lemma_fa": "صلح",
+          "pos": "Singular Noun",
+          "definition_en": "peace",
+          "pron_fa": "solh"
+        },
+        {
+          "lemma_fa": "اصطلاح",
+          "pos": "Singular Noun",
+          "definition_en": "expression",
+          "pron_fa": "estelɑh"
+        },
+        {
+          "lemma_fa": "صالح",
+          "pos": "Singular Proper Noun/Adjective",
+          "definition_en": "righteous",
+          "pron_fa": "sɑleh"
+        },
+        {
+          "lemma_fa": "صلاح",
+          "pos": "Singular Noun",
+          "definition_en": "salah",
+          "pron_fa": "sælɑh"
+        }
+      ]
+    },
+    "ل ز م": {
+      "root_best_rank": 518.0,
+      "derivatives": [
+        {
+          "lemma_fa": "لازم",
+          "pos": "Adjective",
+          "definition_en": "necessary",
+          "pron_fa": "lɑzem"
+        },
+        {
+          "lemma_fa": "لزوم",
+          "pos": "Singular Noun",
+          "definition_en": "need",
+          "pron_fa": "lozum"
+        },
+        {
+          "lemma_fa": "لازمه",
+          "pos": "Singular Noun/Adjective",
+          "definition_en": "requisite",
+          "pron_fa": "lɑzemæh"
+        }
+      ]
+    },
+    "ح س ب": {
+      "root_best_rank": 524.0,
+      "derivatives": [
+        {
+          "lemma_fa": "حساب",
+          "pos": "Singular Noun",
+          "definition_en": "account",
+          "pron_fa": "hesɑb"
+        },
+        {
+          "lemma_fa": "محسوب",
+          "pos": "Adjective",
+          "definition_en": "considered",
+          "pron_fa": "mæhsub"
+        },
+        {
+          "lemma_fa": "محاسبه",
+          "pos": "Singular Noun",
+          "definition_en": "calculation",
+          "pron_fa": "mohɑsebæh"
+        },
+        {
+          "lemma_fa": "حسب",
+          "pos": "Singular Noun",
+          "definition_en": null,
+          "pron_fa": "hæsb, hæsæb"
+        }
+      ]
+    },
+    "خ ی ر": {
+      "root_best_rank": 533.0,
+      "derivatives": [
+        {
+          "lemma_fa": "اختیار",
+          "pos": "Singular Noun",
+          "definition_en": "authority",
+          "pron_fa": "extiɑr"
+        },
+        {
+          "lemma_fa": "خیر",
+          "pos": "Singular Noun/Adverb/Adjective",
+          "definition_en": "good",
+          "pron_fa": "xejr, xæjjer"
+        },
+        {
+          "lemma_fa": "خیریه",
+          "pos": "Adjective",
+          "definition_en": null,
+          "pron_fa": "xejrijjeh"
+        },
+        {
+          "lemma_fa": "خیره",
+          "pos": "Adjective/Adverb",
+          "definition_en": null,
+          "pron_fa": "xireh"
+        },
+        {
+          "lemma_fa": "مختار",
+          "pos": "Adjective/Singular Proper Noun",
+          "definition_en": null,
+          "pron_fa": "moxʔtɑr"
+        }
+      ]
+    },
+    "ش ه د": {
+      "root_best_rank": 544.0,
+      "derivatives": [
+        {
+          "lemma_fa": "شاهد",
+          "pos": "Singular Noun/Adjective",
+          "definition_en": "witness",
+          "pron_fa": "ʃɑhed"
+        },
+        {
+          "lemma_fa": "شهادت",
+          "pos": "Singular Noun",
+          "definition_en": "testimony",
+          "pron_fa": "ʃæhɑdæt"
+        },
+        {
+          "lemma_fa": "مشاهده",
+          "pos": "Singular Noun",
+          "definition_en": "observation",
+          "pron_fa": "moʃɑhede"
+        },
+        {
+          "lemma_fa": "مشهد",
+          "pos": "Singular Proper Noun",
+          "definition_en": "mashhad",
+          "pron_fa": "mæʃʔhæd"
+        }
+      ]
+    },
+    "ع ک س": {
+      "root_best_rank": 549.0,
+      "derivatives": [
+        {
+          "lemma_fa": "عکس",
+          "pos": "Singular Noun/Adjective",
+          "definition_en": "photo",
+          "pron_fa": "æks"
+        },
+        {
+          "lemma_fa": "عکسی",
+          "pos": "Singular Noun",
+          "definition_en": null,
+          "pron_fa": "ɑksi"
+        },
+        {
+          "lemma_fa": "انعکاس",
+          "pos": "Singular Noun",
+          "definition_en": null,
+          "pron_fa": "enʔekɑs"
+        },
+        {
+          "lemma_fa": "منعکس",
+          "pos": "Adjective",
+          "definition_en": null,
+          "pron_fa": "monʔækes"
+        },
+        {
+          "lemma_fa": "معکوس",
+          "pos": "Adjective",
+          "definition_en": null,
+          "pron_fa": "mæʔkus"
+        }
+      ]
+    },
+    "ک ت ب": {
+      "root_best_rank": 552.0,
+      "derivatives": [
+        {
+          "lemma_fa": "کتاب",
+          "pos": "Singular Noun",
+          "definition_en": "book",
+          "pron_fa": "ketɑb"
+        },
+        {
+          "lemma_fa": "کتابخانه",
+          "pos": "Singular Noun",
+          "definition_en": "library",
+          "pron_fa": "ketɑbʔxɑneh"
+        },
+        {
+          "lemma_fa": "کتابی",
+          "pos": "Singular Noun/Adjective",
+          "definition_en": "book",
+          "pron_fa": "ketɑb bi"
+        },
+        {
+          "lemma_fa": "مکتب",
+          "pos": "Singular Noun",
+          "definition_en": null,
+          "pron_fa": "mæktæb"
+        }
+      ]
+    },
+    "ع ق د": {
+      "root_best_rank": 576.0,
+      "derivatives": [
+        {
+          "lemma_fa": "معتقد",
+          "pos": "Adjective",
+          "definition_en": "believing",
+          "pron_fa": "moʔtæɢed"
+        },
+        {
+          "lemma_fa": "اعتقاد",
+          "pos": "Singular Noun",
+          "definition_en": "belief",
+          "pron_fa": "eʔteɢɑd"
+        },
+        {
+          "lemma_fa": "عقیده",
+          "pos": "Singular Noun",
+          "definition_en": "view",
+          "pron_fa": "æɢideh"
+        },
+        {
+          "lemma_fa": "عقد",
+          "pos": "Singular Noun",
+          "definition_en": "contract",
+          "pron_fa": "æɢd, eɢd, oɢæd"
+        }
+      ]
+    },
+    "ج و ز": {
+      "root_best_rank": 578.0,
+      "derivatives": [
+        {
+          "lemma_fa": "اجازه",
+          "pos": "Singular Noun",
+          "definition_en": "permit",
+          "pron_fa": "eʤɑzeh"
+        },
+        {
+          "lemma_fa": "مجاز",
+          "pos": "Adjective",
+          "definition_en": "allowed",
+          "pron_fa": "moʤɑz, mæʤɑz"
+        },
+        {
+          "lemma_fa": "تجاوز",
+          "pos": "Singular Noun",
+          "definition_en": "assault",
+          "pron_fa": "tæʤɑvoz"
+        },
+        {
+          "lemma_fa": "جواز",
+          "pos": "Singular Noun",
+          "definition_en": null,
+          "pron_fa": "ʤævɑz"
+        },
+        {
+          "lemma_fa": "متجاوز",
+          "pos": "Adjective/Singular Noun",
+          "definition_en": null,
+          "pron_fa": "motæʤɑvez"
+        }
+      ]
+    },
+    "ش خ ص": {
+      "root_best_rank": 589.0,
+      "derivatives": [
+        {
+          "lemma_fa": "مشخص",
+          "pos": "Adjective",
+          "definition_en": "specified",
+          "pron_fa": "moʃæxxæs"
+        },
+        {
+          "lemma_fa": "شاخص",
+          "pos": "Singular Noun/Adjective",
+          "definition_en": "index",
+          "pron_fa": "ʃɑxes"
+        },
+        {
+          "lemma_fa": "شخصیت",
+          "pos": "Singular Noun",
+          "definition_en": "character",
+          "pron_fa": "ʃæxsijjæt"
+        },
+        {
+          "lemma_fa": "شخص",
+          "pos": "Singular Noun",
+          "definition_en": "person",
+          "pron_fa": "ʃæxs"
+        },
+        {
+          "lemma_fa": "مشخصه",
+          "pos": "Singular Noun/Adjective",
+          "definition_en": "characteristic",
+          "pron_fa": "moʃæxʔxæsæh, moʃæxʔxesæh"
+        }
+      ]
+    },
+    "ع و ن": {
+      "root_best_rank": 595.0,
+      "derivatives": [
+        {
+          "lemma_fa": "معاون",
+          "pos": "Singular Noun",
+          "definition_en": "assistant",
+          "pron_fa": "moʔɑven"
+        },
+        {
+          "lemma_fa": "تعاون",
+          "pos": "Singular Noun",
+          "definition_en": null,
+          "pron_fa": "tæʔɑvon"
+        },
+        {
+          "lemma_fa": "معاونت",
+          "pos": "Singular Noun",
+          "definition_en": null,
+          "pron_fa": "moɑʔvænæt"
+        }
+      ]
+    },
+    "ر د د": {
+      "root_best_rank": 608.0,
+      "derivatives": [
+        {
+          "lemma_fa": "رده",
+          "pos": "Singular Noun",
+          "definition_en": "category",
+          "pron_fa": "ræde"
+        },
+        {
+          "lemma_fa": "رد",
+          "pos": "Singular Noun/Adjective",
+          "definition_en": "rejection",
+          "pron_fa": "rædd"
+        },
+        {
+          "lemma_fa": "تردد",
+          "pos": "Singular Noun",
+          "definition_en": null,
+          "pron_fa": "tæræddod"
+        }
+      ]
+    },
+    "م ی ز": {
+      "root_best_rank": 614.0,
+      "derivatives": [
+        {
+          "lemma_fa": "امتیاز",
+          "pos": "Singular Noun",
+          "definition_en": "point, privilege",
+          "pron_fa": "emtijɑz"
+        },
+        {
+          "lemma_fa": "میز",
+          "pos": "Singular Noun",
+          "definition_en": "table",
+          "pron_fa": "miz"
+        },
+        {
+          "lemma_fa": "تمیز",
+          "pos": "Adjective",
+          "definition_en": "clean",
+          "pron_fa": "tɑmiz"
+        },
+        {
+          "lemma_fa": "ممیز",
+          "pos": "Adjective/Singular Proper Noun/Singular Noun",
+          "definition_en": null,
+          "pron_fa": "momæjʔjez, momæjʔjæz"
+        },
+        {
+          "lemma_fa": "ممتاز",
+          "pos": "Adjective",
+          "definition_en": null,
+          "pron_fa": "momʔtɑz"
+        }
+      ]
+    },
+    "د ر س": {
+      "root_best_rank": 620.0,
+      "derivatives": [
+        {
+          "lemma_fa": "مدرسه",
+          "pos": "Singular Noun",
+          "definition_en": "school",
+          "pron_fa": "mædrese"
+        },
+        {
+          "lemma_fa": "درس",
+          "pos": "Singular Noun",
+          "definition_en": "lesson",
+          "pron_fa": "dærs"
+        },
+        {
+          "lemma_fa": "مدرس",
+          "pos": "Singular Noun/Singular Proper Noun",
+          "definition_en": "teacher",
+          "pron_fa": "modærʔres"
+        }
+      ]
+    },
+    "ف ص ل": {
+      "root_best_rank": 633.0,
+      "derivatives": [
+        {
+          "lemma_fa": "فصل",
+          "pos": "Singular Noun",
+          "definition_en": "season",
+          "pron_fa": "fæsl"
+        },
+        {
+          "lemma_fa": "فاصله",
+          "pos": "Singular Noun",
+          "definition_en": "distance",
+          "pron_fa": "fɑseleh"
+        },
+        {
+          "lemma_fa": "مفصل",
+          "pos": "Adjective/Singular Noun",
+          "definition_en": null,
+          "pron_fa": "mæfsel, mofæsʔsæl"
+        }
+      ]
+    },
+    "ص ر ف": {
+      "root_best_rank": 652.0,
+      "derivatives": [
+        {
+          "lemma_fa": "مصرف",
+          "pos": "Singular Noun",
+          "definition_en": "consumption",
+          "pron_fa": "mæsræf"
+        },
+        {
+          "lemma_fa": "صرف",
+          "pos": "Singular Noun/Adjective",
+          "definition_en": "spending",
+          "pron_fa": "særf, serf"
+        },
+        {
+          "lemma_fa": "تصرف",
+          "pos": "Singular Noun",
+          "definition_en": null,
+          "pron_fa": "tasarruf"
+        }
+      ]
+    },
+    "ق و ل": {
+      "root_best_rank": 662.0,
+      "derivatives": [
+        {
+          "lemma_fa": "قول",
+          "pos": "Singular Noun",
+          "definition_en": "promise",
+          "pron_fa": "ɢowl, ɢul"
+        },
+        {
+          "lemma_fa": "قائل",
+          "pos": "Singular Noun/Adjective",
+          "definition_en": "teller",
+          "pron_fa": "ɢɑʔel"
+        },
+        {
+          "lemma_fa": "مقوله",
+          "pos": "Singular Noun",
+          "definition_en": "category",
+          "pron_fa": "mæɢulæh"
+        }
+      ]
+    },
+    "ح ف ظ": {
+      "root_best_rank": 673.0,
+      "derivatives": [
+        {
+          "lemma_fa": "حفظ",
+          "pos": "Singular Noun",
+          "definition_en": "preservation",
+          "pron_fa": "hefz"
+        },
+        {
+          "lemma_fa": "حافظ",
+          "pos": "Singular Proper Noun/Singular Noun",
+          "definition_en": "keeper",
+          "pron_fa": "hæfez"
+        },
+        {
+          "lemma_fa": "محفوظ",
+          "pos": "Adjective",
+          "definition_en": null,
+          "pron_fa": "mæhʔfuz"
+        },
+        {
+          "lemma_fa": "محافظه",
+          "pos": "Singular Noun",
+          "definition_en": null,
+          "pron_fa": "mohɑfezæh"
+        },
+        {
+          "lemma_fa": "محافظت",
+          "pos": "Singular Noun",
+          "definition_en": null,
+          "pron_fa": "mohɑfezæt"
+        }
+      ]
+    },
+    "ص د ر": {
+      "root_best_rank": 674.0,
+      "derivatives": [
+        {
+          "lemma_fa": "صادر",
+          "pos": "Adjective/Singular Noun",
+          "definition_en": "issued",
+          "pron_fa": "sɑder"
+        },
+        {
+          "lemma_fa": "صدور",
+          "pos": "Singular Noun",
+          "definition_en": "issuance",
+          "pron_fa": "sodur"
+        },
+        {
+          "lemma_fa": "صدر",
+          "pos": "Singular Noun/Singular Proper Noun",
+          "definition_en": "top",
+          "pron_fa": "sædr"
+        },
+        {
+          "lemma_fa": "مصادره",
+          "pos": "Singular Noun",
+          "definition_en": null,
+          "pron_fa": "mosɑʔdæræh"
+        }
+      ]
+    },
+    "ح ر م": {
+      "root_best_rank": 685.0,
+      "derivatives": [
+        {
+          "lemma_fa": "محترم",
+          "pos": "Adjective",
+          "definition_en": "honorable",
+          "pron_fa": "mohtæræm"
+        },
+        {
+          "lemma_fa": "احترام",
+          "pos": "Singular Noun",
+          "definition_en": "respect",
+          "pron_fa": "ehterɑm"
+        },
+        {
+          "lemma_fa": "محروم",
+          "pos": "Adjective",
+          "definition_en": "deprived",
+          "pron_fa": "mæhʔrum"
+        },
+        {
+          "lemma_fa": "حرم",
+          "pos": "Singular Noun",
+          "definition_en": null,
+          "pron_fa": "hæræm, horom"
+        },
+        {
+          "lemma_fa": "محرم",
+          "pos": "Singular Noun/Adjective",
+          "definition_en": null,
+          "pron_fa": "mæhræm, mohærʔræm, mohærʔrem"
+        }
+      ]
+    },
+    "ق ط ع": {
+      "root_best_rank": 687.0,
+      "derivatives": [
+        {
+          "lemma_fa": "قطع",
+          "pos": "Singular Noun",
+          "definition_en": "cut",
+          "pron_fa": "ɢætʔ"
+        },
+        {
+          "lemma_fa": "قطعه",
+          "pos": "Singular Noun",
+          "definition_en": "piece",
+          "pron_fa": "ɢetʔæh"
+        },
+        {
+          "lemma_fa": "مقطع",
+          "pos": "Singular Noun",
+          "definition_en": "section",
+          "pron_fa": "moɢætʔtæʔ, mæɢtæʔ, moɢættæʔ"
+        },
+        {
+          "lemma_fa": "قاطع",
+          "pos": "Adjective",
+          "definition_en": null,
+          "pron_fa": "ɢɑteʔ"
+        }
+      ]
+    },
+    "ب ر ک": {
+      "root_best_rank": 688.0,
+      "derivatives": [
+        {
+          "lemma_fa": "مبارک",
+          "pos": "Adjective/Singular Proper Noun",
+          "definition_en": "blessed",
+          "pron_fa": "mobɑræk"
+        },
+        {
+          "lemma_fa": "تبریک",
+          "pos": "Singular Noun",
+          "definition_en": "congratulations",
+          "pron_fa": "tæbrik"
+        },
+        {
+          "lemma_fa": "بارک",
+          "pos": null,
+          "definition_en": "bark",
+          "pron_fa": "ba:rik"
+        }
+      ]
+    },
+    "ق ل ل": {
+      "root_best_rank": 691.0,
+      "derivatives": [
+        {
+          "lemma_fa": "استقلال",
+          "pos": "Singular Noun/Singular Proper Noun",
+          "definition_en": "independence",
+          "pron_fa": "esteɢlɑl"
+        },
+        {
+          "lemma_fa": "مستقل",
+          "pos": "Adjective",
+          "definition_en": "independent",
+          "pron_fa": "mostæʔɢell"
+        },
+        {
+          "lemma_fa": "قله",
+          "pos": "Singular Noun",
+          "definition_en": null,
+          "pron_fa": "ɢolleh"
+        },
+        {
+          "lemma_fa": "اقلیت",
+          "pos": "Plural Noun",
+          "definition_en": null,
+          "pron_fa": null
+        }
+      ]
+    },
+    "ق س م": {
+      "root_best_rank": 714.0,
+      "derivatives": [
+        {
+          "lemma_fa": "قسمت",
+          "pos": "Singular Noun",
+          "definition_en": "section",
+          "pron_fa": "ɢesmæt"
+        },
+        {
+          "lemma_fa": "قاسم",
+          "pos": "Singular Proper Noun",
+          "definition_en": "Qassem",
+          "pron_fa": "ɢɑsem"
+        },
+        {
+          "lemma_fa": "قسم",
+          "pos": "Singular Noun",
+          "definition_en": "sort",
+          "pron_fa": "ɢæsæm, ɢesm, ɢesæm"
+        }
+      ]
+    },
+    "ح ص ل": {
+      "root_best_rank": 743.0,
+      "derivatives": [
+        {
+          "lemma_fa": "محصول",
+          "pos": "Singular Noun",
+          "definition_en": "product",
+          "pron_fa": "mæhʔsul"
+        },
+        {
+          "lemma_fa": "حاصل",
+          "pos": "Singular Noun/Adjective",
+          "definition_en": "result",
+          "pron_fa": "hɑsel"
+        },
+        {
+          "lemma_fa": "حوصله",
+          "pos": "Singular Noun",
+          "definition_en": "mood",
+          "pron_fa": "howseleh"
+        }
+      ]
+    },
+    "د ل ل": {
+      "root_best_rank": 749.0,
+      "derivatives": [
+        {
+          "lemma_fa": "دل",
+          "pos": "Singular Noun",
+          "definition_en": "heart",
+          "pron_fa": "del"
+        },
+        {
+          "lemma_fa": "مدل",
+          "pos": "Singular Noun",
+          "definition_en": "model",
+          "pron_fa": "modell"
+        },
+        {
+          "lemma_fa": "دال",
+          "pos": "Adjective/Singular Noun",
+          "definition_en": null,
+          "pron_fa": "dɑl, dɑll"
+        }
+      ]
+    },
+    "ن ق ل": {
+      "root_best_rank": 756.0,
+      "derivatives": [
+        {
+          "lemma_fa": "انتقال",
+          "pos": "Singular Noun",
+          "definition_en": "transfer",
+          "pron_fa": "enteɢɑl"
+        },
+        {
+          "lemma_fa": "نقل",
+          "pos": "Singular Noun",
+          "definition_en": null,
+          "pron_fa": "næɢl, noɢl"
+        },
+        {
+          "lemma_fa": "منتقل",
+          "pos": "Adjective",
+          "definition_en": "transferred",
+          "pron_fa": "montæɢel"
+        }
+      ]
+    },
+    "ع ی ن": {
+      "root_best_rank": 770.0,
+      "derivatives": [
+        {
+          "lemma_fa": "تعیین",
+          "pos": "Singular Noun",
+          "definition_en": "determination",
+          "pron_fa": "tæʔjin"
+        },
+        {
+          "lemma_fa": "عین",
+          "pos": "Singular Noun",
+          "definition_en": "same",
+          "pron_fa": "ʔaʤn"
+        },
+        {
+          "lemma_fa": "عینی",
+          "pos": "Adjective",
+          "definition_en": null,
+          "pron_fa": "ejni"
+        }
+      ]
+    },
+    "ن ق د": {
+      "root_best_rank": 777.0,
+      "derivatives": [
+        {
+          "lemma_fa": "انتقاد",
+          "pos": "Singular Noun",
+          "definition_en": "criticism",
+          "pron_fa": "enteɢɑd"
+        },
+        {
+          "lemma_fa": "نقد",
+          "pos": "Singular Noun/Adjective",
+          "definition_en": "review",
+          "pron_fa": "næɢd"
+        },
+        {
+          "lemma_fa": "منتقد",
+          "pos": "Adjective/Singular Noun",
+          "definition_en": null,
+          "pron_fa": "montæʔɢed"
+        }
+      ]
+    },
+    "ح س ن": {
+      "root_best_rank": 781.0,
+      "derivatives": [
+        {
+          "lemma_fa": "حسن",
+          "pos": "Singular Proper Noun/Singular Noun",
+          "definition_en": "Hassan, virtue",
+          "pron_fa": "hæsæn, hosn, hæssæn"
+        },
+        {
+          "lemma_fa": "محسن",
+          "pos": "Singular Proper Noun",
+          "definition_en": "Mohsen",
+          "pron_fa": "mohsen"
+        },
+        {
+          "lemma_fa": "احسان",
+          "pos": "Singular Proper Noun/Singular Noun",
+          "definition_en": null,
+          "pron_fa": "ehsɑn"
+        }
+      ]
+    },
+    "ب ن ی": {
+      "root_best_rank": 782.0,
+      "derivatives": [
+        {
+          "lemma_fa": "مبنی",
+          "pos": "Adjective",
+          "definition_en": "based",
+          "pron_fa": "mæbni"
+        },
+        {
+          "lemma_fa": "بنیان",
+          "pos": "Singular Noun",
+          "definition_en": null,
+          "pron_fa": "bonjɑn"
+        },
+        {
+          "lemma_fa": "بانی",
+          "pos": "Singular Noun",
+          "definition_en": null,
+          "pron_fa": "bɑni"
+        }
+      ]
+    },
+    "خ و ن": {
+      "root_best_rank": 795.0,
+      "derivatives": [
+        {
+          "lemma_fa": "خون",
+          "pos": "Singular Noun",
+          "definition_en": "blood",
+          "pron_fa": "xun"
+        },
+        {
+          "lemma_fa": "خان",
+          "pos": "Singular Noun",
+          "definition_en": "khan",
+          "pron_fa": "xɑn"
+        },
+        {
+          "lemma_fa": "خیانت",
+          "pos": "Singular Noun",
+          "definition_en": null,
+          "pron_fa": "xiɑnæt"
+        }
+      ]
+    },
+    "ح س س": {
+      "root_best_rank": 815.0,
+      "derivatives": [
+        {
+          "lemma_fa": "حس",
+          "pos": "Singular Noun",
+          "definition_en": "sense",
+          "pron_fa": "hess"
+        },
+        {
+          "lemma_fa": "حساس",
+          "pos": "Adjective",
+          "definition_en": "sensitive",
+          "pron_fa": "hæssɑs"
+        },
+        {
+          "lemma_fa": "احساس",
+          "pos": "Plural Noun",
+          "definition_en": "feeling",
+          "pron_fa": "ehsɑs"
+        },
+        {
+          "lemma_fa": "محسوس",
+          "pos": "Adjective",
+          "definition_en": null,
+          "pron_fa": "mæhsus"
+        }
+      ]
+    },
+    "ش غ ل": {
+      "root_best_rank": 865.0,
+      "derivatives": [
+        {
+          "lemma_fa": "مشغول",
+          "pos": "Adjective",
+          "definition_en": "engaged",
+          "pron_fa": "mæʃʔɢul"
+        },
+        {
+          "lemma_fa": "شغل",
+          "pos": "Singular Noun",
+          "definition_en": "job",
+          "pron_fa": "ʃoɢl"
+        },
+        {
+          "lemma_fa": "اشتغال",
+          "pos": "Singular Noun",
+          "definition_en": "occupation",
+          "pron_fa": "eʃteɢɑl"
+        },
+        {
+          "lemma_fa": "شاغل",
+          "pos": "Adjective",
+          "definition_en": null,
+          "pron_fa": "ʃɑʔɢel"
+        }
+      ]
+    },
+    "س و د": {
+      "root_best_rank": 880.0,
+      "derivatives": [
+        {
+          "lemma_fa": "سود",
+          "pos": "Singular Noun",
+          "definition_en": null,
+          "pron_fa": "sud"
+        },
+        {
+          "lemma_fa": "سودان",
+          "pos": "Singular Proper Noun",
+          "definition_en": null,
+          "pron_fa": "sudɑn"
+        },
+        {
+          "lemma_fa": "سواد",
+          "pos": "Singular Proper Noun/Singular Noun",
+          "definition_en": null,
+          "pron_fa": "sævɑd"
+        }
+      ]
+    },
+    "ع ه د": {
+      "root_best_rank": 894.0,
+      "derivatives": [
+        {
+          "lemma_fa": "عهده",
+          "pos": "Singular Noun",
+          "definition_en": "responsibility",
+          "pron_fa": "ohdeh"
+        },
+        {
+          "lemma_fa": "معاهده",
+          "pos": "Singular Noun",
+          "definition_en": null,
+          "pron_fa": "moɑʔhædæh"
+        },
+        {
+          "lemma_fa": "تعهد",
+          "pos": "Singular Noun",
+          "definition_en": "commitment",
+          "pron_fa": "tæʔæhhod"
+        },
+        {
+          "lemma_fa": "متعهد",
+          "pos": "Adjective",
+          "definition_en": null,
+          "pron_fa": "motæʔæhhed"
+        }
+      ]
+    },
+    "ق د س": {
+      "root_best_rank": 901.0,
+      "derivatives": [
+        {
+          "lemma_fa": "قدس",
+          "pos": "Singular Proper Noun",
+          "definition_en": "Jerusalem",
+          "pron_fa": "ɢods"
+        },
+        {
+          "lemma_fa": "مقدس",
+          "pos": "Adjective",
+          "definition_en": "holy",
+          "pron_fa": "moɢædʔdæs, mæɢdes"
+        },
+        {
+          "lemma_fa": "مقدسات",
+          "pos": "Plural Noun",
+          "definition_en": null,
+          "pron_fa": "moɢædʔdæsɑt"
+        }
+      ]
+    },
+    "ف ج ر": {
+      "root_best_rank": 906.0,
+      "derivatives": [
+        {
+          "lemma_fa": "انفجار",
+          "pos": "Singular Noun",
+          "definition_en": "explosion",
+          "pron_fa": "enfeʤɑr"
+        },
+        {
+          "lemma_fa": "فجر",
+          "pos": "Singular Proper Noun/Singular Noun",
+          "definition_en": "aurora",
+          "pron_fa": "fæʤr"
+        },
+        {
+          "lemma_fa": "منفجر",
+          "pos": "Adjective",
+          "definition_en": "blow",
+          "pron_fa": "monfæʔʤer"
+        }
+      ]
+    },
+    "م ن ع": {
+      "root_best_rank": 908.0,
+      "derivatives": [
+        {
+          "lemma_fa": "مانع",
+          "pos": "Singular Noun/Adjective",
+          "definition_en": "barrier",
+          "pron_fa": "mɑneʔ"
+        },
+        {
+          "lemma_fa": "ممنوع",
+          "pos": "Adjective",
+          "definition_en": "prohibited",
+          "pron_fa": "mæmʔnuʔ"
+        },
+        {
+          "lemma_fa": "منع",
+          "pos": "Singular Noun",
+          "definition_en": null,
+          "pron_fa": "mænʔ"
+        },
+        {
+          "lemma_fa": "ممنوعیت",
+          "pos": "Singular Noun",
+          "definition_en": null,
+          "pron_fa": "mæmʔnuijjæt"
+        },
+        {
+          "lemma_fa": "ممانعت",
+          "pos": "Singular Noun",
+          "definition_en": null,
+          "pron_fa": "momɑnæʔæt"
+        }
+      ]
+    },
+    "ع ر ف": {
+      "root_best_rank": 921.0,
+      "derivatives": [
+        {
+          "lemma_fa": "معروف",
+          "pos": "Adjective/Singular Noun",
+          "definition_en": "famous",
+          "pron_fa": "mæʔʔruf"
+        },
+        {
+          "lemma_fa": "اعتراف",
+          "pos": "Singular Noun",
+          "definition_en": "admission",
+          "pron_fa": "eʔterɑf"
+        },
+        {
+          "lemma_fa": "معرفت",
+          "pos": "Singular Noun",
+          "definition_en": "knowledge",
+          "pron_fa": "mæʔrefæt"
+        },
+        {
+          "lemma_fa": "تعرفه",
+          "pos": "Singular Noun",
+          "definition_en": null,
+          "pron_fa": "tæʔrefæh"
+        },
+        {
+          "lemma_fa": "عارف",
+          "pos": "Singular Noun/Singular Proper Noun/Adjective",
+          "definition_en": null,
+          "pron_fa": "ɑref"
+        }
+      ]
+    },
+    "ر و ح": {
+      "root_best_rank": 931.0,
+      "derivatives": [
+        {
+          "lemma_fa": "راحت",
+          "pos": "Adjective/Adverb",
+          "definition_en": "comfortable",
+          "pron_fa": "rɑhæt"
+        },
+        {
+          "lemma_fa": "روحیه",
+          "pos": "Singular Noun",
+          "definition_en": "spirit",
+          "pron_fa": null
+        },
+        {
+          "lemma_fa": "روح",
+          "pos": "Singular Noun",
+          "definition_en": "spirit",
+          "pron_fa": "ruh"
+        },
+        {
+          "lemma_fa": "استراحت",
+          "pos": "Singular Noun",
+          "definition_en": "rest",
+          "pron_fa": "esterɑhæt"
+        }
+      ]
+    },
+    "ث ب ت": {
+      "root_best_rank": 944.0,
+      "derivatives": [
+        {
+          "lemma_fa": "ثبت",
+          "pos": "Singular Noun",
+          "definition_en": "registration",
+          "pron_fa": "sæbt"
+        },
+        {
+          "lemma_fa": "ثبات",
+          "pos": "Singular Noun",
+          "definition_en": "stability",
+          "pron_fa": "sæbɑt, sæbbɑt"
+        },
+        {
+          "lemma_fa": "مثبت",
+          "pos": "Adjective",
+          "definition_en": "positive",
+          "pron_fa": "mosbæt"
+        },
+        {
+          "lemma_fa": "ثابت",
+          "pos": "Adjective",
+          "definition_en": "fixed",
+          "pron_fa": "sɑbet"
+        },
+        {
+          "lemma_fa": "اثبات",
+          "pos": "Singular Noun",
+          "definition_en": null,
+          "pron_fa": "esbɑt"
+        }
+      ]
+    },
+    "ک و ن": {
+      "root_best_rank": 947.0,
+      "derivatives": [
+        {
+          "lemma_fa": "مکان",
+          "pos": "Singular Noun",
+          "definition_en": "location",
+          "pron_fa": "mækɑn"
+        },
+        {
+          "lemma_fa": "کیان",
+          "pos": "Singular Noun",
+          "definition_en": null,
+          "pron_fa": "kejɑn, kiɑn"
+        },
+        {
+          "lemma_fa": "مکانی",
+          "pos": "Singular Noun/Adjective",
+          "definition_en": null,
+          "pron_fa": "mæʔkɑni"
+        }
+      ]
+    },
+    "ش ع ر": {
+      "root_best_rank": 980.0,
+      "derivatives": [
+        {
+          "lemma_fa": "شعار",
+          "pos": "Singular Noun",
+          "definition_en": "slogan",
+          "pron_fa": "ʃeʔɑr"
+        },
+        {
+          "lemma_fa": "شعر",
+          "pos": "Singular Noun",
+          "definition_en": "poetry",
+          "pron_fa": "ʃer, ʃeʔr, ʃæʔr"
+        },
+        {
+          "lemma_fa": "شاعر",
+          "pos": "Singular Noun",
+          "definition_en": "poet",
+          "pron_fa": "ʃɑʔer"
+        }
+      ]
+    },
+    "ه د ی": {
+      "root_best_rank": 1001.0,
+      "derivatives": [
+        {
+          "lemma_fa": "مهدی",
+          "pos": "Singular Proper Noun",
+          "definition_en": "Mehdi",
+          "pron_fa": "mehdi"
+        },
+        {
+          "lemma_fa": "هادی",
+          "pos": "Singular Proper Noun/Singular Noun",
+          "definition_en": "conductor",
+          "pron_fa": "hɑdi"
+        },
+        {
+          "lemma_fa": "هدیه",
+          "pos": "Singular Noun",
+          "definition_en": "gift",
+          "pron_fa": "hædijjæh"
+        }
+      ]
+    },
+    "ع ب ر": {
+      "root_best_rank": 1017.0,
+      "derivatives": [
+        {
+          "lemma_fa": "اعتبار",
+          "pos": "Singular Noun",
+          "definition_en": "credit",
+          "pron_fa": "eʔtebɑr"
+        },
+        {
+          "lemma_fa": "عبور",
+          "pos": "Singular Noun",
+          "definition_en": "crossing",
+          "pron_fa": "ʔobur"
+        },
+        {
+          "lemma_fa": "معتبر",
+          "pos": "Adjective",
+          "definition_en": "valid",
+          "pron_fa": "moʔtæʔbær"
+        },
+        {
+          "lemma_fa": "عبارت",
+          "pos": "Singular Noun",
+          "definition_en": "phrase",
+          "pron_fa": "ʔebɑræt"
+        }
+      ]
+    },
+    "ذ ک ر": {
+      "root_best_rank": 1032.0,
+      "derivatives": [
+        {
+          "lemma_fa": "مذاکره",
+          "pos": "Singular Noun",
+          "definition_en": "negotiation",
+          "pron_fa": "mozɑkere"
+        },
+        {
+          "lemma_fa": "ذکر",
+          "pos": "Singular Noun",
+          "definition_en": "mention",
+          "pron_fa": "zekr, zækær, zokr"
+        },
+        {
+          "lemma_fa": "مذکور",
+          "pos": "Adjective",
+          "definition_en": null,
+          "pron_fa": "mæzʔkur"
+        }
+      ]
+    },
+    "ر ج ع": {
+      "root_best_rank": 1042.0,
+      "derivatives": [
+        {
+          "lemma_fa": "راجع",
+          "pos": "Preposition",
+          "definition_en": "about",
+          "pron_fa": "rɑʤeʔ"
+        },
+        {
+          "lemma_fa": "مراجعه",
+          "pos": "Singular Noun",
+          "definition_en": "reference",
+          "pron_fa": "morɑʤeʔe"
+        },
+        {
+          "lemma_fa": "مرجع",
+          "pos": "Singular Noun/Adjective",
+          "definition_en": "reference",
+          "pron_fa": "moræʤæʔe"
+        },
+        {
+          "lemma_fa": "ارجاع",
+          "pos": "Singular Noun",
+          "definition_en": null,
+          "pron_fa": "erʤɑʔ"
+        }
+      ]
+    },
+    "س ک ن": {
+      "root_best_rank": 1046.0,
+      "derivatives": [
+        {
+          "lemma_fa": "مسکن",
+          "pos": "Singular Noun",
+          "definition_en": "housing",
+          "pron_fa": "mæskæn"
+        },
+        {
+          "lemma_fa": "ساکن",
+          "pos": "Adjective/Singular Noun",
+          "definition_en": "resident",
+          "pron_fa": "sɑken"
+        },
+        {
+          "lemma_fa": "اسکان",
+          "pos": "Singular Noun",
+          "definition_en": null,
+          "pron_fa": "eskɑn"
+        }
+      ]
+    },
+    "ع د ل": {
+      "root_best_rank": 1054.0,
+      "derivatives": [
+        {
+          "lemma_fa": "عدالت",
+          "pos": "Singular Noun",
+          "definition_en": "justice",
+          "pron_fa": "ædɑlæt"
+        },
+        {
+          "lemma_fa": "معادل",
+          "pos": "Adjective",
+          "definition_en": "equivalent",
+          "pron_fa": "moɑʔdel"
+        },
+        {
+          "lemma_fa": "عادل",
+          "pos": "Singular Proper Noun/Adjective",
+          "definition_en": "just",
+          "pron_fa": "ɑdel"
+        },
+        {
+          "lemma_fa": "تعادل",
+          "pos": "Singular Noun",
+          "definition_en": null,
+          "pron_fa": "tæʔɑdol"
+        }
+      ]
+    },
+    "ر س ل": {
+      "root_best_rank": 1061.0,
+      "derivatives": [
+        {
+          "lemma_fa": "ارسال",
+          "pos": "Singular Noun",
+          "definition_en": "post",
+          "pron_fa": "ersɑl"
+        },
+        {
+          "lemma_fa": "رسول",
+          "pos": "Singular Noun/Singular Proper Noun",
+          "definition_en": "messenger",
+          "pron_fa": "ræsul"
+        },
+        {
+          "lemma_fa": "رسالت",
+          "pos": "Singular Noun/Singular Proper Noun",
+          "definition_en": null,
+          "pron_fa": "resɑlæt"
+        }
+      ]
+    },
+    "ف و ت": {
+      "root_best_rank": 1066.0,
+      "derivatives": [
+        {
+          "lemma_fa": "متفاوت",
+          "pos": "Adjective",
+          "definition_en": "different",
+          "pron_fa": "motæfɑvet"
+        },
+        {
+          "lemma_fa": "تفاوت",
+          "pos": "Singular Noun",
+          "definition_en": "difference",
+          "pron_fa": "tæfɑvot"
+        },
+        {
+          "lemma_fa": "فوت",
+          "pos": "Singular Noun",
+          "definition_en": "death",
+          "pron_fa": "fowt, fut"
+        }
+      ]
+    },
+    "ش ب ه": {
+      "root_best_rank": 1082.0,
+      "derivatives": [
+        {
+          "lemma_fa": "اشتباه",
+          "pos": "Singular Noun/Adjective",
+          "definition_en": "mistake",
+          "pron_fa": "eʃtebɑh"
+        },
+        {
+          "lemma_fa": "مشابه",
+          "pos": "Adjective",
+          "definition_en": "similar",
+          "pron_fa": "moʃɑʔbeh"
+        },
+        {
+          "lemma_fa": "شبه",
+          "pos": "Singular Noun/Singular Proper Noun/Adjective",
+          "definition_en": null,
+          "pron_fa": "ʃæbæ, ʃæbæh, ʃebh, ʃɑbeh"
+        }
+      ]
+    },
+    "ع ظ م": {
+      "root_best_rank": 1126.0,
+      "derivatives": [
+        {
+          "lemma_fa": "معظم",
+          "pos": "Adjective",
+          "definition_en": "supreme",
+          "pron_fa": "moʔzæm"
+        },
+        {
+          "lemma_fa": "عظمت",
+          "pos": "Singular Noun",
+          "definition_en": null,
+          "pron_fa": "æzæmæt"
+        },
+        {
+          "lemma_fa": "اعظم",
+          "pos": "Comparative Adjective",
+          "definition_en": null,
+          "pron_fa": "æʔzæm"
+        }
+      ]
+    },
+    "ن ش ر": {
+      "root_best_rank": 1131.0,
+      "derivatives": [
+        {
+          "lemma_fa": "انتشار",
+          "pos": "Singular Noun",
+          "definition_en": "publication",
+          "pron_fa": "enteʃɑr"
+        },
+        {
+          "lemma_fa": "منتشر",
+          "pos": "Adjective",
+          "definition_en": "published",
+          "pron_fa": "montæʔʃer"
+        },
+        {
+          "lemma_fa": "نشر",
+          "pos": "Singular Noun",
+          "definition_en": null,
+          "pron_fa": "næʃr"
+        },
+        {
+          "lemma_fa": "ناشر",
+          "pos": "Singular Noun",
+          "definition_en": null,
+          "pron_fa": "nɑʃer"
+        }
+      ]
+    },
+    "ک ی ف": {
+      "root_best_rank": 1133.0,
+      "derivatives": [
+        {
+          "lemma_fa": "کیفیت",
+          "pos": "Singular Noun",
+          "definition_en": "quality",
+          "pron_fa": "kejfijjæt"
+        },
+        {
+          "lemma_fa": "کیف",
+          "pos": "Singular Noun/Singular Proper Noun",
+          "definition_en": "bag",
+          "pron_fa": "kif, kejf, kæjfæʔ"
+        },
+        {
+          "lemma_fa": "کیفی",
+          "pos": "Adjective",
+          "definition_en": null,
+          "pron_fa": "kejʔfi"
+        }
+      ]
+    },
+    "و ز ن": {
+      "root_best_rank": 1150.0,
+      "derivatives": [
+        {
+          "lemma_fa": "وزن",
+          "pos": "Singular Noun",
+          "definition_en": "weight",
+          "pron_fa": "væzn"
+        },
+        {
+          "lemma_fa": "وزنه",
+          "pos": "Singular Noun",
+          "definition_en": "sinker",
+          "pron_fa": "væzne"
+        },
+        {
+          "lemma_fa": "توازن",
+          "pos": "Singular Noun",
+          "definition_en": null,
+          "pron_fa": "tævɑzon"
+        }
+      ]
+    },
+    "ر ت ب": {
+      "root_best_rank": 1254.0,
+      "derivatives": [
+        {
+          "lemma_fa": "رتبه",
+          "pos": "Singular Noun",
+          "definition_en": "rank",
+          "pron_fa": "rotbeh"
+        },
+        {
+          "lemma_fa": "مرتبه",
+          "pos": "Singular Noun",
+          "definition_en": "time",
+          "pron_fa": "mortæbæh"
+        },
+        {
+          "lemma_fa": "مرتب",
+          "pos": "Adjective/Adverb",
+          "definition_en": "arranged",
+          "pron_fa": "morættæb, moræt teb"
+        }
+      ]
+    },
+    "ع م ر": {
+      "root_best_rank": 1283.0,
+      "derivatives": [
+        {
+          "lemma_fa": "عمر",
+          "pos": "Singular Noun/Singular Proper Noun",
+          "definition_en": "life",
+          "pron_fa": "omr, æmr"
+        },
+        {
+          "lemma_fa": "استعمار",
+          "pos": "Singular Noun",
+          "definition_en": null,
+          "pron_fa": "esteʔmɑr"
+        },
+        {
+          "lemma_fa": "معمر",
+          "pos": "Singular Proper Noun",
+          "definition_en": null,
+          "pron_fa": "moæmʔmær, moæmʔmer"
+        },
+        {
+          "lemma_fa": "عمران",
+          "pos": "Singular Noun/Singular Proper Noun",
+          "definition_en": null,
+          "pron_fa": "omrɑn, emrɑn"
+        },
+        {
+          "lemma_fa": "معمار",
+          "pos": "Singular Noun",
+          "definition_en": null,
+          "pron_fa": "meʔmɑr"
+        }
+      ]
+    },
+    "ف ه م": {
+      "root_best_rank": 1417.0,
+      "derivatives": [
+        {
+          "lemma_fa": "تفاهم",
+          "pos": "Singular Noun",
+          "definition_en": null,
+          "pron_fa": null
+        },
+        {
+          "lemma_fa": "مفهوم",
+          "pos": "Singular Noun",
+          "definition_en": "concept",
+          "pron_fa": "mæfhum"
+        },
+        {
+          "lemma_fa": "فهم",
+          "pos": "Verb Subjunctive",
+          "definition_en": "understanding",
+          "pron_fa": "fæhm"
+        }
+      ]
+    },
+    "ع ل ق": {
+      "root_best_rank": 1432.0,
+      "derivatives": [
+        {
+          "lemma_fa": "علاقه",
+          "pos": "Singular Noun",
+          "definition_en": "interest",
+          "pron_fa": "ɑlɑɢeh"
+        },
+        {
+          "lemma_fa": "متعلق",
+          "pos": "Adjective",
+          "definition_en": "belonging",
+          "pron_fa": "mottæʔælleɢ"
+        },
+        {
+          "lemma_fa": "تعلق",
+          "pos": "Singular Noun",
+          "definition_en": "attachment",
+          "pron_fa": "tæʔælloɢ"
+        }
+      ]
+    },
+    "ک ر ر": {
+      "root_best_rank": 1456.0,
+      "derivatives": [
+        {
+          "lemma_fa": "تکرار",
+          "pos": "Singular Noun",
+          "definition_en": "repeat",
+          "pron_fa": "tækrɑr"
+        },
+        {
+          "lemma_fa": "مکرر",
+          "pos": "Adjective/Adverb",
+          "definition_en": null,
+          "pron_fa": "mokærʔrær"
+        },
+        {
+          "lemma_fa": "کر",
+          "pos": "Adjective/Singular Proper Noun/Singular Noun",
+          "definition_en": null,
+          "pron_fa": "kær, kærr, kor, korr"
+        }
+      ]
+    },
+    "ن ز ل": {
+      "root_best_rank": 1462.0,
+      "derivatives": [
+        {
+          "lemma_fa": "منزل",
+          "pos": "Singular Noun",
+          "definition_en": "house",
+          "pron_fa": "mænzel, monʔzæl"
+        },
+        {
+          "lemma_fa": "نزول",
+          "pos": "Singular Noun",
+          "definition_en": null,
+          "pron_fa": "nozul"
+        },
+        {
+          "lemma_fa": "منزله",
+          "pos": "Singular Noun",
+          "definition_en": null,
+          "pron_fa": "monʔzælæh"
+        },
+        {
+          "lemma_fa": "انزل",
+          "pos": "Singular Proper Noun",
+          "definition_en": null,
+          "pron_fa": null
+        }
+      ]
+    },
+    "م ر ر": {
+      "root_best_rank": 1465.0,
+      "derivatives": [
+        {
+          "lemma_fa": "مر",
+          "pos": "Conjunction",
+          "definition_en": "myrrh",
+          "pron_fa": "mær, morr"
+        },
+        {
+          "lemma_fa": "مرور",
+          "pos": "Singular Noun",
+          "definition_en": "review",
+          "pron_fa": "morur"
+        },
+        {
+          "lemma_fa": "مستمر",
+          "pos": "Adjective",
+          "definition_en": "continuous",
+          "pron_fa": "mostæʔmærr, mostæʔmerr"
+        },
+        {
+          "lemma_fa": "استمرار",
+          "pos": "Singular Noun",
+          "definition_en": null,
+          "pron_fa": "estemrɑr"
+        },
+        {
+          "lemma_fa": "مار",
+          "pos": "Singular Noun",
+          "definition_en": "snake",
+          "pron_fa": "mɑr"
+        }
+      ]
+    },
+    "ط ل ب": {
+      "root_best_rank": 1493.0,
+      "derivatives": [
+        {
+          "lemma_fa": "مطلب",
+          "pos": "Singular Noun",
+          "definition_en": "subject",
+          "pron_fa": "mætlæb, motælleb"
+        },
+        {
+          "lemma_fa": "طلب",
+          "pos": "Singular Noun",
+          "definition_en": "demand",
+          "pron_fa": "tælæb, tollæb"
+        },
+        {
+          "lemma_fa": "مطلوب",
+          "pos": "Adjective",
+          "definition_en": null,
+          "pron_fa": "mætʔlub"
+        },
+        {
+          "lemma_fa": "مطالبه",
+          "pos": "Singular Noun",
+          "definition_en": "demand",
+          "pron_fa": "motɑʔlæbæh"
+        },
+        {
+          "lemma_fa": "مطالب",
+          "pos": "Plural Noun",
+          "definition_en": null,
+          "pron_fa": "mætɑleb"
+        }
+      ]
+    },
+    "ف ت ح": {
+      "root_best_rank": 1556.0,
+      "derivatives": [
+        {
+          "lemma_fa": "افتتاح",
+          "pos": "Singular Noun",
+          "definition_en": null,
+          "pron_fa": "eftetɑh"
+        },
+        {
+          "lemma_fa": "فتح",
+          "pos": "Singular Noun",
+          "definition_en": null,
+          "pron_fa": "fætʔh"
+        },
+        {
+          "lemma_fa": "فاتح",
+          "pos": "Adjective/Singular Proper Noun/Singular Noun",
+          "definition_en": null,
+          "pron_fa": "fɑteh"
+        },
+        {
+          "lemma_fa": "افتتاحیه",
+          "pos": "Singular Noun",
+          "definition_en": null,
+          "pron_fa": null
+        }
+      ]
+    },
+    "د ر ک": {
+      "root_best_rank": 1569.0,
+      "derivatives": [
+        {
+          "lemma_fa": "درک",
+          "pos": "Singular Noun",
+          "definition_en": "perception",
+          "pron_fa": "dærk, dæræk"
+        },
+        {
+          "lemma_fa": "مدارک",
+          "pos": "Plural Noun",
+          "definition_en": "documents",
+          "pron_fa": "mædɑrek"
+        },
+        {
+          "lemma_fa": "تدارک",
+          "pos": "Singular Noun",
+          "definition_en": "provision",
+          "pron_fa": "tædɑrok"
+        },
+        {
+          "lemma_fa": "مدرک",
+          "pos": "Singular Noun",
+          "definition_en": "document",
+          "pron_fa": "modʔrek, modʔræk, mædræk"
+        }
+      ]
+    }
+  }
+}
