@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "Farsi Root Word Learner",
-  "version": "1.0.0",
-  "description": "Learn Persian/Farsi by discovering Arabic root words in context",
+  "name": "Language Learner - Farsi & Chinese",
+  "version": "2.0.0",
+  "description": "Learn Persian/Farsi and Chinese by discovering roots, radicals, and character meanings in context",
   "permissions": [
     "storage",
     "activeTab"
@@ -16,6 +16,8 @@
       "js": [
         "utils/language-detector.js",
         "utils/persian-matcher.js",
+        "utils/chinese-detector.js",
+        "utils/chinese-matcher.js",
         "content/translation-popup.js",
         "content/content.js"
       ],
@@ -41,7 +43,10 @@
   },
   "web_accessible_resources": [
     {
-      "resources": ["data/farsi-roots.json"],
+      "resources": [
+        "data/farsi-roots.json",
+        "data/chinese-hsk.json"
+      ],
       "matches": ["<all_urls>"]
     }
   ]
