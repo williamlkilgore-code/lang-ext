@@ -260,7 +260,7 @@ class TranslationPopup {
         </div>
       `;
     } else if (translation.type === 'multiword') {
-      // Multiple words
+      // Multiple words - show word-by-word breakdown
       const wordTranslations = translation.words.map(w =>
         `<span class="word-translation">
           <span class="original">${w.word}</span>
@@ -269,6 +269,9 @@ class TranslationPopup {
         </span>`
       ).join('');
 
+      // Also include external translation links for the full phrase
+      const encodedText = encodeURIComponent(this.currentSelection);
+
       content = `
         <div class="translation-result multiword">
           <div class="translation-header">
@@ -276,6 +279,26 @@ class TranslationPopup {
           </div>
           <div class="word-translations">
             ${wordTranslations}
+          </div>
+          <div class="translation-divider"></div>
+          <div class="translation-header">Translate full phrase</div>
+          <div class="external-options">
+            <a href="https://translate.google.com/?sl=fa&tl=en&text=${encodedText}"
+               target="_blank"
+               class="external-link">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12.87 15.07l-2.54-2.51.03-.03c1.74-1.94 2.98-4.17 3.71-6.53H17V4h-7V2H8v2H1v1.99h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12zm-2.62 7l1.62-4.33L19.12 17h-3.24z"/>
+              </svg>
+              Google Translate
+            </a>
+            <a href="https://www.deepl.com/translator#fa/en/${encodedText}"
+               target="_blank"
+               class="external-link">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/>
+              </svg>
+              DeepL
+            </a>
           </div>
         </div>
       `;

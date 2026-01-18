@@ -311,6 +311,19 @@
   flex: 1;
 }
 
+/* Translation Divider */
+.translation-divider {
+  height: 1px;
+  background: #e5e7eb;
+  margin: 14px 0;
+}
+
+@media (prefers-color-scheme: dark) {
+  .translation-divider {
+    background: #374151;
+  }
+}
+
 /* External Translation Options */
 .translation-result.external {
   text-align: center;
