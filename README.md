@@ -12,7 +12,7 @@ A browser extension that helps you learn Persian/Farsi by identifying and explai
   - Word definition
   - Part of speech
   - Semantic category
-- **500 Common Roots**: Dictionary of the 500 most common Arabic roots found in Farsi
+- **171 Arabic Roots**: Comprehensive dictionary with 171 common Arabic roots and 674 derivative words
 - **Cross-Browser Support**: Works on Chrome, Firefox, and other Chromium-based browsers
 - **Offline Ready**: All dictionary data is embedded, no internet connection required after installation
 - **Beautiful UI**: Modern, responsive design with dark mode support
@@ -57,8 +57,9 @@ A browser extension that helps you learn Persian/Farsi by identifying and explai
    - View dictionary statistics
 
 3. **Testing**:
-   - Open `test.html` in your browser to see the extension in action
-   - The test page contains sample Persian text with various root words
+   - Open `test.html` or `test-expanded.html` in your browser to see the extension in action
+   - The test pages contain sample Persian text with various root words
+   - `test-expanded.html` includes examples from all 171 roots
 
 ## Project Structure
 
@@ -66,7 +67,7 @@ A browser extension that helps you learn Persian/Farsi by identifying and explai
 lang-ext/
 ├── manifest.json              # Extension manifest (Manifest V3)
 ├── data/
-│   └── farsi-roots.json      # Dictionary of 500 Arabic roots and derivatives
+│   └── farsi-roots.json      # Dictionary of 171 Arabic roots and 674 derivatives
 ├── content/
 │   ├── content.js            # Main content script
 │   └── content.css           # Highlighting and tooltip styles
@@ -93,8 +94,9 @@ The dictionary (`data/farsi-roots.json`) follows this structure:
 
 ```json
 {
-  "version": "1.0.0",
+  "version": "2.0.0",
   "language": "farsi",
+  "description": "Comprehensive Arabic roots found in Persian/Farsi",
   "roots": [
     {
       "id": 1,
@@ -115,14 +117,24 @@ The dictionary (`data/farsi-roots.json`) follows this structure:
 }
 ```
 
-## Expanding the Dictionary
+## Dictionary Sources
 
-The current version includes 5 example roots. To expand to the full 500 roots:
+The current version includes 171 roots from multiple sources:
+
+1. **Original Curated Roots** (35 roots): Carefully selected foundational Arabic roots
+2. **Conversational Persian** (150 roots): Common roots used in everyday conversation
+3. **News Persian** (150 roots): Roots frequently found in news media
+
+The dictionary includes roots across 23 semantic categories with 674 total derivative words.
+
+### Expanding Further
+
+To continue expanding the dictionary:
 
 1. Add more root entries to `data/farsi-roots.json`
-2. Follow the same JSON structure
+2. Follow the established JSON structure
 3. Include common derivatives for each root
-4. Categorize roots semantically (education, action, communication, etc.)
+4. Categorize roots semantically
 
 ### Suggested Categories
 - Education & Learning
@@ -211,7 +223,8 @@ Contributions are welcome! Here are some ways to help:
 
 ## Roadmap
 
-- [ ] Expand dictionary to 500 roots
+- [x] Expand dictionary beyond initial 35 roots (now at 171 roots with 674 derivatives)
+- [ ] Continue expanding toward 500+ roots
 - [ ] Add user-customizable dictionary
 - [ ] Implement word frequency statistics
 - [ ] Add learning progress tracking
