@@ -630,7 +630,8 @@
       chineseMatcher,
       persianDetector,
       chineseDetector,
-      loaded
+      loaded,
+      vocabularyManager
     );
 
     // Process page

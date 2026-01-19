@@ -223,6 +223,32 @@
   flex-shrink: 0;
 }
 
+/* Mark as Mastered Button */
+.mark-mastered-btn {
+  display: block;
+  width: 100%;
+  padding: 8px 12px;
+  margin-top: 12px;
+  background: #10b981;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.mark-mastered-btn:hover {
+  background: #059669;
+}
+
+.mark-mastered-btn:disabled,
+.mark-mastered-btn.marked {
+  background: #6b7280;
+  cursor: not-allowed;
+}
+
 /* Translation Result */
 .translation-result {
   padding: 12px;

@@ -4,12 +4,13 @@
  */
 
 class TranslationPopup {
-  constructor(persianMatcher, chineseMatcher, persianDetector, chineseDetector, activeLanguages) {
+  constructor(persianMatcher, chineseMatcher, persianDetector, chineseDetector, activeLanguages, vocabularyManager = null) {
     this.persianMatcher = persianMatcher;
     this.chineseMatcher = chineseMatcher;
     this.persianDetector = persianDetector;
     this.chineseDetector = chineseDetector;
     this.activeLanguages = activeLanguages;
+    this.vocabularyManager = vocabularyManager;
     this.popup = null;
     this.currentSelection = null;
     this.currentLanguage = null;
@@ -350,6 +351,9 @@ class TranslationPopup {
             <div class="translation-root">
               Root: ${translation.root} (${translation.rootLatin}) - ${translation.rootMeaning}
             </div>
+            <button class="mark-mastered-btn" data-word="${this.escapeHtml(translation.word)}" data-lang="persian" title="Mark as mastered">
+              ✓ Mark as Mastered
+            </button>
           </div>
         `;
       } else if (translation.language === 'chinese') {
@@ -364,6 +368,9 @@ class TranslationPopup {
             <div class="translation-root">
               Radical: ${translation.radical} (${translation.radicalMeaning}) • HSK ${translation.hskLevel}
             </div>
+            <button class="mark-mastered-btn" data-word="${this.escapeHtml(translation.character)}" data-lang="chinese" title="Mark as mastered">
+              ✓ Mark as Mastered
+            </button>
           </div>
         `;
       }
@@ -417,6 +424,55 @@ class TranslationPopup {
     // Update popup content
     this.popup.innerHTML = content;
     this.popup.classList.add('showing-translation');
+
+    // Add event listener for "Mark as Mastered" button
+    const markMasteredBtn = this.popup.querySelector('.mark-mastered-btn');
+    if (markMasteredBtn) {
+      markMasteredBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        const word = markMasteredBtn.getAttribute('data-word');
+        const lang = markMasteredBtn.getAttribute('data-lang');
+        this.markAsMastered(word, lang, markMasteredBtn);
+      });
+    }
+  }
+
+  async markAsMastered(word, language, button) {
+    if (!this.vocabularyManager) {
+      console.error('VocabularyManager not available');
+      button.textContent = '✗ Error';
+      return;
+    }
+
+    try {
+      // Mark word as mastered
+      await this.vocabularyManager.markAsMastered(word, language);
+
+      // Reload vocabulary in matchers
+      if (language === 'persian' && this.persianMatcher) {
+        await this.persianMatcher.reloadCustomVocabulary();
+      } else if (language === 'chinese' && this.chineseMatcher) {
+        await this.chineseMatcher.reloadCustomVocabulary();
+      }
+
+      // Update button to show success
+      button.textContent = '✓ Mastered!';
+      button.classList.add('marked');
+      button.disabled = true;
+
+      // Hide popup after short delay
+      setTimeout(() => this.hide(), 1500);
+    } catch (error) {
+      console.error('Error marking word as mastered:', error);
+      button.textContent = '✗ Error';
+    }
+  }
+
+  escapeHtml(text) {
+    const div = document.createElement('div');
+    div.textContent = text;
+    return div.innerHTML;
   }
 
   showExternalTranslationOption(text) {
