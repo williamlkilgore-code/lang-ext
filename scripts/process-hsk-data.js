@@ -63,21 +63,21 @@ const radicalMeanings = {
   '⺀': 'lid'
 };
 
-// Filter for HSK 1-3 words (old system to match user's requested levels)
-const hsk123Words = Object.values(hskData).filter(entry => {
+// Filter for HSK 1-4 words (old system to match user's requested levels)
+const hsk1234Words = Object.values(hskData).filter(entry => {
   if (!entry.level) return false;
   return entry.level.some(level =>
-    level === 'old-1' || level === 'old-2' || level === 'old-3'
+    level === 'old-1' || level === 'old-2' || level === 'old-3' || level === 'old-4'
   );
 });
 
-console.log(`Found ${hsk123Words.length} words in HSK 1-3`);
+console.log(`Found ${hsk1234Words.length} words in HSK 1-4`);
 
 // Group by radical for our dictionary structure
 const radicalGroups = {};
 const wordsList = [];
 
-hsk123Words.forEach((entry, index) => {
+hsk1234Words.forEach((entry, index) => {
   const radical = entry.radical;
   const simplified = entry.simplified;
   const form = entry.forms[0]; // Get first form
@@ -135,11 +135,11 @@ hsk123Words.forEach((entry, index) => {
 
 // Create final dictionary structure
 const chineseDictionary = {
-  version: '1.0.0',
+  version: '1.1.0',
   language: 'chinese',
   variant: 'simplified',
-  description: 'HSK 1-3 vocabulary with radical decomposition',
-  levels: 'HSK 1-3 (old system)',
+  description: 'HSK 1-4 vocabulary with radical decomposition',
+  levels: 'HSK 1-4 (old system)',
   totalWords: wordsList.length,
   totalRadicals: Object.keys(radicalGroups).length,
   words: wordsList.sort((a, b) => a.hskLevel - b.hskLevel || a.frequency - b.frequency),
@@ -156,7 +156,7 @@ console.log(`\n✅ Chinese dictionary created: chinese-hsk.json`);
 console.log(`📊 Total words: ${chineseDictionary.totalWords}`);
 console.log(`📊 Total radicals: ${chineseDictionary.totalRadicals}`);
 console.log(`\nWords by HSK level:`);
-[1, 2, 3].forEach(level => {
+[1, 2, 3, 4].forEach(level => {
   const count = wordsList.filter(w => w.hskLevel === level).length;
   console.log(`  HSK ${level}: ${count} words`);
 });
