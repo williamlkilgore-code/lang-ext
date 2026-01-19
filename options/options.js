@@ -399,6 +399,9 @@ async function resetSettings() {
  * Load vocabulary data and populate UI
  */
 async function loadVocabulary() {
+  // Migrate old custom words to remove "custom" placeholder values
+  await migrateOldCustomWords();
+
   // Load and render mastered words
   await renderMasteredWords('persian');
   await renderMasteredWords('chinese');
@@ -406,6 +409,61 @@ async function loadVocabulary() {
   // Load and render custom dictionaries
   await renderCustomWords('persian');
   await renderCustomWords('chinese');
+}
+
+/**
+ * Migrate old custom words that have "custom" placeholder values
+ */
+async function migrateOldCustomWords() {
+  try {
+    let needsSave = false;
+
+    // Get Persian dictionary
+    const persianWords = await vocabularyManager.getUserDictionary('persian');
+    for (const word of persianWords) {
+      let updated = false;
+      if (word.rootMeaning === 'custom') {
+        word.rootMeaning = '';
+        updated = true;
+      }
+      if (word.wordMeaning === 'custom word') {
+        word.wordMeaning = '';
+        updated = true;
+      }
+      if (word.category === 'custom') {
+        word.category = '';
+        updated = true;
+      }
+      if (updated) {
+        await vocabularyManager.updateCustomWord('persian', word.id, word);
+        needsSave = true;
+      }
+    }
+
+    // Get Chinese dictionary
+    const chineseWords = await vocabularyManager.getUserDictionary('chinese');
+    for (const word of chineseWords) {
+      let updated = false;
+      if (word.meaning === 'custom word') {
+        word.meaning = '';
+        updated = true;
+      }
+      if (word.radicalMeaning === 'custom') {
+        word.radicalMeaning = '';
+        updated = true;
+      }
+      if (updated) {
+        await vocabularyManager.updateCustomWord('chinese', word.id, word);
+        needsSave = true;
+      }
+    }
+
+    if (needsSave) {
+      console.log('Migrated old custom words to remove placeholder values');
+    }
+  } catch (error) {
+    console.error('Error migrating custom words:', error);
+  }
 }
 
 /**
