@@ -8,15 +8,51 @@ class ChineseMatcher {
     this.dictionaryData = null;
     this.wordMap = new Map(); // Map of character/word -> word info
     this.characterMap = new Map(); // Map of single characters -> word info
+    this.vocabularyManager = null;
+    this.settings = null;
+    this.masteredWords = new Set();
+    this.customWords = [];
   }
 
   /**
    * Load and initialize the HSK dictionary
    * @param {Object} dictionaryData - Dictionary data from chinese-hsk.json
    */
-  async initialize(dictionaryData) {
+  async initialize(dictionaryData, vocabularyManager = null, settings = null) {
     this.dictionaryData = dictionaryData;
+    this.vocabularyManager = vocabularyManager;
+    this.settings = settings;
+
+    // Load mastered words and custom dictionary
+    if (vocabularyManager) {
+      await this.loadCustomVocabulary();
+    }
+
     this.buildWordMaps();
+  }
+
+  /**
+   * Load custom vocabulary (mastered words and user dictionary)
+   */
+  async loadCustomVocabulary() {
+    if (!this.vocabularyManager) return;
+
+    // Load mastered words
+    const mastered = await this.vocabularyManager.getMasteredWords('chinese');
+    this.masteredWords = new Set(mastered);
+
+    // Load custom dictionary
+    this.customWords = await this.vocabularyManager.getUserDictionary('chinese');
+
+    console.log(`Chinese Matcher: Loaded ${mastered.length} mastered words, ${this.customWords.length} custom words`);
+  }
+
+  /**
+   * Reload custom vocabulary (call after updates)
+   */
+  async reloadCustomVocabulary() {
+    await this.loadCustomVocabulary();
+    this.buildWordMaps(); // Rebuild to include custom words
   }
 
   /**
@@ -28,6 +64,7 @@ class ChineseMatcher {
     this.wordMap.clear();
     this.characterMap.clear();
 
+    // Add main dictionary words
     this.dictionaryData.words.forEach(word => {
       const char = word.character;
 
@@ -41,7 +78,8 @@ class ChineseMatcher {
         radical: word.radical,
         radicalMeaning: word.radicalMeaning,
         hskLevel: word.hskLevel,
-        frequency: word.frequency
+        frequency: word.frequency,
+        isCustom: false
       });
 
       // Also map individual characters for quick lookup
@@ -54,6 +92,36 @@ class ChineseMatcher {
         }
       }
     });
+
+    // Add custom dictionary words
+    if (this.settings && this.settings.showCustomWords && this.customWords.length > 0) {
+      this.customWords.forEach(customWord => {
+        const char = customWord.character;
+
+        this.wordMap.set(char, {
+          character: customWord.character,
+          traditional: customWord.traditional || customWord.character,
+          pinyin: customWord.pinyin || '',
+          meaning: customWord.meaning || 'custom word',
+          pos: customWord.pos || 'noun',
+          radical: customWord.radical || char[0],
+          radicalMeaning: customWord.radicalMeaning || 'custom',
+          hskLevel: customWord.hskLevel || 0,
+          frequency: 0,
+          isCustom: true
+        });
+
+        // Map individual characters
+        for (const singleChar of char) {
+          if (/[\u4E00-\u9FFF]/.test(singleChar)) {
+            if (!this.characterMap.has(singleChar)) {
+              this.characterMap.set(singleChar, []);
+            }
+            this.characterMap.get(singleChar).push(this.wordMap.get(char));
+          }
+        }
+      });
+    }
   }
 
   /**
@@ -75,6 +143,14 @@ class ChineseMatcher {
 
         // Check if this substring is in our dictionary
         if (this.wordMap.has(substring)) {
+          // Skip mastered words if setting is enabled
+          if (this.settings && this.settings.hideMasteredWords && this.masteredWords.has(substring)) {
+            // Skip this word but mark as matched to advance position
+            i += len;
+            matched = true;
+            break;
+          }
+
           const wordInfo = this.wordMap.get(substring);
 
           matches.push({

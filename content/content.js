@@ -6,8 +6,9 @@
 (async function() {
   'use strict';
 
-  // Initialize settings manager
+  // Initialize managers
   const settingsManager = new SettingsManager();
+  const vocabularyManager = new VocabularyManager();
 
   // Initialize detectors
   const persianDetector = new LanguageDetector();
@@ -36,7 +37,7 @@
       try {
         const response = await fetch(chrome.runtime.getURL('data/farsi-roots.json'));
         const data = await response.json();
-        await persianMatcher.initialize(data);
+        await persianMatcher.initialize(data, vocabularyManager, settings);
         results.persian = true;
         console.log('Language Learner: Persian dictionary loaded', persianMatcher.getStats());
       } catch (error) {
@@ -49,7 +50,7 @@
       try {
         const response = await fetch(chrome.runtime.getURL('data/chinese-hsk.json'));
         const data = await response.json();
-        await chineseMatcher.initialize(data);
+        await chineseMatcher.initialize(data, vocabularyManager, settings);
         results.chinese = true;
         console.log('Language Learner: Chinese dictionary loaded', chineseMatcher.getStats());
       } catch (error) {
@@ -648,7 +649,7 @@
   /**
    * Handle messages from background script
    */
-  chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
+  chrome.runtime.onMessage.addListener(async (message, sender, sendResponse) => {
     if (message.action === 'settingsUpdated') {
       console.log('Language Learner: Settings updated, reloading page...');
       window.location.reload();
@@ -657,6 +658,56 @@
     if (message.action === 'toggleExtension') {
       toggleExtension(message.enabled);
       sendResponse({ success: true });
+    }
+
+    if (message.action === 'markAsMastered') {
+      try {
+        await vocabularyManager.markAsMastered(message.word, message.language);
+        // Reload custom vocabulary in matchers
+        if (message.language === 'persian' && activeLanguages.persian) {
+          await persianMatcher.reloadCustomVocabulary();
+        } else if (message.language === 'chinese' && activeLanguages.chinese) {
+          await chineseMatcher.reloadCustomVocabulary();
+        }
+        sendResponse({ success: true });
+      } catch (error) {
+        console.error('Language Learner: Failed to mark as mastered', error);
+        sendResponse({ success: false, error: error.message });
+      }
+    }
+
+    if (message.action === 'unmarkAsMastered') {
+      try {
+        await vocabularyManager.unmarkAsMastered(message.word, message.language);
+        // Reload custom vocabulary in matchers
+        if (message.language === 'persian' && activeLanguages.persian) {
+          await persianMatcher.reloadCustomVocabulary();
+        } else if (message.language === 'chinese' && activeLanguages.chinese) {
+          await chineseMatcher.reloadCustomVocabulary();
+        }
+        sendResponse({ success: true });
+      } catch (error) {
+        console.error('Language Learner: Failed to unmark as mastered', error);
+        sendResponse({ success: false, error: error.message });
+      }
+    }
+
+    if (message.action === 'reloadVocabulary') {
+      try {
+        // Reload custom vocabulary in both matchers
+        if (activeLanguages.persian) {
+          await persianMatcher.reloadCustomVocabulary();
+        }
+        if (activeLanguages.chinese) {
+          await chineseMatcher.reloadCustomVocabulary();
+        }
+        // Reprocess page
+        processPage();
+        sendResponse({ success: true });
+      } catch (error) {
+        console.error('Language Learner: Failed to reload vocabulary', error);
+        sendResponse({ success: false, error: error.message });
+      }
     }
 
     return true; // Keep message channel open for async response

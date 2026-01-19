@@ -30,6 +30,10 @@ class SettingsManager {
       // Translation Settings (for future use)
       defaultTranslationService: 'both', // google, deepl, both
 
+      // Custom Vocabulary Settings
+      hideMasteredWords: true, // Hide words marked as mastered
+      showCustomWords: true, // Show custom dictionary words
+
       // First run flag
       firstRun: true
     };
