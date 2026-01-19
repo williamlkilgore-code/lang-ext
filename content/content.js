@@ -349,7 +349,7 @@
       const text = textNode.textContent;
 
       // Check if contains Persian
-      if (activeLanguages.persian && persianDetector.containsPersian(text)) {
+      if (activeLanguages.persian && persianDetector.isPersian(text)) {
         processPersianTextNode(textNode);
       }
       // Check if contains Chinese (only if not already processed as Persian)
@@ -378,7 +378,7 @@
 
             if (node.nodeType === Node.TEXT_NODE) {
               const text = node.textContent;
-              if (activeLanguages.persian && persianDetector.containsPersian(text)) {
+              if (activeLanguages.persian && persianDetector.isPersian(text)) {
                 processPersianTextNode(node);
               } else if (activeLanguages.chinese && chineseDetector.containsChinese(text)) {
                 processChineseTextNode(node);
