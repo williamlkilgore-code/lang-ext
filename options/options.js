@@ -323,11 +323,19 @@ function renderExcludedDomains() {
   elements.excludedDomainsList.innerHTML = excludedDomains
     .map(domain => `
       <li>
-        <code>${domain}</code>
-        <button onclick="removeDomain('${domain}')" title="Remove">✕</button>
+        <code>${escapeHtml(domain)}</code>
+        <button data-domain="${escapeHtml(domain)}" title="Remove">✕</button>
       </li>
     `)
     .join('');
+
+  // Attach event listeners to remove buttons
+  elements.excludedDomainsList.querySelectorAll('button').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const domain = btn.getAttribute('data-domain');
+      removeDomain(domain);
+    });
+  });
 }
 
 /**
@@ -510,11 +518,20 @@ async function renderMasteredWords(language) {
       .sort()
       .map(word => `
         <li>
-          <span class="vocab-word">${word}</span>
-          <button class="btn-delete" onclick="removeMasteredWord('${escapeHtml(word)}', '${language}')" title="Remove">✕</button>
+          <span class="vocab-word">${escapeHtml(word)}</span>
+          <button class="btn-delete" data-word="${escapeHtml(word)}" data-lang="${language}" title="Remove">✕</button>
         </li>
       `)
       .join('');
+
+    // Attach event listeners to delete buttons
+    listElement.querySelectorAll('.btn-delete').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const word = btn.getAttribute('data-word');
+        const lang = btn.getAttribute('data-lang');
+        removeMasteredWord(word, lang);
+      });
+    });
   }
 }
 
@@ -636,7 +653,7 @@ async function renderCustomWords(language) {
                 ${word.wordMeaning ? `<span class="vocab-meta">${escapeHtml(word.wordMeaning)}</span>` : ''}
                 <span class="vocab-meta">${word.pos || 'noun'}</span>
               </div>
-              <button class="btn-delete" onclick="removeCustomWord(${word.id}, 'persian')" title="Delete">✕</button>
+              <button class="btn-delete" data-word-id="${word.id}" data-lang="persian" title="Delete">✕</button>
             </li>
           `;
         } else {
@@ -648,12 +665,21 @@ async function renderCustomWords(language) {
                 ${word.meaning ? `<span class="vocab-meta">${escapeHtml(word.meaning)}</span>` : ''}
                 ${word.hskLevel > 0 ? `<span class="vocab-meta">HSK ${word.hskLevel}</span>` : ''}
               </div>
-              <button class="btn-delete" onclick="removeCustomWord(${word.id}, 'chinese')" title="Delete">✕</button>
+              <button class="btn-delete" data-word-id="${word.id}" data-lang="chinese" title="Delete">✕</button>
             </li>
           `;
         }
       })
       .join('');
+
+    // Attach event listeners to delete buttons
+    listElement.querySelectorAll('.btn-delete').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const wordId = parseInt(btn.getAttribute('data-word-id'), 10);
+        const lang = btn.getAttribute('data-lang');
+        removeCustomWord(wordId, lang);
+      });
+    });
   }
 }
 
@@ -849,11 +875,6 @@ function showStatus(message, type) {
     elements.statusMessage.classList.remove('show');
   }, 3000);
 }
-
-// Make functions available globally for inline onclick
-window.removeDomain = removeDomain;
-window.removeMasteredWord = removeMasteredWord;
-window.removeCustomWord = removeCustomWord;
 
 // Initialize when DOM is ready
 if (document.readyState === 'loading') {
