@@ -68,8 +68,8 @@
     });
 
     return {
-      persian: persianAnalysis.isPersian && persianAnalysis.confidence !== 'low',
-      chinese: chineseAnalysis.isChinese && chineseAnalysis.confidence !== 'low'
+      persian: persianAnalysis.isPersian,
+      chinese: chineseAnalysis.isChinese
     };
   }
 
