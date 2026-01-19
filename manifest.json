@@ -9,6 +9,15 @@
     "tabs"
   ],
   "options_page": "options/options.html",
+  "commands": {
+    "toggle-extension": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+L",
+        "mac": "Command+Shift+L"
+      },
+      "description": "Toggle Language Learner on/off for current page"
+    }
+  },
   "host_permissions": [
     "<all_urls>"
   ],

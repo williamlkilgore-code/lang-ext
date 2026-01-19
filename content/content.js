@@ -23,6 +23,8 @@
   let tooltip = null;
   let currentHighlight = null;
   let translationPopup = null;
+  let extensionEnabled = true;
+  let toggleBanner = null;
 
   /**
    * Load dictionaries based on detected languages
@@ -450,6 +452,130 @@
   }
 
   /**
+   * Hide all highlights
+   */
+  function hideHighlights() {
+    const highlights = document.querySelectorAll('.farsi-root-highlight, .chinese-char-highlight');
+    highlights.forEach(highlight => {
+      highlight.style.display = 'none';
+    });
+
+    // Hide tooltip and translation popup
+    if (tooltip) {
+      tooltip.style.display = 'none';
+    }
+    if (translationPopup) {
+      translationPopup.hide();
+    }
+  }
+
+  /**
+   * Show all highlights
+   */
+  function showHighlights() {
+    const highlights = document.querySelectorAll('.farsi-root-highlight, .chinese-char-highlight');
+    highlights.forEach(highlight => {
+      highlight.style.display = '';
+    });
+
+    // Restore tooltip visibility
+    if (tooltip) {
+      tooltip.style.display = '';
+    }
+  }
+
+  /**
+   * Create and show toggle banner
+   */
+  function showToggleBanner(enabled) {
+    // Remove existing banner if any
+    if (toggleBanner) {
+      toggleBanner.remove();
+    }
+
+    // Create banner
+    toggleBanner = document.createElement('div');
+    toggleBanner.id = 'language-learner-toggle-banner';
+    toggleBanner.style.cssText = `
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: ${enabled ? '#10b981' : '#ef4444'};
+      color: white;
+      padding: 12px 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+      z-index: 2147483647;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      animation: slideInRight 0.3s ease-out;
+      pointer-events: none;
+    `;
+
+    toggleBanner.textContent = enabled
+      ? '✓ Language Learner Enabled'
+      : '✕ Language Learner Disabled';
+
+    // Add animation
+    const style = document.createElement('style');
+    style.textContent = `
+      @keyframes slideInRight {
+        from {
+          transform: translateX(400px);
+          opacity: 0;
+        }
+        to {
+          transform: translateX(0);
+          opacity: 1;
+        }
+      }
+      @keyframes slideOutRight {
+        from {
+          transform: translateX(0);
+          opacity: 1;
+        }
+        to {
+          transform: translateX(400px);
+          opacity: 0;
+        }
+      }
+    `;
+    document.head.appendChild(style);
+
+    document.body.appendChild(toggleBanner);
+
+    // Auto-hide after 2 seconds
+    setTimeout(() => {
+      if (toggleBanner) {
+        toggleBanner.style.animation = 'slideOutRight 0.3s ease-in';
+        setTimeout(() => {
+          if (toggleBanner) {
+            toggleBanner.remove();
+            toggleBanner = null;
+          }
+        }, 300);
+      }
+    }, 2000);
+  }
+
+  /**
+   * Toggle extension on/off
+   */
+  function toggleExtension(enabled) {
+    extensionEnabled = enabled;
+
+    if (enabled) {
+      showHighlights();
+    } else {
+      hideHighlights();
+    }
+
+    showToggleBanner(enabled);
+    console.log(`Language Learner: Extension ${enabled ? 'enabled' : 'disabled'}`);
+  }
+
+  /**
    * Initialize extension
    */
   async function init() {
@@ -520,13 +646,20 @@
   }
 
   /**
-   * Handle settings updates
+   * Handle messages from background script
    */
   chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
     if (message.action === 'settingsUpdated') {
       console.log('Language Learner: Settings updated, reloading page...');
       window.location.reload();
     }
+
+    if (message.action === 'toggleExtension') {
+      toggleExtension(message.enabled);
+      sendResponse({ success: true });
+    }
+
+    return true; // Keep message channel open for async response
   });
 
   // Start when DOM is ready

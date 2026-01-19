@@ -1,58 +1,112 @@
 /**
- * Background Service Worker for Farsi Root Word Learner
- * Handles extension lifecycle and messaging
+ * Background Service Worker for Language Learner
+ * Handles extension lifecycle, toggle state, and keyboard commands
  */
+
+// Track toggle state per tab (true = enabled, false = disabled)
+const tabToggleState = new Map();
+
+/**
+ * Get toggle state for a tab (defaults to true/enabled)
+ */
+function getTabToggleState(tabId) {
+  return tabToggleState.get(tabId) !== false; // Default to enabled
+}
+
+/**
+ * Set toggle state for a tab
+ */
+function setTabToggleState(tabId, enabled) {
+  tabToggleState.set(tabId, enabled);
+}
+
+/**
+ * Toggle extension for a tab
+ */
+async function toggleExtensionForTab(tabId) {
+  const currentState = getTabToggleState(tabId);
+  const newState = !currentState;
+  setTabToggleState(tabId, newState);
+
+  // Send message to content script
+  try {
+    await chrome.tabs.sendMessage(tabId, {
+      action: 'toggleExtension',
+      enabled: newState
+    });
+
+    console.log(`Language Learner: Toggled ${newState ? 'ON' : 'OFF'} for tab ${tabId}`);
+  } catch (error) {
+    console.error('Language Learner: Failed to send toggle message:', error);
+  }
+
+  return newState;
+}
 
 // Installation handler
 chrome.runtime.onInstalled.addListener((details) => {
   if (details.reason === 'install') {
-    console.log('Farsi Root Word Learner installed');
+    console.log('Language Learner: Extension installed');
 
-    // Set default settings
-    chrome.storage.sync.set({
-      enableExtension: true,
-      autoDetect: true,
-      highlightColor: 'indigo'
-    });
+    // Settings are now managed by SettingsManager with proper defaults
+    // No need to set legacy settings here
 
-    // Open welcome page
-    chrome.tabs.create({
-      url: chrome.runtime.getURL('welcome.html')
-    });
   } else if (details.reason === 'update') {
-    console.log('Farsi Root Word Learner updated to version', chrome.runtime.getManifest().version);
+    const version = chrome.runtime.getManifest().version;
+    console.log(`Language Learner: Updated to version ${version}`);
+  }
+});
+
+// Handle keyboard commands
+chrome.commands.onCommand.addListener(async (command) => {
+  if (command === 'toggle-extension') {
+    // Get current active tab
+    const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
+
+    if (tab) {
+      const newState = await toggleExtensionForTab(tab.id);
+
+      // Show notification badge
+      chrome.action.setBadgeText({
+        text: newState ? '' : 'OFF',
+        tabId: tab.id
+      });
+
+      chrome.action.setBadgeBackgroundColor({
+        color: '#ef4444', // Red
+        tabId: tab.id
+      });
+    }
   }
 });
 
 // Handle messages from content scripts
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
-  if (request.type === 'getSettings') {
-    chrome.storage.sync.get({
-      enableExtension: true,
-      autoDetect: true,
-      highlightColor: 'indigo'
-    }, (settings) => {
-      sendResponse(settings);
-    });
-    return true; // Will respond asynchronously
+  if (request.action === 'getToggleState') {
+    const enabled = getTabToggleState(sender.tab.id);
+    sendResponse({ enabled });
+    return true;
   }
 
   if (request.type === 'logStats') {
-    console.log('Page stats:', request.stats);
+    console.log('Language Learner: Page stats:', request.stats);
   }
 });
 
-// Handle extension icon click
-chrome.action.onClicked.addListener((tab) => {
-  // This will open the popup by default due to manifest.json configuration
-  console.log('Extension icon clicked on tab:', tab.id);
+// Clean up toggle state when tab is closed
+chrome.tabs.onRemoved.addListener((tabId) => {
+  tabToggleState.delete(tabId);
 });
 
-// Listen for tab updates to potentially reprocess pages
+// Reset toggle state when tab navigates to new page
 chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
   if (changeInfo.status === 'complete') {
-    console.log('Tab completed loading:', tab.url);
+    // Reset toggle state to enabled for new page loads
+    tabToggleState.delete(tabId);
+
+    // Clear badge
+    chrome.action.setBadgeText({ text: '', tabId: tabId });
   }
 });
 
-console.log('Farsi Root Word Learner background service worker loaded');
+console.log('Language Learner: Background service worker loaded');
