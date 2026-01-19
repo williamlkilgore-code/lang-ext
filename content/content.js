@@ -418,9 +418,14 @@
       return;
     }
 
-    // Initialize translation popup with appropriate matcher
-    const primaryMatcher = loaded.persian ? persianMatcher : chineseMatcher;
-    translationPopup = new TranslationPopup(primaryMatcher);
+    // Initialize translation popup with both matchers and detectors
+    translationPopup = new TranslationPopup(
+      persianMatcher,
+      chineseMatcher,
+      persianDetector,
+      chineseDetector,
+      loaded
+    );
 
     // Process page
     processPage();

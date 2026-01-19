@@ -4,10 +4,15 @@
  */
 
 class TranslationPopup {
-  constructor(matcher) {
-    this.matcher = matcher;
+  constructor(persianMatcher, chineseMatcher, persianDetector, chineseDetector, activeLanguages) {
+    this.persianMatcher = persianMatcher;
+    this.chineseMatcher = chineseMatcher;
+    this.persianDetector = persianDetector;
+    this.chineseDetector = chineseDetector;
+    this.activeLanguages = activeLanguages;
     this.popup = null;
     this.currentSelection = null;
+    this.currentLanguage = null;
     this.isVisible = false;
 
     this.init();
@@ -80,8 +85,9 @@ class TranslationPopup {
       return;
     }
 
-    // Check if selection contains Persian text
-    if (!this.containsPersian(selectedText)) {
+    // Detect language and check if it's supported
+    const language = this.detectLanguage(selectedText);
+    if (!language) {
       this.hide();
       return;
     }
@@ -92,12 +98,35 @@ class TranslationPopup {
     }
 
     this.currentSelection = selectedText;
+    this.currentLanguage = language;
     this.show(selection);
   }
 
   containsPersian(text) {
     // Check if text contains Persian/Arabic characters
     return /[\u0600-\u06FF]/.test(text);
+  }
+
+  containsChinese(text) {
+    // Check if text contains Chinese characters
+    return /[\u4E00-\u9FFF]/.test(text);
+  }
+
+  detectLanguage(text) {
+    // Detect which language the text is in
+    const hasPersian = this.activeLanguages.persian && this.containsPersian(text);
+    const hasChinese = this.activeLanguages.chinese && this.containsChinese(text);
+
+    // If both, determine which is more prevalent
+    if (hasPersian && hasChinese) {
+      const persianCount = (text.match(/[\u0600-\u06FF]/g) || []).length;
+      const chineseCount = (text.match(/[\u4E00-\u9FFF]/g) || []).length;
+      return chineseCount > persianCount ? 'chinese' : 'persian';
+    }
+
+    if (hasChinese) return 'chinese';
+    if (hasPersian) return 'persian';
+    return null;
   }
 
   show(selection) {
@@ -193,54 +222,117 @@ class TranslationPopup {
   }
 
   findInDictionary(text) {
-    const normalizedText = this.matcher.normalizeWord(text);
-    const rootInfo = this.matcher.matchWord(normalizedText);
+    if (!this.currentLanguage) return null;
 
-    if (rootInfo) {
-      return {
-        type: 'dictionary',
-        word: text,
-        translation: rootInfo.wordMeaning,
-        pos: rootInfo.pos,
-        root: rootInfo.root,
-        rootLatin: rootInfo.rootLatin,
-        rootMeaning: rootInfo.rootMeaning
-      };
+    if (this.currentLanguage === 'persian') {
+      const normalizedText = this.persianMatcher.normalizeWord(text);
+      const rootInfo = this.persianMatcher.matchWord(normalizedText);
+
+      if (rootInfo) {
+        return {
+          type: 'dictionary',
+          language: 'persian',
+          word: text,
+          translation: rootInfo.wordMeaning,
+          pos: rootInfo.pos,
+          root: rootInfo.root,
+          rootLatin: rootInfo.rootLatin,
+          rootMeaning: rootInfo.rootMeaning
+        };
+      }
+    } else if (this.currentLanguage === 'chinese') {
+      const wordInfo = this.chineseMatcher.matchWord(text);
+
+      if (wordInfo) {
+        return {
+          type: 'dictionary',
+          language: 'chinese',
+          word: text,
+          character: wordInfo.character,
+          pinyin: wordInfo.pinyin,
+          translation: wordInfo.meaning,
+          pos: wordInfo.pos,
+          radical: wordInfo.radical,
+          radicalMeaning: wordInfo.radicalMeaning,
+          hskLevel: wordInfo.hskLevel
+        };
+      }
     }
 
     return null;
   }
 
   translateMultipleWords(text) {
-    // Split text into words and try to translate each
-    const words = text.split(/\s+/);
-    const translations = [];
+    if (!this.currentLanguage) return null;
+
+    let translations = [];
     let foundWords = 0;
+    let totalWords = 0;
 
-    words.forEach(word => {
-      const cleaned = word.trim();
-      if (!cleaned) return;
+    if (this.currentLanguage === 'persian') {
+      // Split Persian text by spaces
+      const words = text.split(/\s+/);
+      totalWords = words.length;
 
-      const translation = this.findInDictionary(cleaned);
-      if (translation) {
-        translations.push({
-          word: cleaned,
-          meaning: translation.translation
+      words.forEach(word => {
+        const cleaned = word.trim();
+        if (!cleaned) return;
+
+        const translation = this.findInDictionary(cleaned);
+        if (translation) {
+          translations.push({
+            word: cleaned,
+            meaning: translation.translation
+          });
+          foundWords++;
+        } else {
+          translations.push({
+            word: cleaned,
+            meaning: '?'
+          });
+        }
+      });
+    } else if (this.currentLanguage === 'chinese') {
+      // For Chinese, try to match individual characters and multi-character words
+      const matches = this.chineseMatcher.extractWords(text);
+
+      if (matches.length > 0) {
+        matches.forEach(match => {
+          translations.push({
+            word: match.word,
+            meaning: match.wordInfo.meaning
+          });
+          foundWords++;
         });
-        foundWords++;
+        totalWords = matches.length;
       } else {
-        translations.push({
-          word: cleaned,
-          meaning: '?'
-        });
+        // If no matches, show individual characters
+        for (const char of text) {
+          if (/[\u4E00-\u9FFF]/.test(char)) {
+            const wordInfo = this.chineseMatcher.matchWord(char);
+            if (wordInfo) {
+              translations.push({
+                word: char,
+                meaning: wordInfo.meaning
+              });
+              foundWords++;
+            } else {
+              translations.push({
+                word: char,
+                meaning: '?'
+              });
+            }
+            totalWords++;
+          }
+        }
       }
-    });
+    }
 
     return {
       type: 'multiword',
       words: translations,
       foundWords: foundWords,
-      totalWords: words.length
+      totalWords: totalWords
     };
   }
 
@@ -249,16 +341,32 @@ class TranslationPopup {
 
     if (translation.type === 'dictionary') {
       // Single word from dictionary
-      content = `
-        <div class="translation-result">
-          <div class="translation-word">${translation.word}</div>
-          <div class="translation-meaning">${translation.translation}</div>
-          <div class="translation-pos">${translation.pos}</div>
-          <div class="translation-root">
-            Root: ${translation.root} (${translation.rootLatin}) - ${translation.rootMeaning}
+      if (translation.language === 'persian') {
+        content = `
+          <div class="translation-result">
+            <div class="translation-word">${translation.word}</div>
+            <div class="translation-meaning">${translation.translation}</div>
+            <div class="translation-pos">${translation.pos}</div>
+            <div class="translation-root">
+              Root: ${translation.root} (${translation.rootLatin}) - ${translation.rootMeaning}
+            </div>
           </div>
-        </div>
-      `;
+        `;
+      } else if (translation.language === 'chinese') {
+        content = `
+          <div class="translation-result">
+            <div class="translation-word">${translation.character}</div>
+            <div class="translation-meaning">
+              <span class="tooltip-root">${translation.pinyin}</span>
+            </div>
+            <div class="translation-meaning">${translation.translation}</div>
+            <div class="translation-pos">${translation.pos}</div>
+            <div class="translation-root">
+              Radical: ${translation.radical} (${translation.radicalMeaning}) • HSK ${translation.hskLevel}
+            </div>
+          </div>
+        `;
+      }
     } else if (translation.type === 'multiword') {
       // Multiple words - show word-by-word breakdown
       const wordTranslations = translation.words.map(w =>
@@ -271,6 +379,8 @@ class TranslationPopup {
 
       // Also include external translation links for the full phrase
       const encodedText = encodeURIComponent(this.currentSelection);
+      const sourceLang = this.currentLanguage === 'chinese' ? 'zh-CN' : 'fa';
+      const deeplLang = this.currentLanguage === 'chinese' ? 'zh' : 'fa';
 
       content = `
         <div class="translation-result multiword">
@@ -283,7 +393,7 @@ class TranslationPopup {
           <div class="translation-divider"></div>
           <div class="translation-header">Translate full phrase</div>
           <div class="external-options">
-            <a href="https://translate.google.com/?sl=fa&tl=en&text=${encodedText}"
+            <a href="https://translate.google.com/?sl=${sourceLang}&tl=en&text=${encodedText}"
                target="_blank"
                class="external-link">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
@@ -291,7 +401,7 @@ class TranslationPopup {
               </svg>
               Google Translate
             </a>
-            <a href="https://www.deepl.com/translator#fa/en/${encodedText}"
+            <a href="https://www.deepl.com/translator#${deeplLang}/en/${encodedText}"
                target="_blank"
                class="external-link">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -313,11 +423,15 @@ class TranslationPopup {
     // Encode text for URLs
     const encodedText = encodeURIComponent(text);
 
+    // Determine source language code
+    const sourceLang = this.currentLanguage === 'chinese' ? 'zh-CN' : 'fa';
+    const deeplLang = this.currentLanguage === 'chinese' ? 'zh' : 'fa';
+
     const content = `
       <div class="translation-result external">
         <div class="translation-header">Translation not found in dictionary</div>
         <div class="external-options">
-          <a href="https://translate.google.com/?sl=fa&tl=en&text=${encodedText}"
+          <a href="https://translate.google.com/?sl=${sourceLang}&tl=en&text=${encodedText}"
              target="_blank"
              class="external-link">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
@@ -325,7 +439,7 @@ class TranslationPopup {
             </svg>
             Google Translate
           </a>
-          <a href="https://www.deepl.com/translator#fa/en/${encodedText}"
+          <a href="https://www.deepl.com/translator#${deeplLang}/en/${encodedText}"
              target="_blank"
              class="external-link">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
