@@ -6,6 +6,9 @@
 (async function() {
   'use strict';
 
+  // Initialize settings manager
+  const settingsManager = new SettingsManager();
+
   // Initialize detectors
   const persianDetector = new LanguageDetector();
   const chineseDetector = new ChineseDetector();
@@ -15,6 +18,7 @@
   const chineseMatcher = new ChineseMatcher();
 
   // State
+  let settings = null;
   let activeLanguages = { persian: false, chinese: false };
   let tooltip = null;
   let currentHighlight = null;
@@ -275,7 +279,13 @@
     }
 
     const text = textNode.textContent;
-    const matches = chineseMatcher.extractWords(text);
+    const allMatches = chineseMatcher.extractWords(text);
+
+    // Filter by HSK level based on settings
+    const matches = allMatches.filter(match => {
+      const hskLevel = match.wordInfo.hskLevel;
+      return hskLevel >= settings.chineseHskMin && hskLevel <= settings.chineseHskMax;
+    });
 
     if (matches.length === 0) return;
 
@@ -398,25 +408,94 @@
   }
 
   /**
+   * Apply highlight styles from settings
+   */
+  function applyHighlightStyles() {
+    if (!settings) return;
+
+    // Remove existing style element if any
+    const existingStyle = document.getElementById('language-learner-highlight-style');
+    if (existingStyle) existingStyle.remove();
+
+    // Create style element
+    const style = document.createElement('style');
+    style.id = 'language-learner-highlight-style';
+
+    // Convert hex to rgba
+    const hex = settings.highlightColor;
+    const r = parseInt(hex.slice(1, 3), 16);
+    const g = parseInt(hex.slice(3, 5), 16);
+    const b = parseInt(hex.slice(5, 7), 16);
+    const opacity = settings.highlightOpacity / 100;
+
+    let decorationStyle = 'dotted';
+    if (settings.highlightStyle === 'solid') decorationStyle = 'solid';
+    else if (settings.highlightStyle === 'wavy') decorationStyle = 'wavy';
+    else if (settings.highlightStyle === 'none') decorationStyle = 'none';
+
+    const css = `
+      .farsi-root-highlight,
+      .chinese-char-highlight {
+        ${decorationStyle === 'none' ? 'text-decoration: none !important;' : `
+          text-decoration-line: underline !important;
+          text-decoration-style: ${decorationStyle} !important;
+          text-decoration-color: rgba(${r}, ${g}, ${b}, ${opacity}) !important;
+          text-decoration-thickness: ${settings.highlightThickness}px !important;
+        `}
+      }
+    `;
+
+    style.textContent = css;
+    document.head.appendChild(style);
+  }
+
+  /**
    * Initialize extension
    */
   async function init() {
-    // Detect languages on page
-    const languages = detectLanguages();
+    // Load settings
+    settings = await settingsManager.getAll();
 
-    if (!languages.persian && !languages.chinese) {
-      console.log('Language Learner: No supported language content detected');
+    // Check if current domain is excluded
+    const isExcluded = await settingsManager.isCurrentDomainExcluded();
+    if (isExcluded) {
+      console.log('Language Learner: Domain is excluded in settings');
+      return;
+    }
+
+    // Check which languages are enabled in settings
+    const enabledLanguages = await settingsManager.getActiveLanguages();
+
+    if (!enabledLanguages.persian && !enabledLanguages.chinese) {
+      console.log('Language Learner: No languages enabled in settings');
+      return;
+    }
+
+    // Detect languages on page
+    const detectedLanguages = detectLanguages();
+
+    // Only load languages that are both enabled AND detected
+    const languagesToLoad = {
+      persian: enabledLanguages.persian && detectedLanguages.persian,
+      chinese: enabledLanguages.chinese && detectedLanguages.chinese
+    };
+
+    if (!languagesToLoad.persian && !languagesToLoad.chinese) {
+      console.log('Language Learner: No enabled language content detected on page');
       return;
     }
 
     // Load appropriate dictionaries
-    const loaded = await loadDictionaries(languages);
+    const loaded = await loadDictionaries(languagesToLoad);
     activeLanguages = loaded;
 
     if (!loaded.persian && !loaded.chinese) {
       console.error('Language Learner: Failed to load any dictionaries');
       return;
     }
+
+    // Apply custom highlight styles from settings
+    applyHighlightStyles();
 
     // Initialize translation popup with both matchers and detectors
     translationPopup = new TranslationPopup(
@@ -434,7 +513,21 @@
     setupMutationObserver();
 
     console.log('Language Learner: Initialized with languages:', activeLanguages);
+    console.log('Language Learner: Settings:', {
+      highlightOpacity: settings.highlightOpacity,
+      chineseHskRange: `${settings.chineseHskMin}-${settings.chineseHskMax}`
+    });
   }
+
+  /**
+   * Handle settings updates
+   */
+  chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
+    if (message.action === 'settingsUpdated') {
+      console.log('Language Learner: Settings updated, reloading page...');
+      window.location.reload();
+    }
+  });
 
   // Start when DOM is ready
   if (document.readyState === 'loading') {
