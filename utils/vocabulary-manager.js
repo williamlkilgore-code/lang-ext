@@ -164,10 +164,10 @@ class VocabularyManager {
       wordData = {
         word: wordData.word,
         root: wordData.root || '',
-        rootMeaning: wordData.rootMeaning || 'custom',
-        wordMeaning: wordData.wordMeaning || 'custom word',
+        rootMeaning: wordData.rootMeaning || '',
+        wordMeaning: wordData.wordMeaning || '',
         pos: wordData.pos || 'noun',
-        category: wordData.category || 'custom',
+        category: wordData.category || '',
         rootLatin: wordData.rootLatin || '',
         id: Date.now()
       };
@@ -179,10 +179,10 @@ class VocabularyManager {
       wordData = {
         character: wordData.character,
         pinyin: wordData.pinyin || '',
-        meaning: wordData.meaning || 'custom word',
+        meaning: wordData.meaning || '',
         pos: wordData.pos || 'noun',
         radical: wordData.radical || wordData.character[0],
-        radicalMeaning: wordData.radicalMeaning || 'custom',
+        radicalMeaning: wordData.radicalMeaning || '',
         hskLevel: wordData.hskLevel || 0,
         traditional: wordData.traditional || wordData.character,
         id: Date.now()
@@ -234,7 +234,9 @@ class VocabularyManager {
    */
   async removeCustomWord(language, wordId) {
     const data = await this.getAll();
-    const index = data.userDictionary[language].findIndex(w => w.id === wordId);
+    // Convert wordId to number if it's a string (from onclick)
+    const id = typeof wordId === 'string' ? parseInt(wordId, 10) : wordId;
+    const index = data.userDictionary[language].findIndex(w => w.id === id);
 
     if (index > -1) {
       const removed = data.userDictionary[language].splice(index, 1)[0];

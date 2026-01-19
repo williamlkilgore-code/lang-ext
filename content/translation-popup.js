@@ -343,31 +343,50 @@ class TranslationPopup {
     if (translation.type === 'dictionary') {
       // Single word from dictionary
       if (translation.language === 'persian') {
+        // Build root info conditionally
+        let rootInfo = '';
+        if (translation.root || translation.rootMeaning) {
+          const parts = [];
+          if (translation.root) {
+            parts.push(`Root: ${translation.root}`);
+            if (translation.rootLatin) parts.push(`(${translation.rootLatin})`);
+          }
+          if (translation.rootMeaning) {
+            parts.push(translation.rootMeaning);
+          }
+          if (parts.length > 0) {
+            rootInfo = `<div class="translation-root">${parts.join(' - ')}</div>`;
+          }
+        }
+
         content = `
           <div class="translation-result">
             <div class="translation-word">${translation.word}</div>
-            <div class="translation-meaning">${translation.translation}</div>
+            ${translation.translation ? `<div class="translation-meaning">${translation.translation}</div>` : ''}
             <div class="translation-pos">${translation.pos}</div>
-            <div class="translation-root">
-              Root: ${translation.root} (${translation.rootLatin}) - ${translation.rootMeaning}
-            </div>
+            ${rootInfo}
             <button class="mark-mastered-btn" data-word="${this.escapeHtml(translation.word)}" data-lang="persian" title="Mark as mastered">
               ✓ Mark as Mastered
             </button>
           </div>
         `;
       } else if (translation.language === 'chinese') {
+        // Build radical info conditionally
+        let radicalInfo = '';
+        if (translation.radical) {
+          const parts = [`Radical: ${translation.radical}`];
+          if (translation.radicalMeaning) parts.push(`(${translation.radicalMeaning})`);
+          if (translation.hskLevel > 0) parts.push(`• HSK ${translation.hskLevel}`);
+          radicalInfo = `<div class="translation-root">${parts.join(' ')}</div>`;
+        }
+
         content = `
           <div class="translation-result">
             <div class="translation-word">${translation.character}</div>
-            <div class="translation-meaning">
-              <span class="tooltip-root">${translation.pinyin}</span>
-            </div>
-            <div class="translation-meaning">${translation.translation}</div>
+            ${translation.pinyin ? `<div class="translation-meaning"><span class="tooltip-root">${translation.pinyin}</span></div>` : ''}
+            ${translation.translation ? `<div class="translation-meaning">${translation.translation}</div>` : ''}
             <div class="translation-pos">${translation.pos}</div>
-            <div class="translation-root">
-              Radical: ${translation.radical} (${translation.radicalMeaning}) • HSK ${translation.hskLevel}
-            </div>
+            ${radicalInfo}
             <button class="mark-mastered-btn" data-word="${this.escapeHtml(translation.character)}" data-lang="chinese" title="Mark as mastered">
               ✓ Mark as Mastered
             </button>

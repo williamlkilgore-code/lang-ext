@@ -575,7 +575,7 @@ async function renderCustomWords(language) {
               <div class="vocab-details">
                 <strong>${word.word}</strong>
                 ${word.root ? `<span class="vocab-meta">Root: ${word.root}</span>` : ''}
-                <span class="vocab-meta">${word.wordMeaning || 'custom word'}</span>
+                ${word.wordMeaning ? `<span class="vocab-meta">${word.wordMeaning}</span>` : ''}
                 <span class="vocab-meta">${word.pos || 'noun'}</span>
               </div>
               <button class="btn-delete" onclick="removeCustomWord('${escapeHtml(word.id)}', 'persian')" title="Delete">✕</button>
@@ -587,7 +587,7 @@ async function renderCustomWords(language) {
               <div class="vocab-details">
                 <strong>${word.character}</strong>
                 ${word.pinyin ? `<span class="vocab-meta">${word.pinyin}</span>` : ''}
-                <span class="vocab-meta">${word.meaning || 'custom word'}</span>
+                ${word.meaning ? `<span class="vocab-meta">${word.meaning}</span>` : ''}
                 ${word.hskLevel > 0 ? `<span class="vocab-meta">HSK ${word.hskLevel}</span>` : ''}
               </div>
               <button class="btn-delete" onclick="removeCustomWord('${escapeHtml(word.id)}', 'chinese')" title="Delete">✕</button>

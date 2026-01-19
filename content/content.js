@@ -97,32 +97,47 @@
   function showPersianTooltip(rootInfo, targetElement) {
     if (!tooltip) tooltip = createTooltip();
 
-    const content = `
-      <div class="tooltip-word">${rootInfo.word}</div>
+    // Build tooltip sections conditionally
+    let sections = `<div class="tooltip-word">${rootInfo.word}</div>`;
 
-      <div class="tooltip-section">
-        <div class="tooltip-label">Root</div>
-        <div class="tooltip-value">
-          <span class="tooltip-root">${rootInfo.root}</span>
-          <span style="margin: 0 4px;">•</span>
-          <span>${rootInfo.rootLatin}</span>
-          <span class="tooltip-category">${rootInfo.category}</span>
+    // Show root section only if root has value
+    if (rootInfo.root) {
+      sections += `
+        <div class="tooltip-section">
+          <div class="tooltip-label">Root</div>
+          <div class="tooltip-value">
+            <span class="tooltip-root">${rootInfo.root}</span>
+            ${rootInfo.rootLatin ? `<span style="margin: 0 4px;">•</span><span>${rootInfo.rootLatin}</span>` : ''}
+            ${rootInfo.category ? `<span class="tooltip-category">${rootInfo.category}</span>` : ''}
+          </div>
         </div>
-      </div>
+      `;
+    }
 
-      <div class="tooltip-section">
-        <div class="tooltip-label">Root Meaning</div>
-        <div class="tooltip-value">${rootInfo.rootMeaning}</div>
-      </div>
-
-      <div class="tooltip-section">
-        <div class="tooltip-label">Word Meaning</div>
-        <div class="tooltip-value">
-          ${rootInfo.wordMeaning}
-          <span class="tooltip-pos">${rootInfo.pos}</span>
+    // Show root meaning only if it has value
+    if (rootInfo.rootMeaning) {
+      sections += `
+        <div class="tooltip-section">
+          <div class="tooltip-label">Root Meaning</div>
+          <div class="tooltip-value">${rootInfo.rootMeaning}</div>
         </div>
-      </div>
-    `;
+      `;
+    }
+
+    // Show word meaning
+    if (rootInfo.wordMeaning) {
+      sections += `
+        <div class="tooltip-section">
+          <div class="tooltip-label">Word Meaning</div>
+          <div class="tooltip-value">
+            ${rootInfo.wordMeaning}
+            <span class="tooltip-pos">${rootInfo.pos}</span>
+          </div>
+        </div>
+      `;
+    }
+
+    const content = sections;
 
     tooltip.innerHTML = content;
     positionTooltip(targetElement);
@@ -134,32 +149,47 @@
   function showChineseTooltip(wordInfo, targetElement) {
     if (!tooltip) tooltip = createTooltip();
 
-    const content = `
-      <div class="tooltip-word">${wordInfo.character}</div>
+    // Build tooltip sections conditionally
+    let sections = `<div class="tooltip-word">${wordInfo.character}</div>`;
 
-      <div class="tooltip-section">
-        <div class="tooltip-label">Pinyin</div>
-        <div class="tooltip-value">${wordInfo.pinyin}</div>
-      </div>
-
-      <div class="tooltip-section">
-        <div class="tooltip-label">Meaning</div>
-        <div class="tooltip-value">
-          ${wordInfo.meaning}
-          <span class="tooltip-pos">${wordInfo.pos}</span>
+    // Show pinyin if available
+    if (wordInfo.pinyin) {
+      sections += `
+        <div class="tooltip-section">
+          <div class="tooltip-label">Pinyin</div>
+          <div class="tooltip-value">${wordInfo.pinyin}</div>
         </div>
-      </div>
+      `;
+    }
 
-      <div class="tooltip-section">
-        <div class="tooltip-label">Radical</div>
-        <div class="tooltip-value">
-          <span class="tooltip-root">${wordInfo.radical}</span>
-          <span style="margin: 0 4px;">•</span>
-          <span>${wordInfo.radicalMeaning}</span>
-          <span class="tooltip-category">HSK ${wordInfo.hskLevel}</span>
+    // Show meaning if available
+    if (wordInfo.meaning) {
+      sections += `
+        <div class="tooltip-section">
+          <div class="tooltip-label">Meaning</div>
+          <div class="tooltip-value">
+            ${wordInfo.meaning}
+            <span class="tooltip-pos">${wordInfo.pos}</span>
+          </div>
         </div>
-      </div>
-    `;
+      `;
+    }
+
+    // Show radical section
+    if (wordInfo.radical) {
+      sections += `
+        <div class="tooltip-section">
+          <div class="tooltip-label">Radical</div>
+          <div class="tooltip-value">
+            <span class="tooltip-root">${wordInfo.radical}</span>
+            ${wordInfo.radicalMeaning ? `<span style="margin: 0 4px;">•</span><span>${wordInfo.radicalMeaning}</span>` : ''}
+            ${wordInfo.hskLevel > 0 ? `<span class="tooltip-category">HSK ${wordInfo.hskLevel}</span>` : ''}
+          </div>
+        </div>
+      `;
+    }
+
+    const content = sections;
 
     tooltip.innerHTML = content;
     positionTooltip(targetElement);
