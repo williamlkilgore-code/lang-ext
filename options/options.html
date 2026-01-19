@@ -168,6 +168,156 @@
                     </div>
                 </div>
             </section>
+
+            <!-- Custom Vocabulary Settings -->
+            <section class="settings-section">
+                <h2>📚 Custom Vocabulary</h2>
+                <p class="section-description">Control how mastered words and custom dictionaries are displayed.</p>
+
+                <div class="setting-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="hideMasteredWords" checked>
+                        <span class="checkbox-custom"></span>
+                        <div class="label-content">
+                            <strong>Hide Mastered Words</strong>
+                            <small>Don't highlight words you've marked as mastered</small>
+                        </div>
+                    </label>
+
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="showCustomWords" checked>
+                        <span class="checkbox-custom"></span>
+                        <div class="label-content">
+                            <strong>Show Custom Dictionary Words</strong>
+                            <small>Highlight words from your custom dictionaries</small>
+                        </div>
+                    </label>
+                </div>
+            </section>
+
+            <!-- Mastered Words Management -->
+            <section class="settings-section">
+                <h2>✅ Mastered Words</h2>
+                <p class="section-description">Manage words you've already learned. Mastered words won't be highlighted.</p>
+
+                <div class="setting-group">
+                    <!-- Language Tabs -->
+                    <div class="tab-buttons">
+                        <button class="tab-btn active" data-tab="mastered-persian">Persian (<span id="masteredPersianCount">0</span>)</button>
+                        <button class="tab-btn" data-tab="mastered-chinese">Chinese (<span id="masteredChineseCount">0</span>)</button>
+                    </div>
+
+                    <!-- Persian Mastered Words -->
+                    <div id="mastered-persian" class="tab-content active">
+                        <div class="vocab-list-header">
+                            <strong>Mastered Persian Words</strong>
+                            <button id="clearMasteredPersian" class="btn-danger-small">Clear All</button>
+                        </div>
+                        <ul id="masteredPersianList" class="vocab-list">
+                            <li class="empty-state">No mastered words yet. Hover over any word and click "Mark as Mastered"</li>
+                        </ul>
+                    </div>
+
+                    <!-- Chinese Mastered Words -->
+                    <div id="mastered-chinese" class="tab-content">
+                        <div class="vocab-list-header">
+                            <strong>Mastered Chinese Words</strong>
+                            <button id="clearMasteredChinese" class="btn-danger-small">Clear All</button>
+                        </div>
+                        <ul id="masteredChineseList" class="vocab-list">
+                            <li class="empty-state">No mastered words yet. Hover over any character and click "Mark as Mastered"</li>
+                        </ul>
+                    </div>
+
+                    <div class="action-buttons">
+                        <button id="exportMastered" class="btn-secondary">📤 Export</button>
+                        <button id="importMastered" class="btn-secondary">📥 Import</button>
+                        <input type="file" id="importMasteredFile" accept=".json" style="display: none;">
+                    </div>
+                </div>
+            </section>
+
+            <!-- Custom Dictionary Management -->
+            <section class="settings-section">
+                <h2>📝 Custom Dictionary</h2>
+                <p class="section-description">Add your own words to supplement the main dictionaries.</p>
+
+                <div class="setting-group">
+                    <!-- Language Tabs -->
+                    <div class="tab-buttons">
+                        <button class="tab-btn active" data-tab="custom-persian">Persian (<span id="customPersianCount">0</span>)</button>
+                        <button class="tab-btn" data-tab="custom-chinese">Chinese (<span id="customChineseCount">0</span>)</button>
+                    </div>
+
+                    <!-- Persian Custom Dictionary -->
+                    <div id="custom-persian" class="tab-content active">
+                        <!-- Add Word Form -->
+                        <div class="add-word-form">
+                            <h4>Add Persian Word</h4>
+                            <div class="form-row">
+                                <input type="text" id="persianWord" placeholder="Word (required) - e.g., کتاب" required>
+                                <input type="text" id="persianRoot" placeholder="Root (optional) - e.g., ک-ت-ب">
+                            </div>
+                            <div class="form-row">
+                                <input type="text" id="persianRootMeaning" placeholder="Root Meaning - e.g., to write">
+                                <input type="text" id="persianWordMeaning" placeholder="Word Meaning - e.g., book">
+                            </div>
+                            <div class="form-row">
+                                <select id="persianPos">
+                                    <option value="noun">Noun</option>
+                                    <option value="verb">Verb</option>
+                                    <option value="adjective">Adjective</option>
+                                    <option value="adverb">Adverb</option>
+                                    <option value="preposition">Preposition</option>
+                                </select>
+                                <button id="addPersianWord" class="btn-primary">Add Word</button>
+                            </div>
+                        </div>
+
+                        <!-- Persian Word List -->
+                        <ul id="customPersianList" class="vocab-list vocab-list-detailed">
+                            <li class="empty-state">No custom words yet. Add your first word above!</li>
+                        </ul>
+                    </div>
+
+                    <!-- Chinese Custom Dictionary -->
+                    <div id="custom-chinese" class="tab-content">
+                        <!-- Add Word Form -->
+                        <div class="add-word-form">
+                            <h4>Add Chinese Word</h4>
+                            <div class="form-row">
+                                <input type="text" id="chineseCharacter" placeholder="Character (required) - e.g., 词" required>
+                                <input type="text" id="chinesePinyin" placeholder="Pinyin - e.g., cí">
+                            </div>
+                            <div class="form-row">
+                                <input type="text" id="chineseMeaning" placeholder="Meaning - e.g., word">
+                                <input type="text" id="chineseRadical" placeholder="Radical (optional) - e.g., 讠">
+                            </div>
+                            <div class="form-row">
+                                <select id="chinesePos">
+                                    <option value="noun">Noun</option>
+                                    <option value="verb">Verb</option>
+                                    <option value="adjective">Adjective</option>
+                                    <option value="adverb">Adverb</option>
+                                    <option value="measure word">Measure Word</option>
+                                </select>
+                                <button id="addChineseWord" class="btn-primary">Add Word</button>
+                            </div>
+                        </div>
+
+                        <!-- Chinese Word List -->
+                        <ul id="customChineseList" class="vocab-list vocab-list-detailed">
+                            <li class="empty-state">No custom words yet. Add your first word above!</li>
+                        </ul>
+                    </div>
+
+                    <div class="action-buttons">
+                        <button id="exportCustom" class="btn-secondary">📤 Export</button>
+                        <button id="importCustom" class="btn-secondary">📥 Import</button>
+                        <input type="file" id="importCustomFile" accept=".json" style="display: none;">
+                    </div>
+                </div>
+            </section>
         </main>
 
         <footer>
@@ -180,6 +330,7 @@
     </div>
 
     <script src="../utils/settings.js"></script>
+    <script src="../utils/vocabulary-manager.js"></script>
     <script src="options.js"></script>
 </body>
 </html>

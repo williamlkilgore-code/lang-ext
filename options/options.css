@@ -476,6 +476,250 @@ footer {
     pointer-events: none;
 }
 
+/* ==================== CUSTOM VOCABULARY STYLES ==================== */
+
+/* Tab Buttons */
+.tab-buttons {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid var(--border);
+}
+
+.tab-btn {
+    padding: 12px 20px;
+    background: none;
+    border: none;
+    border-bottom: 3px solid transparent;
+    color: var(--text-secondary);
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    margin-bottom: -2px;
+}
+
+.tab-btn:hover {
+    color: var(--primary-color);
+    background: #f8fafc;
+}
+
+.tab-btn.active {
+    color: var(--primary-color);
+    border-bottom-color: var(--primary-color);
+}
+
+/* Tab Content */
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+/* Vocabulary List */
+.vocab-list {
+    list-style: none;
+    max-height: 300px;
+    overflow-y: auto;
+    border: 2px solid var(--border);
+    border-radius: 6px;
+    padding: 8px;
+    margin: 16px 0;
+    background: white;
+}
+
+.vocab-list:empty {
+    padding: 30px;
+    text-align: center;
+    color: var(--text-secondary);
+}
+
+.vocab-list li {
+    padding: 12px;
+    background: #f8fafc;
+    border-radius: 4px;
+    margin-bottom: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.2s;
+}
+
+.vocab-list li:last-child {
+    margin-bottom: 0;
+}
+
+.vocab-list li:hover {
+    background: #f1f5f9;
+    transform: translateX(2px);
+}
+
+.vocab-list li.empty-state {
+    background: none;
+    color: var(--text-secondary);
+    font-style: italic;
+    justify-content: center;
+}
+
+.vocab-list li.empty-state:hover {
+    transform: none;
+}
+
+/* Vocabulary List Detailed (for custom dictionary) */
+.vocab-list-detailed li {
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.vocab-word {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--text-primary);
+}
+
+.vocab-details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    font-size: 13px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+}
+
+.vocab-detail-item {
+    display: flex;
+    gap: 4px;
+}
+
+.vocab-detail-label {
+    font-weight: 600;
+}
+
+.vocab-actions {
+    display: flex;
+    gap: 8px;
+    margin-top: 8px;
+    width: 100%;
+    justify-content: flex-end;
+}
+
+/* Vocabulary List Header */
+.vocab-list-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.vocab-list-header strong {
+    font-size: 15px;
+    color: var(--text-primary);
+}
+
+/* Small Buttons */
+.btn-danger-small,
+.btn-edit-small,
+.btn-delete-small {
+    padding: 6px 12px;
+    font-size: 12px;
+    font-weight: 600;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s;
+    border: none;
+}
+
+.btn-danger-small {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+.btn-danger-small:hover {
+    background: #fecaca;
+}
+
+.btn-edit-small {
+    background: #dbeafe;
+    color: #1e40af;
+}
+
+.btn-edit-small:hover {
+    background: #bfdbfe;
+}
+
+.btn-delete-small {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+.btn-delete-small:hover {
+    background: #fecaca;
+}
+
+/* Add Word Form */
+.add-word-form {
+    background: #f8fafc;
+    border: 2px solid var(--border);
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.add-word-form h4 {
+    margin: 0 0 16px 0;
+    color: var(--text-primary);
+    font-size: 16px;
+}
+
+.form-row {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.form-row:last-child {
+    margin-bottom: 0;
+}
+
+.form-row input[type="text"] {
+    flex: 1;
+    padding: 10px 12px;
+    border: 2px solid var(--border);
+    border-radius: 6px;
+    font-size: 14px;
+    outline: none;
+    transition: all 0.2s;
+}
+
+.form-row input[type="text"]:focus {
+    border-color: var(--primary-color);
+    background: white;
+}
+
+.form-row select {
+    flex: 1;
+}
+
+.form-row button {
+    flex: 0 0 auto;
+}
+
+/* Action Buttons */
+.action-buttons {
+    display: flex;
+    gap: 12px;
+    margin-top: 16px;
+    justify-content: flex-end;
+}
+
+.action-buttons button {
+    padding: 10px 20px;
+    font-size: 14px;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
     body {
@@ -488,5 +732,18 @@ footer {
 
     .button-group {
         flex-direction: column;
+    }
+
+    .tab-buttons {
+        flex-wrap: wrap;
+    }
+
+    .form-row {
+        flex-direction: column;
+    }
+
+    .vocab-details {
+        flex-direction: column;
+        gap: 4px;
     }
 }
