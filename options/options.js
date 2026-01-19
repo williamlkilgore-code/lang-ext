@@ -573,24 +573,24 @@ async function renderCustomWords(language) {
           return `
             <li>
               <div class="vocab-details">
-                <strong>${word.word}</strong>
-                ${word.root ? `<span class="vocab-meta">Root: ${word.root}</span>` : ''}
-                ${word.wordMeaning ? `<span class="vocab-meta">${word.wordMeaning}</span>` : ''}
+                <strong>${escapeHtml(word.word)}</strong>
+                ${word.root ? `<span class="vocab-meta">Root: ${escapeHtml(word.root)}</span>` : ''}
+                ${word.wordMeaning ? `<span class="vocab-meta">${escapeHtml(word.wordMeaning)}</span>` : ''}
                 <span class="vocab-meta">${word.pos || 'noun'}</span>
               </div>
-              <button class="btn-delete" onclick="removeCustomWord('${escapeHtml(word.id)}', 'persian')" title="Delete">✕</button>
+              <button class="btn-delete" onclick="removeCustomWord(${word.id}, 'persian')" title="Delete">✕</button>
             </li>
           `;
         } else {
           return `
             <li>
               <div class="vocab-details">
-                <strong>${word.character}</strong>
-                ${word.pinyin ? `<span class="vocab-meta">${word.pinyin}</span>` : ''}
-                ${word.meaning ? `<span class="vocab-meta">${word.meaning}</span>` : ''}
+                <strong>${escapeHtml(word.character)}</strong>
+                ${word.pinyin ? `<span class="vocab-meta">${escapeHtml(word.pinyin)}</span>` : ''}
+                ${word.meaning ? `<span class="vocab-meta">${escapeHtml(word.meaning)}</span>` : ''}
                 ${word.hskLevel > 0 ? `<span class="vocab-meta">HSK ${word.hskLevel}</span>` : ''}
               </div>
-              <button class="btn-delete" onclick="removeCustomWord('${escapeHtml(word.id)}', 'chinese')" title="Delete">✕</button>
+              <button class="btn-delete" onclick="removeCustomWord(${word.id}, 'chinese')" title="Delete">✕</button>
             </li>
           `;
         }
@@ -618,19 +618,24 @@ async function addPersianWord() {
     pos: elements.persianPos.value
   };
 
-  await vocabularyManager.addCustomWord('persian', wordData);
-  await renderCustomWords('persian');
-  notifyContentScripts();
+  try {
+    await vocabularyManager.addCustomWord('persian', wordData);
+    await renderCustomWords('persian');
+    notifyContentScripts();
 
-  // Clear form
-  elements.persianWord.value = '';
-  elements.persianRoot.value = '';
-  elements.persianRootMeaning.value = '';
-  elements.persianWordMeaning.value = '';
-  elements.persianPos.value = 'noun';
-  elements.persianWord.focus();
+    // Clear form
+    elements.persianWord.value = '';
+    elements.persianRoot.value = '';
+    elements.persianRootMeaning.value = '';
+    elements.persianWordMeaning.value = '';
+    elements.persianPos.value = 'noun';
+    elements.persianWord.focus();
 
-  showStatus(`✓ Added "${word}" to custom dictionary`, 'success');
+    showStatus(`✓ Added "${word}" to custom dictionary`, 'success');
+  } catch (error) {
+    console.error('Error adding Persian word:', error);
+    showStatus('Error adding word: ' + error.message, 'error');
+  }
 }
 
 /**
@@ -652,29 +657,40 @@ async function addChineseWord() {
     pos: elements.chinesePos.value
   };
 
-  await vocabularyManager.addCustomWord('chinese', wordData);
-  await renderCustomWords('chinese');
-  notifyContentScripts();
+  try {
+    await vocabularyManager.addCustomWord('chinese', wordData);
+    await renderCustomWords('chinese');
+    notifyContentScripts();
 
-  // Clear form
-  elements.chineseCharacter.value = '';
-  elements.chinesePinyin.value = '';
-  elements.chineseMeaning.value = '';
-  elements.chineseRadical.value = '';
-  elements.chinesePos.value = 'noun';
-  elements.chineseCharacter.focus();
+    // Clear form
+    elements.chineseCharacter.value = '';
+    elements.chinesePinyin.value = '';
+    elements.chineseMeaning.value = '';
+    elements.chineseRadical.value = '';
+    elements.chinesePos.value = 'noun';
+    elements.chineseCharacter.focus();
 
-  showStatus(`✓ Added "${character}" to custom dictionary`, 'success');
+    showStatus(`✓ Added "${character}" to custom dictionary`, 'success');
+  } catch (error) {
+    console.error('Error adding Chinese word:', error);
+    showStatus('Error adding word: ' + error.message, 'error');
+  }
 }
 
 /**
  * Remove a custom word
  */
 async function removeCustomWord(wordId, language) {
-  await vocabularyManager.removeCustomWord(language, wordId);
-  await renderCustomWords(language);
-  notifyContentScripts();
-  showStatus('✓ Word removed from custom dictionary', 'success');
+  try {
+    console.log('Removing custom word:', wordId, language, typeof wordId);
+    await vocabularyManager.removeCustomWord(language, wordId);
+    await renderCustomWords(language);
+    notifyContentScripts();
+    showStatus('✓ Word removed from custom dictionary', 'success');
+  } catch (error) {
+    console.error('Error removing custom word:', error);
+    showStatus('Error removing word: ' + error.message, 'error');
+  }
 }
 
 /**
@@ -758,8 +774,9 @@ function notifyContentScripts() {
  * Escape HTML to prevent XSS in onclick attributes
  */
 function escapeHtml(text) {
+  if (text === null || text === undefined) return '';
   const div = document.createElement('div');
-  div.textContent = text;
+  div.textContent = String(text);
   return div.innerHTML.replace(/'/g, '&apos;').replace(/"/g, '&quot;');
 }
 
