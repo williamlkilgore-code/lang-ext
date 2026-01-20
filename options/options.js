@@ -901,6 +901,7 @@ async function exportCustomDictionary() {
   const data = {
     persian: await vocabularyManager.getUserDictionary('persian'),
     chinese: await vocabularyManager.getUserDictionary('chinese'),
+    russian: await vocabularyManager.getUserDictionary('russian'),
     exportDate: new Date().toISOString()
   };
 
@@ -912,7 +913,7 @@ async function exportCustomDictionary() {
   a.click();
   URL.revokeObjectURL(url);
 
-  const totalWords = data.persian.length + data.chinese.length;
+  const totalWords = data.persian.length + data.chinese.length + data.russian.length;
   showStatus(`✓ Exported ${totalWords} custom words`, 'success');
 }
 
@@ -927,26 +928,37 @@ async function importCustomDictionary(event) {
     const text = await file.text();
     const data = JSON.parse(text);
 
-    // Validate data structure
-    if (!data.persian || !data.chinese) {
+    // Validate data structure - at least one language should exist
+    if (!data.persian && !data.chinese && !data.russian) {
       showStatus('Invalid file format', 'error');
       return;
     }
 
     // Import words
     let importedCount = 0;
-    for (const word of data.persian) {
-      await vocabularyManager.addCustomWord('persian', word);
-      importedCount++;
+    if (data.persian) {
+      for (const word of data.persian) {
+        await vocabularyManager.addCustomWord('persian', word);
+        importedCount++;
+      }
     }
-    for (const word of data.chinese) {
-      await vocabularyManager.addCustomWord('chinese', word);
-      importedCount++;
+    if (data.chinese) {
+      for (const word of data.chinese) {
+        await vocabularyManager.addCustomWord('chinese', word);
+        importedCount++;
+      }
+    }
+    if (data.russian) {
+      for (const word of data.russian) {
+        await vocabularyManager.addCustomWord('russian', word);
+        importedCount++;
+      }
     }
 
     // Refresh UI
     await renderCustomWords('persian');
     await renderCustomWords('chinese');
+    await renderCustomWords('russian');
     notifyContentScripts();
 
     showStatus(`✓ Imported ${importedCount} custom words`, 'success');

@@ -111,7 +111,8 @@ class SettingsManager {
     const settings = await this.getAll();
     return {
       persian: settings.activePersian,
-      chinese: settings.activeChinese
+      chinese: settings.activeChinese,
+      russian: settings.activeRussian
     };
   }
 
