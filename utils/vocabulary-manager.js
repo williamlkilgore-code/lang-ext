@@ -19,8 +19,8 @@ class VocabularyManager {
       if (typeof chrome !== 'undefined' && chrome.storage && chrome.storage.local) {
         chrome.storage.local.get(['masteredWords', 'userDictionary'], (result) => {
           const data = {
-            masteredWords: result.masteredWords || { persian: [], chinese: [] },
-            userDictionary: result.userDictionary || { persian: [], chinese: [] }
+            masteredWords: result.masteredWords || { persian: [], chinese: [], russian: [] },
+            userDictionary: result.userDictionary || { persian: [], chinese: [], russian: [] }
           };
           this.cache = data;
           resolve(data);
@@ -28,8 +28,8 @@ class VocabularyManager {
       } else {
         // Fallback for testing
         const data = {
-          masteredWords: { persian: [], chinese: [] },
-          userDictionary: { persian: [], chinese: [] }
+          masteredWords: { persian: [], chinese: [], russian: [] },
+          userDictionary: { persian: [], chinese: [], russian: [] }
         };
         this.cache = data;
         resolve(data);
@@ -171,6 +171,15 @@ class VocabularyManager {
           cleaned.radicalMeaning = '';
           needsSave = true;
         }
+      } else if (language === 'russian') {
+        if (cleaned.rootMeaning === 'custom') {
+          cleaned.rootMeaning = '';
+          needsSave = true;
+        }
+        if (cleaned.wordMeaning === 'custom word') {
+          cleaned.wordMeaning = '';
+          needsSave = true;
+        }
       }
 
       return cleaned;
@@ -228,12 +237,27 @@ class VocabularyManager {
         traditional: wordData.traditional || wordData.character,
         id: Date.now()
       };
+    } else if (language === 'russian') {
+      if (!wordData.word) {
+        throw new Error('Russian word requires: word');
+      }
+      // Set defaults for optional fields
+      wordData = {
+        word: wordData.word,
+        root: wordData.root || '',
+        rootMeaning: wordData.rootMeaning || '',
+        rootLatin: wordData.rootLatin || '',
+        wordMeaning: wordData.wordMeaning || '',
+        pos: wordData.pos || 'noun',
+        id: Date.now()
+      };
     }
 
     // Check for duplicates
     const exists = data.userDictionary[language].some(w => {
       if (language === 'persian') return w.word === wordData.word;
       if (language === 'chinese') return w.character === wordData.character;
+      if (language === 'russian') return w.word === wordData.word;
       return false;
     });
 

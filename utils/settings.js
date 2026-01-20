@@ -9,6 +9,7 @@ class SettingsManager {
       // Language Settings
       activePersian: true,
       activeChinese: true,
+      activeRussian: false,
 
       // Chinese HSK Level Filter
       chineseHskMin: 1,
