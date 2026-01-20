@@ -1,5 +1,5 @@
 /**
- * Content Script for Multi-Language Learner (Farsi & Chinese)
+ * Content Script for Multi-Language Learner (Farsi, Chinese & Russian)
  * Main script that runs on web pages to detect and highlight words
  */
 
@@ -13,14 +13,16 @@
   // Initialize detectors
   const persianDetector = new LanguageDetector();
   const chineseDetector = new ChineseDetector();
+  const russianDetector = new RussianDetector();
 
   // Initialize matchers
   const persianMatcher = new PersianMatcher();
   const chineseMatcher = new ChineseMatcher();
+  const russianMatcher = new RussianMatcher();
 
   // State
   let settings = null;
-  let activeLanguages = { persian: false, chinese: false };
+  let activeLanguages = { persian: false, chinese: false, russian: false };
   let tooltip = null;
   let currentHighlight = null;
   let translationPopup = null;
@@ -59,6 +61,19 @@
       }
     }
 
+    if (languages.russian) {
+      try {
+        const response = await fetch(chrome.runtime.getURL('data/russian-roots.json'));
+        const data = await response.json();
+        await russianMatcher.initialize(data, vocabularyManager, settings);
+        results.russian = true;
+        console.log('Language Learner: Russian dictionary loaded', russianMatcher.getStats());
+      } catch (error) {
+        console.error('Language Learner: Failed to load Russian dictionary', error);
+        results.russian = false;
+      }
+    }
+
     return results;
   }
 
@@ -68,15 +83,19 @@
   function detectLanguages() {
     const persianAnalysis = persianDetector.analyzePage();
     const chineseAnalysis = chineseDetector.analyzePage();
+    const russianText = document.body.textContent || '';
+    const hasRussian = russianDetector.containsRussian(russianText);
 
     console.log('Language Learner: Page analysis', {
       persian: persianAnalysis,
-      chinese: chineseAnalysis
+      chinese: chineseAnalysis,
+      russian: hasRussian
     });
 
     return {
       persian: persianAnalysis.isPersian,
-      chinese: chineseAnalysis.isChinese
+      chinese: chineseAnalysis.isChinese,
+      russian: hasRussian
     };
   }
 
@@ -184,6 +203,69 @@
             <span class="tooltip-root">${wordInfo.radical}</span>
             ${wordInfo.radicalMeaning ? `<span style="margin: 0 4px;">•</span><span>${wordInfo.radicalMeaning}</span>` : ''}
             ${wordInfo.hskLevel > 0 ? `<span class="tooltip-category">HSK ${wordInfo.hskLevel}</span>` : ''}
+          </div>
+        </div>
+      `;
+    }
+
+    const content = sections;
+
+    tooltip.innerHTML = content;
+    positionTooltip(targetElement);
+  }
+
+  /**
+   * Show tooltip for Russian word
+   */
+  function showRussianTooltip(wordInfo, targetElement) {
+    if (!tooltip) tooltip = createTooltip();
+
+    // Build tooltip sections conditionally
+    let sections = `<div class="tooltip-word">${wordInfo.word}</div>`;
+
+    // Show root section if available
+    if (wordInfo.root) {
+      sections += `
+        <div class="tooltip-section">
+          <div class="tooltip-label">Root</div>
+          <div class="tooltip-value">
+            <span class="tooltip-root">${wordInfo.root}</span>
+            ${wordInfo.rootLatin ? `<span style="margin: 0 4px;">•</span><span>${wordInfo.rootLatin}</span>` : ''}
+          </div>
+        </div>
+      `;
+    }
+
+    // Show root meaning if available
+    if (wordInfo.rootMeaning) {
+      sections += `
+        <div class="tooltip-section">
+          <div class="tooltip-label">Root Meaning</div>
+          <div class="tooltip-value">${wordInfo.rootMeaning}</div>
+        </div>
+      `;
+    }
+
+    // Show word meaning if available
+    if (wordInfo.wordMeaning) {
+      sections += `
+        <div class="tooltip-section">
+          <div class="tooltip-label">Word Meaning</div>
+          <div class="tooltip-value">
+            ${wordInfo.wordMeaning}
+            <span class="tooltip-pos">${wordInfo.pos}</span>
+          </div>
+        </div>
+      `;
+    }
+
+    // Show frequency rank if available
+    if (wordInfo.frequencyRank > 0) {
+      sections += `
+        <div class="tooltip-section">
+          <div class="tooltip-label">Frequency</div>
+          <div class="tooltip-value">
+            <span class="tooltip-category">#${wordInfo.frequencyRank} most common</span>
           </div>
         </div>
       `;
@@ -365,6 +447,70 @@
   }
 
   /**
+   * Process Russian text node
+   */
+  function processRussianTextNode(textNode) {
+    if (!textNode || !textNode.parentNode || !textNode.textContent) return;
+
+    const parent = textNode.parentNode;
+    if (parent.classList && (
+        parent.classList.contains('farsi-root-highlight') ||
+        parent.classList.contains('chinese-char-highlight') ||
+        parent.classList.contains('russian-word-highlight') ||
+        parent.classList.contains('farsi-root-tooltip') ||
+        parent.closest('.farsi-root-tooltip')
+    )) {
+      return;
+    }
+
+    const text = textNode.textContent;
+    const matches = russianMatcher.extractWords(text);
+
+    if (matches.length === 0) return;
+
+    const fragment = document.createDocumentFragment();
+    let lastIndex = 0;
+
+    matches.forEach(match => {
+      if (match.startIndex > lastIndex) {
+        fragment.appendChild(
+          document.createTextNode(text.substring(lastIndex, match.startIndex))
+        );
+      }
+
+      const span = document.createElement('span');
+      span.className = 'russian-word-highlight farsi-root-highlight'; // Reuse farsi styles
+      span.textContent = match.word;
+      span.dataset.language = 'russian';
+      span.dataset.wordInfo = JSON.stringify(match.wordInfo);
+
+      span.addEventListener('mouseenter', function() {
+        const wordInfo = JSON.parse(this.dataset.wordInfo);
+        showRussianTooltip(wordInfo, this);
+        currentHighlight = this;
+      });
+
+      span.addEventListener('mouseleave', function() {
+        hideTooltip();
+        currentHighlight = null;
+      });
+
+      fragment.appendChild(span);
+      lastIndex = match.endIndex;
+    });
+
+    if (lastIndex < text.length) {
+      fragment.appendChild(document.createTextNode(text.substring(lastIndex)));
+    }
+
+    try {
+      textNode.parentNode.replaceChild(fragment, textNode);
+    } catch (error) {
+      console.error('Language Learner: Error processing Russian text', error);
+    }
+  }
+
+  /**
    * Process all text nodes in document
    */
   function processPage() {
@@ -399,6 +545,10 @@
       else if (activeLanguages.chinese && chineseDetector.containsChinese(text)) {
         processChineseTextNode(textNode);
       }
+      // Check if contains Russian (only if not already processed)
+      else if (activeLanguages.russian && russianDetector.containsRussian(text)) {
+        processRussianTextNode(textNode);
+      }
     });
   }
 
@@ -416,7 +566,8 @@
             if (node.classList && (
                 node.classList.contains('farsi-root-tooltip') ||
                 node.classList.contains('farsi-root-highlight') ||
-                node.classList.contains('chinese-char-highlight')
+                node.classList.contains('chinese-char-highlight') ||
+                node.classList.contains('russian-word-highlight')
             )) return;
 
             if (node.nodeType === Node.TEXT_NODE) {
@@ -425,6 +576,8 @@
                 processPersianTextNode(node);
               } else if (activeLanguages.chinese && chineseDetector.containsChinese(text)) {
                 processChineseTextNode(node);
+              } else if (activeLanguages.russian && russianDetector.containsRussian(text)) {
+                processRussianTextNode(node);
               }
             } else if (node.nodeType === Node.ELEMENT_NODE) {
               processPage();
@@ -468,7 +621,8 @@
 
     const css = `
       .farsi-root-highlight,
-      .chinese-char-highlight {
+      .chinese-char-highlight,
+      .russian-word-highlight {
         ${decorationStyle === 'none' ? 'text-decoration: none !important;' : `
           text-decoration-line: underline !important;
           text-decoration-style: ${decorationStyle} !important;
@@ -486,7 +640,7 @@
    * Hide all highlights
    */
   function hideHighlights() {
-    const highlights = document.querySelectorAll('.farsi-root-highlight, .chinese-char-highlight');
+    const highlights = document.querySelectorAll('.farsi-root-highlight, .chinese-char-highlight, .russian-word-highlight');
     highlights.forEach(highlight => {
       highlight.style.display = 'none';
     });
@@ -504,7 +658,7 @@
    * Show all highlights
    */
   function showHighlights() {
-    const highlights = document.querySelectorAll('.farsi-root-highlight, .chinese-char-highlight');
+    const highlights = document.querySelectorAll('.farsi-root-highlight, .chinese-char-highlight, .russian-word-highlight');
     highlights.forEach(highlight => {
       highlight.style.display = '';
     });
@@ -623,7 +777,7 @@
     // Check which languages are enabled in settings
     const enabledLanguages = await settingsManager.getActiveLanguages();
 
-    if (!enabledLanguages.persian && !enabledLanguages.chinese) {
+    if (!enabledLanguages.persian && !enabledLanguages.chinese && !enabledLanguages.russian) {
       console.log('Language Learner: No languages enabled in settings');
       return;
     }
@@ -634,10 +788,11 @@
     // Only load languages that are both enabled AND detected
     const languagesToLoad = {
       persian: enabledLanguages.persian && detectedLanguages.persian,
-      chinese: enabledLanguages.chinese && detectedLanguages.chinese
+      chinese: enabledLanguages.chinese && detectedLanguages.chinese,
+      russian: enabledLanguages.russian && detectedLanguages.russian
     };
 
-    if (!languagesToLoad.persian && !languagesToLoad.chinese) {
+    if (!languagesToLoad.persian && !languagesToLoad.chinese && !languagesToLoad.russian) {
       console.log('Language Learner: No enabled language content detected on page');
       return;
     }
@@ -646,7 +801,7 @@
     const loaded = await loadDictionaries(languagesToLoad);
     activeLanguages = loaded;
 
-    if (!loaded.persian && !loaded.chinese) {
+    if (!loaded.persian && !loaded.chinese && !loaded.russian) {
       console.error('Language Learner: Failed to load any dictionaries');
       return;
     }
@@ -654,12 +809,14 @@
     // Apply custom highlight styles from settings
     applyHighlightStyles();
 
-    // Initialize translation popup with both matchers and detectors
+    // Initialize translation popup with all matchers and detectors
     translationPopup = new TranslationPopup(
       persianMatcher,
       chineseMatcher,
+      russianMatcher,
       persianDetector,
       chineseDetector,
+      russianDetector,
       loaded,
       vocabularyManager
     );
@@ -699,6 +856,8 @@
           await persianMatcher.reloadCustomVocabulary();
         } else if (message.language === 'chinese' && activeLanguages.chinese) {
           await chineseMatcher.reloadCustomVocabulary();
+        } else if (message.language === 'russian' && activeLanguages.russian) {
+          await russianMatcher.reloadCustomVocabulary();
         }
         sendResponse({ success: true });
       } catch (error) {
@@ -715,6 +874,8 @@
           await persianMatcher.reloadCustomVocabulary();
         } else if (message.language === 'chinese' && activeLanguages.chinese) {
           await chineseMatcher.reloadCustomVocabulary();
+        } else if (message.language === 'russian' && activeLanguages.russian) {
+          await russianMatcher.reloadCustomVocabulary();
         }
         sendResponse({ success: true });
       } catch (error) {
@@ -725,12 +886,15 @@
 
     if (message.action === 'reloadVocabulary') {
       try {
-        // Reload custom vocabulary in both matchers
+        // Reload custom vocabulary in all matchers
         if (activeLanguages.persian) {
           await persianMatcher.reloadCustomVocabulary();
         }
         if (activeLanguages.chinese) {
           await chineseMatcher.reloadCustomVocabulary();
+        }
+        if (activeLanguages.russian) {
+          await russianMatcher.reloadCustomVocabulary();
         }
         // Reprocess page
         processPage();

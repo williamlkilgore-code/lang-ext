@@ -4,11 +4,13 @@
  */
 
 class TranslationPopup {
-  constructor(persianMatcher, chineseMatcher, persianDetector, chineseDetector, activeLanguages, vocabularyManager = null) {
+  constructor(persianMatcher, chineseMatcher, russianMatcher, persianDetector, chineseDetector, russianDetector, activeLanguages, vocabularyManager = null) {
     this.persianMatcher = persianMatcher;
     this.chineseMatcher = chineseMatcher;
+    this.russianMatcher = russianMatcher;
     this.persianDetector = persianDetector;
     this.chineseDetector = chineseDetector;
+    this.russianDetector = russianDetector;
     this.activeLanguages = activeLanguages;
     this.vocabularyManager = vocabularyManager;
     this.popup = null;
@@ -113,18 +115,29 @@ class TranslationPopup {
     return /[\u4E00-\u9FFF]/.test(text);
   }
 
+  containsRussian(text) {
+    // Check if text contains Russian/Cyrillic characters
+    return /[А-Яа-яЁё]/.test(text);
+  }
+
   detectLanguage(text) {
     // Detect which language the text is in
     const hasPersian = this.activeLanguages.persian && this.containsPersian(text);
     const hasChinese = this.activeLanguages.chinese && this.containsChinese(text);
+    const hasRussian = this.activeLanguages.russian && this.containsRussian(text);
 
-    // If both, determine which is more prevalent
-    if (hasPersian && hasChinese) {
-      const persianCount = (text.match(/[\u0600-\u06FF]/g) || []).length;
-      const chineseCount = (text.match(/[\u4E00-\u9FFF]/g) || []).length;
-      return chineseCount > persianCount ? 'chinese' : 'persian';
+    // If multiple languages, determine which is more prevalent
+    const counts = [];
+    if (hasPersian) counts.push({ lang: 'persian', count: (text.match(/[\u0600-\u06FF]/g) || []).length });
+    if (hasChinese) counts.push({ lang: 'chinese', count: (text.match(/[\u4E00-\u9FFF]/g) || []).length });
+    if (hasRussian) counts.push({ lang: 'russian', count: (text.match(/[А-Яа-яЁё]/g) || []).length });
+
+    if (counts.length > 1) {
+      counts.sort((a, b) => b.count - a.count);
+      return counts[0].lang;
     }
 
+    if (hasRussian) return 'russian';
     if (hasChinese) return 'chinese';
     if (hasPersian) return 'persian';
     return null;
@@ -258,6 +271,23 @@ class TranslationPopup {
           hskLevel: wordInfo.hskLevel
         };
       }
+    } else if (this.currentLanguage === 'russian') {
+      const normalizedText = this.russianMatcher.normalizeWord(text);
+      const wordInfo = this.russianMatcher.matchWord(normalizedText);
+
+      if (wordInfo) {
+        return {
+          type: 'dictionary',
+          language: 'russian',
+          word: text,
+          translation: wordInfo.wordMeaning,
+          pos: wordInfo.pos,
+          root: wordInfo.root,
+          rootLatin: wordInfo.rootLatin,
+          rootMeaning: wordInfo.rootMeaning,
+          frequencyRank: wordInfo.frequencyRank
+        };
+      }
     }
 
     return null;
@@ -327,6 +357,29 @@ class TranslationPopup {
           }
         }
       }
+    } else if (this.currentLanguage === 'russian') {
+      // Split Russian text by spaces
+      const words = text.split(/\s+/);
+      totalWords = words.length;
+
+      words.forEach(word => {
+        const cleaned = word.trim();
+        if (!cleaned) return;
+
+        const translation = this.findInDictionary(cleaned);
+        if (translation) {
+          translations.push({
+            word: cleaned,
+            meaning: translation.translation || '(no translation)'
+          });
+          foundWords++;
+        } else {
+          translations.push({
+            word: cleaned,
+            meaning: '?'
+          });
+        }
+      });
     }
 
     return {
@@ -392,6 +445,37 @@ class TranslationPopup {
             </button>
           </div>
         `;
+      } else if (translation.language === 'russian') {
+        // Build root info conditionally
+        let rootInfo = '';
+        if (translation.root || translation.rootMeaning) {
+          const parts = [];
+          if (translation.root) {
+            parts.push(`Root: ${translation.root}`);
+            if (translation.rootLatin) parts.push(`(${translation.rootLatin})`);
+          }
+          if (translation.rootMeaning) {
+            parts.push(translation.rootMeaning);
+          }
+          if (translation.frequencyRank > 0) {
+            parts.push(`• #${translation.frequencyRank}`);
+          }
+          if (parts.length > 0) {
+            rootInfo = `<div class="translation-root">${parts.join(' - ')}</div>`;
+          }
+        }
+
+        content = `
+          <div class="translation-result">
+            <div class="translation-word">${translation.word}</div>
+            ${translation.translation ? `<div class="translation-meaning">${translation.translation}</div>` : ''}
+            <div class="translation-pos">${translation.pos}</div>
+            ${rootInfo}
+            <button class="mark-mastered-btn" data-word="${this.escapeHtml(translation.word)}" data-lang="russian" title="Mark as mastered">
+              ✓ Mark as Mastered
+            </button>
+          </div>
+        `;
       }
     } else if (translation.type === 'multiword') {
       // Multiple words - show word-by-word breakdown
@@ -405,8 +489,15 @@ class TranslationPopup {
 
       // Also include external translation links for the full phrase
       const encodedText = encodeURIComponent(this.currentSelection);
-      const sourceLang = this.currentLanguage === 'chinese' ? 'zh-CN' : 'fa';
-      const deeplLang = this.currentLanguage === 'chinese' ? 'zh' : 'fa';
+      let sourceLang = 'fa';
+      let deeplLang = 'fa';
+      if (this.currentLanguage === 'chinese') {
+        sourceLang = 'zh-CN';
+        deeplLang = 'zh';
+      } else if (this.currentLanguage === 'russian') {
+        sourceLang = 'ru';
+        deeplLang = 'ru';
+      }
 
       content = `
         <div class="translation-result multiword">
@@ -473,6 +564,8 @@ class TranslationPopup {
         await this.persianMatcher.reloadCustomVocabulary();
       } else if (language === 'chinese' && this.chineseMatcher) {
         await this.chineseMatcher.reloadCustomVocabulary();
+      } else if (language === 'russian' && this.russianMatcher) {
+        await this.russianMatcher.reloadCustomVocabulary();
       }
 
       // Update button to show success
@@ -499,8 +592,15 @@ class TranslationPopup {
     const encodedText = encodeURIComponent(text);
 
     // Determine source language code
-    const sourceLang = this.currentLanguage === 'chinese' ? 'zh-CN' : 'fa';
-    const deeplLang = this.currentLanguage === 'chinese' ? 'zh' : 'fa';
+    let sourceLang = 'fa';
+    let deeplLang = 'fa';
+    if (this.currentLanguage === 'chinese') {
+      sourceLang = 'zh-CN';
+      deeplLang = 'zh';
+    } else if (this.currentLanguage === 'russian') {
+      sourceLang = 'ru';
+      deeplLang = 'ru';
+    }
 
     const content = `
       <div class="translation-result external">

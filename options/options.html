@@ -37,10 +37,19 @@
                             <small>4,993 HSK words, 227 radicals</small>
                         </div>
                     </label>
+
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="activeRussian" checked>
+                        <span class="checkbox-custom"></span>
+                        <div class="label-content">
+                            <strong>Russian / Русский</strong>
+                            <small>250 roots, 4,422 derivative words</small>
+                        </div>
+                    </label>
                 </div>
 
                 <div class="info-box">
-                    <strong>💡 Tip:</strong> Disabling Chinese saves ~800KB-1MB of memory per page.
+                    <strong>💡 Tip:</strong> Disabling unused languages improves performance and reduces memory usage.
                 </div>
             </section>
 
@@ -205,6 +214,7 @@
                     <div class="tab-buttons">
                         <button class="tab-btn active" data-tab="mastered-persian">Persian (<span id="masteredPersianCount">0</span>)</button>
                         <button class="tab-btn" data-tab="mastered-chinese">Chinese (<span id="masteredChineseCount">0</span>)</button>
+                        <button class="tab-btn" data-tab="mastered-russian">Russian (<span id="masteredRussianCount">0</span>)</button>
                     </div>
 
                     <!-- Persian Mastered Words -->
@@ -229,6 +239,17 @@
                         </ul>
                     </div>
 
+                    <!-- Russian Mastered Words -->
+                    <div id="mastered-russian" class="tab-content">
+                        <div class="vocab-list-header">
+                            <strong>Mastered Russian Words</strong>
+                            <button id="clearMasteredRussian" class="btn-danger-small">Clear All</button>
+                        </div>
+                        <ul id="masteredRussianList" class="vocab-list">
+                            <li class="empty-state">No mastered words yet. Hover over any word and click "Mark as Mastered"</li>
+                        </ul>
+                    </div>
+
                     <div class="action-buttons">
                         <button id="exportMastered" class="btn-secondary">📤 Export</button>
                         <button id="importMastered" class="btn-secondary">📥 Import</button>
@@ -247,6 +268,7 @@
                     <div class="tab-buttons">
                         <button class="tab-btn active" data-tab="custom-persian">Persian (<span id="customPersianCount">0</span>)</button>
                         <button class="tab-btn" data-tab="custom-chinese">Chinese (<span id="customChineseCount">0</span>)</button>
+                        <button class="tab-btn" data-tab="custom-russian">Russian (<span id="customRussianCount">0</span>)</button>
                     </div>
 
                     <!-- Persian Custom Dictionary -->
@@ -307,6 +329,40 @@
 
                         <!-- Chinese Word List -->
                         <ul id="customChineseList" class="vocab-list vocab-list-detailed">
+                            <li class="empty-state">No custom words yet. Add your first word above!</li>
+                        </ul>
+                    </div>
+
+                    <!-- Russian Custom Dictionary -->
+                    <div id="custom-russian" class="tab-content">
+                        <!-- Add Word Form -->
+                        <div class="add-word-form">
+                            <h4>Add Russian Word</h4>
+                            <div class="form-row">
+                                <input type="text" id="russianWord" placeholder="Word (required) - e.g., книга" required>
+                                <input type="text" id="russianRoot" placeholder="Root (optional) - e.g., книг">
+                            </div>
+                            <div class="form-row">
+                                <input type="text" id="russianRootMeaning" placeholder="Root Meaning - e.g., book">
+                                <input type="text" id="russianWordMeaning" placeholder="Word Meaning - e.g., book">
+                            </div>
+                            <div class="form-row">
+                                <input type="text" id="russianRootLatin" placeholder="Root (Latin) - e.g., knig">
+                                <select id="russianPos">
+                                    <option value="noun">Noun</option>
+                                    <option value="verb">Verb</option>
+                                    <option value="adjective">Adjective</option>
+                                    <option value="adverb">Adverb</option>
+                                    <option value="preposition">Preposition</option>
+                                </select>
+                            </div>
+                            <div class="form-row">
+                                <button id="addRussianWord" class="btn-primary" style="width: 100%;">Add Word</button>
+                            </div>
+                        </div>
+
+                        <!-- Russian Word List -->
+                        <ul id="customRussianList" class="vocab-list vocab-list-detailed">
                             <li class="empty-state">No custom words yet. Add your first word above!</li>
                         </ul>
                     </div>

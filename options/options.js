@@ -21,6 +21,7 @@ const elements = {
   // Language
   activePersian: document.getElementById('activePersian'),
   activeChinese: document.getElementById('activeChinese'),
+  activeRussian: document.getElementById('activeRussian'),
   chineseSection: document.getElementById('chineseSection'),
 
   // HSK Levels
@@ -50,10 +51,13 @@ const elements = {
   // Mastered Words
   masteredPersianCount: document.getElementById('masteredPersianCount'),
   masteredChineseCount: document.getElementById('masteredChineseCount'),
+  masteredRussianCount: document.getElementById('masteredRussianCount'),
   masteredPersianList: document.getElementById('masteredPersianList'),
   masteredChineseList: document.getElementById('masteredChineseList'),
+  masteredRussianList: document.getElementById('masteredRussianList'),
   clearMasteredPersian: document.getElementById('clearMasteredPersian'),
   clearMasteredChinese: document.getElementById('clearMasteredChinese'),
+  clearMasteredRussian: document.getElementById('clearMasteredRussian'),
   exportMastered: document.getElementById('exportMastered'),
   importMastered: document.getElementById('importMastered'),
   importMasteredFile: document.getElementById('importMasteredFile'),
@@ -77,6 +81,17 @@ const elements = {
   addChineseWord: document.getElementById('addChineseWord'),
   customChineseList: document.getElementById('customChineseList'),
   customChineseCount: document.getElementById('customChineseCount'),
+
+  // Custom Dictionary - Russian
+  russianWord: document.getElementById('russianWord'),
+  russianRoot: document.getElementById('russianRoot'),
+  russianRootMeaning: document.getElementById('russianRootMeaning'),
+  russianWordMeaning: document.getElementById('russianWordMeaning'),
+  russianRootLatin: document.getElementById('russianRootLatin'),
+  russianPos: document.getElementById('russianPos'),
+  addRussianWord: document.getElementById('addRussianWord'),
+  customRussianList: document.getElementById('customRussianList'),
+  customRussianCount: document.getElementById('customRussianCount'),
 
   // Custom Dictionary Actions
   exportCustom: document.getElementById('exportCustom'),
@@ -114,6 +129,7 @@ async function loadSettings() {
   // Language settings
   elements.activePersian.checked = settings.activePersian;
   elements.activeChinese.checked = settings.activeChinese;
+  elements.activeRussian.checked = settings.activeRussian;
 
   // HSK level settings
   elements.chineseHskMin.value = settings.chineseHskMin;
@@ -190,6 +206,7 @@ function attachEventListeners() {
   // Mastered words controls
   elements.clearMasteredPersian.addEventListener('click', () => clearMasteredWords('persian'));
   elements.clearMasteredChinese.addEventListener('click', () => clearMasteredWords('chinese'));
+  elements.clearMasteredRussian.addEventListener('click', () => clearMasteredWords('russian'));
   elements.exportMastered.addEventListener('click', exportMasteredWords);
   elements.importMastered.addEventListener('click', () => elements.importMasteredFile.click());
   elements.importMasteredFile.addEventListener('change', importMasteredWords);
@@ -204,6 +221,12 @@ function attachEventListeners() {
   elements.addChineseWord.addEventListener('click', addChineseWord);
   elements.chineseCharacter.addEventListener('keypress', (e) => {
     if (e.key === 'Enter') addChineseWord();
+  });
+
+  // Custom dictionary controls - Russian
+  elements.addRussianWord.addEventListener('click', addRussianWord);
+  elements.russianWord.addEventListener('keypress', (e) => {
+    if (e.key === 'Enter') addRussianWord();
   });
 
   // Custom dictionary actions
@@ -346,6 +369,7 @@ async function saveSettings() {
     // Language settings
     activePersian: elements.activePersian.checked,
     activeChinese: elements.activeChinese.checked,
+    activeRussian: elements.activeRussian.checked,
 
     // HSK level settings
     chineseHskMin: parseInt(elements.chineseHskMin.value),
@@ -369,7 +393,7 @@ async function saveSettings() {
   };
 
   // Validate: at least one language must be active
-  if (!settings.activePersian && !settings.activeChinese) {
+  if (!settings.activePersian && !settings.activeChinese && !settings.activeRussian) {
     showStatus('At least one language must be enabled', 'error');
     return;
   }
@@ -413,10 +437,12 @@ async function loadVocabulary() {
   // Load and render mastered words
   await renderMasteredWords('persian');
   await renderMasteredWords('chinese');
+  await renderMasteredWords('russian');
 
   // Load and render custom dictionaries
   await renderCustomWords('persian');
   await renderCustomWords('chinese');
+  await renderCustomWords('russian');
 }
 
 /**
@@ -501,17 +527,28 @@ function setupTabListeners() {
  */
 async function renderMasteredWords(language) {
   const words = await vocabularyManager.getMasteredWords(language);
-  const listElement = language === 'persian' ? elements.masteredPersianList : elements.masteredChineseList;
-  const countElement = language === 'persian' ? elements.masteredPersianCount : elements.masteredChineseCount;
+  let listElement, countElement;
+
+  if (language === 'persian') {
+    listElement = elements.masteredPersianList;
+    countElement = elements.masteredPersianCount;
+  } else if (language === 'chinese') {
+    listElement = elements.masteredChineseList;
+    countElement = elements.masteredChineseCount;
+  } else if (language === 'russian') {
+    listElement = elements.masteredRussianList;
+    countElement = elements.masteredRussianCount;
+  }
 
   // Update count
   countElement.textContent = words.length;
 
   // Render list
   if (words.length === 0) {
-    const emptyMessage = language === 'persian'
-      ? 'No mastered words yet. Hover over any word and click "Mark as Mastered"'
-      : 'No mastered words yet. Hover over any character and click "Mark as Mastered"';
+    let emptyMessage = 'No mastered words yet. Hover over any word and click "Mark as Mastered"';
+    if (language === 'chinese') {
+      emptyMessage = 'No mastered words yet. Hover over any character and click "Mark as Mastered"';
+    }
     listElement.innerHTML = `<li class="empty-state">${emptyMessage}</li>`;
   } else {
     listElement.innerHTML = words
@@ -549,7 +586,10 @@ async function removeMasteredWord(word, language) {
  * Clear all mastered words for a language
  */
 async function clearMasteredWords(language) {
-  const languageName = language === 'persian' ? 'Persian' : 'Chinese';
+  let languageName = 'Persian';
+  if (language === 'chinese') languageName = 'Chinese';
+  else if (language === 'russian') languageName = 'Russian';
+
   if (!confirm(`Clear all mastered ${languageName} words? This cannot be undone.`)) {
     return;
   }
@@ -568,6 +608,7 @@ async function exportMasteredWords() {
   const data = {
     persian: await vocabularyManager.getMasteredWords('persian'),
     chinese: await vocabularyManager.getMasteredWords('chinese'),
+    russian: await vocabularyManager.getMasteredWords('russian'),
     exportDate: new Date().toISOString(),
     stats: stats
   };
@@ -607,13 +648,20 @@ async function importMasteredWords(event) {
     for (const word of data.chinese) {
       await vocabularyManager.markAsMastered(word, 'chinese');
     }
+    if (data.russian) {
+      for (const word of data.russian) {
+        await vocabularyManager.markAsMastered(word, 'russian');
+      }
+    }
 
     // Refresh UI
     await renderMasteredWords('persian');
     await renderMasteredWords('chinese');
+    await renderMasteredWords('russian');
     notifyContentScripts();
 
-    showStatus(`✓ Imported ${data.persian.length + data.chinese.length} mastered words`, 'success');
+    const totalImported = data.persian.length + data.chinese.length + (data.russian ? data.russian.length : 0);
+    showStatus(`✓ Imported ${totalImported} mastered words`, 'success');
   } catch (error) {
     showStatus('Failed to import file: ' + error.message, 'error');
   }
@@ -627,8 +675,18 @@ async function importMasteredWords(event) {
  */
 async function renderCustomWords(language) {
   const words = await vocabularyManager.getUserDictionary(language);
-  const listElement = language === 'persian' ? elements.customPersianList : elements.customChineseList;
-  const countElement = language === 'persian' ? elements.customPersianCount : elements.customChineseCount;
+  let listElement, countElement;
+
+  if (language === 'persian') {
+    listElement = elements.customPersianList;
+    countElement = elements.customPersianCount;
+  } else if (language === 'chinese') {
+    listElement = elements.customChineseList;
+    countElement = elements.customChineseCount;
+  } else if (language === 'russian') {
+    listElement = elements.customRussianList;
+    countElement = elements.customRussianCount;
+  }
 
   // Update count
   countElement.textContent = words.length;
@@ -639,8 +697,14 @@ async function renderCustomWords(language) {
   } else {
     listElement.innerHTML = words
       .sort((a, b) => {
-        const wordA = language === 'persian' ? a.word : a.character;
-        const wordB = language === 'persian' ? b.word : b.character;
+        let wordA, wordB;
+        if (language === 'chinese') {
+          wordA = a.character;
+          wordB = b.character;
+        } else {
+          wordA = a.word;
+          wordB = b.word;
+        }
         return wordA.localeCompare(wordB);
       })
       .map(word => {
@@ -656,7 +720,7 @@ async function renderCustomWords(language) {
               <button class="btn-delete" data-word-id="${word.id}" data-lang="persian" title="Delete">✕</button>
             </li>
           `;
-        } else {
+        } else if (language === 'chinese') {
           return `
             <li>
               <div class="vocab-details">
@@ -666,6 +730,18 @@ async function renderCustomWords(language) {
                 ${word.hskLevel > 0 ? `<span class="vocab-meta">HSK ${word.hskLevel}</span>` : ''}
               </div>
               <button class="btn-delete" data-word-id="${word.id}" data-lang="chinese" title="Delete">✕</button>
+            </li>
+          `;
+        } else if (language === 'russian') {
+          return `
+            <li>
+              <div class="vocab-details">
+                <strong>${escapeHtml(word.word)}</strong>
+                ${word.root ? `<span class="vocab-meta">Root: ${escapeHtml(word.root)}</span>` : ''}
+                ${word.wordMeaning ? `<span class="vocab-meta">${escapeHtml(word.wordMeaning)}</span>` : ''}
+                <span class="vocab-meta">${word.pos || 'noun'}</span>
+              </div>
+              <button class="btn-delete" data-word-id="${word.id}" data-lang="russian" title="Delete">✕</button>
             </li>
           `;
         }
@@ -757,6 +833,47 @@ async function addChineseWord() {
     showStatus(`✓ Added "${character}" to custom dictionary`, 'success');
   } catch (error) {
     console.error('Error adding Chinese word:', error);
+    showStatus('Error adding word: ' + error.message, 'error');
+  }
+}
+
+/**
+ * Add a Russian word to custom dictionary
+ */
+async function addRussianWord() {
+  const word = elements.russianWord.value.trim();
+
+  if (!word) {
+    showStatus('Word is required', 'error');
+    return;
+  }
+
+  const wordData = {
+    word: word,
+    root: elements.russianRoot.value.trim(),
+    rootMeaning: elements.russianRootMeaning.value.trim(),
+    wordMeaning: elements.russianWordMeaning.value.trim(),
+    rootLatin: elements.russianRootLatin.value.trim(),
+    pos: elements.russianPos.value
+  };
+
+  try {
+    await vocabularyManager.addCustomWord('russian', wordData);
+    await renderCustomWords('russian');
+    notifyContentScripts();
+
+    // Clear form
+    elements.russianWord.value = '';
+    elements.russianRoot.value = '';
+    elements.russianRootMeaning.value = '';
+    elements.russianWordMeaning.value = '';
+    elements.russianRootLatin.value = '';
+    elements.russianPos.value = 'noun';
+    elements.russianWord.focus();
+
+    showStatus(`✓ Added "${word}" to custom dictionary`, 'success');
+  } catch (error) {
+    console.error('Error adding Russian word:', error);
     showStatus('Error adding word: ' + error.message, 'error');
   }
 }

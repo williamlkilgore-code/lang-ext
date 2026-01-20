@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "Language Learner - Farsi & Chinese",
-  "version": "2.1.0",
-  "description": "Learn Persian/Farsi and Chinese by discovering roots, radicals, and character meanings in context",
+  "name": "Language Learner - Farsi, Chinese & Russian",
+  "version": "2.2.0",
+  "description": "Learn Persian/Farsi, Chinese, and Russian by discovering roots, radicals, and character meanings in context",
   "permissions": [
     "storage",
     "activeTab",
@@ -31,6 +31,8 @@
         "utils/persian-matcher.js",
         "utils/chinese-detector.js",
         "utils/chinese-matcher.js",
+        "utils/russian-detector.js",
+        "utils/russian-matcher.js",
         "content/translation-popup.js",
         "content/content.js"
       ],
@@ -58,7 +60,8 @@
     {
       "resources": [
         "data/farsi-roots.json",
-        "data/chinese-hsk.json"
+        "data/chinese-hsk.json",
+        "data/russian-roots.json"
       ],
       "matches": ["<all_urls>"]
     }
