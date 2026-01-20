@@ -142,7 +142,48 @@ class VocabularyManager {
    */
   async getUserDictionary(language) {
     const data = await this.getAll();
-    return data.userDictionary[language] || [];
+    const words = data.userDictionary[language] || [];
+
+    // Clean up old "custom" placeholder values
+    let needsSave = false;
+    const cleanedWords = words.map(word => {
+      const cleaned = { ...word };
+
+      if (language === 'persian') {
+        if (cleaned.rootMeaning === 'custom') {
+          cleaned.rootMeaning = '';
+          needsSave = true;
+        }
+        if (cleaned.wordMeaning === 'custom word') {
+          cleaned.wordMeaning = '';
+          needsSave = true;
+        }
+        if (cleaned.category === 'custom') {
+          cleaned.category = '';
+          needsSave = true;
+        }
+      } else if (language === 'chinese') {
+        if (cleaned.meaning === 'custom word') {
+          cleaned.meaning = '';
+          needsSave = true;
+        }
+        if (cleaned.radicalMeaning === 'custom') {
+          cleaned.radicalMeaning = '';
+          needsSave = true;
+        }
+      }
+
+      return cleaned;
+    });
+
+    // Save cleaned data if any changes were made
+    if (needsSave) {
+      data.userDictionary[language] = cleanedWords;
+      await this.save({ userDictionary: data.userDictionary });
+      console.log(`Vocabulary Manager: Cleaned up placeholder values in ${language} dictionary`);
+    }
+
+    return cleanedWords;
   }
 
   /**
