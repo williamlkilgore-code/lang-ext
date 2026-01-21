@@ -47,6 +47,7 @@ const elements = {
   // Custom Vocabulary Settings
   hideMasteredWords: document.getElementById('hideMasteredWords'),
   showCustomWords: document.getElementById('showCustomWords'),
+  showRussianAffixes: document.getElementById('showRussianAffixes'),
 
   // Mastered Words
   masteredPersianCount: document.getElementById('masteredPersianCount'),
@@ -151,6 +152,7 @@ async function loadSettings() {
   // Custom vocabulary settings
   elements.hideMasteredWords.checked = settings.hideMasteredWords;
   elements.showCustomWords.checked = settings.showCustomWords;
+  elements.showRussianAffixes.checked = settings.showRussianAffixes;
 }
 
 /**
@@ -387,6 +389,7 @@ async function saveSettings() {
     // Custom vocabulary settings
     hideMasteredWords: elements.hideMasteredWords.checked,
     showCustomWords: elements.showCustomWords.checked,
+    showRussianAffixes: elements.showRussianAffixes.checked,
 
     // Mark as not first run
     firstRun: false

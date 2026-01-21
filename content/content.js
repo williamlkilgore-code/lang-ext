@@ -246,6 +246,28 @@
       `;
     }
 
+    // Show prefixes and suffixes if enabled and available
+    if (settings.showRussianAffixes && (wordInfo.commonPrefixes?.length > 0 || wordInfo.commonSuffixes?.length > 0)) {
+      const affixParts = [];
+      if (wordInfo.commonPrefixes && wordInfo.commonPrefixes.length > 0) {
+        const prefixes = wordInfo.commonPrefixes.slice(0, 5).join(', ');
+        affixParts.push(`Prefixes: ${prefixes}`);
+      }
+      if (wordInfo.commonSuffixes && wordInfo.commonSuffixes.length > 0) {
+        const suffixes = wordInfo.commonSuffixes.slice(0, 5).join(', ');
+        affixParts.push(`Suffixes: ${suffixes}`);
+      }
+
+      if (affixParts.length > 0) {
+        sections += `
+          <div class="tooltip-section">
+            <div class="tooltip-label">Common Affixes</div>
+            <div class="tooltip-value" style="font-size: 0.9em;">${affixParts.join(' • ')}</div>
+          </div>
+        `;
+      }
+    }
+
     // Show word meaning if available
     if (wordInfo.wordMeaning) {
       sections += `

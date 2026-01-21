@@ -9,11 +9,14 @@ class SettingsManager {
       // Language Settings
       activePersian: true,
       activeChinese: true,
-      activeRussian: false,
+      activeRussian: true,
 
       // Chinese HSK Level Filter
       chineseHskMin: 1,
       chineseHskMax: 6,
+
+      // Russian Display Settings
+      showRussianAffixes: true, // Show prefixes/suffixes in Russian tooltips
 
       // Domain Exclusions
       excludedDomains: [],
