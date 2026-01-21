@@ -246,26 +246,30 @@
       `;
     }
 
-    // Show prefixes and suffixes if enabled and available
-    if (settings.showRussianAffixes && (wordInfo.prefixes?.length > 0 || wordInfo.suffixes?.length > 0)) {
-      const affixParts = [];
-      if (wordInfo.prefixes && wordInfo.prefixes.length > 0) {
-        const prefixes = wordInfo.prefixes.slice(0, 5).join(', ');
-        affixParts.push(`Prefixes: ${prefixes}`);
-      }
-      if (wordInfo.suffixes && wordInfo.suffixes.length > 0) {
-        const suffixes = wordInfo.suffixes.slice(0, 5).join(', ');
-        affixParts.push(`Suffixes: ${suffixes}`);
-      }
-
-      if (affixParts.length > 0) {
-        sections += `
-          <div class="tooltip-section">
-            <div class="tooltip-label">Common Affixes</div>
-            <div class="tooltip-value" style="font-size: 0.9em;">${affixParts.join(' • ')}</div>
+    // Show detected prefix in this word (if enabled and available)
+    if (settings.showRussianAffixes && wordInfo.detectedPrefix) {
+      sections += `
+        <div class="tooltip-section">
+          <div class="tooltip-label">Prefix</div>
+          <div class="tooltip-value">
+            <span class="tooltip-root">${wordInfo.detectedPrefix}-</span>
+            ${wordInfo.detectedPrefixMeaning ? `<span style="margin: 0 4px;">•</span><span style="font-size: 0.9em;">${wordInfo.detectedPrefixMeaning}</span>` : ''}
           </div>
-        `;
-      }
+        </div>
+      `;
+    }
+
+    // Show detected suffix in this word (if enabled and available)
+    if (settings.showRussianAffixes && wordInfo.detectedSuffix) {
+      sections += `
+        <div class="tooltip-section">
+          <div class="tooltip-label">Suffix</div>
+          <div class="tooltip-value">
+            <span class="tooltip-root">-${wordInfo.detectedSuffix}</span>
+            ${wordInfo.detectedSuffixMeaning ? `<span style="margin: 0 4px;">•</span><span style="font-size: 0.9em;">${wordInfo.detectedSuffixMeaning}</span>` : ''}
+          </div>
+        </div>
+      `;
     }
 
     // Show word meaning if available

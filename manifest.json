@@ -32,6 +32,7 @@
         "utils/chinese-detector.js",
         "utils/chinese-matcher.js",
         "utils/russian-detector.js",
+        "utils/russian-affixes.js",
         "utils/russian-matcher.js",
         "content/translation-popup.js",
         "content/content.js"

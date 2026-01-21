@@ -68,6 +68,10 @@ class RussianMatcher {
       root.derivatives.forEach(derivative => {
         const normalizedWord = this.normalizeWord(derivative.word);
 
+        // Detect specific prefix and suffix in this word
+        const detectedPrefix = detectPrefix(derivative.word);
+        const detectedSuffix = detectSuffix(derivative.word);
+
         this.wordMap.set(normalizedWord, {
           root: root.root,
           rootLatin: root.rootLatin || '',
@@ -79,6 +83,10 @@ class RussianMatcher {
           frequencyRank: derivative.frequency_rank || 0,
           prefixes: root.commonPrefixes || [],
           suffixes: root.commonSuffixes || [],
+          detectedPrefix: detectedPrefix,
+          detectedPrefixMeaning: detectedPrefix ? getPrefixMeaning(detectedPrefix) : null,
+          detectedSuffix: detectedSuffix,
+          detectedSuffixMeaning: detectedSuffix ? getSuffixMeaning(detectedSuffix) : null,
           isCustom: false
         });
 
@@ -94,6 +102,10 @@ class RussianMatcher {
       this.customWords.forEach(customWord => {
         const normalizedWord = this.normalizeWord(customWord.word);
 
+        // Detect specific prefix and suffix in custom word
+        const detectedPrefix = detectPrefix(customWord.word);
+        const detectedSuffix = detectSuffix(customWord.word);
+
         this.wordMap.set(normalizedWord, {
           root: customWord.root || '',
           rootLatin: customWord.rootLatin || '',
@@ -105,6 +117,10 @@ class RussianMatcher {
           frequencyRank: 0,
           prefixes: [],
           suffixes: [],
+          detectedPrefix: detectedPrefix,
+          detectedPrefixMeaning: detectedPrefix ? getPrefixMeaning(detectedPrefix) : null,
+          detectedSuffix: detectedSuffix,
+          detectedSuffixMeaning: detectedSuffix ? getSuffixMeaning(detectedSuffix) : null,
           isCustom: true
         });
       });
