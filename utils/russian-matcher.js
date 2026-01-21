@@ -78,7 +78,7 @@ class RussianMatcher {
           rootMeaning: root.rootMeaning || '',
           productivity: root.productivity || 0,
           word: derivative.word,
-          wordMeaning: '', // We'll need to add translations later
+          wordMeaning: derivative.word_meaning || '', // Read from JSON data
           pos: derivative.pos || 'noun',
           frequencyRank: derivative.frequency_rank || 0,
           prefixes: root.commonPrefixes || [],
