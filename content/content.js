@@ -247,14 +247,14 @@
     }
 
     // Show prefixes and suffixes if enabled and available
-    if (settings.showRussianAffixes && (wordInfo.commonPrefixes?.length > 0 || wordInfo.commonSuffixes?.length > 0)) {
+    if (settings.showRussianAffixes && (wordInfo.prefixes?.length > 0 || wordInfo.suffixes?.length > 0)) {
       const affixParts = [];
-      if (wordInfo.commonPrefixes && wordInfo.commonPrefixes.length > 0) {
-        const prefixes = wordInfo.commonPrefixes.slice(0, 5).join(', ');
+      if (wordInfo.prefixes && wordInfo.prefixes.length > 0) {
+        const prefixes = wordInfo.prefixes.slice(0, 5).join(', ');
         affixParts.push(`Prefixes: ${prefixes}`);
       }
-      if (wordInfo.commonSuffixes && wordInfo.commonSuffixes.length > 0) {
-        const suffixes = wordInfo.commonSuffixes.slice(0, 5).join(', ');
+      if (wordInfo.suffixes && wordInfo.suffixes.length > 0) {
+        const suffixes = wordInfo.suffixes.slice(0, 5).join(', ');
         affixParts.push(`Suffixes: ${suffixes}`);
       }
 
