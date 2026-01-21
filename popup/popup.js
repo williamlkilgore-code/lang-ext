@@ -1,76 +1,84 @@
 /**
- * Popup script for Farsi Root Word Learner extension
+ * Popup script for Language Learner extension
  */
 
 document.addEventListener('DOMContentLoaded', async () => {
-  await loadStats();
   await loadSettings();
+  await loadVocabularyStats();
   setupEventListeners();
+  displayVersion();
 });
 
 /**
- * Load and display dictionary statistics
- */
-async function loadStats() {
-  try {
-    const response = await fetch(chrome.runtime.getURL('data/farsi-roots.json'));
-    const data = await response.json();
-
-    const totalRoots = data.roots.length;
-    const totalWords = data.roots.reduce((sum, root) => sum + root.derivatives.length, 0);
-    const categories = new Set(data.roots.map(root => root.category));
-
-    document.getElementById('totalRoots').textContent = totalRoots;
-    document.getElementById('totalWords').textContent = totalWords;
-    document.getElementById('totalCategories').textContent = categories.size;
-  } catch (error) {
-    console.error('Failed to load dictionary stats:', error);
-    document.getElementById('totalRoots').textContent = '?';
-    document.getElementById('totalWords').textContent = '?';
-    document.getElementById('totalCategories').textContent = '?';
-  }
-}
-
-/**
- * Load settings from storage
+ * Load settings from storage and populate UI
  */
 async function loadSettings() {
   try {
     const settings = await chrome.storage.sync.get({
-      enableExtension: true,
-      autoDetect: true,
-      highlightColor: 'indigo'
+      activePersian: true,
+      activeChinese: true,
+      activeRussian: true,
+      hideMasteredWords: true,
+      showRussianAffixes: true
     });
 
-    document.getElementById('enableExtension').checked = settings.enableExtension;
-    document.getElementById('autoDetect').checked = settings.autoDetect;
-    document.getElementById('highlightColor').value = settings.highlightColor;
+    document.getElementById('activePersian').checked = settings.activePersian;
+    document.getElementById('activeChinese').checked = settings.activeChinese;
+    document.getElementById('activeRussian').checked = settings.activeRussian;
+    document.getElementById('hideMasteredWords').checked = settings.hideMasteredWords;
+    document.getElementById('showRussianAffixes').checked = settings.showRussianAffixes;
   } catch (error) {
     console.error('Failed to load settings:', error);
   }
 }
 
 /**
- * Save settings to storage
+ * Load vocabulary statistics
  */
-async function saveSettings() {
-  const settings = {
-    enableExtension: document.getElementById('enableExtension').checked,
-    autoDetect: document.getElementById('autoDetect').checked,
-    highlightColor: document.getElementById('highlightColor').value
-  };
-
+async function loadVocabularyStats() {
   try {
-    await chrome.storage.sync.set(settings);
-    console.log('Settings saved:', settings);
+    const data = await chrome.storage.local.get({
+      masteredWords: { persian: [], chinese: [], russian: [] },
+      userDictionary: { persian: [], chinese: [], russian: [] }
+    });
+
+    const totalMastered = 
+      (data.masteredWords.persian?.length || 0) +
+      (data.masteredWords.chinese?.length || 0) +
+      (data.masteredWords.russian?.length || 0);
+
+    const totalCustom = 
+      (data.userDictionary.persian?.length || 0) +
+      (data.userDictionary.chinese?.length || 0) +
+      (data.userDictionary.russian?.length || 0);
+
+    document.getElementById('masteredCount').textContent = totalMastered;
+    document.getElementById('customCount').textContent = totalCustom;
+  } catch (error) {
+    console.error('Failed to load vocabulary stats:', error);
+    document.getElementById('masteredCount').textContent = '?';
+    document.getElementById('customCount').textContent = '?';
+  }
+}
+
+/**
+ * Save a setting to storage
+ */
+async function saveSetting(key, value) {
+  try {
+    await chrome.storage.sync.set({ [key]: value });
+    console.log(`Setting saved: ${key} = ${value}`);
 
     // Notify content scripts of settings change
-    const tabs = await chrome.tabs.query({ active: true, currentWindow: true });
-    if (tabs[0]) {
-      chrome.tabs.sendMessage(tabs[0].id, { type: 'settingsChanged', settings });
-    }
+    chrome.tabs.query({}, (tabs) => {
+      tabs.forEach(tab => {
+        chrome.tabs.sendMessage(tab.id, { action: 'settingsUpdated' }).catch(() => {
+          // Ignore errors for tabs without content scripts
+        });
+      });
+    });
   } catch (error) {
-    console.error('Failed to save settings:', error);
+    console.error('Failed to save setting:', error);
   }
 }
 
@@ -78,24 +86,42 @@ async function saveSettings() {
  * Setup event listeners
  */
 function setupEventListeners() {
-  // Save settings on change
-  document.getElementById('enableExtension').addEventListener('change', saveSettings);
-  document.getElementById('autoDetect').addEventListener('change', saveSettings);
-  document.getElementById('highlightColor').addEventListener('change', saveSettings);
-
-  // View dictionary button
-  document.getElementById('viewDictionary').addEventListener('click', (e) => {
-    e.preventDefault();
-    chrome.tabs.create({ url: chrome.runtime.getURL('dictionary.html') });
+  // Language toggles
+  document.getElementById('activePersian').addEventListener('change', (e) => {
+    saveSetting('activePersian', e.target.checked);
   });
 
-  // Report issue button
-  document.getElementById('reportIssue').addEventListener('click', (e) => {
-    e.preventDefault();
+  document.getElementById('activeChinese').addEventListener('change', (e) => {
+    saveSetting('activeChinese', e.target.checked);
+  });
+
+  document.getElementById('activeRussian').addEventListener('change', (e) => {
+    saveSetting('activeRussian', e.target.checked);
+  });
+
+  // Quick settings
+  document.getElementById('hideMasteredWords').addEventListener('change', (e) => {
+    saveSetting('hideMasteredWords', e.target.checked);
+  });
+
+  document.getElementById('showRussianAffixes').addEventListener('change', (e) => {
+    saveSetting('showRussianAffixes', e.target.checked);
+  });
+
+  // Action buttons
+  document.getElementById('openSettings').addEventListener('click', () => {
+    chrome.runtime.openOptionsPage();
+  });
+
+  document.getElementById('openHelp').addEventListener('click', () => {
     chrome.tabs.create({ url: 'https://github.com/williamlkilgore-code/lang-ext/issues' });
   });
+}
 
-  // Display version
+/**
+ * Display extension version
+ */
+function displayVersion() {
   const manifest = chrome.runtime.getManifest();
   document.getElementById('version').textContent = manifest.version;
 }
