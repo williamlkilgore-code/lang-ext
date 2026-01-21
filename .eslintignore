@@ -1,0 +1,20 @@
+# Dependencies
+node_modules/
+
+# Data files
+data/*.json
+
+# Documentation
+docs/
+*.md
+
+# Build artifacts
+dist/
+build/
+
+# Backup files
+*.backup
+*.bak
+
+# Git
+.git/
