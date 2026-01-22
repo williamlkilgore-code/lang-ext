@@ -19,6 +19,11 @@ dist/
 build/
 *.zip
 
+# Auto-generated manifest files (templates are manifest-v2.json)
+# Use npm run firefox/chrome to generate these
+manifest.json
+manifest-v3.json
+
 # Temporary files
 *.tmp
 .cache/

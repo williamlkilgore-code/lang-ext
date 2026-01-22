@@ -11,7 +11,11 @@
     "lint": "eslint content/ utils/ options/ popup/ background/",
     "lint:fix": "eslint --fix content/ utils/ options/ popup/ background/",
     "security": "./security-scan.sh",
-    "security:full": "npm run lint && npm run security"
+    "security:full": "npm run lint && npm run security",
+    "firefox": "cp manifest.json manifest-v3.json 2>/dev/null || true && cp manifest-v2.json manifest.json && echo '✅ Switched to Firefox (Manifest V2)'",
+    "chrome": "cp manifest-v3.json manifest.json && echo '✅ Switched to Chrome (Manifest V3)'",
+    "package:firefox": "npm run firefox && zip -r language-learner-firefox.zip . -x '*.git*' 'node_modules/*' '*.md' 'scripts/*' 'test*.html' '*.backup' 'manifest-v3.json'",
+    "package:chrome": "npm run chrome && zip -r language-learner-chrome.zip . -x '*.git*' 'node_modules/*' '*.md' 'scripts/*' 'test*.html' '*.backup' 'manifest-v2.json' 'background/background-v2.js'"
   },
   "repository": {
     "type": "git",
