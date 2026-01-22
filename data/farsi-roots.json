@@ -1,0 +1,5596 @@
+{
+  "version": "2.0.0",
+  "language": "farsi",
+  "description": "Comprehensive Arabic roots found in Persian/Farsi - merged from multiple sources",
+  "sources": [
+    "Original 35 curated roots",
+    "Conversational Persian roots (150 roots)",
+    "News Persian roots (150 roots)"
+  ],
+  "roots": [
+    {
+      "id": 1,
+      "root": "ک-ت-ب",
+      "rootLatin": "k-t-b",
+      "meaning": "to write",
+      "category": "writing",
+      "derivatives": [
+        {
+          "word": "کتاب",
+          "latin": "ketâb",
+          "meaning": "book",
+          "pos": "noun"
+        },
+        {
+          "word": "کتابخانه",
+          "latin": "ketâbkhâne",
+          "meaning": "library",
+          "pos": "noun"
+        },
+        {
+          "word": "کتابت",
+          "latin": "ketâbat",
+          "meaning": "writing, calligraphy",
+          "pos": "noun"
+        },
+        {
+          "word": "کاتب",
+          "latin": "kâteb",
+          "meaning": "writer, scribe",
+          "pos": "noun"
+        },
+        {
+          "word": "مکتوب",
+          "latin": "maktub",
+          "meaning": "letter, written document",
+          "pos": "noun"
+        },
+        {
+          "word": "کتابی",
+          "latin": "ketɑb bi",
+          "meaning": "book",
+          "pos": "noun"
+        },
+        {
+          "word": "مکتب",
+          "latin": "mæktæb",
+          "meaning": "[مکتب] (definition pending)",
+          "pos": "noun"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "root": "ع-ل-م",
+      "rootLatin": "ʿ-l-m",
+      "meaning": "to know",
+      "category": "knowledge",
+      "derivatives": [
+        {
+          "word": "علم",
+          "latin": "elm",
+          "meaning": "science, knowledge",
+          "pos": "noun"
+        },
+        {
+          "word": "عالم",
+          "latin": "âlem",
+          "meaning": "scholar, world",
+          "pos": "noun"
+        },
+        {
+          "word": "معلم",
+          "latin": "moʿallem",
+          "meaning": "teacher",
+          "pos": "noun"
+        },
+        {
+          "word": "علمی",
+          "latin": "elmi",
+          "meaning": "scientific",
+          "pos": "adjective"
+        },
+        {
+          "word": "اعلام",
+          "latin": "eʿlâm",
+          "meaning": "announcement",
+          "pos": "noun"
+        },
+        {
+          "word": "معلوم",
+          "latin": "mæʔʔlum",
+          "meaning": "clear",
+          "pos": "adjective"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "root": "د-ر-س",
+      "rootLatin": "d-r-s",
+      "meaning": "to study",
+      "category": "education",
+      "derivatives": [
+        {
+          "word": "درس",
+          "latin": "dars",
+          "meaning": "lesson",
+          "pos": "noun"
+        },
+        {
+          "word": "مدرسه",
+          "latin": "madrese",
+          "meaning": "school",
+          "pos": "noun"
+        },
+        {
+          "word": "مدرس",
+          "latin": "modarres",
+          "meaning": "instructor",
+          "pos": "noun"
+        },
+        {
+          "word": "تدریس",
+          "latin": "tadris",
+          "meaning": "teaching",
+          "pos": "noun"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "root": "ک-ل-م",
+      "rootLatin": "k-l-m",
+      "meaning": "to speak",
+      "category": "communication",
+      "derivatives": [
+        {
+          "word": "کلمه",
+          "latin": "kalame",
+          "meaning": "word",
+          "pos": "noun"
+        },
+        {
+          "word": "کلام",
+          "latin": "kalâm",
+          "meaning": "speech, discourse",
+          "pos": "noun"
+        },
+        {
+          "word": "تکلم",
+          "latin": "takallom",
+          "meaning": "speaking",
+          "pos": "noun"
+        },
+        {
+          "word": "متکلم",
+          "latin": "motakallem",
+          "meaning": "speaker",
+          "pos": "noun"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "root": "ع-م-ل",
+      "rootLatin": "ʿ-m-l",
+      "meaning": "to do, to act",
+      "category": "action",
+      "derivatives": [
+        {
+          "word": "عمل",
+          "latin": "amal",
+          "meaning": "action, deed",
+          "pos": "noun"
+        },
+        {
+          "word": "عملی",
+          "latin": "amali",
+          "meaning": "practical",
+          "pos": "adjective"
+        },
+        {
+          "word": "عامل",
+          "latin": "âmel",
+          "meaning": "agent, factor",
+          "pos": "noun"
+        },
+        {
+          "word": "استعمال",
+          "latin": "esteʿmâl",
+          "meaning": "use, usage",
+          "pos": "noun"
+        },
+        {
+          "word": "معمول",
+          "latin": "mæʔʔmul",
+          "meaning": "usual",
+          "pos": "adjective"
+        },
+        {
+          "word": "معامله",
+          "latin": "moʔɑmele",
+          "meaning": "transaction",
+          "pos": "noun"
+        },
+        {
+          "word": "تعامل",
+          "latin": null,
+          "meaning": "interaction",
+          "pos": "noun"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "root": "ف-ک-ر",
+      "rootLatin": "f-k-r",
+      "meaning": "to think",
+      "category": "knowledge",
+      "derivatives": [
+        {
+          "word": "فکر",
+          "latin": "fekr",
+          "meaning": "thought, idea",
+          "pos": "noun"
+        },
+        {
+          "word": "تفکر",
+          "latin": "tafakkor",
+          "meaning": "contemplation, thinking",
+          "pos": "noun"
+        },
+        {
+          "word": "فکری",
+          "latin": "fekri",
+          "meaning": "intellectual",
+          "pos": "adjective"
+        },
+        {
+          "word": "متفکر",
+          "latin": "motefakker",
+          "meaning": "thinker",
+          "pos": "noun"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "root": "ق-ر-ء",
+      "rootLatin": "q-r-ʾ",
+      "meaning": "to read",
+      "category": "education",
+      "derivatives": [
+        {
+          "word": "قرائت",
+          "latin": "qerâʾat",
+          "meaning": "reading, recitation",
+          "pos": "noun"
+        },
+        {
+          "word": "قاری",
+          "latin": "qâri",
+          "meaning": "reader, reciter",
+          "pos": "noun"
+        },
+        {
+          "word": "مقروء",
+          "latin": "maqruʾ",
+          "meaning": "readable",
+          "pos": "adjective"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "root": "ن-ظ-ر",
+      "rootLatin": "n-ẓ-r",
+      "meaning": "to look, to see",
+      "category": "perception",
+      "derivatives": [
+        {
+          "word": "نظر",
+          "latin": "nazar",
+          "meaning": "view, opinion, look",
+          "pos": "noun"
+        },
+        {
+          "word": "نظری",
+          "latin": "nazari",
+          "meaning": "theoretical",
+          "pos": "adjective"
+        },
+        {
+          "word": "ناظر",
+          "latin": "nâzer",
+          "meaning": "observer, supervisor",
+          "pos": "noun"
+        },
+        {
+          "word": "منظر",
+          "latin": "manzar",
+          "meaning": "scenery, landscape",
+          "pos": "noun"
+        },
+        {
+          "word": "نظارت",
+          "latin": "nezârat",
+          "meaning": "supervision",
+          "pos": "noun"
+        },
+        {
+          "word": "منظور",
+          "latin": "mænʔzur",
+          "meaning": "purpose",
+          "pos": "noun"
+        },
+        {
+          "word": "انتظار",
+          "latin": "entezɑr",
+          "meaning": "expectation",
+          "pos": "noun"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "root": "س-ء-ل",
+      "rootLatin": "s-ʾ-l",
+      "meaning": "to ask, to question",
+      "category": "communication",
+      "derivatives": [
+        {
+          "word": "سؤال",
+          "latin": "soʾâl",
+          "meaning": "question",
+          "pos": "noun"
+        },
+        {
+          "word": "سائل",
+          "latin": "sâʾel",
+          "meaning": "questioner, beggar",
+          "pos": "noun"
+        },
+        {
+          "word": "مسئله",
+          "latin": "masʾale",
+          "meaning": "problem, issue",
+          "pos": "noun"
+        },
+        {
+          "word": "مسئول",
+          "latin": "masʾul",
+          "meaning": "responsible",
+          "pos": "adjective"
+        },
+        {
+          "word": "مساله",
+          "latin": "mæsʔæle",
+          "meaning": "issue",
+          "pos": "noun"
+        },
+        {
+          "word": "مسئولیت",
+          "latin": "mæsʔulijjæt",
+          "meaning": "disclaimer",
+          "pos": "noun"
+        },
+        {
+          "word": "مسأله",
+          "latin": null,
+          "meaning": "[مسأله] (definition pending)",
+          "pos": "noun"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "root": "ج-و-ب",
+      "rootLatin": "j-w-b",
+      "meaning": "to answer",
+      "category": "communication",
+      "derivatives": [
+        {
+          "word": "جواب",
+          "latin": "javâb",
+          "meaning": "answer, reply",
+          "pos": "noun"
+        },
+        {
+          "word": "پاسخ",
+          "latin": "pâsokh",
+          "meaning": "answer, response",
+          "pos": "noun"
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "root": "ح-ی-ی",
+      "rootLatin": "ḥ-y-y",
+      "meaning": "to live",
+      "category": "life",
+      "derivatives": [
+        {
+          "word": "حیات",
+          "latin": "hayât",
+          "meaning": "life",
+          "pos": "noun"
+        },
+        {
+          "word": "زندگی",
+          "latin": "zendegi",
+          "meaning": "life, living",
+          "pos": "noun"
+        },
+        {
+          "word": "حی",
+          "latin": "hayy",
+          "meaning": "alive, living",
+          "pos": "adjective"
+        },
+        {
+          "word": "احیا",
+          "latin": "ehyâ",
+          "meaning": "revival",
+          "pos": "noun"
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "root": "م-و-ت",
+      "rootLatin": "m-w-t",
+      "meaning": "to die",
+      "category": "life",
+      "derivatives": [
+        {
+          "word": "موت",
+          "latin": "mowt",
+          "meaning": "death",
+          "pos": "noun"
+        },
+        {
+          "word": "مرگ",
+          "latin": "marg",
+          "meaning": "death",
+          "pos": "noun"
+        },
+        {
+          "word": "میت",
+          "latin": "mayyit",
+          "meaning": "deceased",
+          "pos": "noun"
+        },
+        {
+          "word": "ممات",
+          "latin": "mamât",
+          "meaning": "death, demise",
+          "pos": "noun"
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "root": "ق-ل-ب",
+      "rootLatin": "q-l-b",
+      "meaning": "heart, to turn",
+      "category": "body",
+      "derivatives": [
+        {
+          "word": "قلب",
+          "latin": "qalb",
+          "meaning": "heart",
+          "pos": "noun"
+        },
+        {
+          "word": "قلبی",
+          "latin": "qalbi",
+          "meaning": "cardiac, heartfelt",
+          "pos": "adjective"
+        },
+        {
+          "word": "انقلاب",
+          "latin": "enqelâb",
+          "meaning": "revolution",
+          "pos": "noun"
+        },
+        {
+          "word": "قالب",
+          "latin": "ɢɑleb",
+          "meaning": "format",
+          "pos": "noun"
+        },
+        {
+          "word": "تقلب",
+          "latin": "tæɢællob",
+          "meaning": "[تقلب] (definition pending)",
+          "pos": "noun"
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "root": "ع-ق-ل",
+      "rootLatin": "ʿ-q-l",
+      "meaning": "to reason, intellect",
+      "category": "knowledge",
+      "derivatives": [
+        {
+          "word": "عقل",
+          "latin": "aql",
+          "meaning": "intellect, reason",
+          "pos": "noun"
+        },
+        {
+          "word": "عاقل",
+          "latin": "âqel",
+          "meaning": "wise, rational",
+          "pos": "adjective"
+        },
+        {
+          "word": "معقول",
+          "latin": "maʿqul",
+          "meaning": "reasonable",
+          "pos": "adjective"
+        },
+        {
+          "word": "عقلی",
+          "latin": "aqli",
+          "meaning": "rational",
+          "pos": "adjective"
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "root": "ف-ه-م",
+      "rootLatin": "f-h-m",
+      "meaning": "to understand",
+      "category": "knowledge",
+      "derivatives": [
+        {
+          "word": "فهم",
+          "latin": "fahm",
+          "meaning": "understanding, comprehension",
+          "pos": "noun"
+        },
+        {
+          "word": "فهمیدن",
+          "latin": "fahmidan",
+          "meaning": "to understand",
+          "pos": "verb"
+        },
+        {
+          "word": "تفهیم",
+          "latin": "tafhim",
+          "meaning": "explanation",
+          "pos": "noun"
+        },
+        {
+          "word": "مفهوم",
+          "latin": "mafhum",
+          "meaning": "concept, meaning",
+          "pos": "noun"
+        },
+        {
+          "word": "تفاهم",
+          "latin": null,
+          "meaning": "[تفاهم] (definition pending)",
+          "pos": "noun"
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "root": "ح-ک-م",
+      "rootLatin": "ḥ-k-m",
+      "meaning": "to rule, to judge",
+      "category": "governance",
+      "derivatives": [
+        {
+          "word": "حکم",
+          "latin": "hokm",
+          "meaning": "ruling, decree",
+          "pos": "noun"
+        },
+        {
+          "word": "حاکم",
+          "latin": "hâkem",
+          "meaning": "ruler, judge",
+          "pos": "noun"
+        },
+        {
+          "word": "حکومت",
+          "latin": "hokumat",
+          "meaning": "government",
+          "pos": "noun"
+        },
+        {
+          "word": "حکمت",
+          "latin": "hekmat",
+          "meaning": "wisdom",
+          "pos": "noun"
+        },
+        {
+          "word": "حکیم",
+          "latin": "hakim",
+          "meaning": "wise person, physician",
+          "pos": "noun"
+        },
+        {
+          "word": "محکوم",
+          "latin": "mæhʔkum",
+          "meaning": "sentenced",
+          "pos": "adjective"
+        },
+        {
+          "word": "حاکمیت",
+          "latin": "hɑkemijjæt",
+          "meaning": "rule",
+          "pos": "noun"
+        },
+        {
+          "word": "محاکمه",
+          "latin": "mohɑkeme",
+          "meaning": "trial",
+          "pos": "noun"
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "root": "د-ی-ن",
+      "rootLatin": "d-y-n",
+      "meaning": "religion, judgment",
+      "category": "religion",
+      "derivatives": [
+        {
+          "word": "دین",
+          "latin": "din",
+          "meaning": "religion",
+          "pos": "noun"
+        },
+        {
+          "word": "دینی",
+          "latin": "dini",
+          "meaning": "religious",
+          "pos": "adjective"
+        },
+        {
+          "word": "متدین",
+          "latin": "motadayyen",
+          "meaning": "religious person",
+          "pos": "noun"
+        },
+        {
+          "word": "مدینه",
+          "latin": "madine",
+          "meaning": "city (Medina)",
+          "pos": "noun"
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "root": "خ-ر-ج",
+      "rootLatin": "kh-r-j",
+      "meaning": "to exit, to go out",
+      "category": "movement",
+      "derivatives": [
+        {
+          "word": "خروج",
+          "latin": "khoruj",
+          "meaning": "exit, departure",
+          "pos": "noun"
+        },
+        {
+          "word": "خارج",
+          "latin": "khârej",
+          "meaning": "outside, abroad",
+          "pos": "noun"
+        },
+        {
+          "word": "مخرج",
+          "latin": "makhraj",
+          "meaning": "exit, outlet",
+          "pos": "noun"
+        },
+        {
+          "word": "اخراج",
+          "latin": "exrɑʤ",
+          "meaning": "dismissal",
+          "pos": "noun"
+        },
+        {
+          "word": "خرج",
+          "latin": "xærʤ",
+          "meaning": "cost",
+          "pos": "noun"
+        },
+        {
+          "word": "استخراج",
+          "latin": "estexrɑʤ",
+          "meaning": "[استخراج] (definition pending)",
+          "pos": "noun"
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "root": "د-خ-ل",
+      "rootLatin": "d-kh-l",
+      "meaning": "to enter",
+      "category": "movement",
+      "derivatives": [
+        {
+          "word": "دخول",
+          "latin": "dokhul",
+          "meaning": "entrance, entry",
+          "pos": "noun"
+        },
+        {
+          "word": "داخل",
+          "latin": "dâkhel",
+          "meaning": "inside, interior",
+          "pos": "noun"
+        },
+        {
+          "word": "مدخل",
+          "latin": "madkhal",
+          "meaning": "entrance",
+          "pos": "noun"
+        },
+        {
+          "word": "دخالت",
+          "latin": "dekhâlat",
+          "meaning": "interference",
+          "pos": "noun"
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "root": "ذ-ه-ب",
+      "rootLatin": "dh-h-b",
+      "meaning": "to go",
+      "category": "movement",
+      "derivatives": [
+        {
+          "word": "ذهاب",
+          "latin": "zahâb",
+          "meaning": "going, departure",
+          "pos": "noun"
+        },
+        {
+          "word": "ذهن",
+          "latin": "zehn",
+          "meaning": "mind",
+          "pos": "noun"
+        },
+        {
+          "word": "ذهنی",
+          "latin": "zehni",
+          "meaning": "mental",
+          "pos": "adjective"
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "root": "ج-ء-ی",
+      "rootLatin": "j-ʾ-y",
+      "meaning": "to come",
+      "category": "movement",
+      "derivatives": [
+        {
+          "word": "جای",
+          "latin": "jây",
+          "meaning": "place",
+          "pos": "noun"
+        },
+        {
+          "word": "مجیء",
+          "latin": "majiʾ",
+          "meaning": "coming, arrival",
+          "pos": "noun"
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "root": "و-ج-د",
+      "rootLatin": "w-j-d",
+      "meaning": "to find, to exist",
+      "category": "existence",
+      "derivatives": [
+        {
+          "word": "وجود",
+          "latin": "vojud",
+          "meaning": "existence, being",
+          "pos": "noun"
+        },
+        {
+          "word": "موجود",
+          "latin": "mowjud",
+          "meaning": "existing, creature",
+          "pos": "adjective"
+        },
+        {
+          "word": "واجد",
+          "latin": "vâjed",
+          "meaning": "possessing",
+          "pos": "adjective"
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "root": "ف-ق-د",
+      "rootLatin": "f-q-d",
+      "meaning": "to lose, to lack",
+      "category": "existence",
+      "derivatives": [
+        {
+          "word": "فقدان",
+          "latin": "feqdân",
+          "meaning": "loss, lack",
+          "pos": "noun"
+        },
+        {
+          "word": "فاقد",
+          "latin": "fâqed",
+          "meaning": "lacking",
+          "pos": "adjective"
+        },
+        {
+          "word": "مفقود",
+          "latin": "mafqud",
+          "meaning": "lost, missing",
+          "pos": "adjective"
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "root": "ح-ب-ب",
+      "rootLatin": "ḥ-b-b",
+      "meaning": "to love",
+      "category": "emotion",
+      "derivatives": [
+        {
+          "word": "حب",
+          "latin": "hobb",
+          "meaning": "love",
+          "pos": "noun"
+        },
+        {
+          "word": "محبت",
+          "latin": "mohabbat",
+          "meaning": "affection, love",
+          "pos": "noun"
+        },
+        {
+          "word": "حبیب",
+          "latin": "habib",
+          "meaning": "beloved",
+          "pos": "noun"
+        },
+        {
+          "word": "محبوب",
+          "latin": "mahbub",
+          "meaning": "beloved, popular",
+          "pos": "adjective"
+        }
+      ]
+    },
+    {
+      "id": 25,
+      "root": "ف-ر-ح",
+      "rootLatin": "f-r-ḥ",
+      "meaning": "to rejoice",
+      "category": "emotion",
+      "derivatives": [
+        {
+          "word": "فرح",
+          "latin": "farah",
+          "meaning": "joy, happiness",
+          "pos": "noun"
+        },
+        {
+          "word": "فرحت",
+          "latin": "farhat",
+          "meaning": "joy, gladness",
+          "pos": "noun"
+        },
+        {
+          "word": "مفرح",
+          "latin": "mofarreh",
+          "meaning": "joyful, cheering",
+          "pos": "adjective"
+        }
+      ]
+    },
+    {
+      "id": 26,
+      "root": "ح-ز-ن",
+      "rootLatin": "ḥ-z-n",
+      "meaning": "to be sad",
+      "category": "emotion",
+      "derivatives": [
+        {
+          "word": "حزن",
+          "latin": "hozn",
+          "meaning": "sadness, sorrow",
+          "pos": "noun"
+        },
+        {
+          "word": "حزین",
+          "latin": "hazin",
+          "meaning": "sad",
+          "pos": "adjective"
+        },
+        {
+          "word": "محزون",
+          "latin": "mahzun",
+          "meaning": "sad, grieved",
+          "pos": "adjective"
+        }
+      ]
+    },
+    {
+      "id": 27,
+      "root": "ص-د-ق",
+      "rootLatin": "ṣ-d-q",
+      "meaning": "to be truthful",
+      "category": "morality",
+      "derivatives": [
+        {
+          "word": "صدق",
+          "latin": "sedq",
+          "meaning": "truth, honesty",
+          "pos": "noun"
+        },
+        {
+          "word": "صادق",
+          "latin": "sâdeq",
+          "meaning": "truthful, honest",
+          "pos": "adjective"
+        },
+        {
+          "word": "صداقت",
+          "latin": "sedâqat",
+          "meaning": "honesty, sincerity",
+          "pos": "noun"
+        },
+        {
+          "word": "تصدیق",
+          "latin": "tasdiq",
+          "meaning": "confirmation",
+          "pos": "noun"
+        }
+      ]
+    },
+    {
+      "id": 28,
+      "root": "ک-ذ-ب",
+      "rootLatin": "k-dh-b",
+      "meaning": "to lie",
+      "category": "morality",
+      "derivatives": [
+        {
+          "word": "کذب",
+          "latin": "kazeb",
+          "meaning": "lie, falsehood",
+          "pos": "noun"
+        },
+        {
+          "word": "کاذب",
+          "latin": "kâzeb",
+          "meaning": "liar, false",
+          "pos": "adjective"
+        },
+        {
+          "word": "تکذیب",
+          "latin": "takzib",
+          "meaning": "denial, refutation",
+          "pos": "noun"
+        }
+      ]
+    },
+    {
+      "id": 29,
+      "root": "ق-د-ر",
+      "rootLatin": "q-d-r",
+      "meaning": "to be able, power",
+      "category": "ability",
+      "derivatives": [
+        {
+          "word": "قدر",
+          "latin": "qadr",
+          "meaning": "value, worth",
+          "pos": "noun"
+        },
+        {
+          "word": "قدرت",
+          "latin": "qodrat",
+          "meaning": "power, ability",
+          "pos": "noun"
+        },
+        {
+          "word": "قادر",
+          "latin": "qâder",
+          "meaning": "capable, able",
+          "pos": "adjective"
+        },
+        {
+          "word": "مقدار",
+          "latin": "meqdâr",
+          "meaning": "amount, quantity",
+          "pos": "noun"
+        },
+        {
+          "word": "تقدیر",
+          "latin": "taqdir",
+          "meaning": "destiny, appreciation",
+          "pos": "noun"
+        },
+        {
+          "word": "اقتدار",
+          "latin": "eɢtedɑr",
+          "meaning": "power",
+          "pos": "noun"
+        }
+      ]
+    },
+    {
+      "id": 30,
+      "root": "ع-ج-ز",
+      "rootLatin": "ʿ-j-z",
+      "meaning": "to be unable",
+      "category": "ability",
+      "derivatives": [
+        {
+          "word": "عجز",
+          "latin": "ajz",
+          "meaning": "inability, weakness",
+          "pos": "noun"
+        },
+        {
+          "word": "عاجز",
+          "latin": "âjez",
+          "meaning": "unable, weak",
+          "pos": "adjective"
+        },
+        {
+          "word": "اعجاز",
+          "latin": "eʿjâz",
+          "meaning": "miracle",
+          "pos": "noun"
+        }
+      ]
+    },
+    {
+      "id": 31,
+      "root": "ش-ک-ر",
+      "rootLatin": "sh-k-r",
+      "meaning": "to thank",
+      "category": "morality",
+      "derivatives": [
+        {
+          "word": "شکر",
+          "latin": "shokr",
+          "meaning": "thanks, gratitude",
+          "pos": "noun"
+        },
+        {
+          "word": "شاکر",
+          "latin": "shâker",
+          "meaning": "thankful",
+          "pos": "adjective"
+        },
+        {
+          "word": "تشکر",
+          "latin": "tashakkor",
+          "meaning": "thanks, appreciation",
+          "pos": "noun"
+        }
+      ]
+    },
+    {
+      "id": 32,
+      "root": "ک-ف-ر",
+      "rootLatin": "k-f-r",
+      "meaning": "to disbelieve, to cover",
+      "category": "religion",
+      "derivatives": [
+        {
+          "word": "کفر",
+          "latin": "kofr",
+          "meaning": "disbelief",
+          "pos": "noun"
+        },
+        {
+          "word": "کافر",
+          "latin": "kâfer",
+          "meaning": "disbeliever",
+          "pos": "noun"
+        }
+      ]
+    },
+    {
+      "id": 33,
+      "root": "ن-ف-ع",
+      "rootLatin": "n-f-ʿ",
+      "meaning": "to benefit",
+      "category": "utility",
+      "derivatives": [
+        {
+          "word": "نفع",
+          "latin": "nafʿ",
+          "meaning": "benefit, profit",
+          "pos": "noun"
+        },
+        {
+          "word": "نافع",
+          "latin": "nâfeʿ",
+          "meaning": "beneficial, useful",
+          "pos": "adjective"
+        },
+        {
+          "word": "منفعت",
+          "latin": "manfaʿat",
+          "meaning": "benefit, advantage",
+          "pos": "noun"
+        }
+      ]
+    },
+    {
+      "id": 34,
+      "root": "ض-ر-ر",
+      "rootLatin": "ḍ-r-r",
+      "meaning": "to harm",
+      "category": "utility",
+      "derivatives": [
+        {
+          "word": "ضرر",
+          "latin": "zarar",
+          "meaning": "harm, damage",
+          "pos": "noun"
+        },
+        {
+          "word": "ضار",
+          "latin": "zârr",
+          "meaning": "harmful",
+          "pos": "adjective"
+        },
+        {
+          "word": "مضر",
+          "latin": "mozarr",
+          "meaning": "harmful",
+          "pos": "adjective"
+        }
+      ]
+    },
+    {
+      "id": 35,
+      "root": "ج-م-ع",
+      "rootLatin": "j-m-ʿ",
+      "meaning": "to gather, to collect",
+      "category": "action",
+      "derivatives": [
+        {
+          "word": "جمع",
+          "latin": "jamʿ",
+          "meaning": "collection, gathering",
+          "pos": "noun"
+        },
+        {
+          "word": "جامع",
+          "latin": "jâmeʿ",
+          "meaning": "comprehensive, mosque",
+          "pos": "adjective"
+        },
+        {
+          "word": "جمعیت",
+          "latin": "jamʿiyyat",
+          "meaning": "population, group",
+          "pos": "noun"
+        },
+        {
+          "word": "اجتماع",
+          "latin": "ejtemâʿ",
+          "meaning": "society, gathering",
+          "pos": "noun"
+        },
+        {
+          "word": "مجموع",
+          "latin": "majmuʿ",
+          "meaning": "total, collection",
+          "pos": "noun"
+        },
+        {
+          "word": "جامعه",
+          "latin": "ʤɑmeʔe",
+          "meaning": "society",
+          "pos": "noun"
+        },
+        {
+          "word": "جمعه",
+          "latin": "ʤomʔeh",
+          "meaning": "friday",
+          "pos": "noun"
+        },
+        {
+          "word": "مجموعه",
+          "latin": "mæʤʔmuʔæh",
+          "meaning": "collection",
+          "pos": "noun"
+        }
+      ]
+    },
+    {
+      "id": 36,
+      "root": "ح-و-ل",
+      "rootLatin": "ح و ل",
+      "meaning": "now",
+      "category": "knowledge",
+      "derivatives": [
+        {
+          "word": "حال",
+          "latin": "hɑl",
+          "meaning": "state",
+          "pos": "noun"
+        },
+        {
+          "word": "حالا",
+          "latin": "hɑlæn, hɑlɑ",
+          "meaning": "now",
+          "pos": "verb"
+        },
+        {
+          "word": "تحول",
+          "latin": "tæhævvol",
+          "meaning": "development",
+          "pos": "noun"
+        },
+        {
+          "word": "حول",
+          "latin": "how",
+          "meaning": "[حول] (definition pending)",
+          "pos": "noun"
+        },
+        {
+          "word": "محال",
+          "latin": "mohɑl",
+          "meaning": "[محال] (definition pending)",
+          "pos": "noun"
+        }
+      ]
+    },
+    {
+      "id": 37,
+      "root": "ق-ر-ر",
+      "rootLatin": "ق ر ر",
+      "meaning": "agreement",
+      "category": "general",
+      "derivatives": [
+        {
+          "word": "قرار",
+          "latin": "ɢærɑr",
+          "meaning": "agreement",
+          "pos": "noun"
+        },
+        {
+          "word": "مستقر",
+          "latin": "mostæʔɢerr, mostæʔɢærr",
+          "meaning": "based",
+          "pos": "adjective"
+        },
+        {
+          "word": "قاره",
+          "latin": "ɢɑre",
+          "meaning": "continent",
+          "pos": "noun"
+        },
+        {
+          "word": "استقرار",
+          "latin": "esteɢrɑr",
+          "meaning": "establishment",
+          "pos": "noun"
+        },
+        {
+          "word": "مقررات",
+          "latin": "moɢærʔrærɑt",
+          "meaning": "provisions",
+          "pos": "noun"
+        }
+      ]
+    },
+    {
+      "id": 38,
+      "root": "ع-ن-ی",
+      "rootLatin": "ع ن ی",
+      "meaning": "namely, meaning",
+      "category": "knowledge",
+      "derivatives": [
+        {
+          "word": "معنی",
+          "latin": "mæʔni, mæʔnɑ",
+          "meaning": "meaning",
+          "pos": "noun"
+        },
+        {
+          "word": "عنایت",
+          "latin": "enɑjæt",
+          "meaning": "thanks",
+          "pos": "noun"
+        },
+        {
+          "word": "یعنی",
+          "latin": "jæʔni",
+          "meaning": "namely, meaning",
+          "pos": "verb"
+        },
+        {
+          "word": "معنوی",
+          "latin": "mæʔnævi",
+          "meaning": "[معنوی] (definition pending)",
+          "pos": "adjective"
+        }
+      ]
+    },
+    {
+      "id": 39,
+      "root": "ق-ص-د",
+      "rootLatin": "ق ص د",
+      "meaning": "economy",
+      "category": "knowledge",
+      "derivatives": [
+        {
+          "word": "اقتصاد",
+          "latin": "eɢtesɑd",
+          "meaning": "economy",
+          "pos": "noun"
+        },
+        {
+          "word": "قصد",
+          "latin": "ɢæsd",
+          "meaning": "intent",
+          "pos": "noun"
+        },
+        {
+          "word": "مقصد",
+          "latin": "mæɢʔsæd",
+          "meaning": "[مقصد] (definition pending)",
+          "pos": "noun"
+        }
+      ]
+    },
+    {
+      "id": 40,
+      "root": "س-ل-م",
+      "rootLatin": "س ل م",
+      "meaning": "hello",
+      "category": "general",
+      "derivatives": [
+        {
+          "word": "سلام",
+          "latin": "sælɑm",
+          "meaning": "hello",
+          "pos": "noun"
+        },
+        {
+          "word": "اسلام",
+          "latin": "eslɑm",
+          "meaning": "Islam",
+          "pos": "noun"
+        },
+        {
+          "word": "سلامت",
+          "latin": "sælɑmæt",
+          "meaning": "health",
+          "pos": "noun"
+        },
+        {
+          "word": "مسلم",
+          "latin": "mosællæm, moslem",
+          "meaning": "moslem",
+          "pos": "noun"
+        },
+        {
+          "word": "سالم",
+          "latin": "sɑlem",
+          "meaning": "healthy",
+          "pos": "adjective"
+        }
+      ]
+    },
+    {
+      "id": 41,
+      "root": "ن-ظ-م",
+      "rootLatin": "ن ظ م",
+      "meaning": "system",
+      "category": "knowledge",
+      "derivatives": [
+        {
+          "word": "نظام",
+          "latin": "nezɑm",
+          "meaning": "system",
+          "pos": "noun"
+        },
+        {
+          "word": "نظم",
+          "latin": "næzm",
+          "meaning": "[نظم] (definition pending)",
+          "pos": "noun"
+        },
+        {
+          "word": "منظم",
+          "latin": "monæzʔzæm",
+          "meaning": "[منظم] (definition pending)",
+          "pos": "adjective"
+        }
+      ]
+    },
+    {
+      "id": 42,
+      "root": "و-ق-ع",
+      "rootLatin": "و ق ع",
+      "meaning": "time",
+      "category": "knowledge",
+      "derivatives": [
+        {
+          "word": "موقع",
+          "latin": "mowɢeʔ",
+          "meaning": "time",
+          "pos": "noun"
+        },
+        {
+          "word": "واقع",
+          "latin": "vɑɢeʔ",
+          "meaning": "indeed",
+          "pos": "adjective"
+        },
+        {
+          "word": "واقعیت",
+          "latin": "vɑɢeʔijjæt",
+          "meaning": "reality",
+          "pos": "noun"
+        },
+        {
+          "word": "وقوع",
+          "latin": "voɢuʔ",
+          "meaning": "occurrence",
+          "pos": "noun"
+        },
+        {
+          "word": "واقعه",
+          "latin": "vɑɢeæh, vɑɢeʔæh",
+          "meaning": "[واقعه] (definition pending)",
+          "pos": "noun"
+        }
+      ]
+    },
+    {
+      "id": 43,
+      "root": "ن-ف-ر",
+      "rootLatin": "ن ف ر",
+      "meaning": "person",
+      "category": "social",
+      "derivatives": [
+        {
+          "word": "نفر",
+          "latin": "næfær",
+          "meaning": "person",
+          "pos": "noun"
+        },
+        {
+          "word": "نفره",
+          "latin": null,
+          "meaning": "people",
+          "pos": "noun"
+        },
+        {
+          "word": "نفرت",
+          "latin": "næfræt",
+          "meaning": "hate",
+          "pos": "noun"
+        }
+      ]
+    },
+    {
+      "id": 44,
+      "root": "د-و-م",
+      "rootLatin": "د و م",
+      "meaning": "continuation",
+      "category": "knowledge",
+      "derivatives": [
+        {
+          "word": "ادامه",
+          "latin": "edɑme",
+          "meaning": "continuation",
+          "pos": "noun"
+        },
+        {
+          "word": "دام",
+          "latin": "dɑm, dɑʔmæ",
+          "meaning": "trap",
+          "pos": "noun"
+        },
+        {
+          "word": "دوام",
+          "latin": "dævɑm",
+          "meaning": "[دوام] (definition pending)",
+          "pos": "noun"
+        }
+      ]
+    },
+    {
+      "id": 45,
+      "root": "ح-ض-ر",
+      "rootLatin": "ح ض ر",
+      "meaning": "presence",
+      "category": "knowledge",
+      "derivatives": [
+        {
+          "word": "حضور",
+          "latin": "hozur",
+          "meaning": "presence",
+          "pos": "noun"
+        },
+        {
+          "word": "حاضر",
+          "latin": "hɑzer",
+          "meaning": "present",
+          "pos": "adjective"
+        },
+        {
+          "word": "حضرت",
+          "latin": "hæzræt",
+          "meaning": "holiness",
+          "pos": "noun"
+        },
+        {
+          "word": "حضر",
+          "latin": "hæzær",
+          "meaning": "[حضر] (definition pending)",
+          "pos": "noun"
+        },
+        {
+          "word": "احضار",
+          "latin": "ehzɑr",
+          "meaning": "[احضار] (definition pending)",
+          "pos": "noun"
+        }
+      ]
+    },
+    {
+      "id": 46,
+      "root": "ج-د-د",
+      "rootLatin": "ج د د",
+      "meaning": "new",
+      "category": "knowledge",
+      "derivatives": [
+        {
+          "word": "جدید",
+          "latin": "ʤædid",
+          "meaning": "new",
+          "pos": "adjective"
+        },
+        {
+          "word": "جدی",
+          "latin": "ʤæddi",
+          "meaning": "serious",
+          "pos": "adjective"
+        },
+        {
+          "word": "جدا",
+          "latin": "ʤodɑ, ʤeddæn",
+          "meaning": "separate",
+          "pos": "adjective"
+        },
+        {
+          "word": "مجدد",
+          "latin": "moʤædʔdæd",
+          "meaning": "further",
+          "pos": "adjective"
+        },
+        {
+          "word": "جدیت",
+          "latin": "ʤeddijæt",
+          "meaning": "[جدیت] (definition pending)",
+          "pos": "noun"
+        }
+      ]
+    },
+    {
+      "id": 47,
+      "root": "و-ر-د",
+      "rootLatin": "و ر د",
+      "meaning": "case",
+      "category": "movement",
+      "derivatives": [
+        {
+          "word": "مورد",
+          "latin": "mored",
+          "meaning": "case",
+          "pos": "noun"
+        },
+        {
+          "word": "وارد",
+          "latin": "vɑred",
+          "meaning": "enter",
+          "pos": "noun"
+        },
+        {
+          "word": "ورود",
+          "latin": "vorud",
+          "meaning": "entry",
+          "pos": "noun"
+        }
+      ]
+    },
+    {
+      "id": 48,
+      "root": "م-ل-ل",
+      "rootLatin": "م ل ل",
+      "meaning": "national",
+      "category": "geography",
+      "derivatives": [
+        {
+          "word": "ملی",
+          "latin": "melli",
+          "meaning": "national",
+          "pos": "adjective"
+        },
+        {
+          "word": "ملت",
+          "latin": "mellæt",
+          "meaning": "nation",
+          "pos": "noun"
+        },
+        {
+          "word": "ملل",
+          "latin": "melæl",
+          "meaning": "nations",
+          "pos": "noun"
+        }
+      ]
+    },
+    {
+      "id": 49,
+      "root": "ش-ر-ک",
+      "rootLatin": "ش ر ک",
+      "meaning": "partnership",
+      "category": "knowledge",
+      "derivatives": [
+        {
+          "word": "مشارکت",
+          "latin": "moʃɑrækæt",
+          "meaning": "partnership",
+          "pos": "noun"
+        },
+        {
+          "word": "شرکت",
+          "latin": "ʃerkæt",
+          "meaning": "company",
+          "pos": "noun"
+        },
+        {
+          "word": "مشترک",
+          "latin": "moʃtæræk",
+          "meaning": "common",
+          "pos": "adjective"
+        },
+        {
+          "word": "شریک",
+          "latin": "ʃærik",
+          "meaning": "partner",
+          "pos": "noun"
+        },
+        {
+          "word": "اشتراک",
+          "latin": "eʃterɑk",
+          "meaning": "[اشتراک] (definition pending)",
+          "pos": "noun"
+        }
+      ]
+    },
+    {
+      "id": 50,
+      "root": "و-ض-ع",
+      "rootLatin": "و ض ع",
+      "meaning": "status",
+      "category": "general",
+      "derivatives": [
+        {
+          "word": "وضع",
+          "latin": "væzʔ",
+          "meaning": "status",
+          "pos": "noun"
+        },
+        {
+          "word": "موضوع",
+          "latin": "mowzuʔ",
+          "meaning": "topic",
+          "pos": "noun"
+        },
+        {
+          "word": "موضع",
+          "latin": "mowzeʔ",
+          "meaning": "position",
+          "pos": "noun"
+        }
+      ]
+    },
+    {
+      "id": 51,
+      "root": "و-ج-ه",
+      "rootLatin": "و ج ه",
+      "meaning": "attention",
+      "category": "quantity",
+      "derivatives": [
+        {
+          "word": "توجه",
+          "latin": "tævæʤʤoh",
+          "meaning": "attention",
+          "pos": "noun"
+        },
+        {
+          "word": "جهت",
+          "latin": "ʤehæt",
+          "meaning": "direction",
+          "pos": "noun"
+        },
+        {
+          "word": "مواجه",
+          "latin": "movɑʔʤeh",
+          "meaning": "encountering",
+          "pos": "adjective"
+        },
+        {
+          "word": "متوجه",
+          "latin": "motæʔvæʤʤeh",
+          "meaning": "notice",
+          "pos": "noun"
+        },
+        {
+          "word": "وجه",
+          "latin": "væʤh",
+          "meaning": "payment",
+          "pos": "noun"
+        }
+      ]
+    },
+    {
+      "id": 52,
+      "root": "ش-ه-ر",
+      "rootLatin": "ش ه ر",
+      "meaning": "city",
+      "category": "knowledge",
+      "derivatives": [
+        {
+          "word": "شهر",
+          "latin": "ʃæhr",
+          "meaning": "city",
+          "pos": "noun"
+        },
+        {
+          "word": "مشهور",
+          "latin": "mæʃʔhur",
+          "meaning": "famous",
+          "pos": "adjective"
+        },
+        {
+          "word": "شهرت",
+          "latin": "ʃohræt",
+          "meaning": "[شهرت] (definition pending)",
+          "pos": "noun"
+        },
+        {
+          "word": "شهره",
+          "latin": "ʃohreh",
+          "meaning": "sh",
+          "pos": "noun"
+        }
+      ]
+    },
+    {
+      "id": 53,
+      "root": "ه-م-م",
+      "rootLatin": "ه م م",
+      "meaning": "thanks",
+      "category": "knowledge",
+      "derivatives": [
+        {
+          "word": "همت",
+          "latin": "hemmæt",
+          "meaning": "thanks",
+          "pos": "noun"
+        },
+        {
+          "word": "مهم",
+          "latin": "mohem",
+          "meaning": "important",
+          "pos": "noun"
+        },
+        {
+          "word": "اهمیت",
+          "latin": "ɑhæmmijjæt",
+          "meaning": "importance",
+          "pos": "noun"
+        },
+        {
+          "word": "هام",
+          "latin": "ha:mm",
+          "meaning": "[هام] (definition pending)",
+          "pos": "noun"
+        },
+        {
+          "word": "همام",
+          "latin": "homɑm",
+          "meaning": "hammam",
+          "pos": "adjective"
+        }
+      ]
+    },
+    {
+      "id": 54,
+      "root": "غ-ر-ب",
+      "rootLatin": "غ ر ب",
+      "meaning": "west",
+      "category": "knowledge",
+      "derivatives": [
+        {
+          "word": "غرب",
+          "latin": "ɢærb",
+          "meaning": "west",
+          "pos": "noun"
+        },
+        {
+          "word": "مغرب",
+          "latin": "mæɢreb",
+          "meaning": "[مغرب] (definition pending)",
+          "pos": "noun"
+        },
+        {
+          "word": "غروب",
+          "latin": "ɢorub",
+          "meaning": "[غروب] (definition pending)",
+          "pos": "noun"
+        }
+      ]
+    },
+    {
+      "id": 55,
+      "root": "ش-ک-ل",
+      "rootLatin": "ش ک ل",
+      "meaning": "problem",
+      "category": "general",
+      "derivatives": [
+        {
+          "word": "مشکل",
+          "latin": "moʃkel",
+          "meaning": "problem",
+          "pos": "noun"
+        },
+        {
+          "word": "تشکیل",
+          "latin": "tæʃkil",
+          "meaning": "formation",
+          "pos": "noun"
+        },
+        {
+          "word": "شکل",
+          "latin": "ʃækl",
+          "meaning": "shape",
+          "pos": "noun"
+        },
+        {
+          "word": "اشکال",
+          "latin": "eʃkɑl, æʃkɑl",
+          "meaning": "difficulty",
+          "pos": "noun"
+        },
+        {
+          "word": "تشکل",
+          "latin": "tæʃækkol",
+          "meaning": "association",
+          "pos": "noun"
+        }
+      ]
+    },
+    {
+      "id": 56,
+      "root": "ق-د-م",
+      "rootLatin": "ق د م",
+      "meaning": "action",
+      "category": "knowledge",
+      "derivatives": [
+        {
+          "word": "اقدام",
+          "latin": "eɢdɑm, æɢdɑm",
+          "meaning": "action",
+          "pos": "noun"
+        },
+        {
+          "word": "مقدمه",
+          "latin": "moɢæddæme",
+          "meaning": "introduction",
+          "pos": "noun"
+        },
+        {
+          "word": "قدم",
+          "latin": "ɢædæm, ɢedæm",
+          "meaning": "step",
+          "pos": "noun"
+        },
+        {
+          "word": "مقدم",
+          "latin": "moɢæddæm, mæɢdæm",
+          "meaning": "[مقدم] (definition pending)",
+          "pos": "noun"
+        }
+      ]
+    },
+    {
+      "id": 57,
+      "root": "ن-خ-ب",
+      "rootLatin": "ن خ ب",
+      "meaning": "selection",
+      "category": "knowledge",
+      "derivatives": [
+        {
+          "word": "انتخاب",
+          "latin": "entexɑb",
+          "meaning": "selection",
+          "pos": "noun"
+        },
+        {
+          "word": "نخبه",
+          "latin": "noxbæh",
+          "meaning": "elite",
+          "pos": "noun"
+        },
+        {
+          "word": "منتخب",
+          "latin": "montæʔxæb, montæʔxeb",
+          "meaning": "[منتخب] (definition pending)",
+          "pos": "noun"
+        }
+      ]
+    },
+    {
+      "id": 58,
+      "root": "س-ر-ر",
+      "rootLatin": "س ر ر",
+      "meaning": "head",
+      "category": "knowledge",
+      "derivatives": [
+        {
+          "word": "سر",
+          "latin": "sær, ser",
+          "meaning": "head",
+          "pos": "noun"
+        },
+        {
+          "word": "سره",
+          "latin": "særeh",
+          "meaning": "pure",
+          "pos": "noun"
+        },
+        {
+          "word": "سرور",
+          "latin": "sorur, særvær",
+          "meaning": "[سرور] (definition pending)",
+          "pos": "noun"
+        }
+      ]
+    },
+    {
+      "id": 59,
+      "root": "ب-ی-ن",
+      "rootLatin": "ب ی ن",
+      "meaning": "nose",
+      "category": "knowledge",
+      "derivatives": [
+        {
+          "word": "بین",
+          "latin": "bejn",
+          "meaning": "between",
+          "pos": "noun"
+        },
+        {
+          "word": "بیان",
+          "latin": "bæjɑn",
+          "meaning": "expression",
+          "pos": "noun"
+        },
+        {
+          "word": "بینی",
+          "latin": "bini",
+          "meaning": "nose",
+          "pos": "noun"
+        },
+        {
+          "word": "تبیین",
+          "latin": "tæbʔjin",
+          "meaning": "[تبیین] (definition pending)",
+          "pos": "noun"
+        },
+        {
+          "word": "بان",
+          "latin": "bɑn",
+          "meaning": "[بان] (definition pending)",
+          "pos": "noun"
+        }
+      ]
+    },
+    {
+      "id": 60,
+      "root": "ا-م-ن",
+      "rootLatin": "ا م ن",
+      "meaning": "security",
+      "category": "general",
+      "derivatives": [
+        {
+          "word": "امنیت",
+          "latin": "æmnijæt",
+          "meaning": "security",
+          "pos": "noun"
+        },
+        {
+          "word": "امن",
+          "latin": "æmn, æmen",
+          "meaning": "safe",
+          "pos": "adjective"
+        },
+        {
+          "word": "امان",
+          "latin": "æmɑn",
+          "meaning": "mercy",
+          "pos": "noun"
+        }
+      ]
+    },
+    {
+      "id": 61,
+      "root": "ح-د-د",
+      "rootLatin": "ح د د",
+      "meaning": "limit",
+      "category": "knowledge",
+      "derivatives": [
+        {
+          "word": "حد",
+          "latin": "hædd",
+          "meaning": "limit",
+          "pos": "noun"
+        },
+        {
+          "word": "حدود",
+          "latin": "hodud",
+          "meaning": "range",
+          "pos": "noun"
+        },
+        {
+          "word": "محدود",
+          "latin": "mæhdud",
+          "meaning": "limited",
+          "pos": "adjective"
+        },
+        {
+          "word": "محدودیت",
+          "latin": null,
+          "meaning": "restriction",
+          "pos": "noun"
+        },
+        {
+          "word": "حداد",
+          "latin": "hæddɑd",
+          "meaning": "[حداد] (definition pending)",
+          "pos": "noun"
+        }
+      ]
+    },
+    {
+      "id": 62,
+      "root": "ف-ی-د",
+      "rootLatin": "ف ی د",
+      "meaning": "use",
+      "category": "knowledge",
+      "derivatives": [
+        {
+          "word": "استفاده",
+          "latin": "estefɑde",
+          "meaning": "use",
+          "pos": "noun"
+        },
+        {
+          "word": "مفید",
+          "latin": "mofid",
+          "meaning": "useful",
+          "pos": "adjective"
+        },
+        {
+          "word": "مفاد",
+          "latin": "mofɑd",
+          "meaning": "[مفاد] (definition pending)",
+          "pos": "noun"
+        }
+      ]
+    },
+    {
+      "id": 63,
+      "root": "ت-م-م",
+      "rootLatin": "ت م م",
+      "meaning": "whole, all",
+      "category": "knowledge",
+      "derivatives": [
+        {
+          "word": "تمام",
+          "latin": "tæmɑm",
+          "meaning": "whole, all",
+          "pos": "adjective"
+        },
+        {
+          "word": "تم",
+          "latin": "tæmʔmæ",
+          "meaning": "themes",
+          "pos": "noun"
+        },
+        {
+          "word": "اتمام",
+          "latin": "etmɑm",
+          "meaning": "[اتمام] (definition pending)",
+          "pos": "noun"
+        },
+        {
+          "word": "تام",
+          "latin": "tɑm",
+          "meaning": "[تام] (definition pending)",
+          "pos": "noun"
+        }
+      ]
+    },
+    {
+      "id": 64,
+      "root": "ا-م-ر",
+      "rootLatin": "ا م ر",
+      "meaning": "affair",
+      "category": "general",
+      "derivatives": [
+        {
+          "word": "امر",
+          "latin": "æmr",
+          "meaning": "affair",
+          "pos": "noun"
+        },
+        {
+          "word": "امار",
+          "latin": "ɑmɑr",
+          "meaning": "statistics",
+          "pos": "noun"
+        },
+        {
+          "word": "مامور",
+          "latin": "mɑʔmur",
+          "meaning": "officer",
+          "pos": "noun"
+        }
+      ]
+    },
+    {
+      "id": 65,
+      "root": "ق-و-م",
+      "rootLatin": "ق و م",
+      "meaning": "position",
+      "category": "social",
+      "derivatives": [
+        {
+          "word": "مقام",
+          "latin": "mæɢɑm",
+          "meaning": "position",
+          "pos": "noun"
+        },
+        {
+          "word": "قیمت",
+          "latin": "ɢimæt",
+          "meaning": "price",
+          "pos": "noun"
+        },
+        {
+          "word": "مقاومت",
+          "latin": "moɢɑvæmæt",
+          "meaning": "resistance",
+          "pos": "noun"
+        },
+        {
+          "word": "اقامت",
+          "latin": "eɢɑmæt",
+          "meaning": "stay",
+          "pos": "noun"
+        },
+        {
+          "word": "قوم",
+          "latin": "ɢowm",
+          "meaning": "people",
+          "pos": "noun"
+        }
+      ]
+    },
+    {
+      "id": 66,
+      "root": "خ-ل-ف",
+      "rootLatin": "خ ل ف",
+      "meaning": "different",
+      "category": "general",
+      "derivatives": [
+        {
+          "word": "مختلف",
+          "latin": "moxtælef",
+          "meaning": "different",
+          "pos": "adjective"
+        },
+        {
+          "word": "مخالف",
+          "latin": "moxɑlef",
+          "meaning": "against",
+          "pos": "noun"
+        },
+        {
+          "word": "اختلاف",
+          "latin": "extelɑf",
+          "meaning": "difference",
+          "pos": "noun"
+        },
+        {
+          "word": "خلیفه",
+          "latin": "xælife",
+          "meaning": "caliph",
+          "pos": "noun"
+        },
+        {
+          "word": "خلاف",
+          "latin": "xelɑf",
+          "meaning": "unlike",
+          "pos": "noun"
+        }
+      ]
+    },
+    {
+      "id": 67,
+      "root": "خ-ص-ص",
+      "rootLatin": "خ ص ص",
+      "meaning": "about",
+      "category": "space",
+      "derivatives": [
+        {
+          "word": "خصوص",
+          "latin": "xosus",
+          "meaning": "about",
+          "pos": "noun"
+        },
+        {
+          "word": "خاص",
+          "latin": "xɑss",
+          "meaning": "specific",
+          "pos": "noun"
+        },
+        {
+          "word": "اختصاص",
+          "latin": "extesɑs",
+          "meaning": "allocation",
+          "pos": "noun"
+        },
+        {
+          "word": "متخصص",
+          "latin": "motæʔxæsses",
+          "meaning": "expert",
+          "pos": "noun"
+        },
+        {
+          "word": "تخصص",
+          "latin": "tæxæssos",
+          "meaning": "specialization",
+          "pos": "noun"
+        }
+      ]
+    },
+    {
+      "id": 68,
+      "root": "ع-ل-ل",
+      "rootLatin": "ع ل ل",
+      "meaning": "against",
+      "category": "knowledge",
+      "derivatives": [
+        {
+          "word": "علیه",
+          "latin": "ælejh",
+          "meaning": "against",
+          "pos": "noun"
+        },
+        {
+          "word": "علت",
+          "latin": "ʔellæt",
+          "meaning": "reason",
+          "pos": "noun"
+        },
+        {
+          "word": "معلول",
+          "latin": "mæʔʔlul",
+          "meaning": "[معلول] (definition pending)",
+          "pos": "noun"
+        }
+      ]
+    },
+    {
+      "id": 69,
+      "root": "ق-ب-ل",
+      "rootLatin": "ق ب ل",
+      "meaning": "accept",
+      "category": "ability",
+      "derivatives": [
+        {
+          "word": "قبول",
+          "latin": "ɢæbul",
+          "meaning": "accept",
+          "pos": "noun"
+        },
+        {
+          "word": "قبل",
+          "latin": "ɢæbl",
+          "meaning": "before",
+          "pos": "noun"
+        },
+        {
+          "word": "مقابل",
+          "latin": "moɢɑbel",
+          "meaning": "opposite",
+          "pos": "noun"
+        },
+        {
+          "word": "قابل",
+          "latin": "ɢɑbel",
+          "meaning": "available",
+          "pos": "adjective"
+        },
+        {
+          "word": "مقابله",
+          "latin": "moɢɑbele",
+          "meaning": "confronting",
+          "pos": "noun"
+        }
+      ]
+    },
+    {
+      "id": 70,
+      "root": "ر-ق-ب",
+      "rootLatin": "ر ق ب",
+      "meaning": "competition",
+      "category": "knowledge",
+      "derivatives": [
+        {
+          "word": "رقابت",
+          "latin": "ræɢɑbæt",
+          "meaning": "competition",
+          "pos": "noun"
+        },
+        {
+          "word": "مراقبت",
+          "latin": "morɑʔɢæbæt",
+          "meaning": "[مراقبت] (definition pending)",
+          "pos": "noun"
+        },
+        {
+          "word": "مراقب",
+          "latin": "morɑʔɢeb",
+          "meaning": "[مراقب] (definition pending)",
+          "pos": "noun"
+        }
+      ]
+    },
+    {
+      "id": 71,
+      "root": "خ-د-م",
+      "rootLatin": "خ د م",
+      "meaning": "service",
+      "category": "knowledge",
+      "derivatives": [
+        {
+          "word": "خدمت",
+          "latin": "xedmæt",
+          "meaning": "service",
+          "pos": "noun"
+        },
+        {
+          "word": "استخدام",
+          "latin": "estexdɑm",
+          "meaning": "employment",
+          "pos": "noun"
+        },
+        {
+          "word": "خدام",
+          "latin": "xudda:m",
+          "meaning": "[خدام] (definition pending)",
+          "pos": "noun"
+        }
+      ]
+    },
+    {
+      "id": 72,
+      "root": "م-د-د",
+      "rootLatin": "م د د",
+      "meaning": "fashion",
+      "category": "knowledge",
+      "derivatives": [
+        {
+          "word": "مد",
+          "latin": "mædd, med, mod",
+          "meaning": "fashion",
+          "pos": "noun"
+        },
+        {
+          "word": "مدت",
+          "latin": "moddæt",
+          "meaning": "term",
+          "pos": "noun"
+        },
+        {
+          "word": "ماده",
+          "latin": "mɑdeh",
+          "meaning": "article",
+          "pos": "noun"
+        },
+        {
+          "word": "امداد",
+          "latin": "emdɑd",
+          "meaning": "[امداد] (definition pending)",
+          "pos": "noun"
+        }
+      ]
+    },
+    {
+      "id": 73,
+      "root": "د-و-ر",
+      "rootLatin": "د و ر",
+      "meaning": "away",
+      "category": "general",
+      "derivatives": [
+        {
+          "word": "دور",
+          "latin": "dowr, dur",
+          "meaning": "away",
+          "pos": "noun"
+        },
+        {
+          "word": "دوره",
+          "latin": "dowre",
+          "meaning": "period",
+          "pos": "noun"
+        },
+        {
+          "word": "دوران",
+          "latin": "dæværɑn",
+          "meaning": "era",
+          "pos": "noun"
+        },
+        {
+          "word": "اداره",
+          "latin": "edɑre",
+          "meaning": "office",
+          "pos": "noun"
+        },
+        {
+          "word": "داور",
+          "latin": "dɑvær",
+          "meaning": "referee",
+          "pos": "noun"
+        }
+      ]
+    },
+    {
+      "id": 74,
+      "root": "س-ب-ق",
+      "rootLatin": "س ب ق",
+      "meaning": "history",
+      "category": "general",
+      "derivatives": [
+        {
+          "word": "سابقه",
+          "latin": "sɑbeɢeh",
+          "meaning": "history",
+          "pos": "noun"
+        },
+        {
+          "word": "مسابقه",
+          "latin": "mosɑbeɢe",
+          "meaning": "competition",
+          "pos": "noun"
+        },
+        {
+          "word": "سابق",
+          "latin": "sɑbeɢ",
+          "meaning": "former",
+          "pos": "adjective"
+        }
+      ]
+    },
+    {
+      "id": 75,
+      "root": "ح-م-ل",
+      "rootLatin": "ح م ل",
+      "meaning": "shipping",
+      "category": "knowledge",
+      "derivatives": [
+        {
+          "word": "حمل",
+          "latin": "hæml, hæmæl, heml",
+          "meaning": "shipping",
+          "pos": "noun"
+        },
+        {
+          "word": "حمله",
+          "latin": "hæmle",
+          "meaning": "attack",
+          "pos": "noun"
+        },
+        {
+          "word": "احتمال",
+          "latin": "ehtemɑl",
+          "meaning": "probability",
+          "pos": "noun"
+        },
+        {
+          "word": "تحمل",
+          "latin": "tæhæmmol",
+          "meaning": "tolerance",
+          "pos": "noun"
+        },
+        {
+          "word": "حامل",
+          "latin": "hɑmel",
+          "meaning": "[حامل] (definition pending)",
+          "pos": "noun"
+        }
+      ]
+    },
+    {
+      "id": 76,
+      "root": "ر-ب-ط",
+      "rootLatin": "ر ب ط",
+      "meaning": "relationship",
+      "category": "general",
+      "derivatives": [
+        {
+          "word": "ارتباط",
+          "latin": "ertebɑt",
+          "meaning": "relationship",
+          "pos": "noun"
+        },
+        {
+          "word": "رابطه",
+          "latin": "rɑbete",
+          "meaning": "relation",
+          "pos": "noun"
+        },
+        {
+          "word": "مربوط",
+          "latin": "mærbut",
+          "meaning": "related",
+          "pos": "adjective"
+        },
+        {
+          "word": "مرتبط",
+          "latin": "mortæbet",
+          "meaning": "linked",
+          "pos": "adjective"
+        },
+        {
+          "word": "ربط",
+          "latin": "ræbt",
+          "meaning": "relevance",
+          "pos": "noun"
+        }
+      ]
+    },
+    {
+      "id": 77,
+      "root": "ک-م-ل",
+      "rootLatin": "ک م ل",
+      "meaning": "complete",
+      "category": "knowledge",
+      "derivatives": [
+        {
+          "word": "کامل",
+          "latin": "kɑmel",
+          "meaning": "complete",
+          "pos": "adjective"
+        },
+        {
+          "word": "تکمیل",
+          "latin": "tækmil",
+          "meaning": "completion",
+          "pos": "noun"
+        },
+        {
+          "word": "کمال",
+          "latin": "kæmɑl",
+          "meaning": "perfection",
+          "pos": "noun"
+        },
+        {
+          "word": "تکامل",
+          "latin": "tækɑmol",
+          "meaning": "[تکامل] (definition pending)",
+          "pos": "noun"
+        }
+      ]
+    },
+    {
+      "id": 78,
+      "root": "ش-و-ر",
+      "rootLatin": "ش و ر",
+      "meaning": "indicate",
+      "category": "knowledge",
+      "derivatives": [
+        {
+          "word": "اشاره",
+          "latin": "eʃɑre",
+          "meaning": "indicate",
+          "pos": "noun"
+        },
+        {
+          "word": "مشاور",
+          "latin": "moʃɑver",
+          "meaning": "consultant",
+          "pos": "noun"
+        },
+        {
+          "word": "شور",
+          "latin": "ʃur, ʃowr",
+          "meaning": "passion",
+          "pos": "noun"
+        },
+        {
+          "word": "مشورت",
+          "latin": "mæʃværæt",
+          "meaning": "consultation",
+          "pos": "noun"
+        },
+        {
+          "word": "مشاوره",
+          "latin": "moʃɑvere",
+          "meaning": "[مشاوره] (definition pending)",
+          "pos": "noun"
+        }
+      ]
+    },
+    {
+      "id": 79,
+      "root": "ع-ر-ض",
+      "rootLatin": "ع ر ض",
+      "meaning": "protest",
+      "category": "knowledge",
+      "derivatives": [
+        {
+          "word": "اعتراض",
+          "latin": "eʔterɑz",
+          "meaning": "protest",
+          "pos": "noun"
+        },
+        {
+          "word": "عرض",
+          "latin": "ʔæræz, ʔærz",
+          "meaning": "width",
+          "pos": "noun"
+        },
+        {
+          "word": "معترض",
+          "latin": "moʔtærez",
+          "meaning": "objecting",
+          "pos": "adjective"
+        },
+        {
+          "word": "عرضه",
+          "latin": "ærzeh, orzeh",
+          "meaning": "offer",
+          "pos": "noun"
+        },
+        {
+          "word": "معرض",
+          "latin": "mæʔræz",
+          "meaning": "[معرض] (definition pending)",
+          "pos": "noun"
+        }
+      ]
+    },
+    {
+      "id": 80,
+      "root": "و-ح-د",
+      "rootLatin": "و ح د",
+      "meaning": "union",
+      "category": "general",
+      "derivatives": [
+        {
+          "word": "اتحادیه",
+          "latin": "ettehɑdije",
+          "meaning": "union",
+          "pos": "noun"
+        },
+        {
+          "word": "واحد",
+          "latin": "vɑhed",
+          "meaning": "unit",
+          "pos": "noun"
+        },
+        {
+          "word": "متحد",
+          "latin": "mottæhed",
+          "meaning": "united, ally",
+          "pos": "adjective"
+        },
+        {
+          "word": "وحدت",
+          "latin": "væhdæt",
+          "meaning": "unity",
+          "pos": "noun"
+        },
+        {
+          "word": "اتحاد",
+          "latin": "ettehɑd",
+          "meaning": "alliance",
+          "pos": "noun"
+        }
+      ]
+    },
+    {
+      "id": 81,
+      "root": "س-و-ی",
+      "rootLatin": "س و ی",
+      "meaning": "towards",
+      "category": "conflict",
+      "derivatives": [
+        {
+          "word": "سوی",
+          "latin": "suj, sævi",
+          "meaning": "towards",
+          "pos": "noun"
+        },
+        {
+          "word": "مساوی",
+          "latin": "mosɑvi",
+          "meaning": "equal",
+          "pos": "adjective"
+        },
+        {
+          "word": "تساوی",
+          "latin": "tæsɑvi",
+          "meaning": "equality",
+          "pos": "noun"
+        }
+      ]
+    },
+    {
+      "id": 82,
+      "root": "ن-س-ب",
+      "rootLatin": "ن س ب",
+      "meaning": "relation",
+      "category": "knowledge",
+      "derivatives": [
+        {
+          "word": "نسبت",
+          "latin": "nesbæt",
+          "meaning": "relation",
+          "pos": "noun"
+        },
+        {
+          "word": "مناسب",
+          "latin": "monɑseb",
+          "meaning": "appropriate",
+          "pos": "adjective"
+        },
+        {
+          "word": "مناسبت",
+          "latin": "monɑsebæt",
+          "meaning": "events",
+          "pos": "noun"
+        },
+        {
+          "word": "متناسب",
+          "latin": "motænɑʔseb",
+          "meaning": "[متناسب] (definition pending)",
+          "pos": "adjective"
+        },
+        {
+          "word": "تناسب",
+          "latin": "tænɑsob",
+          "meaning": "[تناسب] (definition pending)",
+          "pos": "noun"
+        }
+      ]
+    },
+    {
+      "id": 83,
+      "root": "س-ف-ر",
+      "rootLatin": "س ف ر",
+      "meaning": "travel",
+      "category": "ability",
+      "derivatives": [
+        {
+          "word": "سفر",
+          "latin": "sæfær",
+          "meaning": "travel",
+          "pos": "noun"
+        },
+        {
+          "word": "سفارت",
+          "latin": "sefɑræt",
+          "meaning": "embassy",
+          "pos": "noun"
+        },
+        {
+          "word": "مسافرت",
+          "latin": "mosɑferæt",
+          "meaning": "travel",
+          "pos": "noun"
+        },
+        {
+          "word": "مسافر",
+          "latin": "mosɑʔfer",
+          "meaning": "passenger",
+          "pos": "noun"
+        },
+        {
+          "word": "سفره",
+          "latin": "sofreh",
+          "meaning": "table",
+          "pos": "noun"
+        }
+      ]
+    },
+    {
+      "id": 84,
+      "root": "ح-م-د",
+      "rootLatin": "ح م د",
+      "meaning": "Mohammad",
+      "category": "knowledge",
+      "derivatives": [
+        {
+          "word": "محمد",
+          "latin": "mohæmmæd",
+          "meaning": "Mohammad",
+          "pos": "noun"
+        },
+        {
+          "word": "احمد",
+          "latin": "ɑhmæd",
+          "meaning": "Ahmad",
+          "pos": "noun"
+        },
+        {
+          "word": "محمود",
+          "latin": "mæhmud",
+          "meaning": "Mahmoud",
+          "pos": "noun"
+        },
+        {
+          "word": "حامد",
+          "latin": "hɑmed",
+          "meaning": "[حامد] (definition pending)",
+          "pos": "noun"
+        }
+      ]
+    },
+    {
+      "id": 85,
+      "root": "ش-ر-ع",
+      "rootLatin": "ش ر ع",
+      "meaning": "start",
+      "category": "knowledge",
+      "derivatives": [
+        {
+          "word": "شروع",
+          "latin": "ʃoruʔ",
+          "meaning": "start",
+          "pos": "noun"
+        },
+        {
+          "word": "مشروع",
+          "latin": "mæʃʔruʔ",
+          "meaning": "[مشروع] (definition pending)",
+          "pos": "adjective"
+        },
+        {
+          "word": "شریعت",
+          "latin": "ʃæriʔæt",
+          "meaning": "[شریعت] (definition pending)",
+          "pos": "noun"
+        }
+      ]
+    },
+    {
+      "id": 86,
+      "root": "ج-ن-ب",
+      "rootLatin": "ج ن ب",
+      "meaning": "south",
+      "category": "knowledge",
+      "derivatives": [
+        {
+          "word": "جنوب",
+          "latin": "ʤonub",
+          "meaning": "south",
+          "pos": "noun"
+        },
+        {
+          "word": "جناب",
+          "latin": "ʤænɑb",
+          "meaning": "excellency",
+          "pos": "noun"
+        },
+        {
+          "word": "جانب",
+          "latin": "ʤɑneb",
+          "meaning": "[جانب] (definition pending)",
+          "pos": "noun"
+        },
+        {
+          "word": "جنبه",
+          "latin": "ʤæmbeh",
+          "meaning": "aspects",
+          "pos": "noun"
+        },
+        {
+          "word": "اجتناب",
+          "latin": "eʤtenɑb",
+          "meaning": "[اجتناب] (definition pending)",
+          "pos": "noun"
+        }
+      ]
+    },
+    {
+      "id": 87,
+      "root": "ق-ه-ر",
+      "rootLatin": "ق ه ر",
+      "meaning": "champion",
+      "category": "general",
+      "derivatives": [
+        {
+          "word": "قهرمان",
+          "latin": "ɢæhremɑn",
+          "meaning": "champion",
+          "pos": "noun"
+        },
+        {
+          "word": "قاهره",
+          "latin": "ɢɑhere",
+          "meaning": "Cairo",
+          "pos": "noun"
+        },
+        {
+          "word": "قهر",
+          "latin": "ɢæhr",
+          "meaning": "wrath",
+          "pos": "noun"
+        }
+      ]
+    },
+    {
+      "id": 88,
+      "root": "ظ-ه-ر",
+      "rootLatin": "ظ ه ر",
+      "meaning": "statement",
+      "category": "knowledge",
+      "derivatives": [
+        {
+          "word": "اظهار",
+          "latin": "ezhɑr, æzhɑr",
+          "meaning": "statement",
+          "pos": "noun"
+        },
+        {
+          "word": "تظاهرات",
+          "latin": "tæzɑhorɑt",
+          "meaning": "protests",
+          "pos": "noun"
+        },
+        {
+          "word": "ظاهر",
+          "latin": "zɑher",
+          "meaning": "appearance",
+          "pos": "noun"
+        },
+        {
+          "word": "ظهر",
+          "latin": "zohr, zæhr",
+          "meaning": "noon",
+          "pos": "noun"
+        },
+        {
+          "word": "ظهور",
+          "latin": "zohur",
+          "meaning": "[ظهور] (definition pending)",
+          "pos": "noun"
+        }
+      ]
+    },
+    {
+      "id": 89,
+      "root": "و-ف-ق",
+      "rootLatin": "و ف ق",
+      "meaning": "event",
+      "category": "general",
+      "derivatives": [
+        {
+          "word": "اتفاق",
+          "latin": "ettefɑɢ",
+          "meaning": "event",
+          "pos": "noun"
+        },
+        {
+          "word": "موفق",
+          "latin": "movæffæɢ",
+          "meaning": "successful",
+          "pos": "adjective"
+        },
+        {
+          "word": "توافق",
+          "latin": "tævɑfoɢ",
+          "meaning": "agreement",
+          "pos": "noun"
+        },
+        {
+          "word": "موافق",
+          "latin": "movɑʔfeɢ",
+          "meaning": "compliant",
+          "pos": "noun"
+        }
+      ]
+    },
+    {
+      "id": 90,
+      "root": "ح-ر-ف",
+      "rootLatin": "ح ر ف",
+      "meaning": "letter",
+      "category": "writing",
+      "derivatives": [
+        {
+          "word": "حرف",
+          "latin": "hærf",
+          "meaning": "letter",
+          "pos": "noun"
+        },
+        {
+          "word": "حرفه",
+          "latin": "herfeh",
+          "meaning": "profession",
+          "pos": "noun"
+        },
+        {
+          "word": "انحراف",
+          "latin": "enherɑf",
+          "meaning": "deviation",
+          "pos": "noun"
+        }
+      ]
+    },
+    {
+      "id": 91,
+      "root": "ک-ل-ل",
+      "rootLatin": "ک ل ل",
+      "meaning": "total",
+      "category": "knowledge",
+      "derivatives": [
+        {
+          "word": "کل",
+          "latin": "kæl, kol",
+          "meaning": "total",
+          "pos": "noun"
+        },
+        {
+          "word": "کلی",
+          "latin": "kæli, koli, kolli",
+          "meaning": "general",
+          "pos": "adjective"
+        },
+        {
+          "word": "کلیه",
+          "latin": "kolʔjæh, kollijjæh",
+          "meaning": "kidney",
+          "pos": "noun"
+        },
+        {
+          "word": "کلیت",
+          "latin": "kollijʔjæt",
+          "meaning": "[کلیت] (definition pending)",
+          "pos": "noun"
+        },
+        {
+          "word": "کله",
+          "latin": "kæleh, kælleh, kolæh, kolleh",
+          "meaning": "head",
+          "pos": "noun"
+        }
+      ]
+    },
+    {
+      "id": 92,
+      "root": "ص-ح-ب",
+      "rootLatin": "ص ح ب",
+      "meaning": "talk",
+      "category": "knowledge",
+      "derivatives": [
+        {
+          "word": "صحبت",
+          "latin": "sohbæt",
+          "meaning": "talk",
+          "pos": "noun"
+        },
+        {
+          "word": "صاحب",
+          "latin": "sɑheb",
+          "meaning": "master",
+          "pos": "noun"
+        },
+        {
+          "word": "مصاحبه",
+          "latin": "mosɑʔhæbæh",
+          "meaning": "[مصاحبه] (definition pending)",
+          "pos": "noun"
+        }
+      ]
+    },
+    {
+      "id": 93,
+      "root": "ن-ق-ش",
+      "rootLatin": "ن ق ش",
+      "meaning": "role",
+      "category": "knowledge",
+      "derivatives": [
+        {
+          "word": "نقش",
+          "latin": "næɢʃ",
+          "meaning": "role",
+          "pos": "noun"
+        },
+        {
+          "word": "نقاش",
+          "latin": "næɢɢɑʃ",
+          "meaning": "painter",
+          "pos": "noun"
+        },
+        {
+          "word": "مناقشه",
+          "latin": "monɑɢæʔʃæh",
+          "meaning": "[مناقشه] (definition pending)",
+          "pos": "noun"
+        }
+      ]
+    },
+    {
+      "id": 94,
+      "root": "ط-ل-ع",
+      "rootLatin": "ط ل ع",
+      "meaning": "information",
+      "category": "knowledge",
+      "derivatives": [
+        {
+          "word": "اطلاع",
+          "latin": "ettelɑʔ",
+          "meaning": "information",
+          "pos": "noun"
+        },
+        {
+          "word": "مطالعه",
+          "latin": "motɑleʔe",
+          "meaning": "study",
+          "pos": "noun"
+        },
+        {
+          "word": "مطلع",
+          "latin": "mætlæʔ, mottæleʔ",
+          "meaning": "[مطلع] (definition pending)",
+          "pos": "noun"
+        }
+      ]
+    },
+    {
+      "id": 95,
+      "root": "ش-م-ل",
+      "rootLatin": "ش م ل",
+      "meaning": "north",
+      "category": "knowledge",
+      "derivatives": [
+        {
+          "word": "شمال",
+          "latin": "ʃomɑl",
+          "meaning": "north",
+          "pos": "noun"
+        },
+        {
+          "word": "شامل",
+          "latin": "ʃɑmel",
+          "meaning": "included",
+          "pos": "adjective"
+        },
+        {
+          "word": "مشمول",
+          "latin": "mæʃʔmul",
+          "meaning": "[مشمول] (definition pending)",
+          "pos": "noun"
+        }
+      ]
+    },
+    {
+      "id": 96,
+      "root": "غ-ی-ر",
+      "rootLatin": "غ ی ر",
+      "meaning": "other",
+      "category": "knowledge",
+      "derivatives": [
+        {
+          "word": "غیر",
+          "latin": "ɢejr",
+          "meaning": "other",
+          "pos": "noun"
+        },
+        {
+          "word": "تغییر",
+          "latin": "tæɢʔjir",
+          "meaning": "change",
+          "pos": "noun"
+        },
+        {
+          "word": "غیره",
+          "latin": "ɢejreh",
+          "meaning": "etc",
+          "pos": "noun"
+        },
+        {
+          "word": "مغایر",
+          "latin": "mæɢɑjer, moɢɑʔjer",
+          "meaning": "[مغایر] (definition pending)",
+          "pos": "adjective"
+        }
+      ]
+    },
+    {
+      "id": 97,
+      "root": "ع-د-د",
+      "rootLatin": "ع د د",
+      "meaning": "number",
+      "category": "knowledge",
+      "derivatives": [
+        {
+          "word": "تعداد",
+          "latin": "tæʔdɑd",
+          "meaning": "number",
+          "pos": "noun"
+        },
+        {
+          "word": "عده",
+          "latin": "oddeh, eddeh",
+          "meaning": "number",
+          "pos": "noun"
+        },
+        {
+          "word": "متعدد",
+          "latin": "motæʔædded",
+          "meaning": "multiple",
+          "pos": "adjective"
+        },
+        {
+          "word": "استعداد",
+          "latin": "esteʔdɑd",
+          "meaning": "[استعداد] (definition pending)",
+          "pos": "noun"
+        },
+        {
+          "word": "عدد",
+          "latin": "ɑdæd, odæd",
+          "meaning": "number",
+          "pos": "noun"
+        }
+      ]
+    },
+    {
+      "id": 98,
+      "root": "و-س-ط",
+      "rootLatin": "و س ط",
+      "meaning": "by",
+      "category": "knowledge",
+      "derivatives": [
+        {
+          "word": "توسط",
+          "latin": "tævæssot",
+          "meaning": "by",
+          "pos": "preposition"
+        },
+        {
+          "word": "وسط",
+          "latin": "væsæt",
+          "meaning": "middle",
+          "pos": "noun"
+        },
+        {
+          "word": "متوسط",
+          "latin": "motævæsset",
+          "meaning": "average",
+          "pos": "noun"
+        },
+        {
+          "word": "واسطه",
+          "latin": "vɑsetæh",
+          "meaning": "intermediate",
+          "pos": "noun"
+        },
+        {
+          "word": "اوسط",
+          "latin": "owsæt",
+          "meaning": "[اوسط] (definition pending)",
+          "pos": "noun"
+        }
+      ]
+    },
+    {
+      "id": 99,
+      "root": "ن-و-ع",
+      "rootLatin": "ن و ع",
+      "meaning": "type",
+      "category": "knowledge",
+      "derivatives": [
+        {
+          "word": "نوع",
+          "latin": "nowʔ",
+          "meaning": "type",
+          "pos": "noun"
+        },
+        {
+          "word": "تنوع",
+          "latin": "tænævvoʔ",
+          "meaning": "diversity",
+          "pos": "noun"
+        },
+        {
+          "word": "متنوع",
+          "latin": "motænævveʔ",
+          "meaning": "[متنوع] (definition pending)",
+          "pos": "adjective"
+        }
+      ]
+    },
+    {
+      "id": 100,
+      "root": "ح-ر-ک",
+      "rootLatin": "ح ر ک",
+      "meaning": "move",
+      "category": "knowledge",
+      "derivatives": [
+        {
+          "word": "حرکت",
+          "latin": "hærækæt",
+          "meaning": "move",
+          "pos": "noun"
+        },
+        {
+          "word": "تحریک",
+          "latin": "tæhrik",
+          "meaning": "[تحریک] (definition pending)",
+          "pos": "noun"
+        },
+        {
+          "word": "تحرک",
+          "latin": "taharruk",
+          "meaning": "[تحرک] (definition pending)",
+          "pos": "noun"
+        }
+      ]
+    },
+    {
+      "id": 101,
+      "root": "س-ی-ر",
+      "rootLatin": "س ی ر",
+      "meaning": "route",
+      "category": "knowledge",
+      "derivatives": [
+        {
+          "word": "مسیر",
+          "latin": "mæsir",
+          "meaning": "route",
+          "pos": "noun"
+        },
+        {
+          "word": "سایر",
+          "latin": "sɑjer",
+          "meaning": "other",
+          "pos": "noun"
+        },
+        {
+          "word": "سیر",
+          "latin": "sir, sejr, siær",
+          "meaning": "[سیر] (definition pending)",
+          "pos": "noun"
+        }
+      ]
+    },
+    {
+      "id": 102,
+      "root": "ح-ل-ل",
+      "rootLatin": "ح ل ل",
+      "meaning": "solution",
+      "category": "knowledge",
+      "derivatives": [
+        {
+          "word": "حل",
+          "latin": "hæll",
+          "meaning": "solution",
+          "pos": "noun"
+        },
+        {
+          "word": "محل",
+          "latin": "mæhæl",
+          "meaning": "location",
+          "pos": "noun"
+        },
+        {
+          "word": "محله",
+          "latin": "mæhælæh",
+          "meaning": "district",
+          "pos": "noun"
+        },
+        {
+          "word": "انحلال",
+          "latin": "enhelɑl",
+          "meaning": "[انحلال] (definition pending)",
+          "pos": "noun"
+        }
+      ]
+    },
+    {
+      "id": 103,
+      "root": "ب-ر-ز",
+      "rootLatin": "ب ر ز",
+      "meaning": "struggle",
+      "category": "knowledge",
+      "derivatives": [
+        {
+          "word": "مبارزه",
+          "latin": "mobɑrezeh",
+          "meaning": "struggle",
+          "pos": "noun"
+        },
+        {
+          "word": "ابراز",
+          "latin": "ebrɑz",
+          "meaning": "expression",
+          "pos": "noun"
+        },
+        {
+          "word": "مبارز",
+          "latin": "mobɑrez",
+          "meaning": "warrior",
+          "pos": "adjective"
+        },
+        {
+          "word": "بارز",
+          "latin": "bɑrez",
+          "meaning": "[بارز] (definition pending)",
+          "pos": "noun"
+        }
+      ]
+    },
+    {
+      "id": 104,
+      "root": "ح-ق-ق",
+      "rootLatin": "ح ق ق",
+      "meaning": "right",
+      "category": "general",
+      "derivatives": [
+        {
+          "word": "حق",
+          "latin": "hæɢ",
+          "meaning": "right",
+          "pos": "noun"
+        },
+        {
+          "word": "حقیقت",
+          "latin": "hæɢiɢæt",
+          "meaning": "truth",
+          "pos": "noun"
+        },
+        {
+          "word": "تحقق",
+          "latin": "tæhæɢɢoɢ",
+          "meaning": "realization",
+          "pos": "noun"
+        },
+        {
+          "word": "محقق",
+          "latin": "mohæɢɢeɢ",
+          "meaning": "scholar",
+          "pos": "noun"
+        }
+      ]
+    },
+    {
+      "id": 105,
+      "root": "ر-ش-د",
+      "rootLatin": "ر ش د",
+      "meaning": "growth",
+      "category": "knowledge",
+      "derivatives": [
+        {
+          "word": "رشد",
+          "latin": "roʃd",
+          "meaning": "growth",
+          "pos": "noun"
+        },
+        {
+          "word": "ارشد",
+          "latin": "ærʃæd",
+          "meaning": "[ارشد] (definition pending)",
+          "pos": "adjective"
+        },
+        {
+          "word": "ارشاد",
+          "latin": "erʃɑd",
+          "meaning": "[ارشاد] (definition pending)",
+          "pos": "noun"
+        }
+      ]
+    },
+    {
+      "id": 106,
+      "root": "د-ف-ع",
+      "rootLatin": "د ف ع",
+      "meaning": "time",
+      "category": "time",
+      "derivatives": [
+        {
+          "word": "دفعه",
+          "latin": "dæfʔeh",
+          "meaning": "time",
+          "pos": "noun"
+        },
+        {
+          "word": "دفاع",
+          "latin": "defɑʔ",
+          "meaning": "defense",
+          "pos": "noun"
+        },
+        {
+          "word": "مدافع",
+          "latin": "modɑʔfeʔ",
+          "meaning": "advocate",
+          "pos": "noun"
+        }
+      ]
+    },
+    {
+      "id": 107,
+      "root": "خ-ل-ص",
+      "rootLatin": "خ ل ص",
+      "meaning": "summary",
+      "category": "knowledge",
+      "derivatives": [
+        {
+          "word": "خلاصه",
+          "latin": "xolɑseh",
+          "meaning": "summary",
+          "pos": "noun"
+        },
+        {
+          "word": "خالص",
+          "latin": "xɑles",
+          "meaning": "[خالص] (definition pending)",
+          "pos": "adjective"
+        },
+        {
+          "word": "مخلص",
+          "latin": "mæxlæs, moxles, moxælles",
+          "meaning": "sincere",
+          "pos": "noun"
+        }
+      ]
+    },
+    {
+      "id": 108,
+      "root": "ص-ل-ح",
+      "rootLatin": "ص ل ح",
+      "meaning": "correction",
+      "category": "conflict",
+      "derivatives": [
+        {
+          "word": "اصلاح",
+          "latin": "eslɑh",
+          "meaning": "correction",
+          "pos": "noun"
+        },
+        {
+          "word": "صلح",
+          "latin": "solh",
+          "meaning": "peace",
+          "pos": "noun"
+        },
+        {
+          "word": "اصطلاح",
+          "latin": "estelɑh",
+          "meaning": "expression",
+          "pos": "noun"
+        },
+        {
+          "word": "صالح",
+          "latin": "sɑleh",
+          "meaning": "righteous",
+          "pos": "noun"
+        },
+        {
+          "word": "صلاح",
+          "latin": "sælɑh",
+          "meaning": "salah",
+          "pos": "noun"
+        }
+      ]
+    },
+    {
+      "id": 109,
+      "root": "ل-ز-م",
+      "rootLatin": "ل ز م",
+      "meaning": "necessary",
+      "category": "general",
+      "derivatives": [
+        {
+          "word": "لازم",
+          "latin": "lɑzem",
+          "meaning": "necessary",
+          "pos": "adjective"
+        },
+        {
+          "word": "لزوم",
+          "latin": "lozum",
+          "meaning": "need",
+          "pos": "noun"
+        },
+        {
+          "word": "لازمه",
+          "latin": "lɑzemæh",
+          "meaning": "requisite",
+          "pos": "noun"
+        }
+      ]
+    },
+    {
+      "id": 110,
+      "root": "ح-س-ب",
+      "rootLatin": "ح س ب",
+      "meaning": "account",
+      "category": "knowledge",
+      "derivatives": [
+        {
+          "word": "حساب",
+          "latin": "hesɑb",
+          "meaning": "account",
+          "pos": "noun"
+        },
+        {
+          "word": "محسوب",
+          "latin": "mæhsub",
+          "meaning": "considered",
+          "pos": "adjective"
+        },
+        {
+          "word": "محاسبه",
+          "latin": "mohɑsebæh",
+          "meaning": "calculation",
+          "pos": "noun"
+        },
+        {
+          "word": "حسب",
+          "latin": "hæsb, hæsæb",
+          "meaning": "[حسب] (definition pending)",
+          "pos": "noun"
+        }
+      ]
+    },
+    {
+      "id": 111,
+      "root": "خ-ی-ر",
+      "rootLatin": "خ ی ر",
+      "meaning": "good",
+      "category": "knowledge",
+      "derivatives": [
+        {
+          "word": "اختیار",
+          "latin": "extiɑr",
+          "meaning": "authority",
+          "pos": "noun"
+        },
+        {
+          "word": "خیر",
+          "latin": "xejr, xæjjer",
+          "meaning": "good",
+          "pos": "noun"
+        },
+        {
+          "word": "خیریه",
+          "latin": "xejrijjeh",
+          "meaning": "[خیریه] (definition pending)",
+          "pos": "adjective"
+        },
+        {
+          "word": "خیره",
+          "latin": "xireh",
+          "meaning": "[خیره] (definition pending)",
+          "pos": "verb"
+        },
+        {
+          "word": "مختار",
+          "latin": "moxʔtɑr",
+          "meaning": "[مختار] (definition pending)",
+          "pos": "noun"
+        }
+      ]
+    },
+    {
+      "id": 112,
+      "root": "ش-ه-د",
+      "rootLatin": "ش ه د",
+      "meaning": "witness",
+      "category": "general",
+      "derivatives": [
+        {
+          "word": "شاهد",
+          "latin": "ʃɑhed",
+          "meaning": "witness",
+          "pos": "noun"
+        },
+        {
+          "word": "شهادت",
+          "latin": "ʃæhɑdæt",
+          "meaning": "testimony",
+          "pos": "noun"
+        },
+        {
+          "word": "مشاهده",
+          "latin": "moʃɑhede",
+          "meaning": "observation",
+          "pos": "noun"
+        },
+        {
+          "word": "مشهد",
+          "latin": "mæʃʔhæd",
+          "meaning": "mashhad",
+          "pos": "noun"
+        }
+      ]
+    },
+    {
+      "id": 113,
+      "root": "ع-ک-س",
+      "rootLatin": "ع ک س",
+      "meaning": "photo",
+      "category": "knowledge",
+      "derivatives": [
+        {
+          "word": "عکس",
+          "latin": "æks",
+          "meaning": "photo",
+          "pos": "noun"
+        },
+        {
+          "word": "عکسی",
+          "latin": "ɑksi",
+          "meaning": "[عکسی] (definition pending)",
+          "pos": "noun"
+        },
+        {
+          "word": "انعکاس",
+          "latin": "enʔekɑs",
+          "meaning": "[انعکاس] (definition pending)",
+          "pos": "noun"
+        },
+        {
+          "word": "منعکس",
+          "latin": "monʔækes",
+          "meaning": "[منعکس] (definition pending)",
+          "pos": "adjective"
+        },
+        {
+          "word": "معکوس",
+          "latin": "mæʔkus",
+          "meaning": "[معکوس] (definition pending)",
+          "pos": "adjective"
+        }
+      ]
+    },
+    {
+      "id": 114,
+      "root": "ع-ق-د",
+      "rootLatin": "ع ق د",
+      "meaning": "believing",
+      "category": "action",
+      "derivatives": [
+        {
+          "word": "معتقد",
+          "latin": "moʔtæɢed",
+          "meaning": "believing",
+          "pos": "adjective"
+        },
+        {
+          "word": "اعتقاد",
+          "latin": "eʔteɢɑd",
+          "meaning": "belief",
+          "pos": "noun"
+        },
+        {
+          "word": "عقیده",
+          "latin": "æɢideh",
+          "meaning": "view",
+          "pos": "noun"
+        },
+        {
+          "word": "عقد",
+          "latin": "æɢd, eɢd, oɢæd",
+          "meaning": "contract",
+          "pos": "noun"
+        }
+      ]
+    },
+    {
+      "id": 115,
+      "root": "ج-و-ز",
+      "rootLatin": "ج و ز",
+      "meaning": "permit",
+      "category": "knowledge",
+      "derivatives": [
+        {
+          "word": "اجازه",
+          "latin": "eʤɑzeh",
+          "meaning": "permit",
+          "pos": "noun"
+        },
+        {
+          "word": "مجاز",
+          "latin": "moʤɑz, mæʤɑz",
+          "meaning": "allowed",
+          "pos": "adjective"
+        },
+        {
+          "word": "تجاوز",
+          "latin": "tæʤɑvoz",
+          "meaning": "assault",
+          "pos": "noun"
+        },
+        {
+          "word": "جواز",
+          "latin": "ʤævɑz",
+          "meaning": "[جواز] (definition pending)",
+          "pos": "noun"
+        },
+        {
+          "word": "متجاوز",
+          "latin": "motæʤɑvez",
+          "meaning": "[متجاوز] (definition pending)",
+          "pos": "noun"
+        }
+      ]
+    },
+    {
+      "id": 116,
+      "root": "ش-خ-ص",
+      "rootLatin": "ش خ ص",
+      "meaning": "specified",
+      "category": "action",
+      "derivatives": [
+        {
+          "word": "مشخص",
+          "latin": "moʃæxxæs",
+          "meaning": "specified",
+          "pos": "adjective"
+        },
+        {
+          "word": "شاخص",
+          "latin": "ʃɑxes",
+          "meaning": "index",
+          "pos": "noun"
+        },
+        {
+          "word": "شخصیت",
+          "latin": "ʃæxsijjæt",
+          "meaning": "character",
+          "pos": "noun"
+        },
+        {
+          "word": "شخص",
+          "latin": "ʃæxs",
+          "meaning": "person",
+          "pos": "noun"
+        },
+        {
+          "word": "مشخصه",
+          "latin": "moʃæxʔxæsæh, moʃæxʔxesæh",
+          "meaning": "characteristic",
+          "pos": "noun"
+        }
+      ]
+    },
+    {
+      "id": 117,
+      "root": "ع-و-ن",
+      "rootLatin": "ع و ن",
+      "meaning": "assistant",
+      "category": "knowledge",
+      "derivatives": [
+        {
+          "word": "معاون",
+          "latin": "moʔɑven",
+          "meaning": "assistant",
+          "pos": "noun"
+        },
+        {
+          "word": "تعاون",
+          "latin": "tæʔɑvon",
+          "meaning": "[تعاون] (definition pending)",
+          "pos": "noun"
+        },
+        {
+          "word": "معاونت",
+          "latin": "moɑʔvænæt",
+          "meaning": "[معاونت] (definition pending)",
+          "pos": "noun"
+        }
+      ]
+    },
+    {
+      "id": 118,
+      "root": "ر-د-د",
+      "rootLatin": "ر د د",
+      "meaning": "category",
+      "category": "knowledge",
+      "derivatives": [
+        {
+          "word": "رده",
+          "latin": "ræde",
+          "meaning": "category",
+          "pos": "noun"
+        },
+        {
+          "word": "رد",
+          "latin": "rædd",
+          "meaning": "rejection",
+          "pos": "noun"
+        },
+        {
+          "word": "تردد",
+          "latin": "tæræddod",
+          "meaning": "[تردد] (definition pending)",
+          "pos": "noun"
+        }
+      ]
+    },
+    {
+      "id": 119,
+      "root": "م-ی-ز",
+      "rootLatin": "م ی ز",
+      "meaning": "point, privilege",
+      "category": "knowledge",
+      "derivatives": [
+        {
+          "word": "امتیاز",
+          "latin": "emtijɑz",
+          "meaning": "point, privilege",
+          "pos": "noun"
+        },
+        {
+          "word": "میز",
+          "latin": "miz",
+          "meaning": "table",
+          "pos": "noun"
+        },
+        {
+          "word": "تمیز",
+          "latin": "tɑmiz",
+          "meaning": "clean",
+          "pos": "adjective"
+        },
+        {
+          "word": "ممیز",
+          "latin": "momæjʔjez, momæjʔjæz",
+          "meaning": "[ممیز] (definition pending)",
+          "pos": "noun"
+        },
+        {
+          "word": "ممتاز",
+          "latin": "momʔtɑz",
+          "meaning": "[ممتاز] (definition pending)",
+          "pos": "adjective"
+        }
+      ]
+    },
+    {
+      "id": 120,
+      "root": "ف-ص-ل",
+      "rootLatin": "ف ص ل",
+      "meaning": "season",
+      "category": "knowledge",
+      "derivatives": [
+        {
+          "word": "فصل",
+          "latin": "fæsl",
+          "meaning": "season",
+          "pos": "noun"
+        },
+        {
+          "word": "فاصله",
+          "latin": "fɑseleh",
+          "meaning": "distance",
+          "pos": "noun"
+        },
+        {
+          "word": "مفصل",
+          "latin": "mæfsel, mofæsʔsæl",
+          "meaning": "[مفصل] (definition pending)",
+          "pos": "noun"
+        }
+      ]
+    },
+    {
+      "id": 121,
+      "root": "ص-ر-ف",
+      "rootLatin": "ص ر ف",
+      "meaning": "consumption",
+      "category": "knowledge",
+      "derivatives": [
+        {
+          "word": "مصرف",
+          "latin": "mæsræf",
+          "meaning": "consumption",
+          "pos": "noun"
+        },
+        {
+          "word": "صرف",
+          "latin": "særf, serf",
+          "meaning": "spending",
+          "pos": "noun"
+        },
+        {
+          "word": "تصرف",
+          "latin": "tasarruf",
+          "meaning": "[تصرف] (definition pending)",
+          "pos": "noun"
+        }
+      ]
+    },
+    {
+      "id": 122,
+      "root": "ق-و-ل",
+      "rootLatin": "ق و ل",
+      "meaning": "promise",
+      "category": "communication",
+      "derivatives": [
+        {
+          "word": "قول",
+          "latin": "ɢowl, ɢul",
+          "meaning": "promise",
+          "pos": "noun"
+        },
+        {
+          "word": "قائل",
+          "latin": "ɢɑʔel",
+          "meaning": "teller",
+          "pos": "noun"
+        },
+        {
+          "word": "مقوله",
+          "latin": "mæɢulæh",
+          "meaning": "category",
+          "pos": "noun"
+        }
+      ]
+    },
+    {
+      "id": 123,
+      "root": "ح-ف-ظ",
+      "rootLatin": "ح ف ظ",
+      "meaning": "preservation",
+      "category": "knowledge",
+      "derivatives": [
+        {
+          "word": "حفظ",
+          "latin": "hefz",
+          "meaning": "preservation",
+          "pos": "noun"
+        },
+        {
+          "word": "حافظ",
+          "latin": "hæfez",
+          "meaning": "keeper",
+          "pos": "noun"
+        },
+        {
+          "word": "محفوظ",
+          "latin": "mæhʔfuz",
+          "meaning": "[محفوظ] (definition pending)",
+          "pos": "adjective"
+        },
+        {
+          "word": "محافظه",
+          "latin": "mohɑfezæh",
+          "meaning": "[محافظه] (definition pending)",
+          "pos": "noun"
+        },
+        {
+          "word": "محافظت",
+          "latin": "mohɑfezæt",
+          "meaning": "[محافظت] (definition pending)",
+          "pos": "noun"
+        }
+      ]
+    },
+    {
+      "id": 124,
+      "root": "ص-د-ر",
+      "rootLatin": "ص د ر",
+      "meaning": "issued",
+      "category": "knowledge",
+      "derivatives": [
+        {
+          "word": "صادر",
+          "latin": "sɑder",
+          "meaning": "issued",
+          "pos": "noun"
+        },
+        {
+          "word": "صدور",
+          "latin": "sodur",
+          "meaning": "issuance",
+          "pos": "noun"
+        },
+        {
+          "word": "صدر",
+          "latin": "sædr",
+          "meaning": "top",
+          "pos": "noun"
+        },
+        {
+          "word": "مصادره",
+          "latin": "mosɑʔdæræh",
+          "meaning": "[مصادره] (definition pending)",
+          "pos": "noun"
+        }
+      ]
+    },
+    {
+      "id": 125,
+      "root": "ح-ر-م",
+      "rootLatin": "ح ر م",
+      "meaning": "honorable",
+      "category": "knowledge",
+      "derivatives": [
+        {
+          "word": "محترم",
+          "latin": "mohtæræm",
+          "meaning": "honorable",
+          "pos": "adjective"
+        },
+        {
+          "word": "احترام",
+          "latin": "ehterɑm",
+          "meaning": "respect",
+          "pos": "noun"
+        },
+        {
+          "word": "محروم",
+          "latin": "mæhʔrum",
+          "meaning": "deprived",
+          "pos": "adjective"
+        },
+        {
+          "word": "حرم",
+          "latin": "hæræm, horom",
+          "meaning": "[حرم] (definition pending)",
+          "pos": "noun"
+        },
+        {
+          "word": "محرم",
+          "latin": "mæhræm, mohærʔræm, mohærʔrem",
+          "meaning": "[محرم] (definition pending)",
+          "pos": "noun"
+        }
+      ]
+    },
+    {
+      "id": 126,
+      "root": "ق-ط-ع",
+      "rootLatin": "ق ط ع",
+      "meaning": "cut",
+      "category": "knowledge",
+      "derivatives": [
+        {
+          "word": "قطع",
+          "latin": "ɢætʔ",
+          "meaning": "cut",
+          "pos": "noun"
+        },
+        {
+          "word": "قطعه",
+          "latin": "ɢetʔæh",
+          "meaning": "piece",
+          "pos": "noun"
+        },
+        {
+          "word": "مقطع",
+          "latin": "moɢætʔtæʔ, mæɢtæʔ, moɢættæʔ",
+          "meaning": "section",
+          "pos": "noun"
+        },
+        {
+          "word": "قاطع",
+          "latin": "ɢɑteʔ",
+          "meaning": "[قاطع] (definition pending)",
+          "pos": "adjective"
+        }
+      ]
+    },
+    {
+      "id": 127,
+      "root": "ب-ر-ک",
+      "rootLatin": "ب ر ک",
+      "meaning": "blessed",
+      "category": "general",
+      "derivatives": [
+        {
+          "word": "مبارک",
+          "latin": "mobɑræk",
+          "meaning": "blessed",
+          "pos": "noun"
+        },
+        {
+          "word": "تبریک",
+          "latin": "tæbrik",
+          "meaning": "congratulations",
+          "pos": "noun"
+        },
+        {
+          "word": "بارک",
+          "latin": "ba:rik",
+          "meaning": "bark",
+          "pos": "noun"
+        }
+      ]
+    },
+    {
+      "id": 128,
+      "root": "ق-ل-ل",
+      "rootLatin": "ق ل ل",
+      "meaning": "independence",
+      "category": "knowledge",
+      "derivatives": [
+        {
+          "word": "استقلال",
+          "latin": "esteɢlɑl",
+          "meaning": "independence",
+          "pos": "noun"
+        },
+        {
+          "word": "مستقل",
+          "latin": "mostæʔɢell",
+          "meaning": "independent",
+          "pos": "adjective"
+        },
+        {
+          "word": "قله",
+          "latin": "ɢolleh",
+          "meaning": "[قله] (definition pending)",
+          "pos": "noun"
+        },
+        {
+          "word": "اقلیت",
+          "latin": null,
+          "meaning": "[اقلیت] (definition pending)",
+          "pos": "noun"
+        }
+      ]
+    },
+    {
+      "id": 129,
+      "root": "ق-س-م",
+      "rootLatin": "ق س م",
+      "meaning": "section",
+      "category": "general",
+      "derivatives": [
+        {
+          "word": "قسمت",
+          "latin": "ɢesmæt",
+          "meaning": "section",
+          "pos": "noun"
+        },
+        {
+          "word": "قاسم",
+          "latin": "ɢɑsem",
+          "meaning": "Qassem",
+          "pos": "noun"
+        },
+        {
+          "word": "قسم",
+          "latin": "ɢæsæm, ɢesm, ɢesæm",
+          "meaning": "sort",
+          "pos": "noun"
+        }
+      ]
+    },
+    {
+      "id": 130,
+      "root": "ح-ص-ل",
+      "rootLatin": "ح ص ل",
+      "meaning": "product",
+      "category": "general",
+      "derivatives": [
+        {
+          "word": "محصول",
+          "latin": "mæhʔsul",
+          "meaning": "product",
+          "pos": "noun"
+        },
+        {
+          "word": "حاصل",
+          "latin": "hɑsel",
+          "meaning": "result",
+          "pos": "noun"
+        },
+        {
+          "word": "حوصله",
+          "latin": "howseleh",
+          "meaning": "mood",
+          "pos": "noun"
+        }
+      ]
+    },
+    {
+      "id": 131,
+      "root": "د-ل-ل",
+      "rootLatin": "د ل ل",
+      "meaning": "heart",
+      "category": "knowledge",
+      "derivatives": [
+        {
+          "word": "دل",
+          "latin": "del",
+          "meaning": "heart",
+          "pos": "noun"
+        },
+        {
+          "word": "مدل",
+          "latin": "modell",
+          "meaning": "model",
+          "pos": "noun"
+        },
+        {
+          "word": "دال",
+          "latin": "dɑl, dɑll",
+          "meaning": "[دال] (definition pending)",
+          "pos": "noun"
+        }
+      ]
+    },
+    {
+      "id": 132,
+      "root": "ن-ق-ل",
+      "rootLatin": "ن ق ل",
+      "meaning": "transfer",
+      "category": "knowledge",
+      "derivatives": [
+        {
+          "word": "انتقال",
+          "latin": "enteɢɑl",
+          "meaning": "transfer",
+          "pos": "noun"
+        },
+        {
+          "word": "نقل",
+          "latin": "næɢl, noɢl",
+          "meaning": "[نقل] (definition pending)",
+          "pos": "noun"
+        },
+        {
+          "word": "منتقل",
+          "latin": "montæɢel",
+          "meaning": "transferred",
+          "pos": "adjective"
+        }
+      ]
+    },
+    {
+      "id": 133,
+      "root": "ع-ی-ن",
+      "rootLatin": "ع ی ن",
+      "meaning": "determination",
+      "category": "knowledge",
+      "derivatives": [
+        {
+          "word": "تعیین",
+          "latin": "tæʔjin",
+          "meaning": "determination",
+          "pos": "noun"
+        },
+        {
+          "word": "عین",
+          "latin": "ʔaʤn",
+          "meaning": "same",
+          "pos": "noun"
+        },
+        {
+          "word": "عینی",
+          "latin": "ejni",
+          "meaning": "[عینی] (definition pending)",
+          "pos": "adjective"
+        }
+      ]
+    },
+    {
+      "id": 134,
+      "root": "ن-ق-د",
+      "rootLatin": "ن ق د",
+      "meaning": "criticism",
+      "category": "knowledge",
+      "derivatives": [
+        {
+          "word": "انتقاد",
+          "latin": "enteɢɑd",
+          "meaning": "criticism",
+          "pos": "noun"
+        },
+        {
+          "word": "نقد",
+          "latin": "næɢd",
+          "meaning": "review",
+          "pos": "noun"
+        },
+        {
+          "word": "منتقد",
+          "latin": "montæʔɢed",
+          "meaning": "[منتقد] (definition pending)",
+          "pos": "noun"
+        }
+      ]
+    },
+    {
+      "id": 135,
+      "root": "ح-س-ن",
+      "rootLatin": "ح س ن",
+      "meaning": "Hassan, virtue",
+      "category": "knowledge",
+      "derivatives": [
+        {
+          "word": "حسن",
+          "latin": "hæsæn, hosn, hæssæn",
+          "meaning": "Hassan, virtue",
+          "pos": "noun"
+        },
+        {
+          "word": "محسن",
+          "latin": "mohsen",
+          "meaning": "Mohsen",
+          "pos": "noun"
+        },
+        {
+          "word": "احسان",
+          "latin": "ehsɑn",
+          "meaning": "[احسان] (definition pending)",
+          "pos": "noun"
+        }
+      ]
+    },
+    {
+      "id": 136,
+      "root": "ب-ن-ی",
+      "rootLatin": "ب ن ی",
+      "meaning": "based",
+      "category": "knowledge",
+      "derivatives": [
+        {
+          "word": "مبنی",
+          "latin": "mæbni",
+          "meaning": "based",
+          "pos": "adjective"
+        },
+        {
+          "word": "بنیان",
+          "latin": "bonjɑn",
+          "meaning": "[بنیان] (definition pending)",
+          "pos": "noun"
+        },
+        {
+          "word": "بانی",
+          "latin": "bɑni",
+          "meaning": "[بانی] (definition pending)",
+          "pos": "noun"
+        }
+      ]
+    },
+    {
+      "id": 137,
+      "root": "خ-و-ن",
+      "rootLatin": "خ و ن",
+      "meaning": "blood",
+      "category": "knowledge",
+      "derivatives": [
+        {
+          "word": "خون",
+          "latin": "xun",
+          "meaning": "blood",
+          "pos": "noun"
+        },
+        {
+          "word": "خان",
+          "latin": "xɑn",
+          "meaning": "khan",
+          "pos": "noun"
+        },
+        {
+          "word": "خیانت",
+          "latin": "xiɑnæt",
+          "meaning": "[خیانت] (definition pending)",
+          "pos": "noun"
+        }
+      ]
+    },
+    {
+      "id": 138,
+      "root": "ح-س-س",
+      "rootLatin": "ح س س",
+      "meaning": "sense",
+      "category": "knowledge",
+      "derivatives": [
+        {
+          "word": "حس",
+          "latin": "hess",
+          "meaning": "sense",
+          "pos": "noun"
+        },
+        {
+          "word": "حساس",
+          "latin": "hæssɑs",
+          "meaning": "sensitive",
+          "pos": "adjective"
+        },
+        {
+          "word": "احساس",
+          "latin": "ehsɑs",
+          "meaning": "feeling",
+          "pos": "noun"
+        },
+        {
+          "word": "محسوس",
+          "latin": "mæhsus",
+          "meaning": "[محسوس] (definition pending)",
+          "pos": "adjective"
+        }
+      ]
+    },
+    {
+      "id": 139,
+      "root": "ش-غ-ل",
+      "rootLatin": "ش غ ل",
+      "meaning": "engaged",
+      "category": "knowledge",
+      "derivatives": [
+        {
+          "word": "مشغول",
+          "latin": "mæʃʔɢul",
+          "meaning": "engaged",
+          "pos": "adjective"
+        },
+        {
+          "word": "شغل",
+          "latin": "ʃoɢl",
+          "meaning": "job",
+          "pos": "noun"
+        },
+        {
+          "word": "اشتغال",
+          "latin": "eʃteɢɑl",
+          "meaning": "occupation",
+          "pos": "noun"
+        },
+        {
+          "word": "شاغل",
+          "latin": "ʃɑʔɢel",
+          "meaning": "[شاغل] (definition pending)",
+          "pos": "adjective"
+        }
+      ]
+    },
+    {
+      "id": 140,
+      "root": "س-و-د",
+      "rootLatin": "س و د",
+      "meaning": "meaning unknown",
+      "category": "knowledge",
+      "derivatives": [
+        {
+          "word": "سود",
+          "latin": "sud",
+          "meaning": "[سود] (definition pending)",
+          "pos": "noun"
+        },
+        {
+          "word": "سودان",
+          "latin": "sudɑn",
+          "meaning": "[سودان] (definition pending)",
+          "pos": "noun"
+        },
+        {
+          "word": "سواد",
+          "latin": "sævɑd",
+          "meaning": "[سواد] (definition pending)",
+          "pos": "noun"
+        }
+      ]
+    },
+    {
+      "id": 141,
+      "root": "ع-ه-د",
+      "rootLatin": "ع ه د",
+      "meaning": "responsibility",
+      "category": "knowledge",
+      "derivatives": [
+        {
+          "word": "عهده",
+          "latin": "ohdeh",
+          "meaning": "responsibility",
+          "pos": "noun"
+        },
+        {
+          "word": "معاهده",
+          "latin": "moɑʔhædæh",
+          "meaning": "[معاهده] (definition pending)",
+          "pos": "noun"
+        },
+        {
+          "word": "تعهد",
+          "latin": "tæʔæhhod",
+          "meaning": "commitment",
+          "pos": "noun"
+        },
+        {
+          "word": "متعهد",
+          "latin": "motæʔæhhed",
+          "meaning": "[متعهد] (definition pending)",
+          "pos": "adjective"
+        }
+      ]
+    },
+    {
+      "id": 142,
+      "root": "ق-د-س",
+      "rootLatin": "ق د س",
+      "meaning": "Jerusalem",
+      "category": "knowledge",
+      "derivatives": [
+        {
+          "word": "قدس",
+          "latin": "ɢods",
+          "meaning": "Jerusalem",
+          "pos": "noun"
+        },
+        {
+          "word": "مقدس",
+          "latin": "moɢædʔdæs, mæɢdes",
+          "meaning": "holy",
+          "pos": "adjective"
+        },
+        {
+          "word": "مقدسات",
+          "latin": "moɢædʔdæsɑt",
+          "meaning": "[مقدسات] (definition pending)",
+          "pos": "noun"
+        }
+      ]
+    },
+    {
+      "id": 143,
+      "root": "ف-ج-ر",
+      "rootLatin": "ف ج ر",
+      "meaning": "explosion",
+      "category": "general",
+      "derivatives": [
+        {
+          "word": "انفجار",
+          "latin": "enfeʤɑr",
+          "meaning": "explosion",
+          "pos": "noun"
+        },
+        {
+          "word": "فجر",
+          "latin": "fæʤr",
+          "meaning": "aurora",
+          "pos": "noun"
+        },
+        {
+          "word": "منفجر",
+          "latin": "monfæʔʤer",
+          "meaning": "blow",
+          "pos": "adjective"
+        }
+      ]
+    },
+    {
+      "id": 144,
+      "root": "م-ن-ع",
+      "rootLatin": "م ن ع",
+      "meaning": "prohibited",
+      "category": "knowledge",
+      "derivatives": [
+        {
+          "word": "ممنوع",
+          "latin": "mæmʔnuʔ",
+          "meaning": "prohibited",
+          "pos": "adjective"
+        },
+        {
+          "word": "مانع",
+          "latin": "mɑneʔ",
+          "meaning": "barrier",
+          "pos": "noun"
+        },
+        {
+          "word": "منع",
+          "latin": "mænʔ",
+          "meaning": "[منع] (definition pending)",
+          "pos": "noun"
+        },
+        {
+          "word": "ممنوعیت",
+          "latin": "mæmʔnuijjæt",
+          "meaning": "[ممنوعیت] (definition pending)",
+          "pos": "noun"
+        },
+        {
+          "word": "ممانعت",
+          "latin": "momɑnæʔæt",
+          "meaning": "[ممانعت] (definition pending)",
+          "pos": "noun"
+        }
+      ]
+    },
+    {
+      "id": 145,
+      "root": "ع-ر-ف",
+      "rootLatin": "ع ر ف",
+      "meaning": "knowledge",
+      "category": "knowledge",
+      "derivatives": [
+        {
+          "word": "معرفت",
+          "latin": "mæʔrefæt",
+          "meaning": "knowledge",
+          "pos": "noun"
+        },
+        {
+          "word": "معروف",
+          "latin": "mæʔʔruf",
+          "meaning": "famous",
+          "pos": "noun"
+        },
+        {
+          "word": "اعتراف",
+          "latin": "eʔterɑf",
+          "meaning": "admission",
+          "pos": "noun"
+        },
+        {
+          "word": "تعرفه",
+          "latin": "tæʔrefæh",
+          "meaning": "[تعرفه] (definition pending)",
+          "pos": "noun"
+        },
+        {
+          "word": "عارف",
+          "latin": "ɑref",
+          "meaning": "[عارف] (definition pending)",
+          "pos": "noun"
+        }
+      ]
+    },
+    {
+      "id": 146,
+      "root": "ر-و-ح",
+      "rootLatin": "ر و ح",
+      "meaning": "comfortable",
+      "category": "ability",
+      "derivatives": [
+        {
+          "word": "راحت",
+          "latin": "rɑhæt",
+          "meaning": "comfortable",
+          "pos": "verb"
+        },
+        {
+          "word": "روحیه",
+          "latin": null,
+          "meaning": "spirit",
+          "pos": "noun"
+        },
+        {
+          "word": "روح",
+          "latin": "ruh",
+          "meaning": "spirit",
+          "pos": "noun"
+        },
+        {
+          "word": "استراحت",
+          "latin": "esterɑhæt",
+          "meaning": "rest",
+          "pos": "noun"
+        }
+      ]
+    },
+    {
+      "id": 147,
+      "root": "ث-ب-ت",
+      "rootLatin": "ث ب ت",
+      "meaning": "registration",
+      "category": "knowledge",
+      "derivatives": [
+        {
+          "word": "ثبت",
+          "latin": "sæbt",
+          "meaning": "registration",
+          "pos": "noun"
+        },
+        {
+          "word": "ثبات",
+          "latin": "sæbɑt, sæbbɑt",
+          "meaning": "stability",
+          "pos": "noun"
+        },
+        {
+          "word": "مثبت",
+          "latin": "mosbæt",
+          "meaning": "positive",
+          "pos": "adjective"
+        },
+        {
+          "word": "ثابت",
+          "latin": "sɑbet",
+          "meaning": "fixed",
+          "pos": "adjective"
+        },
+        {
+          "word": "اثبات",
+          "latin": "esbɑt",
+          "meaning": "[اثبات] (definition pending)",
+          "pos": "noun"
+        }
+      ]
+    },
+    {
+      "id": 148,
+      "root": "ک-و-ن",
+      "rootLatin": "ک و ن",
+      "meaning": "location",
+      "category": "knowledge",
+      "derivatives": [
+        {
+          "word": "مکان",
+          "latin": "mækɑn",
+          "meaning": "location",
+          "pos": "noun"
+        },
+        {
+          "word": "کیان",
+          "latin": "kejɑn, kiɑn",
+          "meaning": "[کیان] (definition pending)",
+          "pos": "noun"
+        },
+        {
+          "word": "مکانی",
+          "latin": "mæʔkɑni",
+          "meaning": "[مکانی] (definition pending)",
+          "pos": "noun"
+        }
+      ]
+    },
+    {
+      "id": 149,
+      "root": "ش-ع-ر",
+      "rootLatin": "ش ع ر",
+      "meaning": "slogan",
+      "category": "general",
+      "derivatives": [
+        {
+          "word": "شعار",
+          "latin": "ʃeʔɑr",
+          "meaning": "slogan",
+          "pos": "noun"
+        },
+        {
+          "word": "شعر",
+          "latin": "ʃer, ʃeʔr, ʃæʔr",
+          "meaning": "poetry",
+          "pos": "noun"
+        },
+        {
+          "word": "شاعر",
+          "latin": "ʃɑʔer",
+          "meaning": "poet",
+          "pos": "noun"
+        }
+      ]
+    },
+    {
+      "id": 150,
+      "root": "ه-د-ی",
+      "rootLatin": "ه د ی",
+      "meaning": "Mehdi",
+      "category": "general",
+      "derivatives": [
+        {
+          "word": "مهدی",
+          "latin": "mehdi",
+          "meaning": "Mehdi",
+          "pos": "noun"
+        },
+        {
+          "word": "هادی",
+          "latin": "hɑdi",
+          "meaning": "conductor",
+          "pos": "noun"
+        },
+        {
+          "word": "هدیه",
+          "latin": "hædijjæh",
+          "meaning": "gift",
+          "pos": "noun"
+        }
+      ]
+    },
+    {
+      "id": 151,
+      "root": "ع-ب-ر",
+      "rootLatin": "ع ب ر",
+      "meaning": "credit",
+      "category": "general",
+      "derivatives": [
+        {
+          "word": "اعتبار",
+          "latin": "eʔtebɑr",
+          "meaning": "credit",
+          "pos": "noun"
+        },
+        {
+          "word": "عبور",
+          "latin": "ʔobur",
+          "meaning": "crossing",
+          "pos": "noun"
+        },
+        {
+          "word": "معتبر",
+          "latin": "moʔtæʔbær",
+          "meaning": "valid",
+          "pos": "adjective"
+        },
+        {
+          "word": "عبارت",
+          "latin": "ʔebɑræt",
+          "meaning": "phrase",
+          "pos": "noun"
+        }
+      ]
+    },
+    {
+      "id": 152,
+      "root": "ذ-ک-ر",
+      "rootLatin": "ذ ک ر",
+      "meaning": "negotiation",
+      "category": "knowledge",
+      "derivatives": [
+        {
+          "word": "مذاکره",
+          "latin": "mozɑkere",
+          "meaning": "negotiation",
+          "pos": "noun"
+        },
+        {
+          "word": "ذکر",
+          "latin": "zekr, zækær, zokr",
+          "meaning": "mention",
+          "pos": "noun"
+        },
+        {
+          "word": "مذکور",
+          "latin": "mæzʔkur",
+          "meaning": "[مذکور] (definition pending)",
+          "pos": "adjective"
+        }
+      ]
+    },
+    {
+      "id": 153,
+      "root": "ر-ج-ع",
+      "rootLatin": "ر ج ع",
+      "meaning": "about",
+      "category": "knowledge",
+      "derivatives": [
+        {
+          "word": "راجع",
+          "latin": "rɑʤeʔ",
+          "meaning": "about",
+          "pos": "preposition"
+        },
+        {
+          "word": "مراجعه",
+          "latin": "morɑʤeʔe",
+          "meaning": "reference",
+          "pos": "noun"
+        },
+        {
+          "word": "مرجع",
+          "latin": "moræʤæʔe",
+          "meaning": "reference",
+          "pos": "noun"
+        },
+        {
+          "word": "ارجاع",
+          "latin": "erʤɑʔ",
+          "meaning": "[ارجاع] (definition pending)",
+          "pos": "noun"
+        }
+      ]
+    },
+    {
+      "id": 154,
+      "root": "س-ک-ن",
+      "rootLatin": "س ک ن",
+      "meaning": "housing",
+      "category": "knowledge",
+      "derivatives": [
+        {
+          "word": "مسکن",
+          "latin": "mæskæn",
+          "meaning": "housing",
+          "pos": "noun"
+        },
+        {
+          "word": "ساکن",
+          "latin": "sɑken",
+          "meaning": "resident",
+          "pos": "noun"
+        },
+        {
+          "word": "اسکان",
+          "latin": "eskɑn",
+          "meaning": "[اسکان] (definition pending)",
+          "pos": "noun"
+        }
+      ]
+    },
+    {
+      "id": 155,
+      "root": "ع-د-ل",
+      "rootLatin": "ع د ل",
+      "meaning": "justice",
+      "category": "knowledge",
+      "derivatives": [
+        {
+          "word": "عدالت",
+          "latin": "ædɑlæt",
+          "meaning": "justice",
+          "pos": "noun"
+        },
+        {
+          "word": "معادل",
+          "latin": "moɑʔdel",
+          "meaning": "equivalent",
+          "pos": "adjective"
+        },
+        {
+          "word": "عادل",
+          "latin": "ɑdel",
+          "meaning": "just",
+          "pos": "noun"
+        },
+        {
+          "word": "تعادل",
+          "latin": "tæʔɑdol",
+          "meaning": "[تعادل] (definition pending)",
+          "pos": "noun"
+        }
+      ]
+    },
+    {
+      "id": 156,
+      "root": "ر-س-ل",
+      "rootLatin": "ر س ل",
+      "meaning": "post",
+      "category": "knowledge",
+      "derivatives": [
+        {
+          "word": "ارسال",
+          "latin": "ersɑl",
+          "meaning": "post",
+          "pos": "noun"
+        },
+        {
+          "word": "رسول",
+          "latin": "ræsul",
+          "meaning": "messenger",
+          "pos": "noun"
+        },
+        {
+          "word": "رسالت",
+          "latin": "resɑlæt",
+          "meaning": "[رسالت] (definition pending)",
+          "pos": "noun"
+        }
+      ]
+    },
+    {
+      "id": 157,
+      "root": "ف-و-ت",
+      "rootLatin": "ف و ت",
+      "meaning": "different",
+      "category": "life",
+      "derivatives": [
+        {
+          "word": "متفاوت",
+          "latin": "motæfɑvet",
+          "meaning": "different",
+          "pos": "adjective"
+        },
+        {
+          "word": "تفاوت",
+          "latin": "tæfɑvot",
+          "meaning": "difference",
+          "pos": "noun"
+        },
+        {
+          "word": "فوت",
+          "latin": "fowt, fut",
+          "meaning": "death",
+          "pos": "noun"
+        }
+      ]
+    },
+    {
+      "id": 158,
+      "root": "ش-ب-ه",
+      "rootLatin": "ش ب ه",
+      "meaning": "mistake",
+      "category": "knowledge",
+      "derivatives": [
+        {
+          "word": "اشتباه",
+          "latin": "eʃtebɑh",
+          "meaning": "mistake",
+          "pos": "noun"
+        },
+        {
+          "word": "مشابه",
+          "latin": "moʃɑʔbeh",
+          "meaning": "similar",
+          "pos": "adjective"
+        },
+        {
+          "word": "شبه",
+          "latin": "ʃæbæ, ʃæbæh, ʃebh, ʃɑbeh",
+          "meaning": "[شبه] (definition pending)",
+          "pos": "noun"
+        }
+      ]
+    },
+    {
+      "id": 159,
+      "root": "ع-ظ-م",
+      "rootLatin": "ع ظ م",
+      "meaning": "supreme",
+      "category": "knowledge",
+      "derivatives": [
+        {
+          "word": "معظم",
+          "latin": "moʔzæm",
+          "meaning": "supreme",
+          "pos": "adjective"
+        },
+        {
+          "word": "عظمت",
+          "latin": "æzæmæt",
+          "meaning": "[عظمت] (definition pending)",
+          "pos": "noun"
+        },
+        {
+          "word": "اعظم",
+          "latin": "æʔzæm",
+          "meaning": "[اعظم] (definition pending)",
+          "pos": "adjective"
+        }
+      ]
+    },
+    {
+      "id": 160,
+      "root": "ن-ش-ر",
+      "rootLatin": "ن ش ر",
+      "meaning": "publication",
+      "category": "knowledge",
+      "derivatives": [
+        {
+          "word": "انتشار",
+          "latin": "enteʃɑr",
+          "meaning": "publication",
+          "pos": "noun"
+        },
+        {
+          "word": "منتشر",
+          "latin": "montæʔʃer",
+          "meaning": "published",
+          "pos": "adjective"
+        },
+        {
+          "word": "نشر",
+          "latin": "næʃr",
+          "meaning": "[نشر] (definition pending)",
+          "pos": "noun"
+        },
+        {
+          "word": "ناشر",
+          "latin": "nɑʃer",
+          "meaning": "[ناشر] (definition pending)",
+          "pos": "noun"
+        }
+      ]
+    },
+    {
+      "id": 161,
+      "root": "ک-ی-ف",
+      "rootLatin": "ک ی ف",
+      "meaning": "quality",
+      "category": "knowledge",
+      "derivatives": [
+        {
+          "word": "کیفیت",
+          "latin": "kejfijjæt",
+          "meaning": "quality",
+          "pos": "noun"
+        },
+        {
+          "word": "کیف",
+          "latin": "kif, kejf, kæjfæʔ",
+          "meaning": "bag",
+          "pos": "noun"
+        },
+        {
+          "word": "کیفی",
+          "latin": "kejʔfi",
+          "meaning": "[کیفی] (definition pending)",
+          "pos": "adjective"
+        }
+      ]
+    },
+    {
+      "id": 162,
+      "root": "و-ز-ن",
+      "rootLatin": "و ز ن",
+      "meaning": "weight",
+      "category": "knowledge",
+      "derivatives": [
+        {
+          "word": "وزن",
+          "latin": "væzn",
+          "meaning": "weight",
+          "pos": "noun"
+        },
+        {
+          "word": "وزنه",
+          "latin": "væzne",
+          "meaning": "sinker",
+          "pos": "noun"
+        },
+        {
+          "word": "توازن",
+          "latin": "tævɑzon",
+          "meaning": "[توازن] (definition pending)",
+          "pos": "noun"
+        }
+      ]
+    },
+    {
+      "id": 163,
+      "root": "ر-ت-ب",
+      "rootLatin": "ر ت ب",
+      "meaning": "arranged",
+      "category": "time",
+      "derivatives": [
+        {
+          "word": "مرتبه",
+          "latin": "mortæbæh",
+          "meaning": "time",
+          "pos": "noun"
+        },
+        {
+          "word": "رتبه",
+          "latin": "rotbeh",
+          "meaning": "rank",
+          "pos": "noun"
+        },
+        {
+          "word": "مرتب",
+          "latin": "morættæb, moræt teb",
+          "meaning": "arranged",
+          "pos": "verb"
+        }
+      ]
+    },
+    {
+      "id": 164,
+      "root": "ع-م-ر",
+      "rootLatin": "ع م ر",
+      "meaning": "life",
+      "category": "knowledge",
+      "derivatives": [
+        {
+          "word": "عمر",
+          "latin": "omr, æmr",
+          "meaning": "life",
+          "pos": "noun"
+        },
+        {
+          "word": "استعمار",
+          "latin": "esteʔmɑr",
+          "meaning": "[استعمار] (definition pending)",
+          "pos": "noun"
+        },
+        {
+          "word": "معمر",
+          "latin": "moæmʔmær, moæmʔmer",
+          "meaning": "[معمر] (definition pending)",
+          "pos": "noun"
+        },
+        {
+          "word": "عمران",
+          "latin": "omrɑn, emrɑn",
+          "meaning": "[عمران] (definition pending)",
+          "pos": "noun"
+        },
+        {
+          "word": "معمار",
+          "latin": "meʔmɑr",
+          "meaning": "[معمار] (definition pending)",
+          "pos": "noun"
+        }
+      ]
+    },
+    {
+      "id": 165,
+      "root": "ع-ل-ق",
+      "rootLatin": "ع ل ق",
+      "meaning": "interest",
+      "category": "general",
+      "derivatives": [
+        {
+          "word": "علاقه",
+          "latin": "ɑlɑɢeh",
+          "meaning": "interest",
+          "pos": "noun"
+        },
+        {
+          "word": "متعلق",
+          "latin": "mottæʔælleɢ",
+          "meaning": "belonging",
+          "pos": "adjective"
+        },
+        {
+          "word": "تعلق",
+          "latin": "tæʔælloɢ",
+          "meaning": "attachment",
+          "pos": "noun"
+        }
+      ]
+    },
+    {
+      "id": 166,
+      "root": "ک-ر-ر",
+      "rootLatin": "ک ر ر",
+      "meaning": "repeat",
+      "category": "knowledge",
+      "derivatives": [
+        {
+          "word": "تکرار",
+          "latin": "tækrɑr",
+          "meaning": "repeat",
+          "pos": "noun"
+        },
+        {
+          "word": "مکرر",
+          "latin": "mokærʔrær",
+          "meaning": "[مکرر] (definition pending)",
+          "pos": "verb"
+        },
+        {
+          "word": "کر",
+          "latin": "kær, kærr, kor, korr",
+          "meaning": "[کر] (definition pending)",
+          "pos": "noun"
+        }
+      ]
+    },
+    {
+      "id": 167,
+      "root": "ن-ز-ل",
+      "rootLatin": "ن ز ل",
+      "meaning": "house",
+      "category": "knowledge",
+      "derivatives": [
+        {
+          "word": "منزل",
+          "latin": "mænzel, monʔzæl",
+          "meaning": "house",
+          "pos": "noun"
+        },
+        {
+          "word": "نزول",
+          "latin": "nozul",
+          "meaning": "[نزول] (definition pending)",
+          "pos": "noun"
+        },
+        {
+          "word": "منزله",
+          "latin": "monʔzælæh",
+          "meaning": "[منزله] (definition pending)",
+          "pos": "noun"
+        },
+        {
+          "word": "انزل",
+          "latin": null,
+          "meaning": "[انزل] (definition pending)",
+          "pos": "noun"
+        }
+      ]
+    },
+    {
+      "id": 168,
+      "root": "م-ر-ر",
+      "rootLatin": "م ر ر",
+      "meaning": "myrrh",
+      "category": "knowledge",
+      "derivatives": [
+        {
+          "word": "مر",
+          "latin": "mær, morr",
+          "meaning": "myrrh",
+          "pos": "conjunction"
+        },
+        {
+          "word": "مرور",
+          "latin": "morur",
+          "meaning": "review",
+          "pos": "noun"
+        },
+        {
+          "word": "مستمر",
+          "latin": "mostæʔmærr, mostæʔmerr",
+          "meaning": "continuous",
+          "pos": "adjective"
+        },
+        {
+          "word": "استمرار",
+          "latin": "estemrɑr",
+          "meaning": "[استمرار] (definition pending)",
+          "pos": "noun"
+        },
+        {
+          "word": "مار",
+          "latin": "mɑr",
+          "meaning": "snake",
+          "pos": "noun"
+        }
+      ]
+    },
+    {
+      "id": 169,
+      "root": "ط-ل-ب",
+      "rootLatin": "ط ل ب",
+      "meaning": "subject",
+      "category": "knowledge",
+      "derivatives": [
+        {
+          "word": "مطلب",
+          "latin": "mætlæb, motælleb",
+          "meaning": "subject",
+          "pos": "noun"
+        },
+        {
+          "word": "طلب",
+          "latin": "tælæb, tollæb",
+          "meaning": "demand",
+          "pos": "noun"
+        },
+        {
+          "word": "مطلوب",
+          "latin": "mætʔlub",
+          "meaning": "[مطلوب] (definition pending)",
+          "pos": "adjective"
+        },
+        {
+          "word": "مطالبه",
+          "latin": "motɑʔlæbæh",
+          "meaning": "demand",
+          "pos": "noun"
+        },
+        {
+          "word": "مطالب",
+          "latin": "mætɑleb",
+          "meaning": "[مطالب] (definition pending)",
+          "pos": "noun"
+        }
+      ]
+    },
+    {
+      "id": 170,
+      "root": "ف-ت-ح",
+      "rootLatin": "ف ت ح",
+      "meaning": "meaning unknown",
+      "category": "knowledge",
+      "derivatives": [
+        {
+          "word": "افتتاح",
+          "latin": "eftetɑh",
+          "meaning": "[افتتاح] (definition pending)",
+          "pos": "noun"
+        },
+        {
+          "word": "فتح",
+          "latin": "fætʔh",
+          "meaning": "[فتح] (definition pending)",
+          "pos": "noun"
+        },
+        {
+          "word": "فاتح",
+          "latin": "fɑteh",
+          "meaning": "[فاتح] (definition pending)",
+          "pos": "noun"
+        },
+        {
+          "word": "افتتاحیه",
+          "latin": null,
+          "meaning": "[افتتاحیه] (definition pending)",
+          "pos": "noun"
+        }
+      ]
+    },
+    {
+      "id": 171,
+      "root": "د-ر-ک",
+      "rootLatin": "د ر ک",
+      "meaning": "perception",
+      "category": "action",
+      "derivatives": [
+        {
+          "word": "درک",
+          "latin": "dærk, dæræk",
+          "meaning": "perception",
+          "pos": "noun"
+        },
+        {
+          "word": "مدارک",
+          "latin": "mædɑrek",
+          "meaning": "documents",
+          "pos": "noun"
+        },
+        {
+          "word": "تدارک",
+          "latin": "tædɑrok",
+          "meaning": "provision",
+          "pos": "noun"
+        },
+        {
+          "word": "مدرک",
+          "latin": "modʔrek, modʔræk, mædræk",
+          "meaning": "document",
+          "pos": "noun"
+        }
+      ]
+    }
+  ],
+  "note": "Merged dictionary with 171 unique Arabic roots and 674 derivative words. Expanded from 35 to 171 roots."
+}

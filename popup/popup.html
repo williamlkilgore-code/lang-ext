@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Language Learner</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="popup-container">
+    <header class="popup-header">
+      <h1>Language Learner</h1>
+      <p class="subtitle">Persian • Chinese • Russian</p>
+    </header>
+
+    <main class="popup-main">
+      <!-- Language Toggles -->
+      <section class="languages-section">
+        <h2>Active Languages</h2>
+
+        <div class="language-toggle">
+          <label class="toggle-label">
+            <input type="checkbox" id="activePersian">
+            <span class="toggle-slider"></span>
+            <span class="language-info">
+              <span class="language-name">Persian / فارسی</span>
+              <span class="language-stats">171 roots, 674 words</span>
+            </span>
+          </label>
+        </div>
+
+        <div class="language-toggle">
+          <label class="toggle-label">
+            <input type="checkbox" id="activeChinese">
+            <span class="toggle-slider"></span>
+            <span class="language-info">
+              <span class="language-name">Chinese / 中文</span>
+              <span class="language-stats">4,993 HSK words</span>
+            </span>
+          </label>
+        </div>
+
+        <div class="language-toggle">
+          <label class="toggle-label">
+            <input type="checkbox" id="activeRussian">
+            <span class="toggle-slider"></span>
+            <span class="language-info">
+              <span class="language-name">Russian / Русский</span>
+              <span class="language-stats">250 roots, 4,422 words</span>
+            </span>
+          </label>
+        </div>
+      </section>
+
+      <!-- Quick Settings -->
+      <section class="settings-section">
+        <h2>Quick Settings</h2>
+
+        <div class="setting-item">
+          <label class="toggle-label">
+            <input type="checkbox" id="hideMasteredWords">
+            <span class="toggle-slider"></span>
+            <span class="setting-text">Hide mastered words</span>
+          </label>
+        </div>
+
+        <div class="setting-item">
+          <label class="toggle-label">
+            <input type="checkbox" id="showRussianAffixes">
+            <span class="toggle-slider"></span>
+            <span class="setting-text">Show Russian affixes</span>
+          </label>
+        </div>
+      </section>
+
+      <!-- Vocabulary Stats -->
+      <section class="vocab-section">
+        <h2>Your Progress</h2>
+        <div class="vocab-stats">
+          <div class="vocab-stat">
+            <span class="vocab-label">Mastered Words:</span>
+            <span class="vocab-value" id="masteredCount">-</span>
+          </div>
+          <div class="vocab-stat">
+            <span class="vocab-label">Custom Words:</span>
+            <span class="vocab-value" id="customCount">-</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Action Buttons -->
+      <section class="actions-section">
+        <button id="openSettings" class="action-button primary">
+          ⚙️ Full Settings
+        </button>
+        <button id="openHelp" class="action-button secondary">
+          ❓ Help & Feedback
+        </button>
+      </section>
+    </main>
+
+    <footer class="popup-footer">
+      <p>Version <span id="version">2.2.0</span></p>
+    </footer>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Language Learner Settings</title>
+    <link rel="stylesheet" href="options.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>⚙️ Language Learner Settings</h1>
+            <p class="subtitle">Configure your language learning experience</p>
+        </header>
+
+        <main>
+            <!-- Language Selection -->
+            <section class="settings-section">
+                <h2>🌍 Active Languages</h2>
+                <p class="section-description">Choose which languages to enable. Disabling unused languages improves performance.</p>
+
+                <div class="setting-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="activePersian" checked>
+                        <span class="checkbox-custom"></span>
+                        <div class="label-content">
+                            <strong>Persian / Farsi (فارسی)</strong>
+                            <small>171 Arabic roots, 674 derivative words</small>
+                        </div>
+                    </label>
+
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="activeChinese" checked>
+                        <span class="checkbox-custom"></span>
+                        <div class="label-content">
+                            <strong>Chinese / 中文 (Simplified)</strong>
+                            <small>4,993 HSK words, 227 radicals</small>
+                        </div>
+                    </label>
+
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="activeRussian" checked>
+                        <span class="checkbox-custom"></span>
+                        <div class="label-content">
+                            <strong>Russian / Русский</strong>
+                            <small>250 roots, 4,422 derivative words</small>
+                        </div>
+                    </label>
+                </div>
+
+                <div class="info-box">
+                    <strong>💡 Tip:</strong> Disabling unused languages improves performance and reduces memory usage.
+                </div>
+            </section>
+
+            <!-- Chinese HSK Level Filter -->
+            <section class="settings-section" id="chineseSection">
+                <h2>🎯 Chinese HSK Level Filter</h2>
+                <p class="section-description">Show only words from specific HSK levels. Great for progressive learning.</p>
+
+                <div class="setting-group">
+                    <div class="range-group">
+                        <label for="chineseHskMin">
+                            <strong>Minimum Level:</strong>
+                            <span class="range-value" id="minLevelValue">HSK 1</span>
+                        </label>
+                        <input type="range" id="chineseHskMin" min="1" max="6" value="1" step="1">
+                        <div class="range-labels">
+                            <span>HSK 1</span>
+                            <span>HSK 2</span>
+                            <span>HSK 3</span>
+                            <span>HSK 4</span>
+                            <span>HSK 5</span>
+                            <span>HSK 6</span>
+                        </div>
+                    </div>
+
+                    <div class="range-group">
+                        <label for="chineseHskMax">
+                            <strong>Maximum Level:</strong>
+                            <span class="range-value" id="maxLevelValue">HSK 6</span>
+                        </label>
+                        <input type="range" id="chineseHskMax" min="1" max="6" value="6" step="1">
+                        <div class="range-labels">
+                            <span>HSK 1</span>
+                            <span>HSK 2</span>
+                            <span>HSK 3</span>
+                            <span>HSK 4</span>
+                            <span>HSK 5</span>
+                            <span>HSK 6</span>
+                        </div>
+                    </div>
+
+                    <div class="word-count-display">
+                        <strong>Vocabulary Size:</strong>
+                        <span id="wordCountDisplay">4,993 words (HSK 1-6)</span>
+                    </div>
+                </div>
+
+                <div class="info-box">
+                    <strong>💡 Example:</strong> Set HSK 1-3 (593 words) if you're a beginner, or HSK 4-6 (4,398 words) for advanced learners.
+                </div>
+            </section>
+
+            <!-- Highlight Appearance -->
+            <section class="settings-section">
+                <h2>✨ Highlight Appearance</h2>
+                <p class="section-description">Customize how words are highlighted on the page.</p>
+
+                <div class="setting-group">
+                    <div class="range-group">
+                        <label for="highlightOpacity">
+                            <strong>Opacity:</strong>
+                            <span class="range-value" id="opacityValue">40%</span>
+                        </label>
+                        <input type="range" id="highlightOpacity" min="10" max="100" value="40" step="5">
+                        <div class="range-labels">
+                            <span>10%<br><small>Subtle</small></span>
+                            <span>50%<br><small>Medium</small></span>
+                            <span>100%<br><small>Bold</small></span>
+                        </div>
+                    </div>
+
+                    <div class="setting-row">
+                        <label for="highlightStyle"><strong>Style:</strong></label>
+                        <select id="highlightStyle">
+                            <option value="dotted">Dotted Line</option>
+                            <option value="solid">Solid Line</option>
+                            <option value="wavy">Wavy Line</option>
+                            <option value="none">No Underline</option>
+                        </select>
+                    </div>
+
+                    <div class="setting-row">
+                        <label for="highlightThickness"><strong>Thickness:</strong></label>
+                        <select id="highlightThickness">
+                            <option value="1">Thin (1px)</option>
+                            <option value="2">Medium (2px)</option>
+                            <option value="3">Bold (3px)</option>
+                        </select>
+                    </div>
+
+                    <div class="setting-row">
+                        <label for="highlightColor"><strong>Color:</strong></label>
+                        <input type="color" id="highlightColor" value="#9CA3AF">
+                    </div>
+
+                    <div class="preview-box">
+                        <strong>Preview:</strong>
+                        <p>
+                            This is how <span id="previewHighlight" class="preview-highlight">highlighted text</span> will appear on websites.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Domain Exclusions -->
+            <section class="settings-section">
+                <h2>🚫 Domain Exclusions</h2>
+                <p class="section-description">Prevent the extension from running on specific websites.</p>
+
+                <div class="setting-group">
+                    <div class="domain-input-group">
+                        <input type="text" id="domainInput" placeholder="example.com or *.example.com">
+                        <button id="addDomain" class="btn-secondary">Add Domain</button>
+                    </div>
+
+                    <ul id="excludedDomainsList" class="domain-list">
+                        <!-- Domains will be added here dynamically -->
+                    </ul>
+
+                    <div class="info-box">
+                        <strong>💡 Examples:</strong><br>
+                        • <code>reddit.com</code> - Excludes exactly reddit.com<br>
+                        • <code>*.reddit.com</code> - Excludes all reddit.com subdomains<br>
+                        • <code>localhost</code> - Excludes local development
+                    </div>
+                </div>
+            </section>
+
+            <!-- Custom Vocabulary Settings -->
+            <section class="settings-section">
+                <h2>📚 Custom Vocabulary</h2>
+                <p class="section-description">Control how mastered words and custom dictionaries are displayed.</p>
+
+                <div class="setting-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="hideMasteredWords" checked>
+                        <span class="checkbox-custom"></span>
+                        <div class="label-content">
+                            <strong>Hide Mastered Words</strong>
+                            <small>Don't highlight words you've marked as mastered</small>
+                        </div>
+                    </label>
+
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="showCustomWords" checked>
+                        <span class="checkbox-custom"></span>
+                        <div class="label-content">
+                            <strong>Show Custom Dictionary Words</strong>
+                            <small>Highlight words from your custom dictionaries</small>
+                        </div>
+                    </label>
+
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="showRussianAffixes" checked>
+                        <span class="checkbox-custom"></span>
+                        <div class="label-content">
+                            <strong>Show Russian Prefixes & Suffixes</strong>
+                            <small>Display common affixes with Russian roots in tooltips</small>
+                        </div>
+                    </label>
+                </div>
+            </section>
+
+            <!-- Mastered Words Management -->
+            <section class="settings-section">
+                <h2>✅ Mastered Words</h2>
+                <p class="section-description">Manage words you've already learned. Mastered words won't be highlighted.</p>
+
+                <div class="setting-group">
+                    <!-- Language Tabs -->
+                    <div class="tab-buttons">
+                        <button class="tab-btn active" data-tab="mastered-persian">Persian (<span id="masteredPersianCount">0</span>)</button>
+                        <button class="tab-btn" data-tab="mastered-chinese">Chinese (<span id="masteredChineseCount">0</span>)</button>
+                        <button class="tab-btn" data-tab="mastered-russian">Russian (<span id="masteredRussianCount">0</span>)</button>
+                    </div>
+
+                    <!-- Persian Mastered Words -->
+                    <div id="mastered-persian" class="tab-content active">
+                        <div class="vocab-list-header">
+                            <strong>Mastered Persian Words</strong>
+                            <button id="clearMasteredPersian" class="btn-danger-small">Clear All</button>
+                        </div>
+                        <ul id="masteredPersianList" class="vocab-list">
+                            <li class="empty-state">No mastered words yet. Hover over any word and click "Mark as Mastered"</li>
+                        </ul>
+                    </div>
+
+                    <!-- Chinese Mastered Words -->
+                    <div id="mastered-chinese" class="tab-content">
+                        <div class="vocab-list-header">
+                            <strong>Mastered Chinese Words</strong>
+                            <button id="clearMasteredChinese" class="btn-danger-small">Clear All</button>
+                        </div>
+                        <ul id="masteredChineseList" class="vocab-list">
+                            <li class="empty-state">No mastered words yet. Hover over any character and click "Mark as Mastered"</li>
+                        </ul>
+                    </div>
+
+                    <!-- Russian Mastered Words -->
+                    <div id="mastered-russian" class="tab-content">
+                        <div class="vocab-list-header">
+                            <strong>Mastered Russian Words</strong>
+                            <button id="clearMasteredRussian" class="btn-danger-small">Clear All</button>
+                        </div>
+                        <ul id="masteredRussianList" class="vocab-list">
+                            <li class="empty-state">No mastered words yet. Hover over any word and click "Mark as Mastered"</li>
+                        </ul>
+                    </div>
+
+                    <div class="action-buttons">
+                        <button id="exportMastered" class="btn-secondary">📤 Export</button>
+                        <button id="importMastered" class="btn-secondary">📥 Import</button>
+                        <input type="file" id="importMasteredFile" accept=".json" style="display: none;">
+                    </div>
+                </div>
+            </section>
+
+            <!-- Custom Dictionary Management -->
+            <section class="settings-section">
+                <h2>📝 Custom Dictionary</h2>
+                <p class="section-description">Add your own words to supplement the main dictionaries.</p>
+
+                <div class="setting-group">
+                    <!-- Language Tabs -->
+                    <div class="tab-buttons">
+                        <button class="tab-btn active" data-tab="custom-persian">Persian (<span id="customPersianCount">0</span>)</button>
+                        <button class="tab-btn" data-tab="custom-chinese">Chinese (<span id="customChineseCount">0</span>)</button>
+                        <button class="tab-btn" data-tab="custom-russian">Russian (<span id="customRussianCount">0</span>)</button>
+                    </div>
+
+                    <!-- Persian Custom Dictionary -->
+                    <div id="custom-persian" class="tab-content active">
+                        <!-- Add Word Form -->
+                        <div class="add-word-form">
+                            <h4>Add Persian Word</h4>
+                            <div class="form-row">
+                                <input type="text" id="persianWord" placeholder="Word (required) - e.g., کتاب" required>
+                                <input type="text" id="persianRoot" placeholder="Root (optional) - e.g., ک-ت-ب">
+                            </div>
+                            <div class="form-row">
+                                <input type="text" id="persianRootMeaning" placeholder="Root Meaning - e.g., to write">
+                                <input type="text" id="persianWordMeaning" placeholder="Word Meaning - e.g., book">
+                            </div>
+                            <div class="form-row">
+                                <select id="persianPos">
+                                    <option value="noun">Noun</option>
+                                    <option value="verb">Verb</option>
+                                    <option value="adjective">Adjective</option>
+                                    <option value="adverb">Adverb</option>
+                                    <option value="preposition">Preposition</option>
+                                </select>
+                                <button id="addPersianWord" class="btn-primary">Add Word</button>
+                            </div>
+                        </div>
+
+                        <!-- Persian Word List -->
+                        <ul id="customPersianList" class="vocab-list vocab-list-detailed">
+                            <li class="empty-state">No custom words yet. Add your first word above!</li>
+                        </ul>
+                    </div>
+
+                    <!-- Chinese Custom Dictionary -->
+                    <div id="custom-chinese" class="tab-content">
+                        <!-- Add Word Form -->
+                        <div class="add-word-form">
+                            <h4>Add Chinese Word</h4>
+                            <div class="form-row">
+                                <input type="text" id="chineseCharacter" placeholder="Character (required) - e.g., 词" required>
+                                <input type="text" id="chinesePinyin" placeholder="Pinyin - e.g., cí">
+                            </div>
+                            <div class="form-row">
+                                <input type="text" id="chineseMeaning" placeholder="Meaning - e.g., word">
+                                <input type="text" id="chineseRadical" placeholder="Radical (optional) - e.g., 讠">
+                            </div>
+                            <div class="form-row">
+                                <select id="chinesePos">
+                                    <option value="noun">Noun</option>
+                                    <option value="verb">Verb</option>
+                                    <option value="adjective">Adjective</option>
+                                    <option value="adverb">Adverb</option>
+                                    <option value="measure word">Measure Word</option>
+                                </select>
+                                <button id="addChineseWord" class="btn-primary">Add Word</button>
+                            </div>
+                        </div>
+
+                        <!-- Chinese Word List -->
+                        <ul id="customChineseList" class="vocab-list vocab-list-detailed">
+                            <li class="empty-state">No custom words yet. Add your first word above!</li>
+                        </ul>
+                    </div>
+
+                    <!-- Russian Custom Dictionary -->
+                    <div id="custom-russian" class="tab-content">
+                        <!-- Add Word Form -->
+                        <div class="add-word-form">
+                            <h4>Add Russian Word</h4>
+                            <div class="form-row">
+                                <input type="text" id="russianWord" placeholder="Word (required) - e.g., книга" required>
+                                <input type="text" id="russianRoot" placeholder="Root (optional) - e.g., книг">
+                            </div>
+                            <div class="form-row">
+                                <input type="text" id="russianRootMeaning" placeholder="Root Meaning - e.g., book">
+                                <input type="text" id="russianWordMeaning" placeholder="Word Meaning - e.g., book">
+                            </div>
+                            <div class="form-row">
+                                <input type="text" id="russianRootLatin" placeholder="Root (Latin) - e.g., knig">
+                                <select id="russianPos">
+                                    <option value="noun">Noun</option>
+                                    <option value="verb">Verb</option>
+                                    <option value="adjective">Adjective</option>
+                                    <option value="adverb">Adverb</option>
+                                    <option value="preposition">Preposition</option>
+                                </select>
+                            </div>
+                            <div class="form-row">
+                                <button id="addRussianWord" class="btn-primary" style="width: 100%;">Add Word</button>
+                            </div>
+                        </div>
+
+                        <!-- Russian Word List -->
+                        <ul id="customRussianList" class="vocab-list vocab-list-detailed">
+                            <li class="empty-state">No custom words yet. Add your first word above!</li>
+                        </ul>
+                    </div>
+
+                    <div class="action-buttons">
+                        <button id="exportCustom" class="btn-secondary">📤 Export</button>
+                        <button id="importCustom" class="btn-secondary">📥 Import</button>
+                        <input type="file" id="importCustomFile" accept=".json" style="display: none;">
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="button-group">
+                <button id="saveSettings" class="btn-primary">💾 Save Settings</button>
+                <button id="resetSettings" class="btn-secondary">🔄 Reset to Defaults</button>
+            </div>
+            <div id="statusMessage" class="status-message"></div>
+        </footer>
+    </div>
+
+    <script src="../utils/settings.js"></script>
+    <script src="../utils/vocabulary-manager.js"></script>
+    <script src="options.js"></script>
+</body>
+</html>

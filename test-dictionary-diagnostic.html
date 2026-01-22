@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Dictionary Load Test</title>
+</head>
+<body>
+    <h1>Dictionary Load Diagnostic</h1>
+    <div id="results"></div>
+
+    <script>
+        async function testDictionary() {
+            const results = document.getElementById('results');
+            results.innerHTML = '<p>Testing dictionary...</p>';
+
+            try {
+                const response = await fetch('data/farsi-roots.json');
+                const data = await response.json();
+
+                const report = {
+                    'File loaded': '✅ Success',
+                    'Version': data.version || 'N/A',
+                    'Total roots': data.roots ? data.roots.length : 0,
+                    'Has roots array': data.roots ? '✅ Yes' : '❌ No',
+                };
+
+                if (data.roots && data.roots.length > 0) {
+                    const firstRoot = data.roots[0];
+                    report['First root ID'] = firstRoot.id;
+                    report['First root text'] = firstRoot.root;
+                    report['First root derivatives'] = firstRoot.derivatives ? firstRoot.derivatives.length : 0;
+
+                    if (firstRoot.derivatives && firstRoot.derivatives.length > 0) {
+                        const firstDeriv = firstRoot.derivatives[0];
+                        report['First derivative word'] = firstDeriv.word || '❌ Missing';
+                        report['First derivative meaning'] = firstDeriv.meaning || '⚠️ null/empty';
+                        report['First derivative pos'] = firstDeriv.pos || '⚠️ null/empty';
+                    }
+
+                    // Count total derivatives
+                    let totalDerivatives = 0;
+                    let nullMeanings = 0;
+                    data.roots.forEach(root => {
+                        if (root.derivatives) {
+                            totalDerivatives += root.derivatives.length;
+                            root.derivatives.forEach(d => {
+                                if (!d.meaning || d.meaning === 'meaning unknown') {
+                                    nullMeanings++;
+                                }
+                            });
+                        }
+                    });
+                    report['Total derivatives'] = totalDerivatives;
+                    report['Derivatives with null/unknown meaning'] = nullMeanings;
+                }
+
+                let html = '<h2 style="color: green;">✅ Dictionary Loaded Successfully</h2><table border="1" style="border-collapse: collapse; margin-top: 20px;">';
+                for (const [key, value] of Object.entries(report)) {
+                    html += `<tr><td style="padding: 8px; font-weight: bold;">${key}</td><td style="padding: 8px;">${value}</td></tr>`;
+                }
+                html += '</table>';
+
+                results.innerHTML = html;
+
+            } catch (error) {
+                results.innerHTML = `
+                    <h2 style="color: red;">❌ Error Loading Dictionary</h2>
+                    <p><strong>Error:</strong> ${error.message}</p>
+                    <p><strong>Error type:</strong> ${error.name}</p>
+                    <pre style="background: #f5f5f5; padding: 10px; border-radius: 4px;">${error.stack}</pre>
+                `;
+            }
+        }
+
+        testDictionary();
+    </script>
+</body>
+</html>

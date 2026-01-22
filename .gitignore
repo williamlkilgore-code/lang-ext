@@ -1,0 +1,38 @@
+# OS Files
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Node modules (if added later)
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Build artifacts
+dist/
+build/
+*.zip
+
+# Temporary files
+*.tmp
+.cache/
+
+# Extension packaging
+*.crx
+*.xpi
+*.pem
+
+# Logs
+*.log
+
+# Generated icons (keep the source SVG)
+# Uncomment if you generate icons from SVG
+# icons/icon16.png
+# icons/icon48.png
+# icons/icon128.png
